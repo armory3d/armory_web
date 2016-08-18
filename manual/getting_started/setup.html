@@ -11,7 +11,7 @@
 	<div class="featured featured-md">
 		<div class="container height-full">
 		<div class="bottom"><h1>
-News
+Manual
 </h1></div>
 		</div>
 	</div>
@@ -25,29 +25,52 @@ News
 		<li><a href="http://armory3d.org/buy.html">Buy</a></li>
 	</ul>
 	</div>
-		
+
 	<div class="container">
 
 		<div class="box margin-top-2">
 		<div class="row">
 		<div class="col-md-6">
-		<h1>Newsletter</h1>
-		<p>Sign up for Armory news.</p>
-		</div>
-		</div>
-		</div>
+<h1 id="setup">Setup</h1>
 
-		<div class="box margin-top-2">
-		<div class="row">
-		<div class="col-md-6">
-		<h1>Site launched!</h1>
-		<p>(August/18/2016)</p>
-		<p>Finally a place to keep everything related to Armory easily accessible to anyone.</p>
-		</div>
-		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/tire.jpg" ></div>
-		</div>
-		</div>
+<h2 id="blender">Blender</h2>
 
+<p>We do not bundle Blender with the SDK, but installing it is straightforward. You can get it for free at <a href="https://www.blender.org/download/">blender.org</a>. Version 2.77 or newer is recommended. After installing Blender, start it up and let's move on to installing Armory itself.</p>
+
+<h2 id="armory">Armory</h2>
+
+<ul>
+<li>Unpack the Armory SDK .zip to your preferred location</li>
+
+<li>In Blender, Select 'File' - 'User Preferences...' and navigate to 'Add-ons' tab</li>
+
+<li>Select 'Install from File' at the bottom</li>
+
+<li>Locate your copy of unpacked Armory SDK and select 'armory.py'.</li>
+
+<li>Enter the path of your unpacked Armory SDK into Preferences panel</li>
+
+<li>Hit 'Save User Settings'</li>
+</ul>
+
+<p><img src="img/setup.jpg" alt="" /></p>
+
+<ul>
+<li><p>To verify everything is working correctly, save your .blend file and hit 'Start' button.
+<img src="img/setup_ready.jpg" alt="" /></p></li>
+
+<li><p>Hit 'Play in Viewport' to render the scene using Armory
+<img src="img/setup_play.jpg" alt="" /></p></li>
+</ul>
+
+<p>If you are experiencing issues, please take a look at the <a href="troubleshooting.html">troubleshooting</a> page. Otherways, feel free to proceed to <a href="../scene/compositing.html">scene compositing</a>.</p>
+
+<p>Note: Armory player is a separate process running in a frameless window. We choose this approach to prevent a need for modified Blender build. </p>
+
+<p>Note: 'Dark Blue Gradient' theme is used, which comes bundled with Blender.</p>
+		</div>
+		</div>
+		</div>
 	</div>
 
 </div>
@@ -66,7 +89,7 @@ News
 			<ul>
 				<a href="https://github.com/armory3d"><li>Source Code</li></a>
 				<a href="https://github.com/armory3d/armory_docs"><li>Documentation</li></a>
-				<a href="http://armory3d.org/index.html"><li>Contact</li></a>
+				<a href="./index.html"><li>Contact</li></a>
 			</ul>
 		</div>
 		<div class="col-md-3 "><h4>Social</h4>
@@ -76,18 +99,10 @@ News
 				<a href="http://armory3d.org/index.html"><li>Facebook</li></a>
 			</ul>
 		</div>
-		<div class="col-md-3 "><h4>Links</h4>
-			<ul>
-				<a href="http://kha.tech"><li>Kha</li></a>
-				<a href="http://haxe.org"><li>Haxe</li></a>
-				<a href="http://blender.org"><li>Blender</li></a>
-			</ul>
-		</div>
 	</div>
 	</div>
 	<div class="container">
-	<br/>
-	<p>Stylesheet by Blender.org</p>
+	<span class="pull-right">Stylesheet by Blender.org</span>
 	</div>
 </footer>
 </body>

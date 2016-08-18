@@ -326,7 +326,7 @@ th {
 html,
 body {
     font-family: "Open Sans", "Lucida Sans", "Lucida Grande", sans-serif, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     color: #444;
     cursor: default;
     width: 100%;
@@ -354,6 +354,10 @@ body.dark {
 .container-main {
     background-color: #f0f0f0;
     padding-bottom: 40px
+}
+
+.container img {
+    width: 100%;
 }
 
 a,
