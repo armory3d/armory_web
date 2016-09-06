@@ -10,5 +10,5 @@ let writeHtml = function(fileName, title) {
 writeHtml('index.html', 'Armory');
 writeHtml('news.html', 'News');
 writeHtml('gallery.html', 'Gallery');
-writeHtml('buy.html', 'Buy');
+writeHtml('download.html', 'Download');
 writeHtml('support.html', 'Support');
