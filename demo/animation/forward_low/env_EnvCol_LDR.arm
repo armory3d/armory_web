@@ -1,1 +1,0 @@
-¬shader_datas‘ƒ°vertex_structure’‚¤name£pos¤size‚¤name£nor¤size¤name®env_EnvCol_LDR¨contexts‘ˆ¤name£env©cull_mode©clockwise¬compare_mode¤less«depth_writeÂ­texture_units­vertex_shader³env_EnvCol_LDR.vert©constants“ƒ¤link®_skydomeMatrix¤name¤SMVP¤type¤mat4ƒ¤link®_backgroundCol¤name­backgroundCol¤type¤vec3‚¤name®envmapStrength¤type¥float¯fragment_shader³env_EnvCol_LDR.frag
