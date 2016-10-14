@@ -5,15 +5,15 @@
 		<div class="row">
 		<div class="col-md-6">
 		<h1>Buy Armory Preview</h1>
-		<p>(current revision: 16.09)</p>
+		<p>(current revision: 16.10)</p>
 		<p>Preview version will be available soon! Before purchasing, please <b>read the manual</b> first to know what parts need more work.</p>
 		<p><b>Estimated price</b>: USD 49 / EUR 43 / GBP 37</p>
 
 		<p><b>Source code</b> is available at <a href="https://github.com/armory3d">GitHub.</a></p>
 
-		<p>While we are still looking for ways to make Armory free, you can support the project directly and get the preview version. We do not plan to sell any separate modules or force splash screens. Everyone accessing the preview version will of course receive all <b>future releases for free</b>. Careful though, the preview version will likely have many rough edges and the experience may be frustrating!</p>
+		<p>While we are still looking for ways to make Armory free, you can support the project directly and get the preview version. We do not plan to sell separate modules or force splash screens. Everyone accessing the preview version will receive all <b>future releases for free</b>. Careful though, the preview version will likely have many rough edges and the experience may be frustrating!</p>
 
-		<p>Please note that eventually, as the project matures, we would love making it free. The funds are (unfortunately!) needed to <b>actively develop</b> project. No one would like to use an engine that is not well maintained. We also plan to split part of the revenue to <b>Blender and Kha</b>, which are the basic blocks of Armory.</p>
+		<p>Please note that eventually, as the project matures, we would love making it free. The funds are (unfortunately!) needed to <b>actively develop</b> project. We also plan to split part of the revenue to <b>Blender and Kha</b>, which are the basic blocks of Armory.</p>
 		</div>
 		<div class="col-md-6">
 		<img class="img-responsive" height="360" width="640" srcset="./img/realtime.jpg" ></div>
@@ -78,8 +78,11 @@
 		<div class="box margin-top-2">
 		<div class="row">
 		<div class="col-md-6">
-		<h1>Browser demos</h1>
-		<p>Get a rough idea on how well will engine perform on your hardware. Run these demos created in Armory straight in your browser.</p>
+		<h1>Examples &amp; Assets</h1>
+		<p>Suite of essential examples to go with Armory SDK. Get it <a hred="https://github.com/armory3d/armory_examples/releases">here</a>!</p>
+		</div>
+		<div class="col-md-6">
+		<img class="img-responsive" height="360" width="640" srcset="./img/examples.jpg" >
 		</div>
 		</div>
 		</div>
@@ -87,8 +90,39 @@
 		<div class="box margin-top-2">
 		<div class="row">
 		<div class="col-md-6">
-		<h1>Examples &amp; Assets</h1>
-		<p>Suite of small examples bundled with Armory SDK.</p>
+		<img class="img-responsive" height="360" width="640" srcset="./img/demo_animation.jpg" >
+		</div>
+		<div class="col-md-6">
+		<h1>Browser demos</h1>
+		<p>Get a rough idea on how well engine performs on your hardware. Run these demos created in Armory straight in your browser. Note that WebGL has some limitations and you can generally expect up to 25% performance increase when deploying native build.</p>
+		<p>To get the best results, Chrome is recommended. Do not use desktop Safari, as it performs considerably slower. On mobile, Safari performs reasonable. To measure performance you can view the frame time in the page title. These demos are targetting 16.7ms per frame (60 FPS).</p>
+		<p>Armory comes with fully dynamic render path. We include the most common ones below. Each render path has it's advantages, either in performance or visual output. If you are unsure which one is suitable for you, just run the standard ones. Please consult the manual for more details.</p>
+
+
+		<h3>Animation demo</h3>
+		<p>A scene with single GPU skinned character. Dual quaternion skinning is used to save memory.</p>
+		<h4>Standard renderers</h4>
+		<p>These renderers should run smooth on any non-ancient desktop.</p>
+		<p><a href="http://armory3d.org/demo/animation/hybrid">Hybrid</a></p>
+		<p><a href="http://armory3d.org/demo/animation/deferred">Deferred</a></p>
+
+		<h4>Forward renderers</h4>
+		<p>Basic forward renderers. 'Forward Low' variants will run even on mobile browsers.</p>
+		<p><a href="http://armory3d.org/demo/animation/forward">Forward</a></p>
+		<p><a href="http://armory3d.org/demo/animation/forward_low">Forward Low</a></p>
+		<p><a href="http://armory3d.org/demo/animation/forward_low_nomsaa">Forward Low - no MSAA</a></p>
+		
+		<h4>Stereo renderers</h4>
+		<p>Forward stereo path. 2X version runs at 1080p.</p>
+		<p><a href="http://armory3d.org/demo/animation/vr_low">VR Low</a></p>
+		<p><a href="http://armory3d.org/demo/animation/vr_low/index2x.html">VR Low 2X</a></p>
+
+		<h4>Deferred variations</h4>
+		<p>Common variations on deferred path. Low version runs with disabled screen-space reflections. High versions use temporal anti-aliasing and velocity buffer for additional effects. 2X version draws at double resolution and then scales down to achieve raw super sampling. This is generally overkill for a browser and may stutter.</p>
+		<p><a href="http://armory3d.org/demo/animation/deferred_low">Deferred Low</a></p>
+		<p><a href="http://armory3d.org/demo/animation/deferred_high">Deferred High</a></p>
+		<p><a href="http://armory3d.org/demo/animation/deferred_high2x">Deferred High 2X</a></p>
+
 		</div>
 		</div>
 		</div>
