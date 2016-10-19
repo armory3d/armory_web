@@ -6,9 +6,11 @@
 		<div class="col-md-6">
 		<h1>In development!</h1>
 		<p>Before proceeding, please note all the materials currently available are still work in progress.</p>
-		<p>As soon as the manual section gets completed we hope to release a preview version. Working as fast as possible to make that happen!</p>
+		<p>As soon as the manual section gets completed we hope to release a <b>preview version</b>. Working as fast as possible to make that happen!</p>
 		</div>
-		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/tire.jpg" ></div>
+		<div class="col-md-6">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/j1riyJilvhs" frameborder="0" allowfullscreen></iframe>
+		</div>
 		</div>
 		</div>
 
@@ -18,9 +20,9 @@
 		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/realtime.jpg" ></div>
 		<div class="col-md-6">
 		<h1>Real-time, in Blender</h1>
-		<p>The goal of Armory is to bring real-time rendering to artists. Everything is fully integrated into Blender, turning it into a complete authoring tool for real-time content.</p>
+		<p>The goal of Armory is to bring real-time rendering to artists. Everything is fully integrated into Blender, turning it into a <b>complete authoring tool</b> for real-time content.</p>
 		<p>The result is a unified workflow from start to finish, making you work faster and more efficient. There is nothing forcing you to jump between different applications and constantly export data from one to another.</p>
-		<p>Behind the scenes, Armory uses Kha, a key to unmatched performance and portability. Both Armory and Kha are open-source projects.</p>
+		<p>Behind the scenes Armory uses Kha, a key to unmatched performance and portability. Both Armory and Kha are <b>open-source projects</b>.</p>
 		</div>
 		</div>
 		</div>
@@ -31,15 +33,17 @@
 		<div class="row">
 		<div class="col-md-6">
 		<h1>State of Art Renderer</h1>
-		<p>Extreme effort has already been put into the render system. Armory tries to closely mimick the output Cycles, which is not an easy task to perform in real-time. To achieve this, serious rendering wizardry is employed. The default renderer is currently rasterized.</p>
-		<p>While there are still roads to go to improve rendering quality further, render system is fully customisable using nodes. This makes it fast to adapt new real-time rendering techniques, never falling a step behind the current arts.</p>
+		<p>Extreme effort has been put into <b>the render system</b>. Armory tries to closely mimick the output of Cycles, which is not an easy task to perform in real-time. To achieve this, serious rendering wizardry is employed. The default renderer is currently rasterized.</p>
+		<p>While there are still roads to go to improve rendering quality further, render system is <b>fully customisable</b> using nodes. This makes it fast to adapt new real-time rendering techniques, never falling a step behind the current arts.</p>
 		<ul>
 		<li>Physically based</li>
 		<li>Cycles rendered probes</li>
+		<li>Voxel cone tracing</li>
 		<li>Raymarched reflections</li>
 		<li>Temporal anti-aliasing</li>
+		<li>Tessellated displacement</li>
+		<li>Volumetric Lighting</li>
 		<li>Compositor effects</li>
-		<li>...</li>
 		</ul>
 		</div>
 		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/balcony.jpg" ></div>
@@ -53,7 +57,7 @@
 		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/nodes.jpg" ></div>
 		<div class="col-md-6">
 		<h1>Use Nodes</h1>
-		<p>Armory is heavily oriented towards nodes. For materials, a subset of standard Cycles nodes is used. This means every scene created for Armory can be rendered as-is in Cycles. We plan to eventually support all Cycles nodes. Performance remains the priority.</p>
+		<p>Armory is heavily oriented towards nodes. For materials, <b>a subset of standard Cycles nodes</b> is used. This means every scene created for Armory can be rendered as-is in Cycles. We plan to eventually support all Cycles nodes. Performance remains the priority.</p>
 		<ul>
 		<li>Material nodes</li>
 		<li>Compositor nodes</li>
@@ -70,7 +74,7 @@
 		<div class="col-md-6">
 		<h1>Build Games</h1>
 		<p></p>
-		<p>Everything is bundled to provide the ultimate game development tool. As a starting point, you can choose one of the available game prototype templates. Code editor with debugging support is integrated. For logic, use nodes or write code in the Haxe programming language.</p>
+		<p>Everything is bundled to provide the ultimate <b>game development tool</b>. As a starting point, you can choose one of the available game prototype templates. Code editor with debugging support is integrated. For logic, use <b>nodes</b> or write code in <b>Haxe, Python or JavaScript</b>.</p>
 		<ul>
 		<li>Rendering</li>
 		<li>Physics</li>
@@ -90,13 +94,12 @@
 		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/carviz.jpg" ></div>
 		<div class="col-md-6">
 		<h1>Your work, alive</h1>
-		<p>Create interactive scenes and export them to web, desktop and mobile, so everyone can experience them.</p>
-		<p>Platforms:</p>
+		<p>Create interactive scenes and export them to <b>web, desktop and mobile</b>, so everyone can experience them. Binary data format, asset compression and efficient build tools are developed to prevent bloated package sizes.</p>
 		<ul>
 		<li>HTML5</li>
-		<li>Android, iOS</li>
 		<li>Windows, Linux, Mac</li>
-		<li>Complete list</li>
+		<li>Android, iOS</li>
+		<li><a href="https://github.com/KTXSoftware/Kha/wiki">Complete list</a></li>
 		</ul>
 		</div>
 		</div>
@@ -107,9 +110,10 @@
 		<div class="row">
 		<div class="col-md-6">
 		<h1>Animation</h1>
-		<p>A robust animation system is employed, with support for hardware accelerated skinning. On top of that, each node can be animated on timeline using keyframes, just like you are used to.</p>
+		<p>A robust animation system is employed, with support for hardware accelerated skinning. On top of that, each node can be animated <b>on timeline</b> using keyframes, just like you are used to.</p>
 		<ul>
-		<li>GPU/CPU skinning</li>
+		<li>GPU/CPU dual-quaternion skinning</li>
+		<li>Instanced rendering of skinned meshes</li>
 		<li>Timeline based animation</li>
 		<li>Procedural animation</li>
 		</ul>
@@ -124,7 +128,7 @@
 		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/island_sunset.jpg" ></div>
 		<div class="col-md-6">
 		<h1>Get Armored!</h1>
-		<p>If we got you interested, start exploring Armory now! Please head here to check how the project is currently distributed.</p>
+		<p>If we got you interested, <b>start exploring Armory</b> now! Please head to the <a href="http://armory3d.org/download.html">download</a> section to check how the project is currently distributed.</p>
 		</div>
 		</div>
 		</div>
