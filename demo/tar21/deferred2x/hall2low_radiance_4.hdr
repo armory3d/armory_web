@@ -1,0 +1,7 @@
+#?RADIANCE
+# Output from cmft.
+FORMAT=32-bit_rle_rgbe
+EXPOSURE=1
+
+-Y 16 +X 32
+®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|®f|Êª…|Å¥€|¾žy|µ–p|¬Œf|©‰c|¦‡b|¤†`|¢…`|¡ƒ_| ‚^|Ÿ]|£†a|ªŒh|¯l|±’m|²’l|±‘i|°Žf|®‹b|²d|º–k|¿œp|ÃŸt|Å¢w|Æ£y|Å¢y|Ã¡y|É¨|Í¬†|Í­‡|Êª…|†xi}ýáÂ|éÍ®|Ô¹—|À¥‚|®“n|Ÿƒ]|›€[|š€]|š€_|­”t|Æ®|×À¢|ßÈ«|àÉ¬|ßÅ¥|Ù¼™|Ð°Š|Ú·‹|ä½|êÁŽ|ìÃŽ|îÅ‘|ôË˜|ôÍœ|õÏ¡|„r]}‹zg}m}p}Œ~n}†xi}ª›Š}›|}ˆ{k}êÑ±|È°Ž|­•q|œ…_|’|W|•€_|©•x|æÓ·|‰€s}‘ˆz}•‹}}•‹{}“‡v}€m}}f}•c}™a}ž„a}¡‡d} ‡d}Ÿ†e}œ„e}¥u}±ž‡}¸§’}»ª—}ºª—}µ¥“}ª›Š}vc~òÜµ}ÙÃ}i}Õ¾˜|¨”n|¹£s|Ï¿ž|øêÍ|’‹}}›“†}¬¥—}·¯ }»³£}ÔÈ´}ÔÅ®}ÖÂ¥}ÚÁž}Å©„}Ò´ˆ}×·‰}Ó³…}íÊ˜}éÈ™}èË¢}éÎ«}ÚÄ©}âÎµ}êÖ½}…zk~…zi~vc~˜Šp~‚g~ƒuZ~äÊ•}œ†T}ýØ„|ÜÁ‚|âÑ«|†p}Ÿ™Š}¹³¤}ÐÉ¹}æßÎ}ìãÐ}íáÌ}íÞÄ}ðÛº}öÚ³}þÞ®}„rW~‹wY~ŠvY~†rV~‚pU~€oX~q]~‚uc~ˆ|k~•ˆv~šx~›v~˜Šp~©˜x~£‘o~—†c~†uS~Â¦f}œ…P}‚pI}õà²|†u}¦ ‘}Ã½®}Ý×Ç}÷ðÞ}ûòÞ}üðÙ}üìÐ}tc~ƒu_~‰w^~|_~—a~•€`~{\~Šw[~†u\~…v`~‰{h~‘„q~¢”~~©š€~¬œ~~©˜x~¶¢}~°t~¦’h~–‚Y~ãÁv}·›\}”P}‚vZ}‘‰u}¨¢’}Æ¿°}áÚÊ}üõã}€{q~€zn~€xj~‚we~†xb~{`~”€b~œ†e~™„c~“~_~Œy\~ˆv]~†v`~Š|h~•‡r~©š€~³¢„~·¥‚~¶¢}~»§|~¸¢u~¯™j~ Š[~ûÕ}Ì­f}¤‹V}‰yY}‘‡r}¤}¿¹ª}ÙÓÄ}ôíÜ}ùðÝ}úî×}úêÏ}þèÆ}ƒu`~Šy_~’~`~™„c~—‚b~|]~‰vZ~ƒrY~r\~†xc~’„n~ªš}~µ¤‚~»§~»§|~º¤w~·¡q~°™g~£Œ[~ƒoC~Ù·l}®“X}ŒzV}‚j}š“‚}°ªœ}ÇÂ³}àÚÊ}æÞÌ}çÝÈ}éÚÀ}íÙ¸}öÜ³}qX~ˆvZ~{]~z\~‡tX~€nT~ôÓ¤}îÑ§}øÝµ}‰{d~¤”u~±žz~¸¤z~º¤w~²œn~±ši~«“a~Ÿ‰V~‚oB~Ýºn}²•Y}ŒxQ}…y`}‹„s}›•ˆ}­¨›}Â½®}ÉÂ²}ÌÃ°}ÎÁª}ÓÁ£}ÛÄŸ}åÉ}ñÑ }þÛ¦}üÙ¤}òÑž}åÆ–}Ø»}Ñ·‘}ÛÂœ}öÜ¯}˜ˆh~¦”n~®šp~²œn~¢`~¢Œ]~‡W~†rF~õÐ~}×µm}¯’V}‡rJ}õÚ¥|òá¾|˜s|ßØÄ|€|q}‰ƒw}¨ }«Ÿ‹}¯ ‡}¶£„}›‰k}­—t}±šu}ª”p}Ê¯„}À¥~}³šv}¬•u}¨’h}Æ­z}éÍ’}”ƒ^~žŠa~¢`~ïÎƒ}óÑƒ}íË~}âÁv}Ñ±l}»ž_} †P}lA}¶›f|úÜ£{÷Ú£{€rW| ”||´©“|¾²›|Á³™|À®‘|Å°Ž|Í·|Õ½|ÞÃ”|çËš|æÉ™|áÃ”|×¹Š|îÎ“|ŠxR}¢_}º¡k}Ò¶w}åÆ€}ïÎƒ}·žc}» d}¹žb}°–\}¥‹U}–~L}…oB}á½u|´™d|‡uT|ïÑ{íÐœ{ìÏœ{ëÍ›{êÌš{óÔ¢{ôÔ¢{íÌ›{qU|‹z]|a|a|“b|ŸŠf|¦f|²˜h|Û¼~|oI}”R}¤[}°˜a}·žc}ùÓƒ|ýÕ„|üÔ‚|öÎ~|ìÅx|à»s|Ñ¯n|¿¡g|­“a|šƒZ|ˆuS|ïÐš{äÇ–{äÆ–{ãÆ–{ãÅ•{âÄ•{áÂ”{ßÁ“{Ý¾’{éÉ˜{€nQ|‹wU|–€Y|¡‰]|¬‘`|·šd|Ã¤h|Õ´q|åÁz|ñÌ€|ùÓƒ|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|¢Š\|
