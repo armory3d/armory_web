@@ -11,4 +11,4 @@ writeHtml('index.html', 'Armory');
 writeHtml('news.html', 'News');
 writeHtml('gallery.html', 'Gallery');
 writeHtml('download.html', 'Download');
-writeHtml('support.html', 'Support');
+writeHtml('community.html', 'Community');
