@@ -11,7 +11,7 @@
 	<div class="featured featured-md">
 		<div class="container height-full">
 		<div class="bottom"><h1>
-News
+Manual
 </h1></div>
 		</div>
 	</div>
@@ -26,43 +26,53 @@ News
 		<li><a href="http://armory3d.org/download.html">Download</a></li>
 	</ul>
 	</div>
-		
+
 	<div class="container">
 
 		<div class="box margin-top-2">
 		<div class="row">
 		<div class="col-md-6">
-		<h1>Newsletter</h1>
-		<p><a href="https://tinyletter.com/Armory">Sign up</a> for Armory news.</p>
-		</div>
-		</div>
-		</div>
+<h1 id="troubleshooting">Troubleshooting</h1>
 
+<h2 id="unabletocompileemptyproject">Unable to compile empty project</h2>
 
-		<div class="box margin-top-2">
-		<div class="row">
-		<div class="col-md-6">
-		<h1>Armory at Blender Conference</h1>
-		<p>(October/24/2016)</p>
-		<p>Crazy as it sounds, there will be a short Armory unveiling at Blender Conference, happening October 29th. I will reveal the inner workings of Armory and show off some of the latest advancements. And if everything goes as planned, there will be more!</p>
-		<p><a href="https://www.blender.org/conference/2016/schedule">Schedule</a></p>
-		</div>
-		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/bcon16.jpg" ></div>
-		</div>
-		</div>
+<p>Make sure SDK path is set up properly or that 'Bundled SDK' is enabled in add-on properties.</p>
 
+<p>If you are on Windows, you may need to install <a href="https://download.microsoft.com/download/1/7/1/1718CCC4-6315-4D8E-9543-8E28A4E18C4C/dxwebsetup.exe">DirectX Setup</a>
+and <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">Visual C++ 2015 Redistributable x86</a>.</p>
 
-		<div class="box margin-top-2">
-		<div class="row">
-		<div class="col-md-6">
-		<h1>Site launched!</h1>
-		<p>(August/18/2016)</p>
-		<p>Finally a place to keep everything related to Armory easily accessible to anyone.</p>
-		</div>
-		<div class="col-md-6"><img class="img-responsive" height="360" width="640" srcset="./img/tire.jpg" ></div>
-		</div>
-		</div>
+<h2 id="playerdoesnotstart">Player does not start</h2>
 
+<h3 id="cleanproject">Clean project</h3>
+
+<p>Locate 'Armory Build' section in 'Render' panel and hit 'Clean' button. Try running your project again.</p>
+
+<h3 id="debugprojectinkodestudio">Debug project in Kode Studio</h3>
+
+<p>Locate 'Armory Build' section in 'Render' panel and hit 'Kode Studio' button. This will load the project in a dedicated IDE. Hit F5 to run and observe console output for potential error reports.</p>
+
+<h2 id="playerrunsslow">Player runs slow</h2>
+
+<h3 id="lowergraphicssettings">Lower graphics settings</h3>
+
+<p>By default, Armory uses a deferred render path. If you are running on older hardware, using a less demading forward path can help. Select active scene camera, locate 'Armory Props' in data panel, and choose 'forward<em>path' or 'forward</em>path_low' as render path.</p>
+
+<h3 id="runplayerinsmallerarea">Run player in smaller area</h3>
+
+<h3 id="sethigherframerate">Set higher frame rate</h3>
+
+<p>Locate render panel - dimensions - frame rate option. Make sure to select 60 fps.</p>
+
+<h2 id="changesdonotreflectinplayer">Changes do not reflect in player</h2>
+
+<p>In some cases the cache is kept even though the Blender data was modified. Cleaning the project will likely help. This will be fixed in the future.</p>
+
+<h2 id="troublepersist">Trouble persist</h2>
+
+<p><a href="http://armory3d.org/support.html">Post a new forum topic, report an issue, or contact us directly!</a></p>
+		</div>
+		</div>
+		</div>
 	</div>
 
 </div>

@@ -1,27 +1,18 @@
 # Setup
 
-## Blender
-We do not bundle Blender with the SDK, but installing it is straightforward. You can get it for free at [blender.org](https://www.blender.org/download/). Version 2.77 or newer is recommended. After installing Blender, start it up and let's move on to installing Armory itself.
+Armory bundle comes with everything you need. Currently, **Blender 2.78** is used with **Armory player** built in. If you do not require the built-in player, Armory can be used as add-on only (instructions available soon). Armory sources are available at [GitHub](https://github.com/armory3d/).
 
-## Armory
+- Unpack **Armory_version.zip** to your preferred location. On Windows, prefer a short path like 'C:\Dev\Armory'.
+- In Blender, Select **File** - **User Preferences...** and navigate to **Add-ons** tab
+- Search for **Armory** add-on and enable it
+- Hit **Save User Settings** at the bottom
 
-- Unpack the Armory SDK .zip to your preferred location
-- In Blender, Select 'File' - 'User Preferences...' and navigate to 'Add-ons' tab
-- Select 'Install from File' at the bottom
-- Locate your copy of unpacked Armory SDK and select 'armory.py'.
-- Enter the path of your unpacked Armory SDK into Preferences panel
-- Hit 'Save User Settings'
+![](img/setup1.jpg)
 
-![](img/setup.jpg)
+- To verify everything is working correctly, save your .blend file and hit **Play in viewport** button, located in the 3D view header.
 
-- To verify everything is working correctly, save your .blend file and hit 'Start' button.
-![](img/setup_ready.jpg)
+![](img/setup2.jpg)
 
-- Hit 'Play in Viewport' to render the scene using Armory
-![](img/setup_play.jpg)
+- That's it! On Windows, it may take a few seconds the first time you run the player. Continue to the [building a scene](../essentials/buildscene.md) tutorial.
 
-If you are experiencing issues, please take a look at the [troubleshooting](troubleshooting.md) page. Otherways, feel free to proceed to [scene compositing](../scene/compositing.md).
-
-Note: Armory player is a separate process running in a frameless window. We choose this approach to prevent a need for modified Blender build. 
-
-Note: 'Dark Blue Gradient' theme is used, which comes bundled with Blender.
+![](img/setup3.jpg)

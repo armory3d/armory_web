@@ -18,7 +18,7 @@ This is something that well established engines are seriously experimenting with
 ### Unmatched portability
 
 The engine needs to be able to run on desktops, consoles, mobile and web with no compromises. It needs to run on a platform announced tomorrow. The common approach is to tie the renderer to OpenGL/ES/WebGL. For games, this is disastrous choice today. There are lots of different graphics APIs now, in order to maximize portability and performance on each platform we need to take advantage of this. What if one of the major platforms decide to axe OpenGL in favor of Vulkan/Metal/D3D12 in the future? Refactoring these things in an existing code-bases not prepared for this is a huge and painful task.
-The core of the engine has been developed will all this in mind, making it possible to add new targets/graphics APIs without rewriting existing code. There is already support for OpenGL/ES/WebGL, D3D9/11/12, Metal and Vulkan. The output to JavaScript is very straightforward making WebGL first-class citizen, preventing bloated file sizes and slow performance that regular engines compiled from C++ face.
+The core of the engine has been developed will all this in mind, making it possible to add new targets/graphics APIs without rewriting existing code. There is already support for OpenGL/ES/WebGL, D3D9/11/12, Metal and Vulkan. The output to JavaScript is very straightforward making WebGL first-class citizen, preventing bloated file sizes that regular engines compiled from C++ face.
 
 ### State of art renderer
 
@@ -28,7 +28,7 @@ On top of that, you can render each scene with Cycles Render path-tracer too, si
 
 ### Open
 
-The language, core, engine and tooling used are all open-source. It is easy to fork any part of it in case you need to. You may have noticed a huge usage of FBX today, a proprietary file format. A special care is placed to not fall short here and focus on open pipelines.
+The language, core, engine and tooling used are all open-source. It is easy to fork any part of it in case you need to. A special care is placed to focus on open pipelines.
 
 ## How
 
@@ -38,12 +38,4 @@ The engine is built on Kha - the most exciting technology I ever discovered. It 
 
 ![](img/intro_ide.jpg)
 
-Python is used to write Blender add-ons and it excels at doing so. For actual game logic, Haxe is used - a language at a level of C# or Java. This is the key to superior portability over purely native C++ engines or purely JS engines, while still maintaining good performance. We can still utilize C++ code for native targets, and JS for the web respectively. For visual programming a system of logic nodes is available.
-
-### Independent
-
-Engine tooling is purely add-on based - there is no special build of Blender required. This is all possible thanks to the very powerful scripting system. It is not dependant on the development cycle of Blender which makes engine development itself independent and flexible.
-
-### Together
-
-When you sum it up, the engine code itself is just a small part in a full view. Blender already offers a stunning editor with loads of features that can be leveraged and loads more in development. The low levels parts belonging to Kha are improving at very fast pace every day. The Haxe language itself is refining and adding new targets that can be used to conquer new platforms. When one part grows, the rest can grow with it. The goal is to live in harmony with these tools.
+Python is used to write Blender add-ons and it excels at doing so. For actual game logic, Haxe is preferred - a language at a level of C# or Java. This is the key to superior portability over purely native C++ engines or purely JS engines, while still maintaining good performance. Optionally, basic support for Python and JavaScript is included. For visual programming a system of logic nodes is available.

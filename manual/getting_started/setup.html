@@ -22,8 +22,8 @@ Manual
 		<li><a href="http://armory3d.org/news.html">News</a></li>
 		<li><a href="http://armory3d.org/manual">Manual</a></li>
 		<li><a href="http://armory3d.org/gallery.html">Gallery</a></li>
-		<li><a href="http://armory3d.org/support.html">Support</a></li>
-		<li><a href="http://armory3d.org/buy.html">Buy</a></li>
+		<li><a href="http://armory3d.org/community.html">Community</a></li>
+		<li><a href="http://armory3d.org/download.html">Download</a></li>
 	</ul>
 	</div>
 
@@ -34,41 +34,31 @@ Manual
 		<div class="col-md-6">
 <h1 id="setup">Setup</h1>
 
-<h2 id="blender">Blender</h2>
-
-<p>We do not bundle Blender with the SDK, but installing it is straightforward. You can get it for free at <a href="https://www.blender.org/download/">blender.org</a>. Version 2.77 or newer is recommended. After installing Blender, start it up and let's move on to installing Armory itself.</p>
-
-<h2 id="armory">Armory</h2>
+<p>Armory bundle comes with everything you need. Currently, <strong>Blender 2.78</strong> is used with <strong>Armory player</strong> built in. If you do not require the built-in player, Armory can be used as add-on only (instructions available soon). Armory sources are available at <a href="https://github.com/armory3d/">GitHub</a>.</p>
 
 <ul>
-<li>Unpack the Armory SDK .zip to your preferred location</li>
+<li>Unpack <strong>Armory_version.zip</strong> to your preferred location. On Windows, prefer a short path like 'C:\Dev\Armory'.</li>
 
-<li>In Blender, Select 'File' - 'User Preferences...' and navigate to 'Add-ons' tab</li>
+<li>In Blender, Select <strong>File</strong> - <strong>User Preferences...</strong> and navigate to <strong>Add-ons</strong> tab</li>
 
-<li>Select 'Install from File' at the bottom</li>
+<li>Search for <strong>Armory</strong> add-on and enable it</li>
 
-<li>Locate your copy of unpacked Armory SDK and select 'armory.py'.</li>
-
-<li>Enter the path of your unpacked Armory SDK into Preferences panel</li>
-
-<li>Hit 'Save User Settings'</li>
+<li>Hit <strong>Save User Settings</strong> at the bottom</li>
 </ul>
 
-<p><img src="img/setup.jpg" alt="" /></p>
+<p><img src="img/setup1.jpg" alt="" /></p>
 
 <ul>
-<li><p>To verify everything is working correctly, save your .blend file and hit 'Start' button.
-<img src="img/setup_ready.jpg" alt="" /></p></li>
-
-<li><p>Hit 'Play in Viewport' to render the scene using Armory
-<img src="img/setup_play.jpg" alt="" /></p></li>
+<li>To verify everything is working correctly, save your .blend file and hit <strong>Play in viewport</strong> button, located in the 3D view header.</li>
 </ul>
 
-<p>If you are experiencing issues, please take a look at the <a href="troubleshooting.html">troubleshooting</a> page. Otherways, feel free to proceed to <a href="../scene/compositing.html">scene compositing</a>.</p>
+<p><img src="img/setup2.jpg" alt="" /></p>
 
-<p>Note: Armory player is a separate process running in a frameless window. We choose this approach to prevent a need for modified Blender build. </p>
+<ul>
+<li>That's it! On Windows, it may take a few seconds the first time you run the player. Continue to the <a href="../essentials/buildscene.html">building a scene</a> tutorial.</li>
+</ul>
 
-<p>Note: 'Dark Blue Gradient' theme is used, which comes bundled with Blender.</p>
+<p><img src="img/setup3.jpg" alt="" /></p>
 		</div>
 		</div>
 		</div>
@@ -83,14 +73,14 @@ Manual
 			<ul>
 				<a href="http://armory3d.org/index.html"><li>Home</li></a>
 				<a href="http://armory3d.org/news.html"><li>News</li></a>
-				<a href="http://armory3d.org/buy.html"><li>Get Armory</li></a>
+				<a href="http://armory3d.org/download.html"><li>Get Armored</li></a>
 			</ul>
 		</div>
 		<div class="col-md-3"><h4>Contribute</h4>
 			<ul>
 				<a href="https://github.com/armory3d"><li>Source Code</li></a>
 				<a href="https://github.com/armory3d/armory_docs"><li>Documentation</li></a>
-				<a href="http://armory3d.org/index.html"><li>Contact</li></a>
+				<a href="http://armory3d.org/community.html"><li>Contact</li></a>
 			</ul>
 		</div>
 		<div class="col-md-3 "><h4>Social</h4>
@@ -102,16 +92,16 @@ Manual
 		</div>
 		<div class="col-md-3 "><h4>Links</h4>
 			<ul>
+				<a href="http://blender.org"><li>Blender</li></a>
 				<a href="http://kha.tech"><li>Kha</li></a>
 				<a href="http://haxe.org"><li>Haxe</li></a>
-				<a href="http://blender.org"><li>Blender</li></a>
 			</ul>
 		</div>
 	</div>
 	</div>
 	<div class="container">
 	<br/>
-	<p>Stylesheet by Blender.org</p>
+	<p style="font-size:0.8em; color:#777;">Stylesheet by <a href="http://blender.org">Blender.org</a></p>
 	</div>
 </footer>
 </body>

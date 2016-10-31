@@ -22,8 +22,8 @@ Manual
 		<li><a href="http://armory3d.org/news.html">News</a></li>
 		<li><a href="http://armory3d.org/manual">Manual</a></li>
 		<li><a href="http://armory3d.org/gallery.html">Gallery</a></li>
-		<li><a href="http://armory3d.org/support.html">Support</a></li>
-		<li><a href="http://armory3d.org/buy.html">Buy</a></li>
+		<li><a href="http://armory3d.org/community.html">Community</a></li>
+		<li><a href="http://armory3d.org/download.html">Download</a></li>
 	</ul>
 	</div>
 
@@ -34,122 +34,119 @@ Manual
 		<div class="col-md-6">
 <h2 id="welcome">Welcome</h2>
 
-<p>Please consider reading through the docs before purchasing preview version to know about the current limitations.</p>
+<p><img src="getting_started/img/intro.jpg" alt="" /></p>
+
+<p>Please consider reading through this manual before purchasing preview. The main limitations are:</p>
 
 <ul>
-<li>Current state</li>
+<li>Use only the bundled Armory PBR node for materials. Node parser is currently being rewritten for more efficiency.</li>
 
-<li>Supported platforms</li>
+<li>Armory player renders always on top, hiding popups as a result.</li>
 
-<li>Supported targets</li>
+<li>No open world data streaming / LOD support.</li>
 
-<li>Get Armory SDK</li>
+<li>Minimal docs / API functionality out of the box.</li>
+
+<li>Graphical effects require more tweaking.</li>
+
+<li>Python / JS scripts not supported on native targets.</li>
+
+<li>Very few logic nodes implemented.</li>
+
+<li>Likely breaking backward compatibility.</li>
+</ul>
+
+<p>To reach the first release, all of these issues need to get resolved.</p>
+
+<hr />
+
+<p>Armory SDK can be used on <strong>Windows, Linux and MacOS</strong>. To learn about the web, desktop and mobile platforms you can target, see <a href="">publishing</a> section.</p>
+
+<ul>
+<li><a href="http://armory3d.org/download.html">Get Armory SDK</a></li>
+
+<li><a href="https://github.com/armory3d/armory_examples/releases">Get Examples</a></li>
 </ul>
 
 <h2 id="gettingstarted">Getting started</h2>
 
-<ul>
-<li><a href="getting_started/intro.html">Intro</a></li>
+<!-- - [Intro](getting_started/intro.md) -->
 
+<ul>
 <li><a href="getting_started/setup.html">Setup</a></li>
 
-<li><a href="getting_started/troubleshooting.html">Troubleshooting</a></li>
+<li><a href="http://armory3d.org/api">API</a></li>
+</ul>
+
+<h2 id="essentials">Essentials</h2>
+
+<ul>
+<li><a href="https://cgcookie.com/lesson/first-steps-with-blender/">Blender essentials (CGCookie)</a></li>
+
+<li><a href="essentials/buildscene.html">Building a scene</a></li>
+</ul>
+
+<!--
+- [Shortcuts]()
+- [User Interface](essentials/ui.md)
+- [Assets management]()
+-->
+
+<!--
+## Graphics
+- Render path
+- Materials
+- Compositor
+- Global illumination
+- Particles
+- Writing shaders
+## Animation
+- Timeline
+- Skinning
+- Scripting
+## Physics
+- Rigid bodies
+-->
+
+<h2 id="scripting">Scripting</h2>
+
+<p>To make the scene interactive, logic nodes, Python, JavaScript or Haxe scripts are used. Haxe is recommended for maximum potential.</p>
+
+<ul>
+<li><a href="https://haxe.org/manual/introduction.html">Haxe manual</a></li>
+
+<li><a href="http://code.haxe.org/category/beginner/">Haxe cookbook</a></li>
+</ul>
+
+<!--
+- Scripting
+- Logic nodes
+## Sound
+- Speakers
+## UI
+## Networking
+## General
+- Modifiers
+- Constraints
+- Navmeshes
+-->
+
+<h2 id="remarks">Remarks</h2>
+
+<!--
+- Debugging
+- Efficiency
+- Publishing
+-->
+
+<ul>
+<li><a href="troubleshooting.html">Troubleshooting</a></li>
 
 <li><a href="roadmap.html">Roadmap</a></li>
 
 <li><a href="contributing.html">Contributing</a></li>
 
 <li><a href="license.html">License</a></li>
-
-<li><a href="api/index.html">API</a></li>
-</ul>
-
-<h2 id="scene">Scene</h2>
-
-<ul>
-<li><a href="https://cgcookie.com/lesson/first-steps-with-blender/">Blender essentials (CGCookie)</a></li>
-
-<li><a href="scene/scene_building.html">Building a scene</a></li>
-</ul>
-
-<h3 id="physics">Physics</h3>
-
-<h3 id="particles">Particles</h3>
-
-<h3 id="navmeshes">Navmeshes</h3>
-
-<h3 id="decalsmodifiers">Decals &amp; Modifiers</h3>
-
-<h3 id="assetsmanagement">Assets management</h3>
-
-<h2 id="graphics">Graphics</h2>
-
-<h3 id="materialnodes">Material nodes</h3>
-
-<h3 id="lampnodes">Lamp nodes</h3>
-
-<h3 id="worldnodes">World nodes</h3>
-
-<h3 id="compositor">Compositor</h3>
-
-<h3 id="renderpath">Render path</h3>
-
-<h3 id="probes">Probes</h3>
-
-<h3 id="customshaders">Custom shaders</h3>
-
-<h2 id="animation">Animation</h2>
-
-<h3 id="nodebased">Node based</h3>
-
-<h3 id="skinning">Skinning</h3>
-
-<h3 id="scripted">Scripted</h3>
-
-<h2 id="scripting">Scripting</h2>
-
-<h3 id="logicnodes">Logic nodes</h3>
-
-<h3 id="scripts">Scripts</h3>
-
-<h2 id="sound">Sound</h2>
-
-<h3 id="speakers">Speakers</h3>
-
-<h2 id="userinterface">User interface</h2>
-
-<h2 id="networking">Networking</h2>
-
-<h2 id="finals">Finals</h2>
-
-<h3 id="gameplayer">Game player</h3>
-
-<h3 id="performance">Performance</h3>
-
-<h3 id="debugging">Debugging</h3>
-
-<h3 id="publishing">Publishing</h3>
-
-<h2 id="examples">Examples</h2>
-
-<ul>
-<li><a href="https://github.com/armory3d/armory_examples">Examples repository</a></li>
-
-<li><a href="examples/gallery.html">Gallery</a></li>
-
-<li><a href="">Calibration</a>https://github.com/armory3d/armory_calibration</li>
-</ul>
-
-<h2 id="community">Community</h2>
-
-<ul>
-<li><a href="">Forums</a></li>
-
-<li><a href="https://github.com/armory3d/armory/issues">Issues</a></li>
-
-<li><a href="">Social</a></li>
-
-<li><a href="">Contact</a></li>
 </ul>
 		</div>
 		</div>
@@ -165,14 +162,14 @@ Manual
 			<ul>
 				<a href="http://armory3d.org/index.html"><li>Home</li></a>
 				<a href="http://armory3d.org/news.html"><li>News</li></a>
-				<a href="http://armory3d.org/buy.html"><li>Get Armory</li></a>
+				<a href="http://armory3d.org/download.html"><li>Get Armored</li></a>
 			</ul>
 		</div>
 		<div class="col-md-3"><h4>Contribute</h4>
 			<ul>
 				<a href="https://github.com/armory3d"><li>Source Code</li></a>
 				<a href="https://github.com/armory3d/armory_docs"><li>Documentation</li></a>
-				<a href="http://armory3d.org/index.html"><li>Contact</li></a>
+				<a href="http://armory3d.org/community.html"><li>Contact</li></a>
 			</ul>
 		</div>
 		<div class="col-md-3 "><h4>Social</h4>
@@ -184,16 +181,16 @@ Manual
 		</div>
 		<div class="col-md-3 "><h4>Links</h4>
 			<ul>
+				<a href="http://blender.org"><li>Blender</li></a>
 				<a href="http://kha.tech"><li>Kha</li></a>
 				<a href="http://haxe.org"><li>Haxe</li></a>
-				<a href="http://blender.org"><li>Blender</li></a>
 			</ul>
 		</div>
 	</div>
 	</div>
 	<div class="container">
 	<br/>
-	<p>Stylesheet by Blender.org</p>
+	<p style="font-size:0.8em; color:#777;">Stylesheet by <a href="http://blender.org">Blender.org</a></p>
 	</div>
 </footer>
 </body>
