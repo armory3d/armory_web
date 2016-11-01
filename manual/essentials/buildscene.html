@@ -32,7 +32,65 @@ Manual
 		<div class="box margin-top-2">
 		<div class="row">
 		<div class="col-md-6">
+<p>This page describes how to build a simple scene with rotating monkey and interactive camera.</p>
 
+<p><em>Video version will be available soon.</em></p>
+
+<p>Boot up Blender located in Armory SDK and save the blend file.</p>
+
+<p><img src="img/scene1/0.jpg" alt="" /></p>
+
+<p>Delete the cube and add monkey.</p>
+
+<p><img src="img/scene1/1.jpg" alt="" /></p>
+
+<p>Create a new material for the monkey. Switch to node editor, delete the default <strong>Diffuse BSDF</strong> node and select <strong>Add</strong> - <strong>Group</strong> - <strong>Armory PBR</strong>. Preview version is still very limited and this node is recommended for all materials for now.</p>
+
+<p><img src="img/scene1/2.jpg" alt="" /></p>
+
+<p>Switch to world nodes and add <strong>Sky Texture</strong> node. Set <strong>Background</strong> strength to 3.0. </p>
+
+<p><img src="img/scene1/3.jpg" alt="" /></p>
+
+<p>Select Lamp and set <strong>Emission</strong> strength to 1000.</p>
+
+<p><img src="img/scene1/4.jpg" alt="" /></p>
+
+<p>Back in 3D view, place a plane under the monkey.</p>
+
+<p>To make monkey rotate, we will add a new trait. Select monkey and locate <strong>Armory Traits</strong> in object properties. Hit <strong>+</strong> to add empty trait. Set <strong>Haxe Script</strong> as type. Hit <strong>New Script</strong> and confirm. Next, hit <strong>Edit Script</strong> and Kode Studio opens.</p>
+
+<p><img src="img/scene1/5.jpg" alt="" /></p>
+
+<p>We want to rotate the monkey a bit every frame. Uncomment <strong>notifyOnUpdate</strong> function and make it look like this:</p>
+
+<pre><code class="haxe language-haxe">notifyOnUpdate(function() {
+    object.transform.rotate(armory.math.Vec4.zAxis(), 0.01);
+});
+</code></pre>
+
+<p><img src="img/scene1/6.jpg" alt="" /></p>
+
+<p>If you want to use logic instead, switch to node editor and select logic nodes category. Click <strong>New</strong> and compose the node tree below. In <strong>Armory Traits</strong>, select <strong>Logic Nodes</strong> as type and set <strong>Tree</strong> entry.</p>
+
+<p><img src="img/scene1/7.jpg" alt="" /></p>
+
+<!--If you want to use Python instead.
+![](img/scene1/7_.jpg)-->
+
+<p>Switch back to 3D view, navigate to modifier properties and add <strong>Subdivision Surface</strong> modifier. Set Render subdivisions to 1.</p>
+
+<p><img src="img/scene1/8.jpg" alt="" /></p>
+
+<p>In Render properties, locate <strong>Armory Play</strong> panel. Check <strong>Viewport Camera</strong> and select <strong>Walk</strong> as navigation. This will allow to control the camera with mouse and keyboard, similar to enabling walk navigation in viewport.</p>
+
+<p>Ready to go! Hit <strong>Play in Viewport</strong> to run.</p>
+
+<p><strong>Stop</strong> the player and select <strong>Browser</strong> runtime in <strong>Armory Play</strong> panel. Hit <strong>Play</strong> and scene opens in the <a href="http://armory3d.org/demo/scene1">browser</a>!</p>
+
+<p><img src="img/scene1/9.jpg" alt="" /></p>
+
+<p>Get the blend file at <a href="https://github.com/armory3d/armory_examples/tree/master/scene1">GitHub</a>.</p>
 		</div>
 		</div>
 		</div>
