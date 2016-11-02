@@ -1,0 +1,135 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<title>Armory3D | Real-time rendering for Blender</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Real-time rendering for Blender">
+	<link href="http://armory3d.org/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="http://armory3d.org/css/main.css">
+</head>
+<body>
+<div class="container-main">
+	<div class="featured featured-md">
+		<div class="container height-full">
+		<div class="bottom"><h1>
+Manual
+</h1></div>
+		</div>
+	</div>
+
+	<div class="container" style="background-color:#ebebeb">
+	<ul class="nav navbar-nav navbar-left" style="font-size:130%">
+		<li><a href="http://armory3d.org/index.html">Home</a></li>
+		<li><a href="http://armory3d.org/news.html">News</a></li>
+		<li><a href="http://armory3d.org/manual">Manual</a></li>
+		<li><a href="http://armory3d.org/gallery.html">Gallery</a></li>
+		<li><a href="http://armory3d.org/community.html">Community</a></li>
+		<li><a href="http://armory3d.org/download.html">Download</a></li>
+	</ul>
+	</div>
+
+	<div class="container">
+
+		<div class="box margin-top-2">
+		<div class="row">
+		<div class="col-md-6">
+<h2 id="antialiasingaa">Anti-aliasing (AA)</h2>
+
+<p>Aliasing has a big impact on the image quality. To fight it, Armory comes pre-equipped with several solutions. Each has varying quality / performance ratio.</p>
+
+<ul>
+<li><a href="#no-aa">No AA</a></li>
+
+<li><a href="#msaa">MSAA</a></li>
+
+<li><a href="#fxaa">FXAA</a></li>
+
+<li><a href="#subpixel-morphological-aa">Subpixel Morphological AA</a></li>
+
+<li><a href="#taa">Temporal AA</a></li>
+
+<li><a href="#super-sampling">Super sampling</a></li>
+</ul>
+
+<p><strong>Problem:</strong> Big degradation of quality because of jagged lines. <strong>Solution:</strong> anti-aliasing or super sampling.
+<img src="img/aa/noaa_taa.jpg" alt="" /></p>
+
+<h3 id="noaa">No AA</h3>
+
+<p>AA can be completely disabled. Currently, Forward Low render path has no AA enabled by default.</p>
+
+<p><img src="img/aa/noaa.jpg" alt="" /></p>
+
+<h3 id="msaa">MSAA</h3>
+
+<p>MSAA can be utilized for Forward Low render path, or any custom path that renders directly to framebuffer. MSAA can be enabled by setting <strong>Render</strong> - <strong>Armory Build</strong> - <strong>Samples per Pixel</strong>. Enter a value from 1 (disabled) to 16 (max quality).</p>
+
+<h3 id="fxaa">FXAA</h3>
+
+<p>The fastest technique, at a cost of blurring some elements. Used in Deferred Low path.
+<img src="img/aa/fxaa.jpg" alt="" /></p>
+
+<h3 id="subpixelmorphologicalaa">Subpixel Morphological AA</h3>
+
+<p>Used in Deferred path.
+<img src="img/aa/smaa.jpg" alt="" /></p>
+
+<h3 id="temporalaa">Temporal AA</h3>
+
+<p>Used in Deferred High path. For dynamic scenes, velocity buffer is required for repojection.
+<img src="img/aa/taa_smaa.jpg" alt="" /></p>
+
+<h3 id="supersampling">Super-sampling</h3>
+
+<p>Very costly method producing very good results.
+<img src="img/aa/taa_smaa_2x.jpg" alt="" /></p>
+
+<p>To enable super sampling, set screen scale in render nodes to 2.0. This effectively renders the scene at double the resolution.</p>
+
+<p><img src="img/aa/screenscale.png" alt="Drawing" style="width: 260px;"/></p>
+		</div>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+<footer style="background-color:#ebebeb">
+	<div id="footer-navigation">
+	<div class="container">
+		<div class="col-md-3"><h4>Armory</h4>
+			<ul>
+				<a href="http://armory3d.org/index.html"><li>Home</li></a>
+				<a href="http://armory3d.org/news.html"><li>News</li></a>
+				<a href="http://armory3d.org/download.html"><li>Get Armored</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3"><h4>Contribute</h4>
+			<ul>
+				<a href="https://github.com/armory3d"><li>Source Code</li></a>
+				<a href="https://github.com/armory3d/armory_docs"><li>Documentation</li></a>
+				<a href="http://armory3d.org/community.html"><li>Contact</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3 "><h4>Social</h4>
+			<ul>
+				<a href="https://twitter.com/luboslenco"><li>Twitter</li></a>
+				<a href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg"><li>Youtube</li></a>
+				<a href="http://armory3d.org/index.html"><li>Facebook</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3 "><h4>Links</h4>
+			<ul>
+				<a href="http://blender.org"><li>Blender</li></a>
+				<a href="http://kha.tech"><li>Kha</li></a>
+				<a href="http://haxe.org"><li>Haxe</li></a>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+	<br/>
+	<p style="font-size:0.8em; color:#777;">Stylesheet by <a href="http://blender.org">Blender.org</a></p>
+	</div>
+</footer>
+</body>
+</html>
