@@ -1,0 +1,156 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+	<title>Armory3D | Real-time rendering for Blender</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Real-time rendering for Blender">
+	<link href="http://armory3d.org/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="all" href="http://armory3d.org/css/main.css">
+</head>
+<body>
+<div class="container-main">
+	<div class="featured featured-md">
+		<div class="container height-full">
+		<div class="bottom"><h1>
+Manual
+</h1></div>
+		</div>
+	</div>
+
+	<div class="container" style="background-color:#ebebeb">
+	<ul class="nav navbar-nav navbar-left" style="font-size:130%">
+		<li><a href="http://armory3d.org/index.html">Home</a></li>
+		<li><a href="http://armory3d.org/news.html">News</a></li>
+		<li><a href="http://armory3d.org/manual">Manual</a></li>
+		<li><a href="http://armory3d.org/gallery.html">Gallery</a></li>
+		<li><a href="http://armory3d.org/community.html">Community</a></li>
+		<li><a href="http://armory3d.org/download.html">Download</a></li>
+	</ul>
+	</div>
+
+	<div class="container">
+
+		<div class="box margin-top-2">
+		<div class="row">
+		<div class="col-md-6">
+<h1 id="achievebestgraphics">Achieve best graphics</h1>
+
+<p>This page talks about ways to improve graphics quality of Armory rendered scenes. Note that this may also considerably hurt performance as a result.</p>
+
+<p>We will take the scene below and go through it's creation steps. Not the prettiest one but it may potentially resemble work on game environment, so we will take it.</p>
+
+<p><img src="img/hut.jpg" alt="" /></p>
+
+<h2 id="1pbrassets">1. PBR Assets</h2>
+
+<p>We need assets! Ideally the ones with PBR maps. We connect those to <em>Armory PBR</em> node group. For <em>occlusion, roughness, metallic and height</em>, single channel textures can be used to save memory.</p>
+
+<p><img src="img/pbrmat.jpg" alt="" /></p>
+
+<p>Connecting <em>Height</em> socket will enable tessellated displacement. To configure amount of tessellation, locate <strong>Height map</strong> in <strong>Armory Props</strong> panel.</p>
+
+<p><img src="img/heightmap.jpg" alt="" /></p>
+
+<h2 id="2scenedesign">2. Scene design</h2>
+
+<p>We need lot's of objects to build lush scenery. To render the same object over and over again with varied location, <strong>instanced rendering</strong> is used. This gives a significant performance boost.</p>
+
+<p>Select desired object and enable <strong>Object data - Armory Props - Instanced Children</strong>.</p>
+
+<p><img src="img/instanced.jpg" alt="" /></p>
+
+<p>Create linked duplicates and parent them under original object.</p>
+
+<p><img src="img/children.jpg" alt="" /></p>
+
+<h2 id="3rendering">3. Rendering</h2>
+
+<p>For higher precission shadows, we increase <strong>Shadow Map</strong> resolution in render path nodes. On top of that, tweaking <em>Clip Start, Clip End and FoV</em> in <strong>Armory Props</strong> to better resemble light volume can boost the precission further.</p>
+
+<p><img src="img/shadowmap.jpg" alt="" /></p>
+
+<p>For higher quality shadows, enable <strong>Percentage Closer Soft Shadows</strong> flag in <strong>World Data - Armory Props</strong>. Lamp size also has to be increased.</p>
+
+<p><img src="img/lampsize.jpg" alt="" /></p>
+
+<p>For <strong>anisotropic texture filtering</strong>, set Texture interpolation to <strong>Smart</strong>. To enable this for all textures at once, check <strong>Force Anisotropic Filtering</strong> in <strong>World Data - Armory Props - Flags</strong>.</p>
+
+<p><img src="img/smarttex.jpg" alt="" /></p>
+
+<p>For better diffuse light shading, enable <strong>Oren Nayar Diffuse</strong> in  <strong>World Data - Armory Props - Flags</strong>.</p>
+
+<h2 id="4effects">4. Effects</h2>
+
+<p>...</p>
+
+<p>Enable Film Grain in <strong>World Data - Armory Props</strong>.</p>
+
+<p>Set depth of field <em>distance</em> and <em>aperture size</em> in <strong>Camera Data - Depth of Field</strong>.</p>
+
+<p><img src="img/dof.jpg" alt="" /></p>
+
+<p>...</p>
+
+<h2 id="5antialiasing">5. Anti-aliasing</h2>
+
+<p>Enable best possible <a href="../graphics/antialiasing.html">AA method</a>.</p>
+
+<h2 id="6globalillumination">6. Global illumination</h2>
+
+<p>... </p>
+
+<p>Set up global illumination.</p>
+
+<p>...</p>
+
+<hr />
+
+<h2 id="additionalresources">Additional resources</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R1-Ef54uTeU" frameborder="0" allowfullscreen></iframe>
+		</div>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+<footer style="background-color:#ebebeb">
+	<div id="footer-navigation">
+	<div class="container">
+		<div class="col-md-3"><h4>Armory</h4>
+			<ul>
+				<a href="http://armory3d.org/index.html"><li>Home</li></a>
+				<a href="http://armory3d.org/news.html"><li>News</li></a>
+				<a href="http://armory3d.org/download.html"><li>Get Armored</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3"><h4>Contribute</h4>
+			<ul>
+				<a href="https://github.com/armory3d"><li>Source Code</li></a>
+				<a href="https://github.com/armory3d/armory_docs"><li>Documentation</li></a>
+				<a href="http://armory3d.org/community.html"><li>Contact</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3 "><h4>Social</h4>
+			<ul>
+				<a href="https://twitter.com/luboslenco"><li>Twitter</li></a>
+				<a href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg"><li>Youtube</li></a>
+				<a href="http://armory3d.org/index.html"><li>Facebook</li></a>
+			</ul>
+		</div>
+		<div class="col-md-3 "><h4>Links</h4>
+			<ul>
+				<a href="http://blender.org"><li>Blender</li></a>
+				<a href="http://kha.tech"><li>Kha</li></a>
+				<a href="http://haxe.org"><li>Haxe</li></a>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+	<br/>
+	<p style="font-size:0.8em; color:#777;">Stylesheet by <a href="http://blender.org">Blender.org</a></p>
+	</div>
+</footer>
+</body>
+</html>
