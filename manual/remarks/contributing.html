@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Achieve best graphics · GitBook</title>
+        <title>Contributing · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../remarks/faq.html" />
+    <link rel="next" href="license.html" />
     
+    
+    <link rel="prev" href="roadmap.html" />
     
 
     </head>
@@ -348,9 +350,9 @@
         
         
     
-        <li class="chapter active" data-level="12.1" data-path="bestgraphics.html">
+        <li class="chapter " data-level="12.1" data-path="../howto/bestgraphics.html">
             
-                <a href="bestgraphics.html">
+                <a href="../howto/bestgraphics.html">
             
                     
                     Achieve best graphics
@@ -368,9 +370,9 @@
         
         
     
-        <li class="chapter " data-level="13.1" data-path="../remarks/faq.html">
+        <li class="chapter " data-level="13.1" data-path="faq.html">
             
-                <a href="../remarks/faq.html">
+                <a href="faq.html">
             
                     
                     FAQ
@@ -381,9 +383,9 @@
             
         </li>
     
-        <li class="chapter " data-level="13.2" data-path="../remarks/roadmap.html">
+        <li class="chapter " data-level="13.2" data-path="roadmap.html">
             
-                <a href="../remarks/roadmap.html">
+                <a href="roadmap.html">
             
                     
                     Roadmap
@@ -394,9 +396,9 @@
             
         </li>
     
-        <li class="chapter " data-level="13.3" data-path="../remarks/contributing.html">
+        <li class="chapter active" data-level="13.3" data-path="contributing.html">
             
-                <a href="../remarks/contributing.html">
+                <a href="contributing.html">
             
                     
                     Contributing
@@ -407,9 +409,9 @@
             
         </li>
     
-        <li class="chapter " data-level="13.4" data-path="../remarks/license.html">
+        <li class="chapter " data-level="13.4" data-path="license.html">
             
-                <a href="../remarks/license.html">
+                <a href="license.html">
             
                     
                     License
@@ -463,7 +465,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Achieve best graphics</a>
+        <a href=".." >Contributing</a>
     </h1>
 </div>
 
@@ -478,44 +480,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="achieve-best-graphics">Achieve best graphics</h1>
-<p>This page talks about ways to improve graphics quality of Armory rendered scenes. Note that this may also considerably hurt performance as a result.</p>
-<p>We will take the scene below and go through it&apos;s creation steps. Not the prettiest one but it may potentially resemble work on game environment, so we will take it.</p>
-<p><img src="img/hut.jpg" alt=""></p>
-<h2 id="1-pbr-assets">1. PBR Assets</h2>
-<p>We need assets! Ideally the ones with PBR maps. We connect those to <em>Armory PBR</em> node group. For <em>occlusion, roughness, metallic and height</em>, single channel textures can be used to save memory.</p>
-<p><img src="img/pbrmat.jpg" alt=""></p>
-<p>Connecting <em>Height</em> socket will enable tessellated displacement. To configure amount of tessellation, locate <strong>Height map</strong> in <strong>Armory Props</strong> panel.</p>
-<p><img src="img/heightmap.jpg" alt=""></p>
-<h2 id="2-scene-design">2. Scene design</h2>
-<p> We need lot&apos;s of objects to build lush scenery. To render the same object over and over again with varied location, <strong>instanced rendering</strong> is used. This gives a significant performance boost.</p>
-<p> Select desired object and enable <strong>Object data - Armory Props - Instanced Children</strong>.</p>
-<p><img src="img/instanced.jpg" alt=""></p>
-<p>Create linked duplicates and parent them under original object.</p>
-<p><img src="img/children.jpg" alt=""></p>
-<h2 id="3-rendering">3. Rendering</h2>
-<p>For higher precission shadows, we increase <strong>Shadow Map</strong> resolution in render path nodes. On top of that, tweaking <em>Clip Start, Clip End and FoV</em> in <strong>Armory Props</strong> to better resemble light volume can boost the precission further.</p>
-<p><img src="img/shadowmap.jpg" alt=""></p>
-<p>For higher quality shadows, enable <strong>Percentage Closer Soft Shadows</strong> flag in <strong>World Data - Armory Props</strong>. Lamp size also has to be increased.</p>
-<p><img src="img/lampsize.jpg" alt=""></p>
-<p>For <strong>anisotropic texture filtering</strong>, set Texture interpolation to <strong>Smart</strong>. To enable this for all textures at once, check <strong>Force Anisotropic Filtering</strong> in <strong>World Data - Armory Props - Flags</strong>.</p>
-<p><img src="img/smarttex.jpg" alt=""></p>
-<p>For better diffuse light shading, enable <strong>Oren Nayar Diffuse</strong> in  <strong>World Data - Armory Props - Flags</strong>.</p>
-<h2 id="4-effects">4. Effects</h2>
-<p>...</p>
-<p>Enable Film Grain in <strong>World Data - Armory Props</strong>.</p>
-<p>Set depth of field <em>distance</em> and <em>aperture size</em> in <strong>Camera Data - Depth of Field</strong>.</p>
-<p><img src="img/dof.jpg" alt=""></p>
-<p>...</p>
-<h2 id="5-anti-aliasing">5. Anti-aliasing</h2>
-<p>Enable best possible <a href="../graphics/antialiasing.html">AA method</a>.</p>
-<h2 id="6-global-illumination">6. Global illumination</h2>
-<p>... </p>
-<p>Set up global illumination.</p>
-<p>...</p>
-<hr>
-<h2 id="additional-resources">Additional resources</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R1-Ef54uTeU" frameborder="0" allowfullscreen></iframe>
+                                <h1 id="contributing">Contributing</h1>
+<p>Any form of contribution is highly welcome! Please take a look at currently opened <a href="https://github.com/armory3d/armory/issues" target="_blank">issues</a>.</p>
+<p>If you are interested in development of a new feature, <a href="http://armory3d.org/support.html" target="_blank">contact us</a>.</p>
+<p>If you created a tutorial or example, add link to <a href="https://github.com/armory3d/armory_docs" target="_blank">documentation</a>!</p>
+<p>If you used Armory in some of your work, post it in the <a href="http://forums.armory3d.org" target="_blank">forums</a>!</p>
 
                                 
                                 </section>
@@ -543,8 +512,12 @@
 
             
                 
+                <a href="roadmap.html" class="navigation navigation-prev " aria-label="Previous page: Roadmap">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="../remarks/faq.html" class="navigation navigation-next navigation-unique" aria-label="Next page: FAQ">
+                
+                <a href="license.html" class="navigation navigation-next " aria-label="Next page: License">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -555,7 +528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Achieve best graphics","level":"12.1","depth":1,"next":{"title":"FAQ","level":"13.1","depth":1,"path":"remarks/faq.md","ref":"remarks/faq.md","articles":[]},"previous":{"title":"Haxe cookbook","level":"7.2","depth":1,"url":"http://code.haxe.org/category/beginner/","ref":"http://code.haxe.org/category/beginner/","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"howto/bestgraphics.md","mtime":"2016-11-04T15:17:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-06T17:23:14.096Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Contributing","level":"13.3","depth":1,"next":{"title":"License","level":"13.4","depth":1,"path":"remarks/license.md","ref":"remarks/license.md","articles":[]},"previous":{"title":"Roadmap","level":"13.2","depth":1,"path":"remarks/roadmap.md","ref":"remarks/roadmap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"remarks/contributing.md","mtime":"2016-10-20T11:12:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-06T17:23:14.096Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
