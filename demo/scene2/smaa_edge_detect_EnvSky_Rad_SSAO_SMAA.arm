@@ -1,0 +1,1 @@
+¬shader_datas‘ƒ¤nameÙ%smaa_edge_detect_EnvSky_Rad_SSAO_SMAA¨contexts‘ˆ«depth_writeÂ­texture_units‘¤name¨colorTex¬compare_mode¦always¯fragment_shaderÙ*smaa_edge_detect_EnvSky_Rad_SSAO_SMAA.frag©cull_mode¤none¤name°smaa_edge_detect­vertex_shaderÙ*smaa_edge_detect_EnvSky_Rad_SSAO_SMAA.vert©constants‘ƒ¤type¤vec2¤name­screenSizeInv¤link®_screenSizeInv°vertex_structure‘‚¤name£pos¤size
