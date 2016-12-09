@@ -1,6 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
 @import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
-@import url(../../assets_shared/css/font-borg.css);
 
 /*!
  * This program is free software: you can redistribute it and/or modify
@@ -419,7 +418,7 @@ h4,
 h5,
 h6 {
     font-family: "Open Sans Condensed", "Lucida Sans", "Lucida Grande", sans-serif, sans-serif !important;
-    font-weight: normal;
+    font-weight: bold;
     color: #2b2b2b
 }
 
@@ -1957,6 +1956,7 @@ input.form-control:focus.background-danger {
 .navbar-nav>li>a {
     color: #444;
     font-family: "Open Sans Condensed", "Lucida Sans", "Lucida Grande", sans-serif !important;
+    font-weight: bold;;
     border-bottom: 2px solid transparent;
     text-shadow: 1px 1px 2px #f8f8f8;
     -webkit-transition: border-color 0.1s ease-out;
@@ -3562,27 +3562,6 @@ tbody>tr.success>td a {
     color: #aaa;
     top: 12px;
     right: 2px
-}
-
-header a.logo {
-    display: block;
-    position: relative;
-    float: left;
-    height: 45px;
-    font-family: "Open Sans Condensed", "Lucida Sans", "Lucida Grande", sans-serif !important;
-    color: inherit;
-    text-align: right;
-    font-size: 120%;
-    background: url(https://www.blender.org/wp-content/themes/bthree/assets/images/logo.png) no-repeat;
-    font-weight: lighter;
-    line-height: 180%;
-    width: 123px;
-    opacity: 1.0;
-    margin: 8px 0 0 0;
-    background-size: 123px 36px;
-    background-position-y: 5px;
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in
 }
 
 @media (max-width: 767px) {
