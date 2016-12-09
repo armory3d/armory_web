@@ -325,7 +325,7 @@ th {
 html,
 body {
     font-family: "Open Sans", "Lucida Sans", "Lucida Grande", sans-serif, sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     color: #444;
     cursor: default;
     width: 100%;
@@ -423,15 +423,15 @@ h6 {
 }
 
 h1 {
-    font-size: 265%
+    font-size: 245%
 }
 
 h2 {
-    font-size: 220%
+    font-size: 200%
 }
 
 h3 {
-    font-size: 180%;
+    font-size: 160%;
     font-weight: lighter
 }
 
