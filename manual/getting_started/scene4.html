@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Logic nodes · GitBook</title>
+        <title>Scene 4 - Materials · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../remarks/faq.html" />
     
-    
-    <link rel="prev" href="gitversion.html" />
+    <link rel="prev" href="scene3.html" />
     
 
     </head>
@@ -104,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../getting_started/setup.html">
+        <li class="chapter " data-level="1.2" data-path="setup.html">
             
-                <a href="../getting_started/setup.html">
+                <a href="setup.html">
             
                     
                     Setup
@@ -117,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../getting_started/setupaddon.html">
+        <li class="chapter " data-level="1.3" data-path="setupaddon.html">
             
-                <a href="../getting_started/setupaddon.html">
+                <a href="setupaddon.html">
             
                     
                     Setup as add-on
@@ -130,9 +128,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../getting_started/scene1.html">
+        <li class="chapter " data-level="1.4" data-path="scene1.html">
             
-                <a href="../getting_started/scene1.html">
+                <a href="scene1.html">
             
                     
                     Scene 1 - Basics
@@ -143,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../getting_started/scene2.html">
+        <li class="chapter " data-level="1.5" data-path="scene2.html">
             
-                <a href="../getting_started/scene2.html">
+                <a href="scene2.html">
             
                     
                     Scene 2 - Physics
@@ -156,9 +154,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../getting_started/scene3.html">
+        <li class="chapter " data-level="1.6" data-path="scene3.html">
             
-                <a href="../getting_started/scene3.html">
+                <a href="scene3.html">
             
                     
                     Scene 3 - Animation
@@ -169,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../getting_started/scene4.html">
+        <li class="chapter active" data-level="1.7" data-path="scene4.html">
             
-                <a href="../getting_started/scene4.html">
+                <a href="scene4.html">
             
                     
                     Scene 4 - Materials
@@ -376,9 +374,9 @@
         
         
     
-        <li class="chapter " data-level="12.1" data-path="gitversion.html">
+        <li class="chapter " data-level="12.1" data-path="../enginedevelopment/gitversion.html">
             
-                <a href="gitversion.html">
+                <a href="../enginedevelopment/gitversion.html">
             
                     
                     Git version
@@ -389,9 +387,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="12.2" data-path="logicnodes.html">
+        <li class="chapter " data-level="12.2" data-path="../enginedevelopment/logicnodes.html">
             
-                <a href="logicnodes.html">
+                <a href="../enginedevelopment/logicnodes.html">
             
                     
                     Logic nodes
@@ -576,7 +574,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Logic nodes</a>
+        <a href=".." >Scene 4 - Materials</a>
     </h1>
 </div>
 
@@ -591,77 +589,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="creating-logic-nodes">Creating logic nodes</h1>
-<p>Currently, Armory sources have to be edited to add new logic nodes. This will be resolved in the future.</p>
-<p>We will create a logic node with single boolean output. This node will return true if input is down - for example mouse/gamepad button is pressed or display is being touched.</p>
-<p>If you decide to follow this process make sure to use different class name, to prevent name conflicts.</p>
-<ul>
-<li>Locate Armory sources at <em>Armory/armory_sdk/armory</em> </li>
-<li>Open <em>blender/nodes_logic.py</em></li>
-<li>Create a node class with single bool output </li>
-</ul>
-<pre><code class="lang-py"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputDownNode</span><span class="hljs-params">(Node, ArmLogicTreeNode)</span>:</span>
-    <span class="hljs-string">&apos;&apos;&apos;Input down node&apos;&apos;&apos;</span>
-    bl_idname = <span class="hljs-string">&apos;InputDownNodeType&apos;</span>
-    bl_label = <span class="hljs-string">&apos;Input Down&apos;</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init</span><span class="hljs-params">(self, context)</span>:</span>
-        self.outputs.new(<span class="hljs-string">&apos;NodeSocketBool&apos;</span>, <span class="hljs-string">&quot;Bool&quot;</span>)
-</code></pre>
-<ul>
-<li>At the bottom, we will add the class to <em>input</em> category. This way node will get registered and displayed in Blender.</li>
-</ul>
-<pre><code class="lang-py">LogicNodeCategory(<span class="hljs-string">&quot;LOGICINPUTNODES&quot;</span>, <span class="hljs-string">&quot;Input&quot;</span>, items=[
-        NodeItem(<span class="hljs-string">&quot;InputDownNodeType&quot;</span>),
-]),
-</code></pre>
-<ul>
-<li>We will implement node logic in Haxe. Create new file named <em>InputDownNode.hx</em> at <em>Sources/armory/logicnode</em>.</li>
-</ul>
-<pre><code class="lang-haxe"><span class="hljs-keyword">package</span> armory.logicnode;
-
-<span class="hljs-keyword">import</span> armory.system.Input;
-<span class="hljs-keyword">import</span> armory.trait.internal.NodeExecutor;
-
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InputDownNode</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">BoolNode</span> </span>{
-
-    <span class="hljs-comment">// Custom node values</span>
-    <span class="hljs-keyword">var</span> lastVal = <span class="hljs-literal">false</span>;
-
-    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">new</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">super</span>();
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span><span class="hljs-params">(executor:NodeExecutor, parent:Node = null)</span> </span>{
-        <span class="hljs-keyword">super</span>.start(executor, parent);
-
-        <span class="hljs-comment">// Register update handler</span>
-        executor.notifyOnNodeUpdate(update);
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-comment">// Input state changed</span>
-        <span class="hljs-keyword">if</span> (lastVal != Input.down) {
-            lastVal = val;
-            val = Input.down;
-            <span class="hljs-comment">// Notify that value of this node changed</span>
-            inputChanged();
-        }
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">create</span><span class="hljs-params">(value:Float)</span> </span>{
-        <span class="hljs-keyword">var</span> n = <span class="hljs-keyword">new</span> InputDownNode();
-        <span class="hljs-keyword">return</span> n;
-    }
-}
-</code></pre>
-<ul>
-<li><p>At the time of writing, restarting Blender is required to register Python changes.</p>
-</li>
-<li><p>Attach node tree below to any object in the scene. When you run the project in Armory, this object will be visible only when mouse button is down.</p>
-</li>
-</ul>
-<p><img src="img/inputdown.png" alt="Drawing" style="width: 500px;"></p>
+                                <h1 id="scene-4---materials">Scene 4 - Materials</h1>
+<p>This page describes how to work with Armory <strong>material system</strong> using the <strong>Cycles nodes</strong>.</p>
+<p><img src="img/scene4/0.jpg" alt=""></p>
+<p>Start by adding an <strong>Environment Texture</strong> node in world nodes. For this tutorial, we use <a href="http://www.hdrlabs.com/sibl/archive.html" target="_blank">Industrial Ruins from hdrlabs</a>. In 3D viewport, check Properties panel (N) - Display - World Background to preview environment map.</p>
+<p><img src="img/scene4/1.jpg" alt=""></p>
+<p>Add a new <strong>UV Sphere</strong>. Set segmnets to 64 and rings to 32 in Tools panel (T). Set shading to smooth in Tools panel - Edit - Shading.</p>
+<p>Create new material and switch to material editor. Select <strong>Add - Group - Armory PBR</strong> and connect <strong>Surface socket</strong> to the <strong>Material Output</strong>. Using <strong>Armory PBR</strong> node is recommended at all times. If we were to use Height maps for tessellated displacement, we would also connect Displacement sockets.</p>
+<p>With <strong>Armory PBR</strong> node, it is easy to use <strong>standard PBR materials</strong> present in other real-time rendering engines.
+For this tutorial, we use <a href="http://freepbr.com/materials/worn-scuffed-plastic-pbr-material/" target="_blank">Plastic Material from freepbr</a>. Drop texures into material editor and connect them to the <strong>Base Color, Occlussion, Roughness and Normal Map sockets</strong>.</p>
+<p><img src="img/scene4/2.jpg" alt=""></p>
+<p>We will create two more spheres. For the second sphere, same material setup is used with only <strong>Base Color</strong> texture changed. For the third sphere, <strong>Base Color</strong> texture is removed and <strong>solid color</strong> of (0.8, 0.8, 0.8) with <strong>Metallic</strong> set to 1.0 is used. Plenty of distinct materials can be achieved just by playing with these values.</p>
+<p><img src="img/scene4/3.jpg" alt=""></p>
+<p>It is also possible to build materials without the <strong>Armory PBR</strong> node. Note this setup is not yet calibrated and therefore the results may look different/wrong compated to <strong>Cycles output</strong>.</p>
+<p>Switch to <strong>second scene layer</strong> and create <strong>another 3 spheres</strong>. For the first one, we use a <strong>Diffuse BSDF</strong> node with <strong>Roughness</strong> of 0.3. For the second sphere, <strong>Glossy BSDF</strong> with <strong>Roughness</strong> of 0.0 is used. For the third sphere, both <strong>Diffuse BSDF</strong> and <strong>Glossy BSDF</strong> are used through <strong>Mix Shader</strong> node.</p>
+<p><img src="img/scene4/4.jpg" alt=""></p>
+<p>Switch to <strong>third scene layer</strong> and create another 3 spheres.</p>
+<p>We can quickly assemble non-metallic material using standard nodes. Connect <strong>Color, Roughness and Normal textures to Diffuse BSDF sockets</strong>. Note that <strong>Normal Map</strong> node is used to connect Normal texture.</p>
+<p><img src="img/scene4/5.jpg" alt=""></p>
+<p>To create <strong>translucent surfaces</strong>, connect texture color or alpha to the <strong>Opacity socket of Armory PBR</strong> node. Alternatively, connect standard shader like Diffuse BSDF with <strong>Transparent BSDF</strong> into <strong>Mix Shader</strong> node. Make sure to enable Camera - Properties - Data - Armory Render Path - Translucency and hit Set (this will get automated in the future). To cut out surface by texture alpha, drop in <strong>opacity texture</strong> and connect <strong>Alpha</strong> to the <strong>Fac socket</strong> of Mix Shader.</p>
+<p><img src="img/scene4/6.jpg" alt=""></p>
+<p>It is recommended to <strong>bake everything down to textures</strong> and keep materials as simple as possible. However, if required and your performance budget allows, it is possible to use <strong>fully procedural Cycles materials</strong>. For this tutorial, we build a simple camouflage material. </p>
+<p><img src="img/scene4/7.jpg" alt=""></p>
+<p>Get the blend file at <a href="https://github.com/armory3d/armory_examples/tree/master/scene4" target="_blank">GitHub</a>.</p>
 
                                 
                                 </section>
@@ -689,14 +639,10 @@
 
             
                 
-                <a href="gitversion.html" class="navigation navigation-prev " aria-label="Previous page: Git version">
+                <a href="scene3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Scene 3 - Animation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../remarks/faq.html" class="navigation navigation-next " aria-label="Next page: FAQ">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -705,7 +651,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Logic nodes","level":"12.2","depth":1,"next":{"title":"FAQ","level":"13.1","depth":1,"path":"remarks/faq.md","ref":"remarks/faq.md","articles":[]},"previous":{"title":"Git version","level":"12.1","depth":1,"path":"enginedevelopment/gitversion.md","ref":"enginedevelopment/gitversion.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"enginedevelopment/logicnodes.md","mtime":"2016-11-14T12:25:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-28T15:43:50.335Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scene 4 - Materials","level":"1.7","depth":1,"next":{"title":"Armory API","level":"2.1","depth":1,"url":"http://armory3d.org/manual/api","ref":"http://armory3d.org/manual/api","articles":[]},"previous":{"title":"Scene 3 - Animation","level":"1.6","depth":1,"path":"getting_started/scene3.md","ref":"getting_started/scene3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting_started/scene4.md","mtime":"2016-12-28T15:38:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-12-28T15:43:50.335Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
