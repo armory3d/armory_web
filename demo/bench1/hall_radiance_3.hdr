@@ -1,0 +1,7 @@
+#?RADIANCE
+# Output from cmft.
+FORMAT=32-bit_rle_rgbe
+EXPOSURE=1
+
+-Y 16 +X 32
+ Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z| Z|«Š`|©ˆ_|¦†^|¤„\|¡‚[|ž€Z|œ~X|™|W|—zV|•yU|”xT|“wS|’vS|’vR|’wS|“wS|”xT|–yU|˜{V|š}W|€Y|¡‚[|¤…]|§ˆ^|ªŠ`|­‹a|®b|¯Žb|¯b|¯a|­Œa|«Š`|¶’d|°Žb|ª‰_|¥…\|ŸZ|š}W|–zU|’vS|ŽsQ|ŒqO|ŠpN|‰nM|ˆnL|‡mK|‡mK|‡nL|‰oM|ŠpO|uR|•zV|›Z|¢…^|©Šb|°e|¶”g|¼—i|¾™i|¿™i|¿™h|¾—g|º•f|¶’d|Â™g|·‘c|­Š^|¤ƒZ|›|U|’uQ|‹oM|…kJ|hH|fG|€fF|fF|‚gF|‚gF|gF|‚hH|„jJ|ˆnN|ŽtR|”yW|š~[|£…`|¬Œe|µ‘h|¼–j|Ã›k|ÊŸl|Ï£n|Ó¥o|Ð£m|ËŸk|Â™g|‡t^}Ì¥y|¯‰^|ž}U|’tN|‡lI|äÃ~{Ô°v{Ø°z{òÆ{üÇ‡{„gE|qN|ŽpO|¿ª|„h|]|±Že|¡\|§ˆa|°f|¹•k|‡oP}ƒkN}ñÃ|á±||Ù¦p|î»ƒ|‡pW}Ë¸£}®›†}‡t^}Â±›}óÎ£|¶‘d|œV|‰S|~…K|Øá{»«j{Ä¨u{€nT|Ç±|§™…}{p~ïçÕ}µ­Ÿ}ïÜÁ|Þ¾–|ŒuV}®Žd}ÆŸm}Ù°{}îÄ}ñÈ”}Þ¹Š}»›s}–zX}uV}Å®”}²¨š~¹®¡~Ž…y~Â±›}„xe~±šr}jD}¿žf|›¦b|Š¡W|oC|´¬e{¸¢r{‚s\|îÛº|ðâÉ}ÓÍ¾~»¸¬~…ƒz~¨ }Œs}Õ·Œ}vV~©‹a~°‘g~µ–o~¯‘l~a~iN~Ás}©Œi}óÛ½}ñãÏ~õçÓ~¹­›~„xe~¬œx~|S~èÂt}ªŠP}ËÁr|›¦]|êþŠ{¹ªe{³œq{÷Ý¶{èÚ¼|ûðØ}ïêÛ~×ÕÈ~™—~Ã»¨}À®’}†u\~µ›t~Ú·‚~Ü¸…~Ú·ˆ~Íª€~´“n~’uW~Ô©{}®Ži}íÑ°}ôáÈ~vhÏ¿¢~¬œx~ìÒ~ïÐƒ~Õ²f~¥†I~³”T}Ø¼m|…xH|È©q{¼¢z{áÍ§{¸¯–|¾·¥}»¹¬~¬« ~û÷æ}§ }³£‰}üß²}©’o~É¬|~Ì¯€~Çª€~¶™s~œ€`~öÃ‘}±‹e}rS}·›z}»§‹~Ó¾›~ßÉ—~ìÒ~ƒtL{Kˆq?â¸c~€i:~“zF}¤ŠW|äÁ‡{Õ¹Š{çÑ¤{—Žu|ëâÄ|ÎË»}ÍÉº}¡}íÝÁ|‚ub}±œ}}ãÆ—}ƒqS~ŠyZ~‹y\~mS~Ø´‰}§…e}öÁ|ÌŸs|ñÃ|òÒ¡}¤’n~ÝÆŠ~ƒtLéÌ‚~ƒoCþÑt~Ú±`~ýÐu}š€K}¯“_|÷Ô—{éÌ–{ñØ¢{ˆ}`|£˜w|ÎÃ£|ÒÇª|»¯•|Žu|§’x|Ë°Œ|çÈ™|ùØ¡|ˆy\}•„e}Ž|`}öÐ¢|ÅŸ||¤a|•tT|¡^|ŠxX}äÍ’}µ¡m~éÌ‚~|M~£ŠQ~ŸƒH~¥‰O}øÒ|´šf|™ƒX|ôÔ™{íÏ–{ðÔœ{ðÕ{ùß¦{üà§{óÖ {€qW|ïÑ£{èÈ{êÆ›{Ç¦‚{Â¡}{ÁŸ|{Å¡}{‹v]|‡pX|gP|úÈ™{ðÇ›{öÐ¡{„rX|€rQ}Õ¼}}|M~‚rU|€pU|‰xW|ŠyW|‚rS|çÌš{âÇ•{ÝÂ{Û¿{Ø¼‹{Ø½‹{Ö»Š{Öº‰{Ó¶‡{Î²…{Ë®„{É­…{Ç«…{Æ©ƒ{Ä§‚{Ã¥{Å¥€{È¨ƒ{Ï®ˆ{Ö´{Üº’{â¿–{æÄ™{éÉœ{îÏ {óÔ£{‚rU|äÇ˜{åÈ˜{äÇ—{âÆ–{ßÄ”{ÜÁ’{Ø½Ž{Õ»Œ{Ó¸‰{Ï´‡{Í³…{Ì²„{Ë°ƒ{É®‚{Ç¬‚{È­ƒ{È­„{È®†{È­…{È­…{É­…{Ê®†{Ì¯ˆ{Ï²Š{Ò´Œ{Õ·Ž{Ùº{Ü½’{ÞÀ”{áÃ•{ãÅ—{äÇ˜{Ø»Ž{×»Ž{×»Ž{Öº{Ô¹‹{Ó¸‹{Ò·Š{Ñ¶‰{Ïµˆ{Î³‡{Ì²…{Ê°„{É¯„{É¯„{É¯„{Ê°…{Ê°…{Ê°†{Ë±†{Ë±‡{Ì±‡{Í²ˆ{Î³‰{Ï´‰{ÑµŠ{Ò¶‹{Ó·‹{Ô·Œ{Õ¹{ÖºŽ{×»Ž{Ø»Ž{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{Ï´ˆ{
