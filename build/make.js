@@ -9,6 +9,5 @@ let writeHtml = function(fileName, title) {
 
 writeHtml('index.html', 'Armory');
 writeHtml('news.html', 'News');
-writeHtml('gallery.html', 'Gallery');
-writeHtml('download.html', 'Download');
 writeHtml('community.html', 'Community');
+writeHtml('download.html', 'Download');

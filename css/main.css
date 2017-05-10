@@ -326,11 +326,11 @@ html,
 body {
     font-family: "Open Sans", "Lucida Sans", "Lucida Grande", sans-serif, sans-serif;
     font-size: 16px;
-    color: #444;
+    color: #aaaaaa;
     cursor: default;
     width: 100%;
     height: 100%;
-    background-color: #dfdfdf;
+    background-color: #1a1a1a;
     -webkit-font-smoothing: antialiased
     margin: 0 !important;
     padding: 0 !important;
@@ -351,7 +351,7 @@ body.dark {
 }
 
 .container-main {
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
     padding-bottom: 40px
 }
 
@@ -419,7 +419,7 @@ h5,
 h6 {
     font-family: "Open Sans Condensed", "Lucida Sans", "Lucida Grande", sans-serif, sans-serif !important;
     font-weight: medium;
-    color: #2b2b2b
+    color: #fbfbfb
 }
 
 h1 {
@@ -1958,7 +1958,6 @@ input.form-control:focus.background-danger {
     font-family: "Open Sans Condensed", "Lucida Sans", "Lucida Grande", sans-serif !important;
     font-weight: medium;;
     border-bottom: 2px solid transparent;
-    text-shadow: 1px 1px 2px #f8f8f8;
     -webkit-transition: border-color 0.1s ease-out;
     transition: border-color 0.1s ease-out
 }
@@ -1970,7 +1969,7 @@ input.form-control:focus.background-danger {
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
-    color: #109df0;
+    color: #fff;
     border-color: #109df0
 }
 
@@ -2853,8 +2852,8 @@ a.btn.external:after {
 .features__releaselogs_section,
 .breadcrumb {
     position: relative;
-    background-color: #fff;
-    border: thin solid #f1f1f1;
+    background-color: #1a1a1a;
+    border: none;
     overflow: hidden;
     word-break: break-word;
     border-radius: 3px;
@@ -3122,13 +3121,13 @@ a.btn.external:after {
 }
 
 .featured {
-    height: 480px;
     position: relative;
     background-color: white;
     border: none;
-    border-bottom: thin solid #eaeaea;
+    border-bottom: thin solid #1a1a1a;
     background-image: url(../img/title.jpg);
     background-size: cover;
+    background-position: center;
     box-shadow: 2px 2px 0 rgba(95, 95, 95, 0.1)
 }
 
@@ -3147,7 +3146,7 @@ a.btn.external:after {
 }
 
 .featured-md {
-    height: 300px
+    height: 500px
 }
 
 .featured-lg {
