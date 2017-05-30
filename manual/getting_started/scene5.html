@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Assets management · GitBook</title>
+        <title>Scene 5 - Logic · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../graphics/antialiasing.html" />
     
-    
-    <link rel="prev" href="workflow.html" />
+    <link rel="prev" href="scene4.html" />
     
 
     </head>
@@ -104,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../getting_started/setup.html">
+        <li class="chapter " data-level="1.2" data-path="setup.html">
             
-                <a href="../getting_started/setup.html">
+                <a href="setup.html">
             
                     
                     Setup
@@ -117,9 +115,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../getting_started/setupaddon.html">
+        <li class="chapter " data-level="1.3" data-path="setupaddon.html">
             
-                <a href="../getting_started/setupaddon.html">
+                <a href="setupaddon.html">
             
                     
                     Setup as add-on
@@ -130,9 +128,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../getting_started/scene1.html">
+        <li class="chapter " data-level="1.4" data-path="scene1.html">
             
-                <a href="../getting_started/scene1.html">
+                <a href="scene1.html">
             
                     
                     Scene 1 - Basics
@@ -143,9 +141,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../getting_started/scene2.html">
+        <li class="chapter " data-level="1.5" data-path="scene2.html">
             
-                <a href="../getting_started/scene2.html">
+                <a href="scene2.html">
             
                     
                     Scene 2 - Physics
@@ -156,9 +154,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../getting_started/scene3.html">
+        <li class="chapter " data-level="1.6" data-path="scene3.html">
             
-                <a href="../getting_started/scene3.html">
+                <a href="scene3.html">
             
                     
                     Scene 3 - Animation
@@ -169,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../getting_started/scene4.html">
+        <li class="chapter " data-level="1.7" data-path="scene4.html">
             
-                <a href="../getting_started/scene4.html">
+                <a href="scene4.html">
             
                     
                     Scene 4 - Materials
@@ -182,9 +180,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../getting_started/scene5.html">
+        <li class="chapter active" data-level="1.8" data-path="scene5.html">
             
-                <a href="../getting_started/scene5.html">
+                <a href="scene5.html">
             
                     
                     Scene 5 - Logic
@@ -215,9 +213,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="ui.html">
+        <li class="chapter " data-level="2.2" data-path="../essentials/ui.html">
             
-                <a href="ui.html">
+                <a href="../essentials/ui.html">
             
                     
                     User interface
@@ -228,9 +226,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="shortcuts.html">
+        <li class="chapter " data-level="2.3" data-path="../essentials/shortcuts.html">
             
-                <a href="shortcuts.html">
+                <a href="../essentials/shortcuts.html">
             
                     
                     Shortcuts
@@ -241,9 +239,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="workflow.html">
+        <li class="chapter " data-level="2.4" data-path="../essentials/workflow.html">
             
-                <a href="workflow.html">
+                <a href="../essentials/workflow.html">
             
                     
                     Workflow
@@ -254,9 +252,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="assetsmanagement.html">
+        <li class="chapter " data-level="2.5" data-path="../essentials/assetsmanagement.html">
             
-                <a href="assetsmanagement.html">
+                <a href="../essentials/assetsmanagement.html">
             
                     
                     Assets management
@@ -674,7 +672,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Assets management</a>
+        <a href=".." >Scene 5 - Logic</a>
     </h1>
 </div>
 
@@ -689,31 +687,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="assets-management">Assets management</h1>
-<h2 id="tracking-assets">Tracking assets</h2>
-<p>You can drop in textures and sounds from any location. However, it is recommended to create an <em>/Assets</em> directory in your project location and store assets here for convenience. All model data is stored directly in Blender.</p>
-<p>When deploying, assets are stored alongside the project. Armory only processes assets that are referenced.</p>
-<h2 id="supported-formats">Supported formats</h2>
-<p>Referenced assets should be in the formats below. When building, assets get processed and may end up in different format based on target platform to save space or boost performance. That means the .wav files can still end up as .ogg&apos;s.</p>
+                                <h1 id="scene-5---logic">Scene 5 - Logic</h1>
+<p>This page describes how to work with <strong>logic node system</strong> in Armory. Logic nodes provide a visual way of creating interactive scenes. When you build your project, created node trees are automatically compiled down to scripts.</p>
+<h2 id="node-types">Node types</h2>
+<p>The whole system consists of just 5 essential categories.</p>
 <ul>
-<li>Images - .png, .jpg, .hdr</li>
-<li>Sounds - .wav</li>
-<li>Videos - .mp4</li>
+<li><p><strong>Events</strong> - nodes where execution starts, triggered by desired event</p>
+</li>
+<li><p><strong>Actions</strong> - once an event is triggered, these nodes take action</p>
+</li>
+<li><p><strong>Logic</strong> - nodes used to control execution flow, using branching, loops, gates..</p>
+</li>
+<li><p><strong>Variables</strong> - nodes used to store data in a logic tree</p>
+</li>
+<li><p><strong>Values</strong> - nodes used to retrieve data from other objects</p>
+</li>
 </ul>
-<p>Note that if different format is provided, Armory will convert it internally to supported format using Blender.</p>
-<p>To process video, specify path to <em>ffmpeg binary</em> (not bundled with SDK) in add-on preferences.</p>
-<p><img src="img/videotex.jpg" alt=""></p>
-<h2 id="packed-assets">Packed assets</h2>
-<p>Armory supports assets packed directly in Blender. When building, the assets are unpacked to build folder automatically. This way you can pack your project into single .blend file with no external dependencies.</p>
-<p><img src="img/assets_packed.jpg" alt=""></p>
-<h2 id="texture-dimensions">Texture dimensions</h2>
-<p>At least <em>4096x4096</em> texture sizes can be used on most modern systems.  </p>
-<p>For HTML5 target, power of 2 textures are required in some cases:</p>
+<h2 id="hello-world">Hello world!</h2>
+<p>Let&apos;s craft the simplest example - after pressing down mouse button, we will show a &apos;Hello world&apos; message. Start up with a default scene, switch to <strong>Node Editor</strong> area and select <strong>Logic Nodes</strong> type. Press <strong>New</strong> to create a new node tree.</p>
+<p>You can browse all available nodes through <strong>Add</strong> menu item, or simply hit <strong>Shift + A</strong> to start searching. Search for <strong>On Mouse</strong> node and hit enter to place it. This is an event node that gets triggered when the mouse button is pressed. Next, place a <strong>Print</strong> node - an action node. Connect <strong>Out</strong> socket of the <strong>On Mouse</strong> node to the <strong>In</strong> socket of the <strong>Print</strong> node. As soon as the mouse gets pressed, <strong>Print</strong> node gets executed. Lastly, we need to tell the <strong>Print</strong> node what to print. Place a <strong>String</strong> node and set it&apos;s value to &apos;Hello world!&apos; - this is a variable node. Connect <strong>String</strong> and <strong>Value</strong> sockets.</p>
+<p>Each node tree has to be attached to an object using a trait system. Similar to the materials defining object looks, logic tree defines it&apos;s behaviour. Select cube and create new trait in <em>Properties - Object - Armory Traits</em>. Set type to Logic Nodes and enter our newly created node tree as Tree entry. That is it - press <strong>P</strong> to play in viewport and click the mouse in viewport area. You will notice a message in a viewport header.</p>
+<p><img src="img/scene5/1.jpg" alt=""></p>
+<p>Using node tree it is easy to interact directly with cube object. Delete all nodes and start fresh. Place <strong>On Mouse</strong> node and switch the first property of <strong>On Mouse</strong> node to <strong>Started</strong>. This indicates that event will fire only once when mouse button changes from rest state to pressed state.</p>
+<p> Create <strong>Translate Object</strong> node and connect it to the <strong>On Mouse</strong> node. Notice that we leave the object field on <strong>Translate Object</strong> node blank - this will automatically select the trait owner - in out case the cube. Set <strong>Vector Y</strong> field to 2.0. Press P and click the mouse - cube object will move on every click.</p>
+<p><img src="img/scene5/2.jpg" alt=""></p>
+<p>We can easily limit the maximum distance allowed the cube to translate. Insert a <strong>Gate</strong> node between <strong>On Mouse</strong> node and <strong>Translate Object</strong> node. Set it&apos;s type to <strong>Less</strong>. Place a <strong>Get Location</strong> node - a value node. This will retrieve current location of cube object. Connect it to the <strong>Separate XYZ</strong> node. We want to limit the distance on Y axis - connect it to the first value socket of <strong>Gate</strong> node. Create <strong>Float</strong> - a variable node - and set it to 5.0. If you play the scene now, cube moves only 3 times and then stops.</p>
+<p>Get the full blend for this example:</p>
 <ul>
-<li>Using <em>repeat</em> texture mode. <em>Clip</em> mode can be safely used with non-power of 2 sizes.</li>
+<li><a href="https://github.com/armory3d/armory_examples/tree/master/logic_helloworld" target="_blank">https://github.com/armory3d/armory_examples/tree/master/logic_helloworld</a></li>
 </ul>
-<p><img src="img/texrepeat.jpg" alt=""></p>
-<p>In the future Armory will handle this internally.</p>
+<p><img src="img/scene5/3.jpg" alt=""></p>
+<h2 id="tanks">Tanks</h2>
+<p>Grab some snack and sit tight - let&apos;s build an actual game prototype. The game will consist of 2 players handling a tank and battling each other. We build a small playground with obstacles and two tanks models. Each object has a rigid body set.</p>
+<p><img src="img/scene5/4.jpg" alt=""></p>
+<p>Red tank acts as a player 1. We allow both keyboard and gamepad controls, but hard-code the actual keys used for simplicity. In a <strong>Player1Controls</strong> tree, the left key on keyboard or gamepad is set to send an event named <strong>&apos;turn_left&apos;</strong>. Later on, we use this event to rotate player controlled tank.</p>
+<p><img src="img/scene5/5.jpg" alt=""></p>
+<p>Do this for all keys - left, right, forward and backward.</p>
+<p><img src="img/scene5/6.jpg" alt=""></p>
+<p>Blue tank acts as a player 2. We define the same controls, but map the keys to WSAD and second connected gamepad instead.</p>
+<p><img src="img/scene5/7.jpg" alt=""></p>
+<p>In a <strong>TankTree</strong>, we listen to the events and perform actions to actually control the tank. The reason this node tree is separate is that we attach it to both tanks, preventing any duplicated work.</p>
+<p><strong>On Event</strong> node is set to listen to the <strong>&apos;turn_left&apos;</strong> event. For player 1, this event is triggered when left key is pressed. For player 2, it happens on the A key press. <strong>On Event</strong> node is connected to the <strong>Rotate Object</strong> node, with <strong>Vector Z</strong> value set to a small positive value controlling the rotation speed. Playing the game now, pressing the left key rotates the tank! </p>
+<p><img src="img/scene5/8.jpg" alt=""></p>
+<p>We do the same for the <strong>&apos;turn_right&apos;</strong> event, however the <strong>Vector Z</strong> value is set to a negative value to rotate in the opposite direction.</p>
+<p><img src="img/scene5/9.jpg" alt=""></p>
+<p>On to the handling <strong>&apos;forward&apos;</strong> event. To figure out which direction should the tank move in, <strong>Vector from Transform</strong> node is used with type set to <strong>Look</strong>. This vector is then scaled down using <strong>Vector Math</strong> node to slow down tank speed moving forward. Resulting vector is passed into <strong>Translate Object</strong> node.</p>
+<p><img src="img/scene5/10.jpg" alt=""></p>
+<p>As before, we do the same for <strong>&apos;backward&apos;</strong> event with translate vector reversed.</p>
+<p><img src="img/scene5/11.jpg" alt=""></p>
+<p>Now that the tanks are fully controllable, we make them shoot bullets. To keep scene clear, bullet object is placed in the second scene layer with <strong>Render disabled</strong>. This ensures object will be exported but not visible on it&apos;s own.</p>
+<p><img src="img/scene5/12.jpg" alt=""></p>
+<p>Selecting the red tank, an empty object is added as a child - the location of this object defines where to shoot bullets from. A new logic tree is added to this empty object. M key or gamepad cross/a key emits a <strong>&apos;fire&apos;</strong> event. We do the same for blue tank.</p>
+<p><img src="img/scene5/13.jpg" alt=""></p>
+<p>We attach another logic tree - handling response to the <strong>&apos;fire&apos;</strong> event. We spawn a new object - our bullet model from layer 2, and set it&apos;s location to the logic tree owner - in this case a bullet spawn point - defined as an empty object placed as a child of tank.</p>
+<p><img src="img/scene5/14.jpg" alt=""></p>
+<p>Playing the scene now, we discover the bullets fall from the cannon down to the ground. We need some fire powder!</p>
+<p><img src="img/scene5/15.jpg" alt=""></p>
+<p><strong>Apply Impulse</strong> node fixes that. Similar to moving the tank forward, we acquire the forward vector and scale it up.</p>
+<p><img src="img/scene5/16.jpg" alt=""></p>
+<p>Even though Armory culls out of screen objects, it is important to keep resources used down to a minimum. We remove each bullet after 2 seconds of lifetime. To do this, <strong>Array(Object)</strong> node is placed and all fired bullets are stored in this array using the <strong>Array Add</strong> node. We wait 2 seconds with <strong>Sleep</strong> node and call <strong>Remove Object</strong> node. <strong>Array Shift</strong> node feeds the first element from bullet array into the <strong>Remove Object</strong> node, and also removes this element from array itself.</p>
+<p><img src="img/scene5/17.jpg" alt=""></p>
+<p>That&apos;s it - feel free to experiment further! Get the full blend for this example:</p>
+<ul>
+<li><a href="https://github.com/armory3d/armory_examples/tree/master/scene5" target="_blank">https://github.com/armory3d/armory_examples/tree/master/scene5</a></li>
+</ul>
+<p>The game can be instatnly played in the browser (and all the other targets) - including gamepad support:</p>
+<ul>
+<li><a href="http://armory3d.org/demo/scene5/" target="_blank">http://armory3d.org/demo/scene5/</a></li>
+</ul>
+<p><img src="img/scene5/18.jpg" alt=""></p>
 
                                 
                                 </section>
@@ -741,14 +783,10 @@
 
             
                 
-                <a href="workflow.html" class="navigation navigation-prev " aria-label="Previous page: Workflow">
+                <a href="scene4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Scene 4 - Materials">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../graphics/antialiasing.html" class="navigation navigation-next " aria-label="Next page: Anti-aliasing">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -757,7 +795,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Assets management","level":"2.5","depth":1,"next":{"title":"Anti-aliasing","level":"3.1","depth":1,"path":"graphics/antialiasing.md","ref":"graphics/antialiasing.md","articles":[]},"previous":{"title":"Workflow","level":"2.4","depth":1,"path":"essentials/workflow.md","ref":"essentials/workflow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"essentials/assetsmanagement.md","mtime":"2017-05-24T12:07:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-30T11:19:49.131Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scene 5 - Logic","level":"1.8","depth":1,"next":{"title":"Armory API","level":"2.1","depth":1,"url":"http://armory3d.org/manual/api","ref":"http://armory3d.org/manual/api","articles":[]},"previous":{"title":"Scene 4 - Materials","level":"1.7","depth":1,"path":"getting_started/scene4.md","ref":"getting_started/scene4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting_started/scene5.md","mtime":"2017-05-30T11:18:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-30T11:19:49.131Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
