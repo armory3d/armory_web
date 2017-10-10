@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Generate mesh · GitBook</title>
+        <title>Supported Particles · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../platforms/windows.html" />
+    <link rel="next" href="faq.html" />
     
     
-    <link rel="prev" href="../graphics/vertexcolors.html" />
+    <link rel="prev" href="supported_nodes.html" />
     
 
     </head>
@@ -321,9 +321,9 @@
         
         
     
-        <li class="chapter active" data-level="6.1" data-path="generate_mesh.html">
+        <li class="chapter " data-level="6.1" data-path="../scripting/generate_mesh.html">
             
-                <a href="generate_mesh.html">
+                <a href="../scripting/generate_mesh.html">
             
                     
                     Generate mesh
@@ -520,9 +520,9 @@
         
         
     
-        <li class="chapter " data-level="14.1" data-path="../remarks/supported_nodes.html">
+        <li class="chapter " data-level="14.1" data-path="supported_nodes.html">
             
-                <a href="../remarks/supported_nodes.html">
+                <a href="supported_nodes.html">
             
                     
                     Supported Nodes
@@ -533,9 +533,9 @@
             
         </li>
     
-        <li class="chapter " data-level="14.2" data-path="../remarks/supported_particles.html">
+        <li class="chapter active" data-level="14.2" data-path="supported_particles.html">
             
-                <a href="../remarks/supported_particles.html">
+                <a href="supported_particles.html">
             
                     
                     Supported Particles
@@ -546,9 +546,9 @@
             
         </li>
     
-        <li class="chapter " data-level="14.3" data-path="../remarks/faq.html">
+        <li class="chapter " data-level="14.3" data-path="faq.html">
             
-                <a href="../remarks/faq.html">
+                <a href="faq.html">
             
                     
                     FAQ
@@ -559,9 +559,9 @@
             
         </li>
     
-        <li class="chapter " data-level="14.4" data-path="../remarks/roadmap.html">
+        <li class="chapter " data-level="14.4" data-path="roadmap.html">
             
-                <a href="../remarks/roadmap.html">
+                <a href="roadmap.html">
             
                     
                     Roadmap
@@ -572,9 +572,9 @@
             
         </li>
     
-        <li class="chapter " data-level="14.5" data-path="../remarks/contributing.html">
+        <li class="chapter " data-level="14.5" data-path="contributing.html">
             
-                <a href="../remarks/contributing.html">
+                <a href="contributing.html">
             
                     
                     Contributing
@@ -585,9 +585,9 @@
             
         </li>
     
-        <li class="chapter " data-level="14.6" data-path="../remarks/license.html">
+        <li class="chapter " data-level="14.6" data-path="license.html">
             
-                <a href="../remarks/license.html">
+                <a href="license.html">
             
                     
                     License
@@ -726,7 +726,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Generate mesh</a>
+        <a href=".." >Supported Particles</a>
     </h1>
 </div>
 
@@ -741,104 +741,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="generate-mesh">Generate mesh</h1>
-<p>This page describes how to dynamically generate mesh object at runtime using a trait script.</p>
-<p>Setup a simple scene with single plane in the center. Assign default material and create a static rigid body for the plane.</p>
-<p><img src="img/generate_mesh/0.jpg" alt=""></p>
-<p>Now we can start writing a trait that will dynamically generate a mesh and spawn it in the scene. For this example Haxe is used.</p>
-<p>Select Camera and attach a new trait using <strong>Object tab - Armory Traits - +</strong>. Hit <strong>New Script</strong> and name it <strong>BoxGenerator</strong>.
-<img src="img/generate_mesh/1.jpg" alt=""></p>
-<p>Pressing <strong>Edit Script</strong> will open our new trait script in <strong>Kode Studio</strong>. Example code below will generate a simple box, attach a rigid body trait and spawn it on the plane after pressing input.</p>
-<pre><code class="lang-hx">package arm;
-
-import armory.Scene;
-import armory.data.SceneFormat;
-import armory.data.Data;
-import armory.data.MeshData;
-import armory.data.MaterialData;
-import armory.system.Input;
-
-@:keep
-class BoxGenerator extends armory.Trait {
-
-    var meshData:MeshData;
-    var materials:haxe.ds.Vector&lt;MaterialData&gt;;
-
-    function toF32(ar:Array&lt;Float&gt;):kha.arrays.Float32Array {
-        var vals = new kha.arrays.Float32Array(ar.length);
-        for (i in 0...vals.length) vals[i] = ar[i];
-        return vals;
-    }
-
-    function toU32(ar:Array&lt;Int&gt;):kha.arrays.Uint32Array {
-        var vals = new kha.arrays.Uint32Array(ar.length);
-        for (i in 0...vals.length) vals[i] = ar[i];
-        return vals;
-    }
-
-    public function new() {
-        super();
-
-        var pos:TVertexArray = {
-            attrib: &quot;pos&quot;,
-            size: 3,
-            values: toF32([1.0,1.0,-1.0,1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,1.0,-1.0,1.0,1.0,1.0,-1.0,1.0,1.0,-1.0,-1.0,1.0,1.0,-1.0,1.0,1.0,1.0,-1.0,1.0,1.0,1.0,1.0,-1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0,-1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,-1.0,1.0,-1.0,1.0,1.0,-1.0,1.0,-1.0,1.0,1.0,1.0,1.0,1.0,-1.0,-1.0,1.0,-1.0,-1.0,1.0,1.0])
-        };
-
-        var nor:TVertexArray = {
-            attrib: &quot;nor&quot;,
-            size: 3,
-            values: toF32([0.0,0.0,-1.0,0.0,0.0,-1.0,0.0,0.0,-1.0,0.0,0.0,-1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,-1.0,-0.0,0.0,-1.0,-0.0,0.0,-1.0,-0.0,0.0,-1.0,-0.0,-1.0,0.0,-0.0,-1.0,0.0,-0.0,-1.0,0.0,-0.0,-1.0,0.0,-0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0])
-        };
-
-        var indices:TIndexArray = {
-            material: 0,
-            size: 3,
-            values: toU32[0,1,2,0,2,3,4,5,6,4,6,7,8,9,10,8,10,11,12,13,14,12,14,15,16,17,18,16,18,19,20,21,22,20,22,23])
-        };
-
-        var rawmesh:TMesh = {
-            vertex_arrays: [pos, nor],
-            index_arrays: [indices]
-        };
-
-        var rawmeshData:TMeshData = { 
-            name: &quot;BoxMesh&quot;,
-            mesh: rawmesh 
-        };
-
-        new MeshData(rawmeshData, function(data:MeshData) {
-            // Mesh data parsed
-            meshData = data;
-            meshData.mesh.calculateAABB();
-
-            // Fetch material from scene data
-            Data.getMaterial(&quot;Scene&quot;, &quot;Material&quot;, function(data:MaterialData) {
-                // Material loaded
-                materials = haxe.ds.Vector.fromData([data]);
-                notifyOnUpdate(update);
-            });
-        });
-    }
-
-    function update() {
-        // Left mouse button was pressed / display touched / ..
-        if (Input.started) {
-            // Create new object in active scene
-            var object = Scene.active.addMeshObject(meshData, materials);
-
-            // Just for testing, add rigid body trait
-            var aabb = meshData.mesh.aabb;
-            object.transform.setDimensions(aabb.x, aabb.y, aabb.z);
-            object.transform.set(Math.random() * 8 - 4, Math.random() * 8 - 4, 5);
-            object.addTrait(new armory.trait.internal.RigidBody());
-        }
-    }
-}
-</code></pre>
-<p>Hit <strong>Play in Viewport</strong> to verity <a href="http://armory3d.org/demo/generate_mesh" target="_blank">results</a>!</p>
-<p><img src="img/generate_mesh/2.jpg" alt=""></p>
-<p>Get the blend file at <a href="https://github.com/armory3d/armory_examples/tree/master/generate_mesh" target="_blank">GitHub</a>.</p>
+                                <h1 id="supported-particles">Supported Particles</h1>
+<p>Particle systems are currently in experimental stage and will be further improved.</p>
+<h2 id="setup">Setup</h2>
+<p>To enable GPU particle simulation:</p>
+<ul>
+<li>Check <code>Properties - Particle System - Armory Props - GPU Simulation</code>.</li>
+<li>Select referenced <em>Dupli Object</em> (object being emitted) and set <code>Properties - Materials - Armory Props - Particle</code> to <code>GPU</code>.</li>
+<li>This setup will be eventually automated</li>
+</ul>
+<p>To enable CPU particle simulation:</p>
+<ul>
+<li>Select referenced <em>Dupli Object</em> (object being emitted) and set <code>Properties - Materials - Armory Props - Particle</code> to <code>CPU</code>.</li>
+<li>This setup will be eventually automated</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li>Type (Emitter, Hair)</li>
+<li>Seed</li>
+<li>Emission - Number</li>
+<li>Emission - Start</li>
+<li>Emission - End</li>
+<li>Emission - Lifetime</li>
+<li>Emission - Random</li>
+<li>Emission - Emit From (Verts, Volume)</li>
+<li>Velocity - Emitter Object</li>
+<li>Velocity - Random</li>
+<li>Physics (No, Newtonian)</li>
+<li>Physics - Newtonian - Size</li>
+<li>Physics - Newtonian - Mass</li>
+<li>Render (Object)</li>
+<li>Render - Dupli Object</li>
+<li>Render - Size</li>
+<li>Particle Info material node - GPU particles</li>
+</ul>
 
                                 
                                 </section>
@@ -866,12 +802,12 @@ class BoxGenerator extends armory.Trait {
 
             
                 
-                <a href="../graphics/vertexcolors.html" class="navigation navigation-prev " aria-label="Previous page: Vertex colors">
+                <a href="supported_nodes.html" class="navigation navigation-prev " aria-label="Previous page: Supported Nodes">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../platforms/windows.html" class="navigation navigation-next " aria-label="Next page: Windows">
+                <a href="faq.html" class="navigation navigation-next " aria-label="Next page: FAQ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -882,7 +818,7 @@ class BoxGenerator extends armory.Trait {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Generate mesh","level":"6.1","depth":1,"next":{"title":"Windows","level":"11.1","depth":1,"path":"platforms/windows.md","ref":"platforms/windows.md","articles":[]},"previous":{"title":"Vertex colors","level":"3.2","depth":1,"path":"graphics/vertexcolors.md","ref":"graphics/vertexcolors.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"scripting/generate_mesh.md","mtime":"2017-08-04T08:34:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-10T11:28:38.848Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Supported Particles","level":"14.2","depth":1,"next":{"title":"FAQ","level":"14.3","depth":1,"path":"remarks/faq.md","ref":"remarks/faq.md","articles":[]},"previous":{"title":"Supported Nodes","level":"14.1","depth":1,"path":"remarks/supported_nodes.md","ref":"remarks/supported_nodes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"remarks/supported_particles.md","mtime":"2017-10-04T13:10:23.965Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-10T11:28:38.848Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

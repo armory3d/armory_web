@@ -533,7 +533,20 @@
             
         </li>
     
-        <li class="chapter " data-level="14.2" data-path="../remarks/faq.html">
+        <li class="chapter " data-level="14.2" data-path="../remarks/supported_particles.html">
+            
+                <a href="../remarks/supported_particles.html">
+            
+                    
+                    Supported Particles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="../remarks/faq.html">
             
                 <a href="../remarks/faq.html">
             
@@ -546,7 +559,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.3" data-path="../remarks/roadmap.html">
+        <li class="chapter " data-level="14.4" data-path="../remarks/roadmap.html">
             
                 <a href="../remarks/roadmap.html">
             
@@ -559,7 +572,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.4" data-path="../remarks/contributing.html">
+        <li class="chapter " data-level="14.5" data-path="../remarks/contributing.html">
             
                 <a href="../remarks/contributing.html">
             
@@ -572,7 +585,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.5" data-path="../remarks/license.html">
+        <li class="chapter " data-level="14.6" data-path="../remarks/license.html">
             
                 <a href="../remarks/license.html">
             
@@ -585,7 +598,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.6" >
+        <li class="chapter " data-level="14.7" >
             
                 <a target="_blank" href="https://github.com/armory3d/armory_docs">
             
@@ -751,7 +764,8 @@
 <p>If we play the scene now, dynamic objects will fall down and collide with static surroundings!</p>
 <p><img src="img/scene2/5.jpg" alt=""></p>
 <p>As the last step, let&apos;s make a <strong>first person camera</strong> that we can use to walk around and interact with objects.</p>
-<p>Create a shape which will represent the <strong>body volume</strong>. For simplicity, we use a <strong>cube</strong> and scale it along a Z axis. In <strong>Physics tab</strong>, enable rigid body and set <strong>Capsule</strong> as shape. Since we want to use this object for collision only, check <strong>Restrict Render</strong> property in <strong>Object data - Armory Props - advanced</strong>. This way the cube will not get rendered.</p>
+<p>Create a shape which will represent the <strong>body volume</strong>. For simplicity, we use a <strong>cube</strong> and scale it along a Z axis. In <strong>Physics tab</strong>, enable rigid body and set <strong>Capsule</strong> as shape. Since we want to use this object for collision only, click on its camera icon in the <strong>Outliner</strong>. This way the cube will not get rendered.</p>
+<p><img src="img/scene2/5_.jpg" alt=""></p>
 <p>Switch to <strong>Object data - Armory Traits</strong> and create new trait. Choose <strong>Bundled Script</strong> as Type and select <strong>FirstPersonController</strong>.</p>
 <p>Lastly, select <strong>camera</strong> and rename it to &quot;Head&quot; (silly limitation that will be eventually resolved). Make camera a <strong>child of body</strong> and set it to preferable position.</p>
 <p><img src="img/scene2/6.jpg" alt=""></p>
@@ -801,7 +815,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scene 2 - Physics","level":"1.5","depth":1,"next":{"title":"Scene 3 - Animation","level":"1.6","depth":1,"path":"getting_started/scene3.md","ref":"getting_started/scene3.md","articles":[]},"previous":{"title":"Scene 1 - Basics","level":"1.4","depth":1,"path":"getting_started/scene1.md","ref":"getting_started/scene1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting_started/scene2.md","mtime":"2017-05-24T12:07:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-28T12:34:40.165Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scene 2 - Physics","level":"1.5","depth":1,"next":{"title":"Scene 3 - Animation","level":"1.6","depth":1,"path":"getting_started/scene3.md","ref":"getting_started/scene3.md","articles":[]},"previous":{"title":"Scene 1 - Basics","level":"1.4","depth":1,"path":"getting_started/scene1.md","ref":"getting_started/scene1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"getting_started/scene2.md","mtime":"2017-10-10T11:25:22.260Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-10-10T11:28:38.848Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
