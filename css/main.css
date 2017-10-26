@@ -3163,7 +3163,8 @@ a.btn.external:after {
 .featured h4,
 .featured h5,
 .featured h6 {
-    color: white
+    color: #fff;
+    text-shadow: 1px 1px 7px #000;
 }
 
 .featured h1 {
