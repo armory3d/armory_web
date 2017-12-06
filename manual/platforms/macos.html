@@ -254,7 +254,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="../essentials/assetsmanagement.html">
+        <li class="chapter " data-level="2.5" data-path="../essentials/workflow_multiuser.html">
+            
+                <a href="../essentials/workflow_multiuser.html">
+            
+                    
+                    Multi-User
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../essentials/assetsmanagement.html">
             
                 <a href="../essentials/assetsmanagement.html">
             
@@ -476,31 +489,11 @@
 
     
         
-        <li class="header">Tooling</li>
-        
-        
-    
-        <li class="chapter " data-level="12.1" data-path="../tooling/substancepainter.html">
-            
-                <a href="../tooling/substancepainter.html">
-            
-                    
-                    Substance Painter
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
         <li class="header">Engine Development</li>
         
         
     
-        <li class="chapter " data-level="13.1" data-path="../dev/gitversion.html">
+        <li class="chapter " data-level="12.1" data-path="../dev/gitversion.html">
             
                 <a href="../dev/gitversion.html">
             
@@ -513,7 +506,7 @@
             
         </li>
     
-        <li class="chapter " data-level="13.2" data-path="../dev/logicnodes.html">
+        <li class="chapter " data-level="12.2" data-path="../dev/logicnodes.html">
             
                 <a href="../dev/logicnodes.html">
             
@@ -533,7 +526,7 @@
         
         
     
-        <li class="chapter " data-level="14.1" data-path="../remarks/supported_nodes.html">
+        <li class="chapter " data-level="13.1" data-path="../remarks/supported_nodes.html">
             
                 <a href="../remarks/supported_nodes.html">
             
@@ -546,7 +539,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.2" data-path="../remarks/supported_particles.html">
+        <li class="chapter " data-level="13.2" data-path="../remarks/supported_particles.html">
             
                 <a href="../remarks/supported_particles.html">
             
@@ -559,33 +552,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.3" data-path="../remarks/faq.html">
-            
-                <a href="../remarks/faq.html">
-            
-                    
-                    FAQ
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="14.4" data-path="../remarks/roadmap.html">
-            
-                <a href="../remarks/roadmap.html">
-            
-                    
-                    Roadmap
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="14.5" data-path="../remarks/contributing.html">
+        <li class="chapter " data-level="13.3" data-path="../remarks/contributing.html">
             
                 <a href="../remarks/contributing.html">
             
@@ -598,7 +565,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.6" data-path="../remarks/license.html">
+        <li class="chapter " data-level="13.4" data-path="../remarks/license.html">
             
                 <a href="../remarks/license.html">
             
@@ -611,7 +578,7 @@
             
         </li>
     
-        <li class="chapter " data-level="14.7" >
+        <li class="chapter " data-level="13.5" >
             
                 <a target="_blank" href="https://github.com/armory3d/armory_docs">
             
@@ -631,7 +598,7 @@
         
         
     
-        <li class="chapter " data-level="15.1" >
+        <li class="chapter " data-level="14.1" >
             
                 <a target="_blank" href="http://armory3d.org/iron/">
             
@@ -644,7 +611,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.2" >
+        <li class="chapter " data-level="14.2" >
             
                 <a target="_blank" href="https://www.youtube.com/watch?v=kes2qmijy7w&list=PLa1F2ddGya_8V90Kd5eC5PeBjySbXWGK1">
             
@@ -657,7 +624,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.3" >
+        <li class="chapter " data-level="14.3" >
             
                 <a target="_blank" href="https://www.blender.org/manual/">
             
@@ -670,7 +637,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.4" >
+        <li class="chapter " data-level="14.4" >
             
                 <a target="_blank" href="https://github.com/KTXSoftware/Kha/wiki">
             
@@ -683,7 +650,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.5" >
+        <li class="chapter " data-level="14.5" >
             
                 <a target="_blank" href="https://haxe.org/manual/introduction.html">
             
@@ -696,7 +663,7 @@
             
         </li>
     
-        <li class="chapter " data-level="15.6" >
+        <li class="chapter " data-level="14.6" >
             
                 <a target="_blank" href="http://code.haxe.org/category/beginner/">
             
@@ -757,9 +724,8 @@
                                 <h1 id="contents">Contents</h1>
 <p>This section covers MacOS specific topics.</p>
 <h2 id="native-c">Native (C++)</h2>
-<p>Select <em>MacOS</em> in <em>Properties - Render - Armory Project - Target</em>. Hit <em>Build</em> to generate XCode project files.</p>
-<p><img src="img/macos/0.jpg" alt=""></p>
-<p>To proceed, install <a href="https://developer.apple.com/xcode/" target="_blank">XCode</a>. Once installed, open the project located at <em>your_blend_file_location/build/osx-build/your_project_name.xcodeproj</em>.</p>
+<p>Create a new preset in <em>Properties - Render - Armory Exporter</em> and select MacOS target. Hit <em>Publish</em> to export XCode project files.</p>
+<p>To proceed, install <a href="https://developer.apple.com/xcode/" target="_blank">XCode</a>. Once installed, open the project located at <em>blend_file_location/build_projectname/osx-build/projectname.xcodeproj</em>.</p>
 <p><img src="img/macos/1.jpg" alt=""></p>
 <p>Next, you can test, debug and profile your project in XCode.</p>
 <p><img src="img/macos/2.jpg" alt=""></p>
@@ -807,7 +773,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MacOS","level":"11.3","depth":1,"next":{"title":"HTML5","level":"11.4","depth":1,"path":"platforms/html5.md","ref":"platforms/html5.md","articles":[]},"previous":{"title":"Linux","level":"11.2","depth":1,"path":"platforms/linux.md","ref":"platforms/linux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platforms/macos.md","mtime":"2017-08-12T15:36:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-11-29T15:54:53.344Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MacOS","level":"11.3","depth":1,"next":{"title":"HTML5","level":"11.4","depth":1,"path":"platforms/html5.md","ref":"platforms/html5.md","articles":[]},"previous":{"title":"Linux","level":"11.2","depth":1,"path":"platforms/linux.md","ref":"platforms/linux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"platforms/macos.md","mtime":"2017-12-06T19:29:33.420Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-12-06T19:33:06.401Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
