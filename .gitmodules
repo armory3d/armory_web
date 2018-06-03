@@ -5,5 +5,5 @@
 	path = manual
 	url = https://github.com/armory3d/armory_docs
 [submodule "armory_lab"]
-	path = armory_lab
+	path = lab
 	url = https://github.com/armory3d/armory_lab
