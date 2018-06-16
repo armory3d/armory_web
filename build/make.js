@@ -11,5 +11,3 @@ writeHtml('index.html', 'Armory');
 writeHtml('news.html', 'News');
 writeHtml('community.html', 'Community');
 writeHtml('download.html', 'Download');
-writeHtml('coat.html', 'ArmorCoat');
-writeHtml('logic.html', 'ArmorLogic');
