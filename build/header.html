@@ -1,32 +1,113 @@
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
-	<title>Armory | 3D Game Engine for Blender</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="3D Game Engine for Blender">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="all" href="css/main.css">
-</head>
-<body>
-<div class="container-main">
-	<div class="featured featured-md">
-		<div class="container height-full">
-		<div class="bottom">
-		<h1>ID_TITLE</h1>
-		</div>
-		</div>
-	</div>
+<!DOCTYPE html>
+<html lang="en">
 
-	<div class="container" style="background-color:#1a1a1a">
-	<ul class="nav navbar-nav navbar-left" style="font-size:130%">
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/index.html">Home</a></li>
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/news.html">News</a></li>
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/manual">Manual</a></li>
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/community.html">Community</a></li>
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/download.html">Download</a></li>
-	</ul>
-	<ul class="nav navbar-nav navbar-right" style="font-size:130%">
-		<a href="https://www.patreon.com/bePatron?u=3705855"><img srcset="./img/patron.png" ></a>
-		<!--<li><a style="color:#aaaaaa" href="http://armorpaint.org/index.html">Paint</a></li>
-		<li><a style="color:#aaaaaa" href="http://armory3d.org/coat.html">Coat</a></li>-->
-	</ul>
-	</div>
+<head>
+  <title>Armory | 3D Game Engine for Blender</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+  <!-- Font Loading -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- lets make sure our anchors will always work when coming from a different page-->
+  <SCRIPT LANGUAGE=JavaScript>
+    function now() {
+      window.location.reload(true);
+    }
+  </SCRIPT>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="uk-flex uk-flex-column ro-text-content" uk-height-viewport>
+  <!-- Disappearing Header -->
+  <div class="uk-section uk-section-secondary uk-padding-remove" style="z-index: -1;" uk-sticky="bottom: #offset">
+    <div class="uk-cover-container uk-height-large uk-text-center">
+      <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+      <div class="uk-position-center uk-background-secondary uk-light">
+        <img src="img\Logo.png" alt="Template Logo">
+        <div class="uk-text-lead uk-text-uppercase ro-text-logo uk-margin-small-top uk-margin-small-bottom">ARMORY3D</div>
+      </div>
+    </div>
+  </div>
+  <!-- Navagation -->
+  <div class="uk-section uk-padding-remove">
+    <!-- large screen nav -->
+    <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+      <div class="uk-background-secondary uk-light">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+          <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav uk-text-capitalize">
+              <li>
+                <!--<a href="#top" uk-scroll="duration: 500">home</a>-->
+                <a href="index.html">home</a>
+              </li>
+              <!--<li>
+                <a href="#">features</a>
+                <div class="uk-navbar-dropdown uk-width-auto uk-text-center uk-padding-small" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
+                    <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
+                    <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
+                    <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
+                    <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
+                    <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
+                  </ul>
+                </div>
+              </li>-->
+              <li><a href="news.html">news</a></li>
+              <li><a href="https://armory3d.org/manual">manual</a></li>
+              <li><a href="community.html">community</a></li>
+              <li><a href="download.html">download</a></li>
+              <li><a href="fund.html">fund<span id="spanheaderstatus"></span></a></li>
+            </ul>
+            <script type="text/javascript">
+            $.get("https://luboslenco.github.io/fund_import/index.html", function(data) {
+              data = JSON.parse(data);
+              $("#spanheaderstatus").html(" (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
+            });
+          </script>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- mobile nav-->
+    <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+      <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+                <span uk-icon="icon: menu"></span> MENU</button>
+    </div>
+    <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+      <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+          <!-- <li> -->
+            <!-- <a href="#top" uk-scroll="duration: 500" class="uk-offcanvas-close uk-position-left uk-position-relative">home</a> -->
+          <!-- </li> -->
+          <!-- <li class="uk-nav-divider"></li> -->
+          <li><a href="index.html">home</a></li>
+          <li><a href="news.html">news</a></li>
+          <li><a href="https://armory3d.org/manual">manual</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="download.html">download</a></li>
+          <li><a href="fund.html">fund<span id="spanheaderstatus2"></span></a></li>
+          <!-- <li class="uk-nav-divider"></li>
+          <li class="uk-nav-header">Features</li>
+          <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
+          <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
+          <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
+          <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
+          <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
+          <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
+          <li class="uk-nav-divider"></li>-->
+          <script type="text/javascript">
+            $.get("https://luboslenco.github.io/fund_import/index.html", function(data) {
+              data = JSON.parse(data);
+              $("#spanheaderstatus2").html(" (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
+          });</script>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  

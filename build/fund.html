@@ -1,0 +1,104 @@
+
+  <!-- Main Content -->
+  <div class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large" style="text-align: center;">
+      
+      <h2 class="uk-heading-divider ro-text-header">Development Fund</h2>
+
+      <div style="margin:0 auto; max-width: 800px;">
+      <p>Welcome to the new funding page!</p>
+      <p>Originally, Armory was using Patreon. We managed to reach the goal ($1600) and Armory was released as a free software. A dream come true! A few days ago, I received an email noticing me that the patreon page was removed. Then, after contacting support, I learned that the page was off due to suspected fraud. I do not yet know what exactly that means, whether it was something I (unknowingly) did or if it was a mistake.</p>
+      
+      <p>This caused a confusion that Armory is being discontinued or sold off. Armory will continue to be developed as free and open-source software and I am fully committed to it. Since I value Armory as a long-term project, I want to keep things as stable as possible. If someone decides to use the technology, he should not worry it will be shut-down tomorrow. This is crucial.</p>
+      
+      <p>In the end, I realized Patreon has every right to do this. To prevent this from happening in the future, I decided to start a dedicated funding page. It is still powered by a third-party service (gumroad), however the funding process and status of the project will always be publicly visible on this page, without risk of being taken down.</p>
+      
+      <p>Once again, I thank you for endless support. Please contact me directly or post in the forums in case of issues. This page will continue being edited with further improvements and fixes. See you around with more updates soon!</p>
+      </div>
+
+      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+      <div class="gumroad-product-embed" data-gumroad-product-id="armory3d"><a href="https://gumroad.com/l/armory3d">Loading...</a></div>
+
+      <h2 class="uk-heading-divider ro-text-header">Rewards</h2>
+      <ul class="uk-list" style="display: inline-block; text-align: left;">
+        <li>&bull; Tier 1: Access to <a href="http://armorpaint.org">ArmorPaint</a> and the upcoming Armory game dev-diary</li>
+        <li>&bull; Tier 2: Vote for the roadmap + above</li>
+        <li>&bull; Tier 3: Your logo on the website + above</li>
+        <li>&bull; Tier 4: Support for your Armory project + above</li>
+        <li>&bull; Tier 5: Project sponsor + above</li>
+      </ul>
+
+      <h2 class="uk-heading-divider ro-text-header">Goals</h2>
+      <ul class="uk-list" style="display: inline-block; text-align: left;">
+        <li>&bull; Status - <span id="spanstatus">...</span></li>
+        <li>&bull; Goal 1 - €1300: Armory is funded again!</li>
+        <li>&bull; Goal 2 - €1300+: Bounties to pay developers for working on Armory</li>
+      </ul>
+
+      <h2 class="uk-heading-divider ro-text-header">Supporters</h2>
+
+      <script type="text/javascript">
+        $.get("https://luboslenco.github.io/fund_import/index.html", function(data) {
+          data = JSON.parse(data);
+          $("#spanstatus").html("€" + data.val + " (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
+        });
+      </script>
+    </div>
+  </div>
+
+
+
+  <div id="donate" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div class="uk-flex-last uk-flex-first@l">
+          <img src="img/Donate.jpg" alt="PayPal donate">
+        </div>
+        <div class="uk-flex-first uk-flex-last@l">
+          <h2 class="uk-heading-divider ro-text-header">PayPal</h2>
+          <p>
+            PayPal is available if you would like to make a one-time donation, or you are not interested in the rewards. Donation of any size is greatly appreciated. Subscription can be cancelled at any time through your PayPal account.
+          </p>
+          <div class="uk-child-width-1-1 uk-child-width-1-2@l uk-text-center uk-grid-collapse" uk-grid>
+            <div>
+              <form align="center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="4PLPYSRW3QXLW">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+            <div>
+              <form align="center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="6MKQ2LPPYD8M6">
+                <table align="center">
+                  <tr>
+                    <td>
+                      <input type="hidden" name="on0" value="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <select name="os0">
+                        <option value="Tier 1">Tier 1 : €5,00 EUR - monthly</option>
+                        <option value="Tier 2">Tier 2 : €10,00 EUR - monthly</option>
+                        <option value="Tier 3">Tier 3 : €25,00 EUR - monthly</option>
+                        <option value="Tier 4">Tier 4 : €50,00 EUR - monthly</option>
+                        <option value="Tier 5">Tier 5 : €100,00 EUR - monthly</option>
+                        <option value="Tier 6">Tier 6 : €180,00 EUR - monthly</option>
+                      </select>
+                    </td>
+                  </tr>
+                </table>
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
