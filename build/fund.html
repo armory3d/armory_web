@@ -34,7 +34,7 @@
       </ul>
 
       <script type="text/javascript">
-        $.get("https://luboslenco.github.io/fund_import/index.html", function(data) {
+        $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
           data = JSON.parse(data);
           $("#spanstatus").html("€" + data.val + " (" + ((data.val / 1300) * 100).toFixed(2) + "%), " + data.subs + " subscribers");
         });
