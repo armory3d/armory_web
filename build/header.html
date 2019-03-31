@@ -43,23 +43,9 @@
                 <!--<a href="#top" uk-scroll="duration: 500">home</a>-->
                 <a href="index.html">home</a>
               </li>
-              <!--<li>
-                <a href="#">features</a>
-                <div class="uk-navbar-dropdown uk-width-auto uk-text-center uk-padding-small" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
-                  <ul class="uk-nav uk-navbar-dropdown-nav">
-                    <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
-                    <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
-                    <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
-                    <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
-                    <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
-                    <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
-                  </ul>
-                </div>
-              </li>-->
               <li><a href="news.html">news</a></li>
               <li><a href="https://armory3d.org/manual">manual</a></li>
               <li><a href="community.html">community</a></li>
-              <li><a href="https://github.com/armory3d/armory/projects">roadmap</a></li>
               <li><a href="download.html">download</a></li>
               <li><a href="fund.html">fund<span id="spanheaderstatus"></span></a></li>
             </ul>
@@ -82,33 +68,18 @@
       <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
-          <!-- <li> -->
-            <!-- <a href="#top" uk-scroll="duration: 500" class="uk-offcanvas-close uk-position-left uk-position-relative">home</a> -->
-          <!-- </li> -->
-          <!-- <li class="uk-nav-divider"></li> -->
           <li><a href="index.html">home</a></li>
           <li><a href="news.html">news</a></li>
           <li><a href="https://armory3d.org/manual">manual</a></li>
           <li><a href="community.html">community</a></li>
-          <li><a href="https://github.com/armory3d/armory/projects">roadmap</a></li>
           <li><a href="download.html">download</a></li>
           <li><a href="fund.html">fund<span id="spanheaderstatus2"></span></a></li>
-          <!-- <li class="uk-nav-divider"></li>
-          <li class="uk-nav-header">Features</li>
-          <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
-          <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
-          <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
-          <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
-          <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
-          <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
-          <li class="uk-nav-divider"></li>-->
           <script type="text/javascript">
             $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
               data = JSON.parse(data);
               $("#spanheaderstatus2").html(" (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
           });</script>
         </ul>
-
       </div>
     </div>
   </div>
