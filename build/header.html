@@ -47,14 +47,8 @@
               <li><a href="https://armory3d.org/manual">manual</a></li>
               <li><a href="community.html">community</a></li>
               <li><a href="download.html">download</a></li>
-              <li><a href="fund.html">fund<span id="spanheaderstatus"></span></a></li>
+              <li><a href="fund.html">fund</a></li>
             </ul>
-            <script type="text/javascript">
-            $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
-              data = JSON.parse(data);
-              $("#spanheaderstatus").html(" (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
-            });
-          </script>
           </div>
         </nav>
       </div>
@@ -73,12 +67,7 @@
           <li><a href="https://armory3d.org/manual">manual</a></li>
           <li><a href="community.html">community</a></li>
           <li><a href="download.html">download</a></li>
-          <li><a href="fund.html">fund<span id="spanheaderstatus2"></span></a></li>
-          <script type="text/javascript">
-            $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
-              data = JSON.parse(data);
-              $("#spanheaderstatus2").html(" (" + ((data.val / 1300) * 100).toFixed(2) + "%)");
-          });</script>
+          <li><a href="fund.html">fund</a></li>
         </ul>
       </div>
     </div>

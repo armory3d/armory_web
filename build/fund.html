@@ -17,26 +17,18 @@
       <script src="https://gumroad.com/js/gumroad-embed.js"></script>
       <div class="gumroad-product-embed" data-gumroad-product-id="armory3d"><a href="https://gumroad.com/l/armory3d">Loading...</a></div>
 
-      <h2 class="uk-heading-divider ro-text-header">Goals</h2>
+      <h2 class="uk-heading-divider ro-text-header">Status</h2>
       <ul class="uk-list" style="display: inline-block; text-align: left;">
-        <li>&bull; Status - <span id="spanstatus">...</span></li>
-        <li>&bull; Goal 1 - €1300: Armory is funded</li>
-        <li>&bull; Goal 2 - €1300+: Bounties to pay developers for working on Armory!</li>
-      </ul>
-
-      <h2 class="uk-heading-divider ro-text-header">Rewards</h2>
-      <ul class="uk-list" style="display: inline-block; text-align: left;">
-        <li>&bull; Tier 1: Access to <a href="http://armorpaint.org">ArmorPaint</a> and the upcoming Armory game dev-diary</li>
-        <li>&bull; Tier 2: Vote for the roadmap + above</li>
-        <li>&bull; Tier 3: Your logo on the website + above</li>
-        <li>&bull; Tier 4: Support for your Armory project + above</li>
-        <li>&bull; Tier 5: Project sponsor + above</li>
+        <li>&bull; Funding - <span id="spanstatus">...</span></li>
+        <li>&bull; Goal - €1300+: Bounties to pay developers for working on Armory!</li>
+        <li>&bull; Subscribing includes access to <a href="http://armorpaint.org">ArmorPaint</a></li>
+        <li>&bull; Thank you for enabling further Armory development</li>
       </ul>
 
       <script type="text/javascript">
         $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
           data = JSON.parse(data);
-          $("#spanstatus").html("€" + data.val + " (" + ((data.val / 1300) * 100).toFixed(2) + "%), " + data.subs + " subscribers");
+          $("#spanstatus").html("€" + data.val + ", " + data.subs + " subscribers");
         });
       </script>
     </div>
