@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Armory | 3D Game Engine for Blender</title>
+  <title>Armory | 3D Engine</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- UIkit CSS -->
@@ -81,92 +81,52 @@
           <img src="img/Workflow.jpg" alt="Realtime Workflow all done in blender">
         </div>
         <div class="uk-flex-first uk-flex-last@l">
-          <h2 class="uk-heading-divider ro-text-header">Build Games in Blender</h2>
+          <h2 class="uk-heading-divider ro-text-header">Armory Engine</h2>
           <p>
-            Armory is an open-source 3D game engine with full Blender integration, turning it into a complete game development tool. The result is a unified workflow from start to finish, making you work faster. No more jumping between different applications to constantly
-            export data from one to another.</p>
+            Armory is an open-source 3D engine focused on portability, minimal footprint and performance. The renderer is fully scriptable with deferred and forward paths supported out of the box.
+          </p>
           <p>
-            Behind the scenes, Armory is powered by open-source technology. Utilizing Kha - multimedia framework and Haxe - cross platform toolkit, to provide top class performance and portability.</p>
+            Written in C, Haxe & WebAssembly, structured as a data-driven engine.
+          </p>
         </div>
       </div>
     </div>
   </div>
+
   <div id="renderer" class="uk-section uk-section-secondary uk-section-medium">
     <div class="uk-container uk-container-large">
       <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
         <div>
-          <h2 class="uk-heading-divider ro-text-header">Armory Renderer</h2>
+          <h2 class="uk-heading-divider ro-text-header">Build Games in Blender</h2>
           <p>
-            Serious effort has been put into the render system. A render path is fully scriptable with deferred and forward paths supported out of the box. To define materials, Armory is based on the Cycles nodes. Materials are pre-compiled into shaders suitable
-            for real-time rendering.
+            Armory provides a full Blender integration add-on, turning it into a complete game development tool. The result is a unified workflow from start to finish.</p>
+            <p>
+            For materials, a subset of Cycles nodes is used. To define game behaviour, visual scripting using logic nodes is available.
           </p>
-          <ul class="uk-list">
-            <li>&bull; Physically based</li>
-            <li>&bull; Cycles material nodes</li>
-            <li>&bull; Voxel-based global illumination</li>
-            <li>&bull; Temporal anti-aliasing</li>
-            <li>&bull; Tessellated displacement</li>
-            <li>&bull; Screen-space raymarching</li>
-            <li>&bull; HDR pipeline</li>
-          </ul>
+          </p>
         </div>
         <div>
-          <img src="img/Renderer.jpg" alt="Armory Rendering Pipeline">
+          <img src="img/UseNodes.jpg" alt="">
         </div>
       </div>
     </div>
   </div>
-  <div id="nodes" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div class="uk-flex-last uk-flex-first@l"><img src="img/UseNodes.jpg" alt="Using Nodes from Blender in Armory"></div>
-        <div class="uk-flex-first uk-flex-last@l">
-          <h2 class="uk-heading-divider ro-text-header">Nodes</h2>
-          <p>
-            Armory is oriented towards nodes. For materials, a subset of standard Cycles nodes is used. Every scene created in Armory is renderable as-is in Cycles using path-tracing. This makes it possible to use Cycles for light baking with no separate setup. Performance
-            remains the priority. To define game behaviour, a system of logic nodes is developed.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="engine" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div>
-          <h2 class="uk-heading-divider ro-text-header">Game Engine</h2>
-          <p>
-            Everything is bundled to provide the ultimate game development tool. As a starting point, you can choose one of the available game prototype templates. Code editor with debugging support is integrated. For logic, use nodes, write scripts in Haxe, or embed
-            WebAssembly code.
-          </p>
-          <ul class="uk-list">
-            <li>&bull; Rendering</li>
-            <li>&bull; Physics</li>
-            <li>&bull; Audio</li>
-            <li>&bull; Navigation</li>
-            <li>&bull; Scripting</li>
-            <li>&bull; Networking</li>
-          </ul>
-        </div>
-        <div><img src="img/Engine.jpg" alt="Armory Rendering Pipeline"></div>
-      </div>
-    </div>
-  </div>
+  
   <div id="platforms" class="uk-section uk-section-secondary uk-section-medium">
     <div class="uk-container uk-container-large">
       <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div class="uk-flex-last uk-flex-first@l"><img src="img/Platforms.jpg" alt="Using Nodes from Blender in Armory"></div>
+        <div class="uk-flex-last uk-flex-first@l"><img src="img/Renderer.jpg" alt="Using Nodes from Blender in Armory"></div>
         <div class="uk-flex-first uk-flex-last@l">
           <h2 class="uk-heading-divider ro-text-header">Platforms</h2>
           <p>
-            Create live scenes and export them to desktop, web, mobile and consoles, so everyone can experience them. Binary data format, asset compression and efficient build tools are developed to prevent bloated package sizes.
+            Armory runs on portable open-source technology. Utilizing Kha - multimedia framework, and Haxe - cross platform toolkit.
           </p>
           <ul class="uk-list">
-            <li>&bull; Windows, Linux, Mac</li>
+            <li>&bull; Windows, Linux, macOS</li>
             <li>&bull; HTML5</li>
             <li>&bull; Android, iOS</li>
             <li>&bull; PS4, Xbox One, Switch</li>
-            <li><a href="https://github.com/KTXSoftware/Kha/wiki">Complete list</a></li>
+            <li><a href="https://github.com/Kode/Kha/wiki">Complete list</a></li>
           </ul>
         </div>
       </div>
@@ -176,17 +136,12 @@
     <div class="uk-container uk-container-large">
       <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
         <div>
-          <h2 class="uk-heading-divider ro-text-header">Animation</h2>
+          <h2 class="uk-heading-divider ro-text-header">ArmorPaint</h2>
           <p>
-            A robust animation system is employed, with support for GPU skinning, action blending and events. On top of that, each node can be animated on timeline using keyframes, just like you are used to.
+            Check out Armory in action - <a href="https://armorpaint.org/">ArmorPaint</a> is a 3D painting software being developed with Armory engine.
           </p>
-          <ul class="uk-list">
-            <li>&bull; GPU dual-quaternion skinning</li>
-            <li>&bull; Instanced rendering of skinned meshes</li>
-            <li>&bull; Timeline based animation</li>
-          </ul>
         </div>
-        <div><img src="img/Animations.jpg" alt="Armory Rendering Pipeline"></div>
+        <div><img src="img/rtbot.jpg" alt=""></div>
       </div>
     </div>
   </div>
@@ -195,24 +150,19 @@
     <div class="uk-container uk-container-small uk-text-center uk-text-muted">
       <div class="uk-child-width-expand uk-text-center uk-grid-small" uk-grid>
         <div class="uk-text-left">
-          Links
-          <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory">Sources</a>
           <br><a style="color: #666" href="https://github.com/armory3d">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory">Sources</a>
+          <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
         </div>
         <div class="uk-text-center">
-          Thanks to
+          <br><a style="color: #666" href="https://armory.org/community">Contact</a>
+          <br><a style="color: #666" href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg">Youtube</a>
           <br><a style="color: #666" href="https://blender.org">Blender</a>
-          <br><a style="color: #666" href="https://getuikit.com">UIkit</a>
-          <br><a style="color: #666" href="https://www.rovacado.me/">Rovacado</a>
         </div>
         <div class="uk-text-right">
-          Social
           <br><a style="color: #666" href="https://twitter.com/armory3d">Twitter</a>
-          <br><a style="color: #666" href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg">Youtube</a>
-          <br><a style="color: #666" href="https://armorpaint.org/community">Contact</a>
-          <!-- <br><a href="http://fb.me/armory3dengine">Facebook</a>
-          <br><a href="https://www.instagram.com/armory3d/">Instagram</a> -->
+          <br><a style="color: #666" href="https://instagram.com/armory3d">Instagram</a>
+          <br><a style="color: #666" href="https://fb.me/armorytools">Facebook</a>
         </div>
       </div>
     </div>
