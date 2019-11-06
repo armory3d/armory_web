@@ -1,65 +1,43 @@
 
-  <!-- Main Content -->
-  <div class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large" style="text-align: center;">
-
-      <h2 class="uk-heading-divider ro-text-header">Development Fund</h2>
-
-      <div style="margin:0 auto; max-width: 800px;">
-      <p>Welcome to the new funding page.</p>
-
-      <p>Armory is developed as a free and open source software, supported by you. Each contribution brings us closer to the ultimate vision - a new way of building games, all in a <b>single Blender package</b>.</p>
-
-      <p>Armory is envisioned as a long-term project with serious commitment behind it. With your help, the engine will get <b>developed faster</b> every single day.</p>
-
-      </div>
-
-      <script src="https://gumroad.com/js/gumroad-embed.js"></script>
-      <div class="gumroad-product-embed" data-gumroad-product-id="armory"><a href="https://gumroad.com/l/armory">Loading...</a></div>
-
-      <h2 class="uk-heading-divider ro-text-header">Status</h2>
-      <ul class="uk-list" style="display: inline-block; text-align: left;">
-        <li>&bull; Funding - <span id="spanstatus">...</span></li>
-        <li>&bull; Goal - €1300+: Bounties to pay developers for working on Armory!</li>
-        <li>&bull; Subscribing includes access to <a href="http://armorpaint.org">ArmorPaint</a></li>
-        <li>&bull; Thank you for enabling further Armory development</li>
-      </ul>
-
-      <script type="text/javascript">
-        $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
-          data = JSON.parse(data);
-          $("#spanstatus").html("€" + data.val + ", " + data.subs + " subscribers");
-        });
-      </script>
-    </div>
-  </div>
-
-  <div id="donate" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div class="uk-flex-last uk-flex-first@l">
-          <img src="img/Donate.jpg" alt="PayPal donate">
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+        <script src="https://gumroad.com/js/gumroad-embed.js"></script>
+        <div class="gumroad-product-embed" data-gumroad-product-id="armory" style="text-align: center;">
+          <a href="https://gumroad.com/l/armory">Loading...</a>
         </div>
-        <div class="uk-flex-first uk-flex-last@l">
-          <h2 class="uk-heading-divider ro-text-header">Donations</h2>
-          <p>
-            PayPal is available if you would like to make a one-time donation, or you are not interested in the rewards. Donation of any size is greatly appreciated. Subscription can be cancelled at any time through your PayPal account.
-          </p>
-            <div>
-              <form align="center" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="4PLPYSRW3QXLW">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-              </form>
-            </div>
+      </div>
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+        <div class="uk-margin-left uk-margin-top text-container">
+          <h2 class="uk-heading-divider ro-text-header">Development Fund</h2>
+          Armory is developed as a free and open source software, supported by you. Each contribution brings us closer to the ultimate vision - a new way of building games, all in a single Blender package.<br><br>
+          Armory is envisioned as a long-term project. With your help, the engine will get developed faster every single day.
         </div>
       </div>
     </div>
   </div>
 
-  <div class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large" style="text-align: center;">
-      <p>See you <a href="https://armory3d.org/community">around</a> with more <a href="https://armory3d.org/news">updates</a>!</p>
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div style="padding: 0">
+        <div class="uk-margin-left uk-margin-top text-container">
+          <h2 class="uk-heading-divider ro-text-header">Status</h2>
+          <ul class="uk-list" style="display: inline-block; text-align: left;">
+            <li>&bull; Funding - <span id="spanstatus">...</span></li>
+            <li>&bull; Subscribing includes access to <a href="https://armorpaint.org">ArmorPaint</a></li>
+            <li>&bull; Thank you for enabling further Armory development</li>
+          </ul>
+        </div>
+      </div>
+      <div style="padding: 0">
+        <img src="img/Donate.jpg">
+      </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    $.get("https://luboslenco.gitlab.io/fund_import/index.html", function(data) {
+      data = JSON.parse(data);
+      $("#spanstatus").html("€" + data.val + "/m, " + data.subs + " subscribers");
+    });
+  </script>

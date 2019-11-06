@@ -5,157 +5,149 @@
   <title>Armory | 3D Engine</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Armory | 3D Engine">
+  <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armory3d.org/">
+  <meta property="og:title" content="Armory | 3D Engine">
+  <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:image" content="https://armory3d.org/git/img1.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://armory3d.org/">
+  <meta property="twitter:title" content="Armory | 3D Engine">
+  <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg">
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
   <!-- Font Loading -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
   <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- lets make sure our anchors will always work when coming from a different page-->
-  <SCRIPT LANGUAGE=JavaScript>
-    function now() {
-      window.location.reload(true);
-    }
-  </SCRIPT>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body class="uk-flex uk-flex-column ro-text-content" uk-height-viewport>
-  <!-- Disappearing Header -->
-  <div class="uk-section uk-section-secondary uk-padding-remove" style="z-index: -1;" uk-sticky="bottom: #offset">
-    <div class="uk-cover-container uk-height-large uk-text-center">
-      <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
-      <div class="uk-position-center uk-background-secondary uk-light">
-        <img src="img\Logo.png" alt="Template Logo">
-        <div class="uk-text-lead uk-text-uppercase ro-text-logo uk-margin-small-top uk-margin-small-bottom">ARMORY3D</div>
-      </div>
-    </div>
-  </div>
-  <!-- Navagation -->
-  <div class="uk-section uk-padding-remove">
-    <!-- large screen nav -->
-    <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-      <div class="uk-background-secondary uk-light">
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-          <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav uk-text-capitalize">
-              <li>
-                <!--<a href="#top" uk-scroll="duration: 500">home</a>-->
-                <a href="index.html">home</a>
-              </li>
-              <li><a href="news.html">news</a></li>
-              <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
-              <li><a href="community.html">community</a></li>
-              <li><a href="download.html">download</a></li>
-              <li><a href="fund.html">fund</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- mobile nav-->
-    <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
-      <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
-                <span uk-icon="icon: menu"></span> MENU</button>
-    </div>
-    <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav uk-nav-default">
-          <li><a href="index.html">home</a></li>
-          <li><a href="news.html">news</a></li>
-          <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
-          <li><a href="community.html">community</a></li>
-          <li><a href="download.html">download</a></li>
-          <li><a href="fund.html">fund</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Main Content -->
-  <div id="workflow" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div class="uk-flex-last uk-flex-first@l">
-          <img src="img/Workflow.jpg" alt="Realtime Workflow all done in blender">
+<body class="ro-text-content">
+
+  <!-- large screen nav -->
+  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <div class="uk-background-secondary uk-light">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+          <a href="index.html"><img src="img\Logo.png" style="max-height: 50px" ></a>
+          <div class="uk-margin-left"><a href="index.html">ARMORY3D</a></div>
         </div>
-        <div class="uk-flex-first uk-flex-last@l">
-          <h2 class="uk-heading-divider ro-text-header">Armory Engine</h2>
-          <p>
-            Armory is an open-source 3D engine focused on portability, minimal footprint and performance. The renderer is fully scriptable with deferred and forward paths supported out of the box.
-          </p>
-          <p>
-            Written in C, Haxe & WebAssembly, structured as a data-driven engine.
-          </p>
+        <div class="uk-navbar-right uk-margin-right">
+          <ul class="uk-navbar-nav uk-text-capitalize">
+            <li><a href="index.html">home</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+            <li><a href="community.html">community</a></li>
+            <li><a href="fund.html">fund</a></li>
+          </ul>
+          <a class="uk-button uk-button-default" href="download.html">download</a>
         </div>
-      </div>
+      </nav>
     </div>
   </div>
 
-  <div id="renderer" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div>
-          <h2 class="uk-heading-divider ro-text-header">Build Games in Blender</h2>
-          <p>
-            Armory provides a full Blender integration add-on, turning it into a complete game development tool. The result is a unified workflow from start to finish.</p>
-            <p>
+  <!-- mobile nav-->
+  <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+    <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+              <span uk-icon="icon: menu"></span> MENU</button>
+  </div>
+  <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav uk-nav-default uk-text-uppercase">
+        <li><a href="index.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+        <li><a href="community.html">community</a></li>
+        <li><a href="fund.html">fund</a></li>
+        <li><a href="download.html">download</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="uk-cover-container cover-container">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+          <img src="img/Workflow.jpg">
+        </div>
+        <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+          <div class="uk-margin-left uk-margin-top text-container">
+            <h2 class="uk-heading-divider ro-text-header">Armory Engine</h2>
+            Armory is an open-source 3D engine focused on portability, minimal footprint and performance. The renderer is fully scriptable with deferred and forward paths supported out of the box.<br><br>
+            Written in C, Haxe & WebAssembly, structured as a data-driven engine.
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div style="padding: 0">
+          <div class="uk-margin-left uk-margin-top text-container">
+            <h2 class="uk-heading-divider ro-text-header">Build Games in Blender</h2>
+            Armory provides a full Blender integration add-on, turning it into a complete game development tool. The result is a unified workflow from start to finish.<br><br>
             For materials, a subset of Cycles nodes is used. To define game behaviour, visual scripting using logic nodes is available.
-          </p>
-          </p>
+          </div>
         </div>
-        <div>
-          <img src="img/UseNodes.jpg" alt="">
+        <div style="padding: 0">
+          <img src="img/UseNodes.jpg">
         </div>
       </div>
-    </div>
   </div>
-  
-  <div id="platforms" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div class="uk-flex-last uk-flex-first@l"><img src="img/Renderer.jpg" alt="Using Nodes from Blender in Armory"></div>
-        <div class="uk-flex-first uk-flex-last@l">
-          <h2 class="uk-heading-divider ro-text-header">Platforms</h2>
-          <p>
+
+  <div class="uk-section uk-section-secondary">
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+          <img src="img/Renderer.jpg">
+        </div>
+        <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
+          <div class="uk-margin-left uk-margin-top text-container">
+            <h2 class="uk-heading-divider ro-text-header">Platforms</h2>
             Armory runs on portable open-source technology. Utilizing Kha - multimedia framework, and Haxe - cross platform toolkit.
-          </p>
-          <ul class="uk-list">
-            <li>&bull; Windows, Linux, macOS</li>
-            <li>&bull; HTML5</li>
-            <li>&bull; Android, iOS</li>
-            <li>&bull; PS4, Xbox One, Switch</li>
-            <li><a href="https://github.com/Kode/Kha/wiki">Complete list</a></li>
-          </ul>
+            <ul class="uk-list">
+              <li>&bull; Windows, Linux, macOS</li>
+              <li>&bull; HTML5</li>
+              <li>&bull; Android, iOS</li>
+              <li>&bull; PS4, Xbox One, Switch</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
   </div>
-  <div id="animations" class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
-        <div>
-          <h2 class="uk-heading-divider ro-text-header">ArmorPaint</h2>
-          <p>
+
+  <div class="uk-section uk-section-secondary">
+      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+        <div style="padding: 0">
+          <div class="uk-margin-left uk-margin-top text-container">
+            <h2 class="uk-heading-divider ro-text-header">ArmorPaint</h2>
             Check out Armory in action - <a href="https://armorpaint.org/">ArmorPaint</a> is a 3D painting software being developed with Armory engine.
-          </p>
+          </div>
         </div>
-        <div><img src="img/rtbot.jpg" alt=""></div>
+        <div style="padding: 0">
+          <img src="img/rtbot.jpg">
+        </div>
       </div>
-    </div>
   </div>
   <!-- Footer Content -->
-  <div class="uk-section uk-section-default ro-background-darksecondary uk-light uk-section-small ro-footer">
-    <div class="uk-container uk-container-small uk-text-center uk-text-muted">
-      <div class="uk-child-width-expand uk-text-center uk-grid-small" uk-grid>
+  <div class="ro-background-darksecondary">
+    <br><br>
+    <div class="uk-container uk-container-small">
+      <div class="uk-child-width-expand" uk-grid>
         <div class="uk-text-left">
-          <br><a style="color: #666" href="https://github.com/armory3d">GitHub</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory">Sources</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
           <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
         </div>
         <div class="uk-text-center">
-          <br><a style="color: #666" href="https://armory.org/community">Contact</a>
+          <br><a style="color: #666" href="https://armory3d.org/community">Contact</a>
           <br><a style="color: #666" href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg">Youtube</a>
           <br><a style="color: #666" href="https://blender.org">Blender</a>
         </div>
@@ -166,11 +158,10 @@
         </div>
       </div>
     </div>
+    <br><br><br>
   </div>
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
-
 </body>
-
 </html>

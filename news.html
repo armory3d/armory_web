@@ -5,96 +5,92 @@
   <title>Armory | 3D Engine</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Armory | 3D Engine">
+  <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armory3d.org/">
+  <meta property="og:title" content="Armory | 3D Engine">
+  <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:image" content="https://armory3d.org/git/img1.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://armory3d.org/">
+  <meta property="twitter:title" content="Armory | 3D Engine">
+  <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg">
   <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
   <!-- Font Loading -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
   <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- lets make sure our anchors will always work when coming from a different page-->
-  <SCRIPT LANGUAGE=JavaScript>
-    function now() {
-      window.location.reload(true);
-    }
-  </SCRIPT>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body class="uk-flex uk-flex-column ro-text-content" uk-height-viewport>
-  <!-- Disappearing Header -->
-  <div class="uk-section uk-section-secondary uk-padding-remove" style="z-index: -1;" uk-sticky="bottom: #offset">
-    <div class="uk-cover-container uk-height-large uk-text-center">
-      <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
-      <div class="uk-position-center uk-background-secondary uk-light">
-        <img src="img\Logo.png" alt="Template Logo">
-        <div class="uk-text-lead uk-text-uppercase ro-text-logo uk-margin-small-top uk-margin-small-bottom">ARMORY3D</div>
-      </div>
-    </div>
-  </div>
-  <!-- Navagation -->
-  <div class="uk-section uk-padding-remove">
-    <!-- large screen nav -->
-    <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-      <div class="uk-background-secondary uk-light">
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-          <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav uk-text-capitalize">
-              <li>
-                <!--<a href="#top" uk-scroll="duration: 500">home</a>-->
-                <a href="index.html">home</a>
-              </li>
-              <li><a href="news.html">news</a></li>
-              <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
-              <li><a href="community.html">community</a></li>
-              <li><a href="download.html">download</a></li>
-              <li><a href="fund.html">fund</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- mobile nav-->
-    <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
-      <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
-                <span uk-icon="icon: menu"></span> MENU</button>
-    </div>
-    <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
-      <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-        <ul class="uk-nav uk-nav-default">
-          <li><a href="index.html">home</a></li>
-          <li><a href="news.html">news</a></li>
-          <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
-          <li><a href="community.html">community</a></li>
-          <li><a href="download.html">download</a></li>
-          <li><a href="fund.html">fund</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="uk-section uk-section-secondary uk-section-medium">
-    <div class="uk-container uk-container-large">
-      <div class="uk-child-width-1-1 uk-text-center uk-grid-medium" uk-grid>
-        <div>
-          <p><a href="https://gumroad.com/armory">Sign up</a> for Armory news.</p>
-          <a class="twitter-timeline" data-width="800" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d?ref_src=twsrc%5Etfw">Tweets by armory3d</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<body class="ro-text-content">
+
+  <!-- large screen nav -->
+  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <div class="uk-background-secondary uk-light">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+          <a href="index.html"><img src="img\Logo.png" style="max-height: 50px" ></a>
+          <div class="uk-margin-left"><a href="index.html">ARMORY3D</a></div>
         </div>
-      </div>
+        <div class="uk-navbar-right uk-margin-right">
+          <ul class="uk-navbar-nav uk-text-capitalize">
+            <li><a href="index.html">home</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+            <li><a href="community.html">community</a></li>
+            <li><a href="fund.html">fund</a></li>
+          </ul>
+          <a class="uk-button uk-button-default" href="download.html">download</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- mobile nav-->
+  <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+    <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+              <span uk-icon="icon: menu"></span> MENU</button>
+  </div>
+  <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav uk-nav-default uk-text-uppercase">
+        <li><a href="index.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+        <li><a href="community.html">community</a></li>
+        <li><a href="fund.html">fund</a></li>
+        <li><a href="download.html">download</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="uk-cover-container cover-container">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-text-center">
+        <br><br><a href="https://gumroad.com/armory">Sign up</a> for Armory news.<br><br><br>
+        <a class="twitter-timeline" data-width="800" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d?ref_src=twsrc%5Etfw">Tweets by armory3d</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
   <!-- Footer Content -->
-  <div class="uk-section uk-section-default ro-background-darksecondary uk-light uk-section-small ro-footer">
-    <div class="uk-container uk-container-small uk-text-center uk-text-muted">
-      <div class="uk-child-width-expand uk-text-center uk-grid-small" uk-grid>
+  <div class="ro-background-darksecondary">
+    <br><br>
+    <div class="uk-container uk-container-small">
+      <div class="uk-child-width-expand" uk-grid>
         <div class="uk-text-left">
-          <br><a style="color: #666" href="https://github.com/armory3d">GitHub</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory">Sources</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
           <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
         </div>
         <div class="uk-text-center">
-          <br><a style="color: #666" href="https://armory.org/community">Contact</a>
+          <br><a style="color: #666" href="https://armory3d.org/community">Contact</a>
           <br><a style="color: #666" href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg">Youtube</a>
           <br><a style="color: #666" href="https://blender.org">Blender</a>
         </div>
@@ -105,11 +101,10 @@
         </div>
       </div>
     </div>
+    <br><br><br>
   </div>
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
-
 </body>
-
 </html>

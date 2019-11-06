@@ -10,7 +10,12 @@
 
 .ro-text-header {
   font-family: "Noto Sans", sans-serif;
-  font-size: 2.0em;
+  font-size: 2.5em;
+}
+
+.ro-text-header-big {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 4.0em;
 }
 
 .ro-background-red {
@@ -29,7 +34,54 @@
   flex: 1;
 }
 
-/*uh oh? -lubos added this*/
-.uk-container-large {
-  max-width: 1200px;
+.uk-height-large {
+  height: 550px;
+}
+
+.uk-section {
+  padding: 0px;
+}
+
+.video-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+@media screen and (min-width : 1200px) {
+  .video-container {
+    padding-top: 26.25%;
+  }
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.cover-container {
+  height: 300px;
+}
+
+.manual-container {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 38px);
+}
+
+@media screen and (min-width : 1200px) {
+  .text-container {
+    padding: 60px;
+  }
+
+  .cover-container {
+    height: 550px;
+  }
+
+  .manual-container {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 80px);
+  }
 }
