@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Armory | 3D Engine</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Armory | 3D Engine">
+  <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armory3d.org/">
+  <meta property="og:title" content="Armory | 3D Engine">
+  <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="og:image" content="https://armory3d.org/git/img1.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://armory3d.org/">
+  <meta property="twitter:title" content="Armory | 3D Engine">
+  <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software.">
+  <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+  <!-- Font Loading -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="ro-text-content">
+
+  <!-- large screen nav -->
+  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <div class="uk-background-secondary uk-light">
+      <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left uk-margin-left">
+          <a href="index.html"><img src="img\Logo.png" style="max-height: 50px" ></a>
+          <div class="uk-margin-left"><a href="index.html">ARMORY3D</a></div>
+        </div>
+        <div class="uk-navbar-right uk-margin-right">
+          <ul class="uk-navbar-nav uk-text-capitalize">
+            <li><a href="index.html">home</a></li>
+            <li><a href="news.html">news</a></li>
+            <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+            <li><a href="community.html">community</a></li>
+            <li><a href="fund.html">fund</a></li>
+          </ul>
+          <a class="uk-button uk-button-default" href="download.html">download</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- mobile nav-->
+  <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+    <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+              <span uk-icon="icon: menu"></span> MENU</button>
+  </div>
+  <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+    <div class="uk-offcanvas-bar">
+      <button class="uk-offcanvas-close" type="button" uk-close></button>
+      <ul class="uk-nav uk-nav-default uk-text-uppercase">
+        <li><a href="index.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="https://github.com/armory3d/armory/wiki">manual</a></li>
+        <li><a href="community.html">community</a></li>
+        <li><a href="fund.html">fund</a></li>
+        <li><a href="download.html">download</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="uk-cover-container cover-container">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div>
+<div class="uk-section uk-section-secondary">
+  <div class="uk-child-width-expand@l uk-grid">
+    <div class="uk-flex uk-margin-left uk-margin-top">
+
+      <h2 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">
+        Release Notes
+      </h2>
+      
+    </div>
+  </div>
+</div>
+
+<!-- -->
+
+<div class="uk-section uk-section-secondary">
+  <div class="uk-child-width-expand@l uk-grid">
+    <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+
+      <ul class="uk-subnav uk-margin-top uk-subnav-divider" uk-switcher="connect: .abc">
+          <li><a href="#">2021</a></li>
+      </ul>
+      
+    </div>
+
+  </div>
+
+  <!-- -->
+
+  <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+
+    <ul class="uk-switcher uk-margin abc">
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021</h3>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- -->
+
+  <div>
+    <hr class="uk-divider-icon uk-margin-top uk-width-1-2 uk-align-center">
+  </div>
+
+  <!-- -->
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l uk-grid">
+      <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+  
+        <ul class="uk-subnav uk-margin-top uk-subnav-divider" uk-switcher="connect: .xyz">
+            <li><a href="#">2021.08</a></li>
+            <li><a href="#">2020.07</a></li>
+            <li><a href="#">2021.06</a></li>
+            <li><a href="#">2020.05</a></li>
+        </ul>
+        
+      </div>
+  </div>
+
+  <!-- -->
+
+  <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+
+    <ul class="uk-switcher uk-margin xyz">
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.08 - August Release</h3>
+      </li>
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.07 - July Release</h3>
+      </li>
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.06 - June Release</h3>
+      </li>
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.05 - May Release</h3>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- -->
+
+  <div>
+    <hr class="uk-margin-top uk-width-1-2 uk-align-center">
+  </div>
+
+  <!-- -->
+
+  <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+
+    <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
+      <li>
+        <img src="img/2021-08.gif" />
+        <p class="uk-text-default">This fine August contains mainly some fixes providing more stability to the Armory3D engine. 
+          This month included more than <span style="font-weight: bold;">14</span> pull requests, containing <span style="font-weight: bold;">17</span> commits.</p>
+        <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
+        <p>Get started using Armory3D today!</p>
+        <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
+      </li>
+      <li>
+        <p class="uk-text-default">Stuff happened in July! xxxx</p>
+      </li>
+      <li>
+        <p class="uk-text-default">Stuff happened in June! xxxx</p>
+      </li>
+      <li>
+        <p class="uk-text-default">Stuff happened in May! xxxx</p>
+      </li>
+    </ul>
+
+  </div>
+
+
+
+  <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
+
+    <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
+
+      <li> <!-- This part is for August START -->
+        <div class="uk-flex uk-margin-top uk-width-1-2">
+
+          <h4>Highlights</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">N8n5h added a fix for volumetric lights when using shadow map atlas. Lots of volumetric lights are now possible!</p>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Additions</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2305</span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2304</span> - Tong added the option to play without building (Shift + Play).</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2298</span> - MoritzBrueckner added basic addon reloading. Good for developers!</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2296</span> - Tong added linear and angular control properties to the PhysicsDrag.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2285</span> - Tong added the axis trait prop to ArcBall. For direction and speed control.</p></li>
+          </ul>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Fixes</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2307</span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2306</span> - MoritzBrueckner added various node fixes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2303</span> - MoritzBrueckner fixed the Nishita sky artifacts and improved the LUT range.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2302</span> - MoritzBrueckner fixed the accidental module reloading caused by global variables.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2300</span> - N8n5h fixed the volumetric lights not working with the shadow map atlas option.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2299</span> - MoritzBrueckner fixed Logic.hx that caused failed CI compilation.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2297</span> - MoritzBrueckner added a canvas fix when using non-default fonts.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2287</span> - MoritzBrueckner fixed thread polling being stopped after callback exception.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2286</span> - MoritzBrueckner fixed filepath error if project is on Windows drive root.</p></li>
+          </ul>
+        </div>
+
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Other changes</h4>
+          
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #135</span> - Niacdoial added a complimentary commit for rotation socket (#2305).</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #134</span> - MoritzBrueckner added the exp() exponent function to vector classes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #133</span> - QuantumCoderQC added a fix for the particle system related to scale and locations.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold">Armory Examples: #30</span> - Tong added miscellanous improvements to the examples.</p></li>
+          </ul>
+        </div>
+
+
+      </li> <!-- This part is for August END -->
+
+      <li> <!-- This part is for July START -->
+
+        <div class="uk-flex uk-margin-top uk-width-1-2">
+
+          <h4>Highlights</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">xxxx</p>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Additions</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2305</span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
+          </ul>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Fixes</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">#2307</span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
+          </ul>
+        </div>
+
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Other changes</h4>
+          
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #135</span> - Niacdoial added a complimentary commit for rotation socket (#2305).</p></li>
+          </ul>
+        </div>
+
+      </li> <!-- This part is for July END -->
+
+      <li> <!-- This part is for June START -->
+        <p class="uk-text-default">To be written June.</p>
+      </li> <!-- This part is for June END -->
+
+      <li> <!-- This part is for May START -->
+        <p class="uk-text-default">To be written May.</p>
+      </li> <!-- This part is for May END -->
+    </ul>
+
+  </div>  <!-- Footer Content -->
+  <div class="ro-background-darksecondary">
+    <br><br>
+    <div class="uk-container uk-container-small">
+      <div class="uk-child-width-expand" uk-grid>
+        <div class="uk-text-left">
+          <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
+          <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
+        </div>
+        <div class="uk-text-center">
+          <br><a style="color: #666" href="https://armory3d.org/community">Contact</a>
+          <br><a style="color: #666" href="https://www.youtube.com/c/armory3d">Youtube</a>
+          <br><a style="color: #666" href="https://blender.org">Blender</a>
+        </div>
+        <div class="uk-text-right">
+          <br><a style="color: #666" href="https://twitter.com/armory3d">Twitter</a>
+          <br><a style="color: #666" href="https://instagram.com/armory3d">Instagram</a>
+          <br><a style="color: #666" href="https://fb.me/armorytools">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
+</body>
+</html>
