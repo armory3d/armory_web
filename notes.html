@@ -165,7 +165,7 @@
 
     <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
       <li>
-        <img src="img/2021-08.gif" />
+        <img src="img/2021-08-a.gif" />
         <p class="uk-text-default">This fine August contains mainly some fixes providing more stability to the Armory3D engine. 
           This month included more than <span style="font-weight: bold;">14</span> pull requests, containing <span style="font-weight: bold;">17</span> commits.</p>
         <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
@@ -173,13 +173,13 @@
         <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
       </li>
       <li>
-        <p class="uk-text-default">Stuff happened in July! xxxx</p>
+        <p class="uk-text-default">Release notes for July in progress.</p>
       </li>
       <li>
-        <p class="uk-text-default">Stuff happened in June! xxxx</p>
+        <p class="uk-text-default">Release notes for June in progress.</p>
       </li>
       <li>
-        <p class="uk-text-default">Stuff happened in May! xxxx</p>
+        <p class="uk-text-default">Release notes for May in progress.</p>
       </li>
     </ul>
 
@@ -198,8 +198,10 @@
       
         </div>
 
+        <img class="uk-margin" src="img/2021-08-b.gif" />
+
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <p class="uk-text-default">N8n5h added a fix for volumetric lights when using shadow map atlas. Lots of volumetric lights are now possible!</p>
+          <p class="uk-text-default ">N8n5h added a fix for volumetric lights when using shadow map atlas. Volumetric lights (god rays) should now work with the shadow map atlasing option.</p>
         </div>
 
         <div class="uk-flex uk-margin-large-top uk-width-1-2">
@@ -210,11 +212,13 @@
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
           <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2305</span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2304</span> - Tong added the option to play without building (Shift + Play).</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2298</span> - MoritzBrueckner added basic addon reloading. Good for developers!</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2296</span> - Tong added linear and angular control properties to the PhysicsDrag.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2285</span> - Tong added the axis trait prop to ArcBall. For direction and speed control.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2309">#2309</a></span> - MoritzBrueckner added the assert() macro for better error handling.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2308">#2308</a></span> - Tong added the option to disable http logging and change webserver port if preused.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2305">#2305</a></span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2304">#2304</a></span> - Tong added the option to play without building (Shift + Play).</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2298">#2298</a></span> - MoritzBrueckner added basic addon reloading. Good for developers!</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2296">#2296</a></span> - Tong added linear and angular control properties to the PhysicsDrag.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2285">#2285</a></span> - Tong added the axis trait prop to ArcBall. For direction and speed control.</p></li>
           </ul>
         </div>
 
@@ -226,15 +230,15 @@
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
           <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2307</span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2306</span> - MoritzBrueckner added various node fixes.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2303</span> - MoritzBrueckner fixed the Nishita sky artifacts and improved the LUT range.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2302</span> - MoritzBrueckner fixed the accidental module reloading caused by global variables.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2300</span> - N8n5h fixed the volumetric lights not working with the shadow map atlas option.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2299</span> - MoritzBrueckner fixed Logic.hx that caused failed CI compilation.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2297</span> - MoritzBrueckner added a canvas fix when using non-default fonts.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2287</span> - MoritzBrueckner fixed thread polling being stopped after callback exception.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2286</span> - MoritzBrueckner fixed filepath error if project is on Windows drive root.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2307">#2307</a></span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2306">#2306</a></span> - MoritzBrueckner added various node fixes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2303">#2303</a></span> - MoritzBrueckner fixed the Nishita sky artifacts and improved the LUT range.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2302">#2302</a></span> - MoritzBrueckner fixed the accidental module reloading caused by global variables.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2300">#2300</a></span> - N8n5h fixed the volumetric lights not working with the shadow map atlas option.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2299">#2299</a></span> - MoritzBrueckner fixed Logic.hx that caused failed CI compilation.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2297">#2297</a></span> - MoritzBrueckner added a canvas fix when using non-default fonts.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2287">#2287</a></span> - MoritzBrueckner fixed thread polling being stopped after callback exception.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2286">#2286</a></span> - MoritzBrueckner fixed filepath error if project is on Windows drive root.</p></li>
           </ul>
         </div>
 
@@ -247,10 +251,10 @@
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
           <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #135</span> - Niacdoial added a complimentary commit for rotation socket (#2305).</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #134</span> - MoritzBrueckner added the exp() exponent function to vector classes.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #133</span> - QuantumCoderQC added a fix for the particle system related to scale and locations.</p></li>
-            <li><p class="uk-text-default"><span class=" uk-text-bold">Armory Examples: #30</span> - Tong added miscellanous improvements to the examples.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/135">Iron: #135</a></span> - Niacdoial added a complimentary commit for rotation socket (#2305).</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/134">Iron: #134</a></span> - MoritzBrueckner added the exp() exponent function to vector classes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/133">Iron: #133</a></span> - QuantumCoderQC added a fix for the particle system related to scale and locations.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory_examples/pull/30">Armory Examples: #30</a></span> - Tong added miscellanous improvements to the examples.</p></li>
           </ul>
         </div>
 
@@ -260,60 +264,36 @@
       <li> <!-- This part is for July START -->
 
         <div class="uk-flex uk-margin-top uk-width-1-2">
-
-          <h4>Highlights</h4>
-      
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <p class="uk-text-default">xxxx</p>
         </div>
 
         <div class="uk-flex uk-margin-large-top uk-width-1-2">
-
-          <h4>Additions</h4>
-      
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2305</span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
-          </ul>
         </div>
 
         <div class="uk-flex uk-margin-large-top uk-width-1-2">
-
-          <h4>Fixes</h4>
-      
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">#2307</span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
-          </ul>
         </div>
 
 
         <div class="uk-flex uk-margin-large-top uk-width-1-2">
-
-          <h4>Other changes</h4>
-          
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <ul class="uk-list">
-            <li><p class="uk-text-default"><span class=" uk-text-bold">Iron: #135</span> - Niacdoial added a complimentary commit for rotation socket (#2305).</p></li>
-          </ul>
         </div>
 
       </li> <!-- This part is for July END -->
 
       <li> <!-- This part is for June START -->
-        <p class="uk-text-default">To be written June.</p>
       </li> <!-- This part is for June END -->
 
       <li> <!-- This part is for May START -->
-        <p class="uk-text-default">To be written May.</p>
       </li> <!-- This part is for May END -->
     </ul>
 
