@@ -93,7 +93,7 @@
       <li>
         <img src="img/2021-08-a.gif" />
         <p class="uk-text-default">This fine August contains mainly some fixes providing more stability to the Armory3D engine. 
-          This month included more than <span style="font-weight: bold;">14</span> pull requests, containing <span style="font-weight: bold;">17</span> commits.</p>
+          This month included more than <span style="font-weight: bold;">21</span> pull requests, containing <span style="font-weight: bold;">36</span> commits!</p>
         <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
         <p>Get started using Armory3D today!</p>
         <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
@@ -124,11 +124,17 @@
       
         </div>
 
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default "><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2300">[#2300]</a></span> N8n5h added a fix for volumetric lights when using shadow map atlas. Volumetric lights (god rays) should now work with the shadow map atlasing option:</p>
+        </div>
+
         <img class="uk-margin" src="img/2021-08-b.gif" />
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
-          <p class="uk-text-default ">N8n5h added a fix for volumetric lights when using shadow map atlas. Volumetric lights (god rays) should now work with the shadow map atlasing option.</p>
+          <p class="uk-text-default "><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2318">[#2318]</a></span> QuantumCoderQC added a new get NavAgent data node:</p>
         </div>
+
+        <img class="uk-margin" src="img/2021-08-c.png" />
 
         <div class="uk-flex uk-margin-large-top uk-width-1-2">
 
@@ -138,6 +144,8 @@
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
           <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2319">#2319</a></span> - MoritzBrueckner added the possibility of using more complex string expressions for assert() messages.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2318">#2318</a></span> - QuantumCoderQC added a node to get NavAgent data and improved the Go To Location node.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2309">#2309</a></span> - MoritzBrueckner added the assert() macro for better error handling.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2308">#2308</a></span> - Tong added the option to disable http logging and change webserver port if preused.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2305">#2305</a></span> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.</p></li>
@@ -156,6 +164,9 @@
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
           <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2320">#2316</a></span> - QuantumCoderQC added a trait fix (fix for issue #2289).</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2315">#2316</a></span> - Onelsonic fixed some Haxe warnings related to type check.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2315">#2315</a></span> - MoritzBrueckner fixed some postprocess uniform warnings.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2307">#2307</a></span> - MoritzBrueckner fixed Armory3D define and ES6 switch for Krom.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2306">#2306</a></span> - MoritzBrueckner added various node fixes.</p></li>
             <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2303">#2303</a></span> - MoritzBrueckner fixed the Nishita sky artifacts and improved the LUT range.</p></li>
