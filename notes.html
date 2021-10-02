@@ -127,6 +127,7 @@
       <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
   
         <ul class="uk-subnav uk-margin-top uk-subnav-divider" uk-switcher="connect: .xyz">
+            <li><a href="#">2021.10</a></li>
             <li><a href="#">2021.09</a></li>
             <li><a href="#">2020.08</a></li>
             <li><a href="#">2021.07</a></li>
@@ -141,6 +142,9 @@
   <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
 
     <ul class="uk-switcher uk-margin xyz">
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.10 - October Release</h3>
+      </li>
       <li>
         <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.09 - September Release</h3>
       </li>
@@ -169,6 +173,13 @@
 
     <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
       <li>
+        <img src="img/2021-10-c.jpg" class="uk-align-center"/>
+        <p class="uk-text-default">October is here and that means a new release for Armory3D with new features and fixes! <span style="font-weight: bold;">14</span> new pull requests from various contributors, thanks to them!</p>
+        <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
+        <p>Get started using Armory3D today!</p>
+        <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
+      </li>
+      <li>
         <img src="img/2021-09-a.gif" />
         <p class="uk-text-default">This september release contains mainly some fixes providing more stability to the Armory3D engine. 
           This month included more than <span style="font-weight: bold;">21</span> pull requests, containing <span style="font-weight: bold;">36</span> commits!</p>
@@ -177,7 +188,17 @@
         <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
       </li>
       <li>
-        <p class="uk-text-default">Release notes for August in progress.</p>
+
+        <p class="uk-text-default" style="font-style: italic;">These notes were written to describe the backwards progress that was made in August. These notes are written in September.</p>
+
+        <img src="img/2021-08-a.gif"/>
+        <p class="uk-text-default">This august added a few but significant changes to the Armory3D Engine, especially to the Live patching system. 
+          This month included more than <span style="font-weight: bold;">10</span> pull requests!</p>
+        <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
+        <p>Get started using Armory3D today!</p>
+        <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
+
+
       </li>
       <li>
         <p class="uk-text-default">Release notes for July in progress.</p>
@@ -195,7 +216,100 @@
 
     <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
 
-      <li> <!-- This part is for August START -->
+      <li> <!-- This part is for October START -->
+        <div class="uk-flex uk-margin-top uk-width-1-2">
+
+          <h4>Highlights</h4>
+      
+        </div>
+
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">MoritzBrueckner made <a href="https://github.com/MoritzBrueckner/aura" class="uk-text-bold">Aura</a> - A fast and lightweight 3D audio engine for Kha and Armory3D</p>
+        </div>
+
+        <a href="https://github.com/MoritzBrueckner/aura"><img class="uk-margin" src="https://github.com/MoritzBrueckner/aura/raw/master/.img/aura_banner_bright.png" /></a>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">Tong added the <a href="https://armory3d.github.io/armory_examples_browser/">Armory3D Examples browser</a> - Try it out now!</p>
+        </div>
+
+        <a href="https://armory3d.github.io/armory_examples_browser/"><img class="uk-margin" src="img/2021-10-a.jpg" /></a>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">The Armory3D Community Game Jam 2.0 has commenced, hosted by Willbot Studios. It will run throughout October. <a href="https://itch.io/jam/armory-3d-community-game-jam-20">Join here</a></p>
+        </div>
+
+        <a href="https://itch.io/jam/armory-3d-community-game-jam-20"><img class="uk-margin" src="img/2021-10-b.jpg" /></a>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">QuantumCoderQC added 3 new nodes for tweening values for both floats, vectors and rotations:</p>
+        </div>
+
+        <a href="https://github.com/armory3d/armory/pull/2336"><img class="uk-margin" src="https://user-images.githubusercontent.com/55564981/133157252-df8c8cb3-ca2b-45ca-9be8-4b4a2066ca16.png" /></a>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Additions</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2351">#2351</a></span> - MoritzBrueckner added debug console: make log output more readable</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2349">#2349</a></span> - MoritzBrueckner added add nodes to get/set global canvas scale</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2342">#2342</a></span> - Tong added improve log messages</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2338">#2338</a></span> - Tong added remove haxe --times param per default</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2336">#2336</a></span> - QuantumCoderQC added introducing Tween nodes</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2331">#2331</a></span> - Tong added do not open build directory in background mode</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2326">#2326</a></span> - Onelsonic added update props_ui.py</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2325">#2325</a></span> - Onelsonic added update props.py</p></li>
+          </ul>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Fixes</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2350">#2350</a></span> - MoritzBrueckner added fix add-on reloading when there are new unimported node files</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2339">#2339</a></span> - Tong added fix invalid fp when using local sdk</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2335">#2335</a></span> - MoritzBrueckner added fix fake user export for traits</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2334">#2334</a></span> - Tong added fix assert throw error</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2332">#2332</a></span> - MoritzBrueckner added fix realtime postprocess & cleanup arm.lib.make_datas</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2329">#2329</a></span> - MoritzBrueckner added fix ArmNodeAddInputOutputButton</p></li>
+          </ul>
+        </div>
+
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Other changes</h4>
+          
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/139">Iron: #139</a></span> - MoritzBrueckner added deferred unloading the world shader until the new shader is loaded.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/138">Iron: #138</a></span> - MoritzBrueckner added a fix for switching scenes with different light objects.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/137">Iron: #137</a></span> - QuantumCoderQC added reset collection transform after spawn.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/136">Iron: #136</a></span> - Tong added Armpack macro compatibility.</p></li>
+            <li><p class="uk-text-default">Release Notes: August- Release notes for august (2021.08) have been added.</p></li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class=""><a class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;" href="fund.html">Support the Armory3D fund!</a></p>
+        </div>
+
+      </li> <!-- This part is for October END -->
+
+      <li> <!-- This part is for September START -->
         <div class="uk-flex uk-margin-top uk-width-1-2">
 
           <h4>Highlights</h4>
@@ -279,36 +393,65 @@
           <p class=""><a class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;" href="fund.html">Support the Armory3D fund!</a></p>
         </div>
 
-      </li> <!-- This part is for August END -->
+      </li> <!-- This part is for September END -->
 
-      <li> <!-- This part is for July START -->
+      <li> <!-- This part is for August START -->
+
+
 
         <div class="uk-flex uk-margin-top uk-width-1-2">
+
+          <h4>Highlights</h4>
+
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2283">[#2283]</a></span> MoritzBrueckner added an immense overhaul of the existing live patching system. The new additional features includes support for light color and strength, support for live patching nodes and more!</p>
         </div>
 
-        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mxklu7TfwBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2283">[#2260]</a></span> Knowledgenude improved the Input map and added nodes to it</p>
+        </div>
+
+        <img class="uk-margin" src="img/2021-08-b.png" />
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <h4>Additions</h4>
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2242">#2242</a></span> - Knowledgenude added "Parent Relative" option to location nodes</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2240">#2240</a></span> - QuantumCoderQC added option for relative physics constraint</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2239">#2239</a></span> - QuantumCoderQC added set material parameter on per object basis</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2235">#2235</a></span> - Knowledgenude added cleanup in ui Ext</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2221">#2221</a></span> - QuantumCoderQC added extra logic nodes</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2220">#2220</a></span> - MoritzBrueckner added add Select node</p></li>
+
+          </ul>
         </div>
 
-        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+        <div class="uk-flex uk-margin-large-top uk-width-1-1">
+          <h4>Fixes</h4>
         </div>
 
         <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2238">#2238</a></span> - MoritzBrueckner fixed threading and publishing in background mode</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2233">#2233</a></span> - MoritzBrueckner fixed compilation of some nodes</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2231">#2231</a></span> - Knowledgenude fixed GetBoneFkIkOnly node & add new input nodes</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2228">#2228</a></span> - MoritzBrueckner fixed rendering multiple movie textures </p></li>
+
+          </ul>
         </div>
 
 
-        <div class="uk-flex uk-margin-large-top uk-width-1-2">
-        </div>
 
-        <div class="uk-flex uk-margin-top uk-width-1-1">
-        </div>
-
-      </li> <!-- This part is for July END -->
+      </li> <!-- This part is for August END -->
 
       <li> <!-- This part is for June START -->
       </li> <!-- This part is for June END -->
