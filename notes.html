@@ -127,6 +127,7 @@
       <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
   
         <ul class="uk-subnav uk-margin-top uk-subnav-divider" uk-switcher="connect: .xyz">
+            <li><a href="#">2021.12</a></li>
             <li><a href="#">2021.11</a></li>
             <li><a href="#">2021.10</a></li>
             <li><a href="#">2021.09</a></li>
@@ -143,6 +144,9 @@
   <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
 
     <ul class="uk-switcher uk-margin xyz">
+      <li>
+        <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.12 - December Release</h3>
+      </li>
       <li>
         <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2021.11 - November Release</h3>
       </li>
@@ -177,6 +181,13 @@
 
     <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
       <li>
+        <img src="img/2021-12-a.jpg" class="uk-align-center"/>
+        <p class="uk-text-default">December! <span style="font-weight: bold;">20</span> new pull requests from various contributors - amazing work!</p>
+        <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
+        <p>Get started using Armory3D today!</p>
+        <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
+      </li>
+      <li>
         <img src="img/2021-11-a.jpg" class="uk-align-center"/>
         <p class="uk-text-default">November! <span style="font-weight: bold;">16</span> new pull requests from various contributors - amazing work!</p>
         <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
@@ -208,8 +219,6 @@
         <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
         <p>Get started using Armory3D today!</p>
         <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
-
-
       </li>
       <li>
         <p class="uk-text-default">Release notes for July in progress.</p>
@@ -226,6 +235,94 @@
   <div class="uk-flex uk-margin-left uk-margin-top uk-flex-center">
 
     <ul class="uk-switcher uk-margin uk-width-1-2 xyz">
+
+
+      <li> <!-- This part is for December START -->
+        <div class="uk-flex uk-margin-top uk-width-1-2">
+
+          <h4>Highlights</h4>
+      
+        </div>
+
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">As usual, there's a bunch of very nice bug fixes and improvements provided by the fantastic contributors. Among the new features, one of the most noticeable ones are the addition of shape keys:</p>
+        </div>
+
+        <img class="uk-margin" src="img/2021-12-b.gif" /></a>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class="uk-text-default">There's a bunch of new nodes to expand the possibilities of visual scripting:</p>
+        </div>
+
+        <img class="uk-margin" src="img/2021-12-c.jpg" /></a>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Additions</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2399">#2399</a></span> - T3du added raycast for non physics objects</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2395">#2395</a></span> - MoritzBrueckner added add option to enable Haxe's --no-traces param</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2391">#2391</a></span> - T3du added add tween transform node</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2389">#2389</a></span> - Sh-dave added run eventnode output, even if the events could not be delivered</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2375">#2375</a></span> - QuantumCoderQC added implementing Shape keys</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2373">#2373</a></span> - QuantumCoderQC added add normal output for pick rb node</p></li>
+          </ul>
+        </div>
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Fixes</h4>
+      
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2400">#2400</a></span> - QuantumCoderQC added detect mobile browser node fix</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2398">#2398</a></span> - MoritzBrueckner added compare node: fix accessing vector methods when DCE is on</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2397">#2397</a></span> - MoritzBrueckner added fix vertex buffer locking on html5 for soft bodies</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2392">#2392</a></span> - MoritzBrueckner added fix parser context references after reload and make enum values unique</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2390">#2390</a></span> - QuantumCoderQC added fix Bool, Int and Float vector property export from logic nodes</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2388">#2388</a></span> - QuantumCoderQC added fix bullet physics memory leak on HL targets</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2385">#2385</a></span> - MoritzBrueckner added fix environment gamma and improve handling of envmap file formats</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2384">#2384</a></span> - QuantumCoderQC added fix TransformExtension - Normalize vectors</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2382">#2382</a></span> - Skehmatics added fix morph target exporting on Unix-based systems</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2381">#2381</a></span> - Skehmatics added correct depricated (and now removed) import</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2379">#2379</a></span> - MoritzBrueckner added fix cpu_count() for incomplete PATH var on Windows and improve error handling</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2374">#2374</a></span> - Tong added fix switch expression</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2372">#2372</a></span> - QuantumCoderQC added decal fix</p></li>
+            <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2367">#2367</a></span> - MoritzBrueckner added fix exporting textures from linked libraries</p></li>
+          </ul>
+        </div>
+
+
+        <div class="uk-flex uk-margin-large-top uk-width-1-2">
+
+          <h4>Other changes</h4>
+          
+        </div>
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <ul class="uk-list">
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/147">Iron: #147</a></span> - t3du added 2 functions used in raycast objects nodes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/146">Iron: #146</a></span> - MoritzBrueckner added Fix vertex buffer locking on html5 for deinterleaved buffers and batched meshes.</p></li>
+            <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/145">Iron: #145</a></span> - QuantumCoderQC added Implement Shape keys.</p></li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <div class="uk-flex uk-margin-top uk-width-1-1">
+          <p class=""><a class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;" href="fund.html">Support the Armory3D fund!</a></p>
+        </div>
+
+      </li> <!-- This part is for December END -->
+
+
 
       <li> <!-- This part is for November START -->
         <div class="uk-flex uk-margin-top uk-width-1-2">
