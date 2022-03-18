@@ -18,6 +18,10 @@
   font-size: 4.0em;
 }
 
+.ro-navbar-light {
+  background-color: #222222;
+}
+
 .ro-background-red {
   background-color: crimson;
 }
