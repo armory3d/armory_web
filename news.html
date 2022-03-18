@@ -18,11 +18,11 @@
   <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software.">
   <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg">
   <!-- UIkit CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
   <!-- Font Loading -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
@@ -33,19 +33,47 @@
     <div class="uk-background-secondary uk-light">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-margin-left">
-          <a href="/"><img src="img\Logo.png" style="max-height: 50px" ></a>
-          <div class="uk-margin-left"><a href="/">ARMORY3D</a></div>
+          <a href="/"><img src="img\Logo.png" style="margin: 1em 0; max-height: 50px"></a>
+          <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY 3D Engine</button>
+          <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-left">
+              <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+                <li><a href="/">HOME</a></li>
+                <li><a href="https://armorpaint.org/">ARMORPAINT</a></li>
+                <li><a href="https://armorlab.org/">ARMORLAB</a></li>
+              </ul>
+          </div>
         </div>
         <div class="uk-navbar-right uk-margin-right">
-          <ul class="uk-navbar-nav uk-text-capitalize">
-            <li><a href="news">news</a></li>
-            <li><a href="https://www.github.com/armory3d/armory/wiki">manual</a></li>
-            <li><a href="https://armory3d.github.io/armory_examples_browser/">examples</a></li>
-            <li><a href="community">community</a></li>
-            <li><a href="fund">fund</a></li>
-            <li><a href="notes">release notes</a></li>
+        <!-- News Category -->
+        <button class="uk-margin-left uk-button-text" uk-icon="icon: chevron-down">NEWS</button>
+        <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center">
+          <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+            <li><a href="notes">Release Notes</a></li>
+            <li><a href="news">Newsletter</a></li>
           </ul>
-          <a class="uk-button uk-button-default" href="download">download</a>
+        </div>
+        <!-- Showcase Category -->
+        <button class="uk-margin-left uk-button-text" uk-icon="icon: chevron-down">SHOWCASE</button>
+        <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center">
+          <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+            <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
+            <li><a href="https://www.github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+          </ul>
+        </div>
+        <!-- Documentation Category -->
+        <button class="uk-margin-left uk-button-text" uk-icon="icon: chevron-down">DOCUMENTATION</button>
+        <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center">
+          <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+            <li><a href="https://www.github.com/armory3d/armory/wiki">Manual</a></li>
+            <li><a href="https://api.armory3d.org">API</a></li>
+          </ul>
+        </div>
+        <!-- Community Category -->
+        <a class="uk-margin-left uk-button-text" uk-icon="" href="community" style="text-decoration: none">COMMUNITY</a>
+        <!-- Fund Category -->
+        <a class="uk-margin-left uk-button-text" href="fund" style="text-decoration: none">FUND</a>
+        <!-- Download Category -->
+        <a class="uk-margin-left uk-background-primary uk-padding-small uk-border-rounded" href="download" style="text-decoration: none">DOWNLOAD</a>
         </div>
       </nav>
     </div>
@@ -53,26 +81,62 @@
 
   <!-- mobile nav-->
   <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
-    <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
-    <span uk-icon="icon: menu"></span> MENU</button>
+    <button class="uk-button uk-button-default uk-width-1-1" style="border:0" type="button" uk-toggle="target: #offcanvas-slide">
+    <span uk-icon="icon: menu"></span>&nbsp;MENU</button>
   </div>
   <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
-    <div class="uk-offcanvas-bar">
+    <div class="uk-offcanvas-bar uk-background-secondary" style="max-width: 75vw; width: 75vw;">
       <button class="uk-offcanvas-close" type="button" uk-close></button>
       <ul class="uk-nav uk-nav-default uk-text-uppercase">
         <li>
           <div class="uk-navbar-left uk-margin-bottom">
             <a href="/"><img src="img\Logo.png" style="max-height: 50px" ></a>
-            <div class="uk-margin-left"><a href="/">ARMORY3D</a></div>
+            <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY 3D Engine</button>
+            <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-left">
+              <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+                <li><a href="/">HOME</a></li>
+                <li><a href="https://armorpaint.org/">ARMORPAINT</a></li>
+                <li><a href="https://armorlab.org/">ARMORLAB</a></li>
+              </ul>
+            </div>
           </div>
         </li>
-        <li><a href="news">news</a></li>
-        <li><a href="https://www.github.com/armory3d/armory/wiki">manual</a></li>
-        <li><a href="https://www.armory3d.github.io/armory_examples_browser/">examples</a></li>
-        <li><a href="community">community</a></li>
-        <li><a href="fund">fund</a></li>
-        <li><a href="notes">release notes</a></li>
-        <li><a href="download">download</a></li>
+        <!-- News Category -->
+        <li>
+          <button class="uk-button-text" uk-icon="icon: chevron-down">NEWS</button>
+          <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-left">
+            <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+              <li><a href="notes">Release Notes</a></li>
+              <li><a href="news">Newsletter</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><br />
+          <!-- Showcase Category -->
+          <button class="uk-button-text" uk-icon="icon: chevron-down">SHOWCASE</button>
+          <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-left">
+            <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+              <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
+              <li><a href="https://www.github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+            </ul>
+          </div>
+        </li><br />
+        <!-- Documentation Category -->
+        <li>
+          <button class="uk-button-text" uk-icon="icon: chevron-down">DOCUMENTATION</button>
+          <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-left">
+            <ul class="uk-nav uk-nav-default uk-dropdown-nav">
+              <li><a href="https://www.github.com/armory3d/armory/wiki">Manual</a></li>
+              <li><a href="https://api.armory3d.org">API</a></li>
+            </ul>
+          </div>
+        </li><br />
+        <!-- Community Category -->
+        <a class="uk-button-text" uk-icon="" href="community" style="text-decoration: none">COMMUNITY</a><br /><br />
+        <!-- Fund Category -->
+        <a class="uk-button-text" href="fund" style="text-decoration: none">FUND</a><br /><br /><br />
+        <!-- Download Category -->
+        <a class="uk-background-primary uk-padding-small uk-border-rounded" href="download" style="text-decoration: none">DOWNLOAD</a>
       </ul>
     </div>
   </div>
@@ -93,19 +157,28 @@
     <div class="uk-container uk-container-small">
       <div class="uk-child-width-expand" uk-grid>
         <div class="uk-text-left">
+          <br><span class="ro-logocolor">Development</span>
           <br><a style="color: #666" href="https://www.github.com/armory3d/armory">GitHub</a>
           <br><a style="color: #666" href="https://www.github.com/armory3d/armory/issues">Tracker</a>
-          <br><a style="color: #666" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4PLPYSRW3QXLW">Donate</a>
+          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/projects">Roadmap</a>
+          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/wiki/contribute">Contribute</a>
         </div>
         <div class="uk-text-center">
-          <br><a style="color: #666" href="community">Contact</a>
-          <br><a style="color: #666" href="https://www.youtube.com/c/armory3d">Youtube</a>
-          <br><a style="color: #666" href="https://www.blender.org">Blender</a>
+          <br><span class="ro-logocolor">Special Thanks</span>
+          <br><a style="color: #666" href="https://www.haxe.org">Haxe</a>
+          <br><a style="color: #666" href="https://www.blender.org">Blender 3D</a>
+          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/graphs/contributors">Contributors</a>
         </div>
         <div class="uk-text-right">
-          <br><a style="color: #666" href="https://www.twitter.com/armory3d">Twitter</a>
-          <br><a style="color: #666" href="https://www.instagram.com/armory3d">Instagram</a>
-          <br><a style="color: #666" href="https://www.fb.me/armorytools">Facebook</a>
+          <br><span class="ro-logocolor">Contact</span>
+          <br><a>
+          <script type="text/javascript">
+            var user_name = "lubos";
+            var host_name = "armory3d.org";
+            document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");
+          </script>
+          </a>
+          <br><a style="color: #666" href="community">Community</a>
         </div>
       </div>
     </div>
