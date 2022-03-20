@@ -5,20 +5,20 @@
 2. Commit new code to the forked repository.
 
 3. Open a pull-request for the forked repository to propose changes:<br />
-`armory_web (+ branch)` <- `Forked repository` (+ branch) containing changes
+`armory_web (+ branch)` <- `Forked repository` (+ branch) containing changes.
 
 # Prerequisites
 
 1. **Node**<br />
 ArmorySDK ships with Node and can be found in:
-`armsdk\nodejs`
+`armsdk\nodejs`.
 
 2. **Python**<br />
 Blender ships with Python and can be found in:
-`Blender\2.93\python\bin`
+`Blender\2.93\python\bin`.
 
 3. **A Localhost that provides 403 & 404 redirecting**<br />
-Here is a [provided](https://github.com/rpaladin/armory_web_python_localhost) one that works well with the `armory_web` source setup. Apache, Node, and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
+Here is a [provided](https://github.com/rpaladin/armory_web_python_localhost) custom localhost that works well with the `armory_web` source setup. Apache, Node, and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
 
 # Development Process
 
