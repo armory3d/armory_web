@@ -5,24 +5,24 @@
 2. Commit new code to the forked repository.
 
 3. Open a pull-request for the forked repository to propose changes:<br />
-`armory_web (+ branch)` <- `Forked repository` (+ branch) containing changes.
+`armory_web [gh-pages branch]` ⬅️ `Forked [gh-pages branch]` containing changes.
 
 # Prerequisites
 
 1. **Node**<br />
-ArmorySDK ships with Node and can be found in:
+The [ArmSDK](https://www.github.com/armory3d/armsdk) ships with [Node](https://www.nodejs.org/en/) and can be found in:
 `armsdk\nodejs`.
 
 2. **Python**<br />
-Blender ships with Python and can be found in:
+[Blender](https://www.blender.org) ships with [Python](https://www.python.org/) and can be found in:
 `Blender\2.93\python\bin`.
 
 3. **A Localhost that provides 403 & 404 redirecting**<br />
-Here is a [provided](https://github.com/rpaladin/armory_web_python_localhost) custom localhost that works well with the `armory_web` source setup. Apache, Node, and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
+This [provided](https://github.com/rpaladin/armory_web_python_localhost) localhost service works well with the [armory_web](https://www.github.com/armory3d/armory_web/tree/gh-pages) source setup. [Apache](https://www.apachelounge.com/download), [Node](https://www.nodejs.org/en/), and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
 
 # Development Process
 
-* The **Armory3D** website is hosted with `Github Pages`. The HTML files that reside in the `armory_web` directory are the webpages that are hosted. **DO NOT** edit these HTML files. Instead, modify the HTML files in `armory_web/templates` directory instead.
+* The [Armory3D](https://www.armory3d.org) website is hosted with `Github Pages`. The HTML files that reside in the `armory_web` directory are the webpages that are hosted. **DO NOT** edit these HTML files. Instead, modify the HTML files in `armory_web/templates` directory instead.
 
 * Each webpage in the `armory_web` directory is comprised of 3 separate webpage sections: `Header Content`, `Main Content`, `Footer Content`.
 
