@@ -34,8 +34,8 @@
     <div class="uk-background-secondary">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
-          <a href="/"><img src="img\Logo.png" style="max-height: 50px" /></a>
-          <button type="button" class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY 3D Engine</button>
+          <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a>
+          <button type="button" class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY3D</button>
           <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center">
             <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
               <li><a href="/">HOME</a></li>
@@ -46,7 +46,7 @@
             </ul>
           </div>
         </div>
-        <div class="uk-navbar-right uk-margin-right uk-light uk-text-center">
+        <div class="uk-navbar-right uk-light uk-text-center">
           <ul class="uk-navbar-nav">
             <!-- News Category -->
             <li>
@@ -85,11 +85,9 @@
             </li>
             <!-- Community Category -->
             <li><a href="community">COMMUNITY</a></li>
-            <!-- Fund Category -->
-            <li><a href="fund">FUND</div></a></li>
+            <!-- Download Category -->
           </ul>
-          <!-- Download Category -->
-          <a class="uk-button uk-button-primary" href="download">
+          <a class="uk-margin-left uk-height-1-1 uk-button ro-download" href="download">
             <div style="transform: translateY(50%)">
               <i uk-icon="icon: download; ratio: 1.5"></i>
               <span class="uk-text-middle">DOWNLOAD</span>
@@ -104,7 +102,7 @@
     <button type="button" class="uk-button uk-button-default uk-width-1-1" style="border: none" uk-toggle="target: #offcanvas-slide">
         <i class="uk-margin-small-bottom" uk-icon="icon: menu; ratio: 1.5"></i>
         <span class="uk-text-middle">MENU</span>
-      </a>
+    </button>
   </div>
   <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
     <div class="uk-offcanvas-bar uk-background-secondary uk-light" style="width: 100vw">
@@ -112,7 +110,7 @@
       <ul class="uk-nav uk-nav-default">
         <li>
           <div class="uk-navbar-left uk-text-center">
-            <a href="/"><img src="img\Logo.png" style="max-height: 50px" ></a>
+            <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Image Logo" /></a>
             <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY 3D Engine</button>
             <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
               <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
@@ -177,7 +175,7 @@
   <div class="uk-section uk-section-secondary">
       <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
         <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-          <img src="img/Workflow.jpg">
+          <img src="img/Workflow.jpg" alt="Armory3D Image">
         </div>
         <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
           <div class="uk-margin-left uk-margin-top text-container">
@@ -200,7 +198,7 @@
           </div>
         </div>
         <div style="padding: 0">
-          <img src="img/rtbot.jpg">
+          <img src="img/rtbot.jpg" alt="ArmorPaint Image">
         </div>
       </div>
   </div>
@@ -208,7 +206,7 @@
   <div class="uk-section uk-section-secondary">
       <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
         <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-          <img src="img/lab.jpg">
+          <img src="img/lab.jpg" alt="ArmorLab Image">
         </div>
         <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
           <div class="uk-margin-left uk-margin-top text-container">
@@ -233,14 +231,14 @@
         </div>
         <div class="uk-text-center">
           <br><span class="ro-logocolor">Special Thanks</span>
-          <br><a style="color: #666" href="https://www.haxe.org">Haxe</a>
+          <br><a style="color: #666" href="http://kode.tech">Kode</a>
           <br><a style="color: #666" href="https://www.blender.org">Blender 3D</a>
           <br><a style="color: #666" href="https://www.github.com/armory3d/armory/graphs/contributors">Contributors</a>
         </div>
         <div class="uk-text-right">
           <br><span class="ro-logocolor">Contact</span>
           <br><a>
-          <script type="text/javascript">
+          <script>
             var user_name = "lubos";
             var host_name = "armory3d.org";
             document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");

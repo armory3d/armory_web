@@ -60,6 +60,30 @@ html {
   color: white;
 }
 
+.ro-download {
+  background-color: rgb(207,43,67);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.ro-download:hover,
+.ro-download:focus {
+  background-color: rgb(215,51,75);
+  color: #fff;
+}
+
+.ro-download:active,
+.ro-download.uk-active {
+  background-color: rgb(205,43,65);
+  color: #fff;
+}
+
+.ro-download:disabled {
+  background-color: transparent;
+  color: #999;
+  border-color: #e5e5e5;
+}
+
 .ro-footer {
   flex: 1;
 }
