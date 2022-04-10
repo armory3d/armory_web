@@ -12,4 +12,5 @@ writeHTML('index.html');
 writeHTML('news.html');
 writeHTML('community.html');
 writeHTML('download.html');
+writeHTML('fund.html');
 writeHTML('notes.html');
