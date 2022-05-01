@@ -137,6 +137,7 @@
         <ul class="uk-switcher year">
           <li>
             <ul class="uk-subnav uk-margin-top uk-subnav-divider" uk-switcher="connect: .entry2022">
+              <li><a href="#">2022.05</a></li>
               <li><a href="#">2022.04</a></li>
               <li><a href="#">2022.03</a></li>
               <li><a href="#">2022.02</a></li>
@@ -169,6 +170,9 @@
       <!-- Year 2022 header -->
       <li>
         <ul class="uk-switcher uk-margin entry2022">
+          <li>
+            <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2022.05 - May Release</h3>
+          </li>
           <li>
             <h3 class="uk-heading-divider ro-text-header uk-align-center" style="border-bottom: none;">2022.04 - April Release</h3>
           </li>
@@ -233,6 +237,16 @@
       <li>
 
         <ul class="uk-switcher uk-margin uk-width-1-1 uk-align-center entry2022">
+
+          <li>
+            
+            <img src="img/2022-05-a.png" class="uk-align-center"/>
+            <p class="uk-text-default">May is here <span style="font-weight: bold;">8</span> new pull requests from the great contributors - Great work!</p>
+            <a href="https://armory.itch.io/armory3d/purchase?popup=1"><p class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">New builds are out and can be downloaded on Itch</p></a>
+            <p>Get started using Armory3D today!</p>
+            <a href="https://github.com/armory3d/armory/wiki/setup" class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;">Learn more at the official Armory3D Wiki</a>
+
+          </li>
 
           <li>
             
@@ -345,6 +359,85 @@
       <li>
         <ul class="uk-switcher uk-margin uk-align-center uk-width-1-1 entry2022">
 
+          <!-- May start -->
+          <li> <!-- This part is for May START -->
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+    
+              <h4>Highlights</h4>
+          
+            </div>
+    
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <p class="uk-text-default">MoritzBrueckner added support for texture bindings for custom materials as well as the option to read depth texture for materials. Allows for interesting effects such as underwater caustics. Checkout the repo here: <a href="https://github.com/MoritzBrueckner/armory-caustics-volume">https://github.com/MoritzBrueckner/armory-caustics-volume</a></p>
+            </div>
+    
+            <img class="uk-margin" src="img/2022-05-b.gif" /></a>
+
+            <img class="uk-margin" src="img/2022-05-d.gif" /></a>
+
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <p class="uk-text-default">QuantumCoderQC added key interpolation node. Allows for linear interpolation (lerp) between 0-1. Good for smoothing character animation:</p>
+            </div>
+
+            <img class="uk-margin" src="img/2022-05-c.png" /></a>
+
+            <div class="uk-flex uk-margin-large-top uk-width-1-2">
+    
+              <h4>Additions</h4>
+          
+            </div>
+    
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <ul class="uk-list">
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2483">#2483</a></span> - MoritzBrueckner added support for texture bindings for custom (json) materials</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2477">#2477</a></span> - QuantumCoderQC added key Interpolation Node</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2475">#2475</a></span> - Tong added use port from prefs for html5 player path</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2474">#2474</a></span> - MoritzBrueckner added allow materials to read from a depth texture</p></li>
+              </ul>
+            </div>
+    
+            <div class="uk-flex uk-margin-large-top uk-width-1-2">
+    
+              <h4>Fixes</h4>
+          
+            </div>
+    
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <ul class="uk-list">
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2481">#2481</a></span> - Tong added remove head style element</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2480">#2480</a></span> - MoritzBrueckner added fix export of logic nodes with Blender standard sockets</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2479">#2479</a></span> - Tong added search ffmpeg if not set</p></li>
+                <li><p class="uk-text-default"><span class="uk-text-bold"><a href="https://github.com/armory3d/armory/pull/2470">#2470</a></span> - MoritzBrueckner added fix printing WASM errors when using ammo.js</p></li>
+              </ul>
+            </div>
+    
+    
+            <div class="uk-flex uk-margin-large-top uk-width-1-2">
+    
+              <h4>Other changes</h4>
+              
+            </div>
+    
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <ul class="uk-list">
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory_examples/pull/50">Armory Examples: #50</a></span> - Tong updated api links.</p></li>
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory_examples/pull/49">Armory Examples: #49</a></span> - Tong added sun Fix logic node errors.</p></li>
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/161">Iron: #161</a></span> - MoritzBrueckner added sun world matrix uniform.</p></li>
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/iron/pull/160">Iron: #160</a></span> - MoritzBrueckner added Allow materials to read from a depth texture</p></li>
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory_tutorials/pull/17">Armory Tutorials: #17</a></span> - Tong updated workflows.</p></li>
+                <li><p class="uk-text-default"><span class=" uk-text-bold"><a href="https://github.com/armory3d/armory_tutorials/pull/16">Armory Tutorials: #16</a></span> - Tong updated projects.</p></li>
+              </ul>
+            </div>
+    
+            <hr />
+    
+            <div class="uk-flex uk-margin-top uk-width-1-1">
+              <p class=""><a class="uk-label" style="color: #FFF; background-color: #cf2b43; text-decoration: underline;" href="fund">Support the Armory3D fund!</a></p>
+            </div>
+    
+          </li> <!-- This part is for May END -->
+
+
           <li> <!-- This part is for April START -->
             <div class="uk-flex uk-margin-top uk-width-1-1">
     
@@ -362,7 +455,7 @@
             <img class="uk-margin" src="img/2022-04-d.gif" /></a>
 
             <div class="uk-flex uk-margin-top uk-width-1-1">
-              <p class="uk-text-default">Rpaladin added upgrades for the onEvent nodes:</p>
+              <p class="uk-text-default">RPaladin added upgrades for the onEvent nodes:</p>
             </div>
 
             <img class="uk-margin" src="img/2022-04-b.png" /></a>
