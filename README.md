@@ -1,29 +1,52 @@
 # Want to Contribute?
 
-1. Fork [this](https://www.github.com/armory3d/armory_web) repository
+1. Fork [this](https://www.github.com/armory3d/armory_web) repository.
 
-2. Contribute **new** code to the forked repository
+2. Commit new code to the forked repository.
 
-3. Open a **pull-request** for the forked repository to propose changes: `armory_web <- Repo containing changes`
+3. Open a pull-request for the forked repository to propose changes:<br />
+`armory_web [gh-pages branch]` ⬅️ `Forked [gh-pages branch]` containing changes.
 
-# How to Contribute
+# Prerequisites
 
-* Each main webpage is comprised of 3 seperate webpage sections: `Header`, `Main`, `Footer`
+1. **Node**<br />
+The [ArmSDK](https://www.github.com/armory3d/armsdk) ships with [Node](https://www.nodejs.org/en/) and can be found in:
+`armsdk\nodejs`.
 
-*  The `armory_web/tree/gh-pages/build` contains template sections for each HTML webpages - including `Header` & `Footer` webpages
+2. **Python**<br />
+[Blender](https://www.blender.org) ships with [Python](https://www.python.org/) and can be found in:
+`Blender\2.93\python\bin`.
 
-* Any changes to `armory_web/tree/gh-pages/build` or `armory_web/tree/gh-pages` should ALWAYS match corrosponding sections<br />
+3. **A Localhost that provides 403 & 404 redirecting**<br />
+This [provided](https://github.com/rpaladin/armory_web_python_localhost) localhost service works well with the [armory_web](https://www.github.com/armory3d/armory_web/tree/gh-pages) source setup. [Apache](https://www.apachelounge.com/download), [Node](https://www.nodejs.org/en/), and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
 
-## Example: How to change Header content
+# Development Process
 
-To make changes for the `Header` sections:
+* The [Armory3D](https://www.armory3d.org) website is hosted with `Github Pages`. The HTML files that reside in the `armory_web` directory are the webpages that are hosted. **DO NOT** edit these HTML files. Instead, modify the HTML files in `armory_web/templates` directory instead.
 
-* Make changes to `armory_web/tree/gh-pages/build/header.html`
-* Then manually update each HTML webpages Header sections in `armory_web/tree/gh-pages` to match the new section changes
+* Each webpage in the `armory_web` directory is comprised of 3 separate webpage sections: `Header Content`, `Main Content`, `Footer Content`.
 
-## Example: How to change Main content
+*  The `armory_web/templates` directory contains a HTML file for **each** template section, including the `Header` & `Footer` global webpages. **Use** these HTML files for implementing new changes, **NOT** the HTML files that reside in the `armory_web` directory.
 
-To make changes for the `Community` webpage:
+* **Update** any new changes from the HTML files in the `armory_web/templates` directory to the `armory_web` directory by running the `make.js` script with **Node**.
 
-* Make changes to `armory_web/tree/gh-pages/build/community.html`
-* Then manually update `armory_web/tree/gh-pages/community.html` to match the new section changes
+## Example: How to update Header Content
+
+To make changes for the `Header` section:
+
+* Make changes to the `armory_web/templates/header.html` HTML file.
+* Then run `make.js` with Node to update the new changes globally to all HTML files that reside in the `armory_web` directory.
+
+## Example: How to update Main Content
+
+To make changes for the `Community` section:
+
+* Make changes to `armory_web/templates/community.html`
+* Then run `make.js` with Node to update the new changes to the `community.html` HTML file that resides in the `armory_web` directory.
+
+## Example: How to update Footer Content
+
+To make changes for the `Footer` section:
+
+* Make changes to the `armory_web/templates/footer.html` HTML file.
+* Then run `make.js` with Node to update the new changes globally to all HTML files that reside in the `armory_web` directory.

@@ -1,3 +1,21 @@
+body {background: #333; height: 100vh;}
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {width: 8px; height: 3px;}
+::-webkit-scrollbar-button {background-color: #666;}
+::-webkit-scrollbar-track {background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb {height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner {background-color: #646464;}
+
 .ro-text-content {
   font-family: "Open Sans", sans-serif;
   font-size: 1.0em;
@@ -18,6 +36,10 @@
   font-size: 4.0em;
 }
 
+.ro-navbar-light {
+  background-color: #222222;
+}
+
 .ro-background-red {
   background-color: crimson;
 }
@@ -36,6 +58,30 @@
 
 .ro-logocolor {
   color: white;
+}
+
+.ro-download {
+  background-color: rgb(207,43,67);
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.ro-download:hover,
+.ro-download:focus {
+  background-color: rgb(215,51,75);
+  color: #fff;
+}
+
+.ro-download:active,
+.ro-download.uk-active {
+  background-color: rgb(205,43,65);
+  color: #fff;
+}
+
+.ro-download:disabled {
+  background-color: transparent;
+  color: #999;
+  border-color: #e5e5e5;
 }
 
 .ro-footer {
