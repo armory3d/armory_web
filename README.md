@@ -1,28 +1,28 @@
 # Want to Contribute?
 
-1. Fork [this](https://www.github.com/armory3d/armory_web) repository.
+1. Fork [this](https://github.com/armory3d/armory_web) repository.
 
 2. Commit new code to the forked repository.
 
 3. Open a pull-request for the forked repository to propose changes:<br />
-`armory_web [gh-pages branch]` ⬅️ `Forked [gh-pages branch]` containing changes.
+`armory_web repository [main branch]` ⬅️ `Forked repository [main branch]`
 
 # Prerequisites
 
 1. **Node**<br />
-The [ArmSDK](https://www.github.com/armory3d/armsdk) ships with [Node](https://www.nodejs.org/en/) and can be found in:
+The [ArmSDK](https://github.com/armory3d/armsdk) ships with [Node](https://nodejs.org/en/) and can be found in:
 `armsdk\nodejs`.
 
 2. **Python**<br />
-[Blender](https://www.blender.org) ships with [Python](https://www.python.org/) and can be found in:
+[Blender](https://blender.org) ships with [Python](https://python.org/) and can be found in:
 `Blender\2.93\python\bin`.
 
 3. **A Localhost that provides 403 & 404 redirecting**<br />
-This [provided](https://github.com/rpaladin/armory_web_python_localhost) localhost service works well with the [armory_web](https://www.github.com/armory3d/armory_web/tree/gh-pages) source setup. [Apache](https://www.apachelounge.com/download), [Node](https://www.nodejs.org/en/), and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
+This [provided](https://github.com/rpaladin/armory_web_python_localhost) localhost service works well with the [armory_web](https://github.com/armory3d/armory_web) source setup. [Apache](https://apachelounge.com/download), [Node](https://nodejs.org/en/), and some other localhost software can accomplish the source setup, but you'll need to setup it up yourself.
 
 # Development Process
 
-* The [Armory3D](https://www.armory3d.org) website is hosted with `Github Pages`. The HTML files that reside in the `armory_web` directory are the webpages that are hosted. **DO NOT** edit these HTML files. Instead, modify the HTML files in `armory_web/templates` directory instead.
+* The [Armory3D](https://armory3d.org) website is hosted with `Github Pages`. The HTML files that reside in the `armory_web` directory are the webpages that are hosted. **DO NOT** edit these HTML files. Instead, modify the HTML files in `armory_web/templates` directory instead, then inject the new changes to their main counterparts.
 
 * Each webpage in the `armory_web` directory is comprised of 3 separate webpage sections: `Header Content`, `Main Content`, `Footer Content`.
 
