@@ -3,7 +3,7 @@
 <head>
   <title>Armory | 3D Engine</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1 /">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="title" content="Armory | 3D Engine" />
   <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software." />
   <meta property="og:type" content="website" />
@@ -16,17 +16,12 @@
   <meta property="twitter:title" content="Armory | 3D Engine" />
   <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software." />
   <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg" />
-  <!-- Font Loading -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans" />
-  <!-- UIkit CSS -->
-  <link rel="stylesheet" type="text/css" href="css/uikit.min.css" />
-  <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <!-- JQuery JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- UIkit JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
+  <!-- CSS UIkit -->
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <!-- CSS Armory3D -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- CSS Fonts -->
+  <link rel="stylesheet" href="css/fonts.css" />
 </head>
 <body class="ro-text-content">
   <!-- Desktop Nav -->
@@ -64,11 +59,11 @@
               <a uk-icon="icon: chevron-down">LEARN</a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a href="https://www.github.com/armory3d/armory/wiki">Manual</a></li>
+                  <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
                   <li><div class="uk-nav-divider"></div></li>
                   <li><a href="https://api.armory3d.org">API</a></li>
                   <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="https://www.github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
+                  <li><a href="https://github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
                 </ul>
               </div>
             </li>
@@ -79,7 +74,7 @@
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
                   <li class="uk-nav-divider"></li>
-                  <li><a href="https://www.github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+                  <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
                 </ul>
               </div>
             </li>
@@ -140,11 +135,11 @@
           <a class="uk-margin-small-bottom uk-button uk-button-default" uk-icon="icon: chevron-down">LEARN</a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
             <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="https://www.github.com/armory3d/armory/wiki">Manual</a></li>
+              <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
               <li><div class="uk-nav-divider"></div></li>
               <li><a href="https://api.armory3d.org">API</a></li>
               <li><div class="uk-nav-divider"></div></li>
-              <li><a href="https://www.github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
+              <li><a href="https://github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
             </ul>
           </div>
         </li>
@@ -155,7 +150,7 @@
             <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
               <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
               <li class="uk-nav-divider"></li>
-              <li><a href="https://www.github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+              <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
             </ul>
           </div>
         </li>
@@ -186,25 +181,21 @@
       <div class="uk-child-width-expand" uk-grid>
         <div class="uk-text-left">
           <br><span class="ro-logocolor">Development</span>
-          <br><a style="color: #666" href="https://www.github.com/armory3d/armory">GitHub</a>
-          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/issues">Tracker</a>
-          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/projects">Roadmap</a>
-          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/wiki/contribute">Contribute</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/projects">Roadmap</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a>
         </div>
         <div class="uk-text-center">
           <br><span class="ro-logocolor">Special Thanks</span>
           <br><a style="color: #666" href="http://kode.tech">Kode</a>
-          <br><a style="color: #666" href="https://www.blender.org">Blender 3D</a>
-          <br><a style="color: #666" href="https://www.github.com/armory3d/armory/graphs/contributors">Contributors</a>
+          <br><a style="color: #666" href="https://blender.org">Blender 3D</a>
+          <br><a style="color: #666" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a>
         </div>
         <div class="uk-text-right">
           <br><span class="ro-logocolor">Contact</span>
           <br><a>
-          <script>
-            var user_name = "lubos";
-            var host_name = "armory3d.org";
-            document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");
-          </script>
+          <a href="mailto:lubos@armory3d.org" style="color: #666">Email</a>
           </a>
           <br><a style="color: #666" href="community">Community</a>
         </div>
@@ -212,5 +203,8 @@
     </div>
     <br><br><br>
   </div>
+  <!-- JS UIkit -->
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
 </body>
 </html>
