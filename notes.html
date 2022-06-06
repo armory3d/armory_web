@@ -1361,7 +1361,11 @@
         <div class="uk-text-right">
           <br><span class="ro-logocolor">Contact</span>
           <br><a>
-          <a href="mailto:lubos@armory3d.org" style="color: #666">Email</a>
+          <script>
+            var user_name = "lubos";
+            var host_name = "armory3d.org";
+            document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");
+          </script>
           </a>
           <br><a style="color: #666" href="community">Community</a>
         </div>
