@@ -29,34 +29,51 @@
     <div class="uk-background-secondary">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
-          <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a>
-          <button type="button" class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY3D</button>
-          <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center">
-            <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="/">HOME</a></li>
-              <li><div class="uk-nav-divider"></div></li>
-              <li><a href="https://armorpaint.org/">ARMORPAINT</a></li>
-              <li><div class="uk-nav-divider"></div></li>
-              <li><a href="https://armorlab.org/">ARMORLAB</a></li>
-            </ul>
-          </div>
+          <ul class="uk-navbar-nav">
+            <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+            <li>
+              <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
+              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
+                  <li><a href="/">Home</a></li>
+                  <li><div class="uk-nav-divider"></div></li>
+                  <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
+                  <li><div class="uk-nav-divider"></div></li>
+                  <li><a href="https://armorlab.org/">ArmorLab</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
         <div class="uk-navbar-right uk-light uk-text-center">
           <ul class="uk-navbar-nav">
             <!-- News Category -->
             <li>
-              <a uk-icon="icon: chevron-down">NEWS</a>
+              <a class="ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-nav-dropdown" style="border: 1px solid rgb(255,255,255,0.25)">
+                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="notes">Release Notes</a></li>
                   <li><div class="uk-nav-divider"></div></li>
                   <li><a href="news">Newsletter</a></li>
                 </ul>
               </div>
             </li>
+            <!-- Features Category -->
+            <li><a class="ro-navbar" href="features"><span>FEATURES</span></a></li>
+            <!-- Showcase Category -->
+            <li>
+              <a class="ro-navbar" uk-icon="icon: chevron-down"><span>SHOWCASE</span></a>
+              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
+                  <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Demos</a></li>
+                  <li class="uk-nav-divider"></li>
+                  <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+                </ul>
+              </div>
+            </li>
             <!-- Learn Category -->
             <li>
-              <a uk-icon="icon: chevron-down">LEARN</a>
+              <a class="ro-navbar" uk-icon="icon: chevron-down"><span>LEARN</span></a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
@@ -67,19 +84,8 @@
                 </ul>
               </div>
             </li>
-            <!-- Showcase Category -->
-            <li>
-              <a uk-icon="icon: chevron-down">SHOWCASE</a>
-              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
-                  <li class="uk-nav-divider"></li>
-                  <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
-                </ul>
-              </div>
-            </li>
             <!-- Community Category -->
-            <li><a href="community">COMMUNITY</a></li>
+            <li><a class="ro-navbar" href="community"><span>COMMUNITY</span></a></li>
             <!-- Download Category -->
           </ul>
           <a class="uk-margin-left uk-height-1-1 uk-button ro-download" href="download">
@@ -101,19 +107,19 @@
   </div>
   <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
     <div class="uk-offcanvas-bar uk-background-secondary uk-light" style="width: 100vw">
-      <button type="button" class="uk-offcanvas-close uk-close-large" uk-close></button>
+      <button type="button" class="uk-offcanvas-close uk-close-large" uk-close style="transform: translateY(35%)"></button>
       <ul class="uk-nav uk-nav-default">
         <li>
           <div class="uk-navbar-left uk-text-center">
             <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Image Logo" /></a>
-            <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY 3D Engine</button>
+            <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY3D</button>
             <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
               <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                <li><a href="/">HOME</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="https://armorpaint.org/">ARMORPAINT</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href="https://armorlab.org/">ARMORLAB</a></li>
+                <li><a href="/">Home</a></li>
+                <li><div class="uk-nav-divider"></div></li>
+                <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
+                <li><div class="uk-nav-divider"></div></li>
+                <li><a href="https://armorlab.org/">ArmorLab</a></li>
               </ul>
             </div>
           </div>
@@ -121,7 +127,7 @@
         <hr>
         <!-- News Category -->
         <li>
-          <a class="uk-margin-small-bottom uk-button uk-button-default" uk-icon="icon: chevron-down">NEWS</a>
+          <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
             <ul class="uk-nav uk-nav-default uk-nav-dropdown" style="border: 1px solid rgb(255,255,255,0.25)">
               <li><a href="notes">Release Notes</a></li>
@@ -130,9 +136,22 @@
             </ul>
           </div>
         </li>
+        <!-- Features Category -->
+        <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="features"><span>FEATURES</span></a></li>
+        <!-- Showcase Category -->
+        <li>
+          <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>SHOWCASE</span></a>
+          <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
+            <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
+              <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Demos</a></li>
+              <li class="uk-nav-divider"></li>
+              <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+            </ul>
+          </div>
+        </li>
         <!-- Learn Category -->
         <li>
-          <a class="uk-margin-small-bottom uk-button uk-button-default" uk-icon="icon: chevron-down">LEARN</a>
+          <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>LEARN</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
             <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
               <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
@@ -143,117 +162,129 @@
             </ul>
           </div>
         </li>
-        <!-- Showcase Category -->
-        <li>
-          <a class="uk-margin-small-bottom uk-button uk-button-default" uk-icon="icon: chevron-down">SHOWCASE</a>
-          <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
-            <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Examples</a></li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
-            </ul>
-          </div>
-        </li>
         <!-- Community Category -->
-        <li><a class="uk-margin-small-bottom uk-button uk-button-default" href="community">COMMUNITY</a></li>
+        <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="community"><span>COMMUNITY</span></a></li>
         <!-- Download Category -->
-        <li><a class="uk-button uk-button-default" href="download">DOWNLOAD</a></li>
+        <li><a class="uk-button uk-button-default ro-navbar" href="download"><span>DOWNLOAD</span></a></li>
       </ul>
     </div>
-  </div>
-  <!-- Main Content -->
-  <div class="uk-cover-container cover-container">
-    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
-  </div>
+  </div>  <!-- Main Content -->
+  <div class="uk-section-secondary uk-background-cover uk-light" data-src="img/FeaturedCover.jpg" uk-img>
+    <div class="uk-margin-left uk-margin-right">
+      <!-- <div class="uk-grid-small uk-child-width-1-4@s uk-flex-center uk-text-center" uk-grid> -->
 
-  <div class="uk-section uk-section-secondary">
-    <br><br><br>
+        <div class="uk-child-width-1-2@s uk-child-width-1-6@m" uk-grid="masonry: true">
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 100px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 130px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 150px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 160px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 180px">Item</div>
+          </div>
+          <div>
+              <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
+          </div>
+      <!-- </div> -->
+
+    <!-- <div class="uk-child-width-expand@l-2 uk-text-center uk-grid-medium" uk-grid>
+      <div class="community">
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://discord.gg/axq6qWV">Discord</a></h1>
+        <span>&nbsp;</span>
+        <span>Join Armory server</span>
+      </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://github.com/armory3d/armory/discussions">GitHub</a></h1>
+        Discuss or propose ideas for Armory
+        <br />or browse&nbsp;<a href="https://github.com/search?q=armory3d">#hashtag</a>
+      </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="http://forums.armory3d.org">Discourse</a></h1>
+        <span>&nbsp;</span>
+        <span>Discuss or share Armory content</span>
+      </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://reddit.com/r/armory3d">Reddit</a></h1>
+        <span>&nbsp;</span>
+        <span>Discuss or share Armory content</span>
+      </div>
+    </div>
     <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
       <div>
-        <h1 class="uk-heading-divider ro-text-header"><a href="https://discord.gg/axq6qWV">Discord</a></h1>
-          <span>&nbsp;</span>
-          <span>Join Armory server</span>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://github.com/armory3d/armory/discussions">GitHub</a></h1>
-          Discuss or propose ideas for Armory
-          <br />or browse&nbsp;<a href="https://github.com/search?q=armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="http://forums.armory3d.org">Discourse</a></h1>
-          <span>&nbsp;</span>
-          <span>Discuss or share Armory content</span>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://reddit.com/r/armory3d">Reddit</a></h1>
-          <span>&nbsp;</span>
-          <span>Discuss or share Armory content</span>
-        </div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://facebook.com/armorytools/">Facebook</a></h1>
+        Join Armory group
+        <br />or use&nbsp;<a href="https://facebook.com/hashtag/armory3d">#hashtag</a>
       </div>
-      <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://facebook.com/armorytools/">Facebook</a></h1>
-          Join Armory group
-          <br />or use&nbsp;<a href="https://facebook.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://twitter.com/armory3d">Twitter</a></h1>
-          Latest tweets about Armory
-          <br />or use&nbsp;<a href="https://twitter.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://instagram.com/armory3d">Instagram</a></h1>
-          Latest posts about Armory
-          <br />or use&nbsp;<a href="https://instagram.com/explore/tags/armory3d">#hashtag</a>
-        </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://twitter.com/armory3d">Twitter</a></h1>
+        Latest tweets about Armory
+        <br />or use&nbsp;<a href="https://twitter.com/hashtag/armory3d">#hashtag</a>
       </div>
-      <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://youtube.com/c/Armory3d">YouTube</a></h1>
-          Latest videos about Armory
-          <a href="https://youtube.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://artstation.com/search?sort_by=relevance&query=armory3d">Artstation</a></h1>
-          <span>&nbsp;</span>
-          <span>Share Armory content with hashtag</span>
-        </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://instagram.com/armory3d">Instagram</a></h1>
+        Latest posts about Armory
+        <br />or use&nbsp;<a href="https://instagram.com/explore/tags/armory3d">#hashtag</a>
       </div>
-    <br><br><br>
+    </div>
+    <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://youtube.com/c/Armory3d">YouTube</a></h1>
+        Latest videos about Armory
+        <a href="https://youtube.com/hashtag/armory3d">#hashtag</a>
+      </div>
+      <div>
+        <h1 class="uk-heading-divider ro-text-header"><a href="https://artstation.com/search?sort_by=relevance&query=armory3d">Artstation</a></h1>
+        <span>&nbsp;</span>
+        <span>Share Armory content with hashtag</span>
+      </div>
+    </div> -->
+    </div>
   </div>
+  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-section-secondary uk-background-cover uk-light" data-src="img/baked.jpg" uk-img></div>
 
-  <div class="uk-section uk-section-secondary">
-      <div class="uk-align-center">
-        <img src="img/community.jpg" alt="Community Image">
-      </div>
-  </div>
-  <!-- Footer Content -->
+  <!-- <div class="uk-cover-container cover-container">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div> -->  <!-- Footer Content -->
   <div class="ro-background-darksecondary">
     <br><br>
     <div class="uk-container uk-container-small">
       <div class="uk-child-width-expand" uk-grid>
-        <div class="uk-text-left">
+        <div class="uk-text-left ro-footer">
           <br><span class="ro-logocolor">Development</span>
           <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
           <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
           <br><a style="color: #666" href="https://github.com/armory3d/armory/projects">Roadmap</a>
           <br><a style="color: #666" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a>
         </div>
-        <div class="uk-text-center">
+        <div class="uk-text-center ro-footer">
           <br><span class="ro-logocolor">Special Thanks</span>
           <br><a style="color: #666" href="http://kode.tech">Kode</a>
           <br><a style="color: #666" href="https://blender.org">Blender 3D</a>
           <br><a style="color: #666" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a>
         </div>
-        <div class="uk-text-right">
-          <br><span class="ro-logocolor">Contact</span>
-          <br><a>
+        <div class="uk-text-right ro-footer">
+          <br><span class="ro-logocolor">Contact</span><br>
           <script>
             var user_name = "lubos";
             var host_name = "armory3d.org";
             document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");
           </script>
-          </a>
           <br><a style="color: #666" href="community">Community</a>
         </div>
       </div>

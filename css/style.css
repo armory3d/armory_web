@@ -16,9 +16,8 @@ html {
 ::-webkit-scrollbar-thumb {height: 50px; background-color: #666; border-radius: 3px;}
 ::-webkit-scrollbar-corner {background-color: #646464;}
 
-.ro-text-content {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.0em;
+.ro-trans {
+  background-color: rgba(0,0,0,0.75);
 }
 
 .ro-text-logo {
@@ -60,6 +59,63 @@ html {
   color: white;
 }
 
+/* Navbar - Start */
+
+.ro-navbar span {
+  color: white !important;
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  position: relative;
+}
+
+.ro-navbar span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  border-bottom: 1px solid white;
+  transition: right 0.3s ease-out;
+  color: #666;
+}
+
+.ro-navbar:hover span::before,
+.ro-navbar:focus span::before {
+  right: 0;
+}
+
+/* Navbar - End */
+
+.ro-text-content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.0em;
+}
+
+/* Info - Start */
+
+.ro-info {
+  background-color: #1e87f0;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.ro-info:hover,
+.ro-info:focus {
+  background-color: #0f7ae5;
+  color: #fff;
+}
+
+.ro-info:active,
+.ro-info.uk-active {
+  background-color: #0e6dcd;
+  color: #fff;
+}
+
+/* Info - End */
+
+/* Download - Start */
+
 .ro-download {
   background-color: rgb(207,43,67);
   color: #fff;
@@ -78,11 +134,7 @@ html {
   color: #fff;
 }
 
-.ro-download:disabled {
-  background-color: transparent;
-  color: #999;
-  border-color: #e5e5e5;
-}
+/* Download - End */
 
 .ro-footer {
   flex: 1;

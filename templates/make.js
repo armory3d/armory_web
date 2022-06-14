@@ -10,6 +10,7 @@ let writeHTML = function(fileName) {
 writeHTML('404.html');
 writeHTML('index.html');
 writeHTML('news.html');
+writeHTML('notes.html');
+writeHTML('features.html');
 writeHTML('community.html');
 writeHTML('download.html');
-writeHTML('notes.html');
