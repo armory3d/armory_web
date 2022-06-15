@@ -61,7 +61,8 @@ html {
 
 /* Navbar - Start */
 
-.ro-navbar span {
+.ro-navbar span,
+.ro-download div span {
   color: white !important;
   padding: 0;
   line-height: 1.5;
@@ -69,7 +70,8 @@ html {
   position: relative;
 }
 
-.ro-navbar span::before {
+.ro-navbar span::before,
+.ro-download div span::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -81,7 +83,10 @@ html {
 }
 
 .ro-navbar:hover span::before,
-.ro-navbar:focus span::before {
+.ro-navbar:focus span::before,
+.ro-download:hover div span::before,
+.ro-download:focus div span::before
+{
   right: 0;
 }
 
@@ -118,20 +123,17 @@ html {
 
 .ro-download {
   background-color: rgb(207,43,67);
-  color: #fff;
   border: 1px solid transparent;
 }
 
 .ro-download:hover,
 .ro-download:focus {
-  background-color: rgb(215,51,75);
-  color: #fff;
+  background-color: rgb(223,59,83);
 }
 
 .ro-download:active,
 .ro-download.uk-active {
-  background-color: rgb(205,43,65);
-  color: #fff;
+  background-color: rgb(191,27,51);
 }
 
 /* Download - End */

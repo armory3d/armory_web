@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- CSS Fonts -->
   <link rel="stylesheet" href="css/fonts.css" />
+  <!-- JS Query -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body class="ro-text-content">
   <!-- Desktop Nav -->
@@ -31,8 +33,8 @@
         <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
           <ul class="uk-navbar-nav">
             <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+            <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
             <li>
-              <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="/">Home</a></li>
@@ -111,17 +113,21 @@
       <ul class="uk-nav uk-nav-default">
         <li>
           <div class="uk-navbar-left uk-text-center">
-            <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Image Logo" /></a>
-            <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY3D</button>
-            <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
-              <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                <li><a href="/">Home</a></li>
-                <li><div class="uk-nav-divider"></div></li>
-                <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
-                <li><div class="uk-nav-divider"></div></li>
-                <li><a href="https://armorlab.org/">ArmorLab</a></li>
-              </ul>
-            </div>
+            <ul class="uk-navbar-nav">
+              <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+              <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
+              <li>
+                <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
+                  <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
+                    <li><a href="/">Home</a></li>
+                    <li><div class="uk-nav-divider"></div></li>
+                    <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
+                    <li><div class="uk-nav-divider"></div></li>
+                    <li><a href="https://armorlab.org/">ArmorLab</a></li>
+                  </ul>
+                </div>
+              </li>
+            </li>
           </div>
         </li>
         <hr>
@@ -169,52 +175,50 @@
       </ul>
     </div>
   </div>	<!-- Main Content -->
-  <div class="uk-background-cover uk-light" data-src="img/Renderer.jpg" uk-img style="height: 65vh">
-    <div class="uk-inline uk-position-relative uk-position-center-left uk-margin-large-left">
-      <h1 class="uk-inline ro-text-header uk-margin-remove uk-padding-small" style="background-color: rgb(207,43,67) !important">The best Blender game-engine</h1>
-      <p class="uk-margin-remove uk-padding-small uk-background-secondary" style="color: white !important">Create your game in Blender and export to virtually any device & platform on the market.</p>
-      <div class="uk-button-group uk-section-secondary">
-        <a class="uk-button uk-button-large ro-info" href="features">
-          <i uk-icon="icon: info"></i>
-          <span class="uk-text-middle">&nbsp;Learn More</span>
-        </a>
-        <a class="uk-button uk-button-large ro-info" href="https://armory3d.github.io/armory_examples_browser/">
-          <i uk-icon="icon: play-circle"></i>
-          <span class="uk-text-middle">&nbsp;Online Demos</span>
-        </a>
-      </div>
-    </div>
-	</div>
-
-  <div class="uk-section uk-section-secondary">
-      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-        <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-          <img src="img/Workflow.jpg" alt="Armory3D Image">
-        </div>
-        <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
-          <div class="uk-margin-left uk-margin-top text-container">
-            <h2 class="uk-heading-divider ro-text-header">Armory 3D Engine</h2>
-            Armory is an open-source 3D engine focused on portability, minimal footprint and performance. The renderer is fully scriptable with deferred and forward paths supported out of the box.<br><br>
-            Armory provides a full Blender integration add-on, turning it into a complete game development tool. The result is a unified workflow from start to finish.<br/><br/>
-            <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki">learn more</a>
+  <div class="uk-height-1-1 uk-section uk-section-secondary uk-background-cover uk-light" data-src="img/2021-08-b.gif" uk-img>
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
+        <div class="uk-inline uk-position-center-left text-container">
+          <h2 class="uk-inline uk-margin-remove uk-padding-small ro-text-header" style="background-color: rgb(207,43,67)">Armory Game Engine</h2>
+          <p class="uk-margin-remove uk-padding-small uk-background-secondary" style="color: white">A powerful, free & open-source cross-platform game engine, integrated in Blender.</p>
+          <div class="uk-margin-top">
+            <a class="uk-button uk-button-default" href="features">learn more</a>
+            <a class="uk-button uk-button-default" href="https://armory3d.github.io/armory_examples_browser/">online demos</a>
           </div>
         </div>
       </div>
+    </div>
   </div>
 
   <div class="uk-section uk-section-secondary">
-      <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-        <div style="padding: 0">
-          <div class="uk-margin-left uk-margin-top text-container">
-            <h2 class="uk-heading-divider ro-text-header">ArmorPaint</h2>
-            Powered by Armory engine - ArmorPaint is a stand-alone software designed for physically-based texture painting. Drag & drop your 3D models and start painting. Receive instant visual feedback in the viewport as you paint.<br/><br/>
-            <a class="uk-button uk-button-default" href="https://armorpaint.org">learn more</a>
-          </div>
-        </div>
-        <div style="padding: 0">
-          <img src="img/rtbot.jpg" alt="ArmorPaint Image">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+        <img src="img/Workflow.jpg" alt="Armory3D Image">
+      </div>
+      <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
+        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+          <h2 class="uk-heading-divider ro-text-header">Armory 3D Engine</h2>
+          Armory is an open-source 3D engine focused on portability, minimal footprint and performance. The renderer is fully scriptable with deferred and forward paths supported out of the box.<br><br>
+          Armory provides a full Blender integration add-on, turning it into a complete game development tool. The result is a unified workflow from start to finish.<br/><br/>
+          <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki">learn more</a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="uk-section uk-section-secondary">
+    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div style="padding: 0">
+        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+          <h2 class="uk-heading-divider ro-text-header">ArmorPaint</h2>
+          Powered by Armory engine - ArmorPaint is a stand-alone software designed for physically-based texture painting. Drag & drop your 3D models and start painting. Receive instant visual feedback in the viewport as you paint.<br/><br/>
+          <a class="uk-button uk-button-default" href="https://armorpaint.org">learn more</a>
+        </div>
+      </div>
+      <div style="padding: 0">
+        <img src="img/rtbot.jpg" alt="ArmorPaint Image">
+      </div>
+    </div>
   </div>
 
   <div class="uk-section uk-section-secondary">
@@ -222,8 +226,8 @@
         <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
           <img src="img/lab.jpg" alt="ArmorLab Image">
         </div>
-        <div class="uk-flex-first uk-flex-last@l" style="padding: 0;">
-          <div class="uk-margin-left uk-margin-top text-container">
+        <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
+          <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
             <h2 class="uk-heading-divider ro-text-header">ArmorLab</h2>
             Powered by Armory engine - ArmorLab is a stand-alone software designed for AI-powered texture authoring. Generate PBR materials by drag & dropping your photos.<br/><br/>
             <a class="uk-button uk-button-default" href="https://armorlab.org">learn more</a>

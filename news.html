@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- CSS Fonts -->
   <link rel="stylesheet" href="css/fonts.css" />
+  <!-- JS Query -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body class="ro-text-content">
   <!-- Desktop Nav -->
@@ -31,8 +33,8 @@
         <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
           <ul class="uk-navbar-nav">
             <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+            <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
             <li>
-              <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="/">Home</a></li>
@@ -111,17 +113,21 @@
       <ul class="uk-nav uk-nav-default">
         <li>
           <div class="uk-navbar-left uk-text-center">
-            <a href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Image Logo" /></a>
-            <button class="uk-margin-left uk-button-text" uk-icon="icon: triangle-down">ARMORY3D</button>
-            <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
-              <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                <li><a href="/">Home</a></li>
-                <li><div class="uk-nav-divider"></div></li>
-                <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
-                <li><div class="uk-nav-divider"></div></li>
-                <li><a href="https://armorlab.org/">ArmorLab</a></li>
-              </ul>
-            </div>
+            <ul class="uk-navbar-nav">
+              <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+              <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
+              <li>
+                <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
+                  <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
+                    <li><a href="/">Home</a></li>
+                    <li><div class="uk-nav-divider"></div></li>
+                    <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
+                    <li><div class="uk-nav-divider"></div></li>
+                    <li><a href="https://armorlab.org/">ArmorLab</a></li>
+                  </ul>
+                </div>
+              </li>
+            </li>
           </div>
         </li>
         <hr>
@@ -168,16 +174,20 @@
         <li><a class="uk-button uk-button-default ro-navbar" href="download"><span>DOWNLOAD</span></a></li>
       </ul>
     </div>
-  </div>  <div class="uk-cover-container cover-container">
+  </div>  <!-- Main Content -->
+  <div class="uk-cover-container cover-container" style="height: 50vh">
     <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
   </div>
 
   <div class="uk-section uk-section-secondary">
-    <div class="uk-text-center uk-margin-bottom">
-        <br><br><a href="https://tinyletter.com/armory">Sign up</a> for Armory news.<br><br><br>
-        <a class="twitter-timeline" data-width="800" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d">Tweets by armory3d</a> <script async src="https://platform.twitter.com/widgets.js"></script>
+    <div class="uk-margin-large-top uk-margin-bottom uk-text-center">
+      <p>
+        <a href="https://tinyletter.com/armory">Sign up</a> for Armory news |
+        <a class="twitter-timeline" data-width="800" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d">Tweets</a> by armory3d
+      </p>
     </div>
-  </div>  <!-- Footer Content -->
+  </div>
+  <script async src="https://platform.twitter.com/widgets.js"></script>  <!-- Footer Content -->
   <div class="ro-background-darksecondary">
     <br><br>
     <div class="uk-container uk-container-small">
