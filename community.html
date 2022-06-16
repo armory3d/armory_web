@@ -33,8 +33,8 @@
         <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
           <ul class="uk-navbar-nav">
             <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
-            <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
             <li>
+              <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
               <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
                 <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                   <li><a href="/">Home</a></li>
@@ -115,8 +115,8 @@
           <div class="uk-navbar-left uk-text-center">
             <ul class="uk-navbar-nav">
               <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
-              <li><a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a></li>
               <li>
+                <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
                 <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
                   <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
                     <li><a href="/">Home</a></li>
@@ -178,60 +178,64 @@
   <div class="uk-cover-container cover-container" style="height: 50vh">
     <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
   </div>
-
   <div class="uk-section uk-section-secondary">
     <br><br><br>
     <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
+      <!-- Discord -->
       <div>
-        <h1 class="uk-heading-divider ro-text-header"><a href="https://discord.gg/axq6qWV">Discord</a></h1>
-          <span>&nbsp;</span>
-          <span>Join Armory server</span>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://github.com/armory3d/armory/discussions">GitHub</a></h1>
-          Discuss or propose ideas for Armory
-          <br />or browse&nbsp;<a href="https://github.com/search?q=armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="http://forums.armory3d.org">Discourse</a></h1>
-          <span>&nbsp;</span>
-          <span>Discuss or share Armory content</span>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://reddit.com/r/armory3d">Reddit</a></h1>
-          <span>&nbsp;</span>
-          <span>Discuss or share Armory content</span>
-        </div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Discord</h1><br />
+        <a class="uk-button uk-button-default" href="https://discord.gg/axq6qWV" uk-icon="icon: discord"></a>
       </div>
-      <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://facebook.com/armorytools/">Facebook</a></h1>
-          Join Armory group
-          <br />or use&nbsp;<a href="https://facebook.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://twitter.com/armory3d">Twitter</a></h1>
-          Latest tweets about Armory
-          <br />or use&nbsp;<a href="https://twitter.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://instagram.com/armory3d">Instagram</a></h1>
-          Latest posts about Armory
-          <br />or use&nbsp;<a href="https://instagram.com/explore/tags/armory3d">#hashtag</a>
-        </div>
+      <!-- Github -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Github</h1><br />
+        <a class="uk-button uk-button-default" href="https://github.com/search?q=armory3d" uk-icon="icon: hashtag"></a>
+        <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/discussions" uk-icon="icon: github"></a>
       </div>
-      <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://youtube.com/c/Armory3d">YouTube</a></h1>
-          Latest videos about Armory
-          <a href="https://youtube.com/hashtag/armory3d">#hashtag</a>
-        </div>
-        <div>
-          <h1 class="uk-heading-divider ro-text-header"><a href="https://artstation.com/search?sort_by=relevance&query=armory3d">Artstation</a></h1>
-          <span>&nbsp;</span>
-          <span>Share Armory content with hashtag</span>
-        </div>
+      <!-- Discourse -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Discourse</h1><br />
+        <a class="uk-button uk-button-default" href="http://forums.armory3d.org" uk-icon="icon: social"></a>
       </div>
+    </div>
+    <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
+      <!-- Reddit -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Reddit</h1><br />
+        <a class="uk-button uk-button-default" href="https://reddit.com/r/armory3d" uk-icon="icon: reddit"></a>
+      </div>
+      <!-- Facebook -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Facebook</h1><br />
+        <a class="uk-button uk-button-default" href="https://facebook.com/hashtag/armory3d" uk-icon="icon: hashtag"></a>
+        <a class="uk-button uk-button-default" href="https://facebook.com/armorytools/" uk-icon="icon: facebook"></a>
+      </div>
+      <!-- Twitter -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Twitter</h1><br />
+        <a class="uk-button uk-button-default" href="https://twitter.com/hashtag/armory3d" uk-icon="icon: hashtag"></a>
+        <a class="uk-button uk-button-default" href="https://twitter.com/armory3d" uk-icon="icon: twitter"></a>
+      </div>
+    </div>
+    <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
+      <!-- Instagram -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Instagram</h1><br />
+        <a class="uk-button uk-button-default" href="https://instagram.com/explore/tags/armory3d" uk-icon="icon: hashtag"></a>
+        <a class="uk-button uk-button-default" href="https://instagram.com/armory3d" uk-icon="icon: instagram"></a>
+      </div>
+      <!-- YouTube -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">YouTube</h1><br />
+        <a class="uk-button uk-button-default" href="https://youtube.com/hashtag/armory3d" uk-icon="icon: hashtag"></a>
+        <a class="uk-button uk-button-default" href="https://youtube.com/c/Armory3d" uk-icon="icon: youtube"></a>
+      </div>
+      <!-- Artstation -->
+      <div>
+        <h1 class="uk-inline uk-heading-divider ro-text-header">Artstation</h1><br />
+        <a class="uk-button uk-button-default" href="https://artstation.com/search?sort_by=relevance&query=armory3d" uk-icon="icon: hashtag"></a>
+      </div>
+    </div>
     <br><br><br>
   </div>  <!-- Footer Content -->
   <div class="ro-background-darksecondary">
