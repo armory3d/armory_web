@@ -20,18 +20,30 @@
     </div>
   </div>
   <script>
+    // Set URL (on tab click)
     var assignTabs = function(tab) {
       window.location.href = "/notes_dud#" + String(tab.innerText);
     }
-
     var checkTabs = function() {
-      if (document.getElementById(String(window.location.hash.substr(1)))) {
-        if (window.location.hash.substr(1) == 2022.04) {
-          UIkit.tab("#notes").show(0);
-        } else if (window.location.hash.substr(1) == 2022.05) {
-          UIkit.tab("#notes").show(1);
-        } else if (window.location.hash.substr(1) == 2022.06) {
-          UIkit.tab("#notes").show(2);
+      let url = window.location.hash.substr(1);
+      // Check URL (if root page)
+      if (window.location.href === "http://" + window.location.hostname + "/notes_dud") {
+        UIkit.tab("#notes").show(2);
+      } else if (window.location.href !== "http://" + window.location.hostname + "/notes_dud" && (!(document.getElementById(url)))) {
+        window.location.href = "/404"
+      }
+      // Set tab (based on URL)
+      if (document.getElementById(url)) {
+        switch (window.location.hash.substr(1)) {
+          case "2022.04":
+            UIkit.tab("#notes").show(0);
+            break;
+          case "2022.05":
+            UIkit.tab("#notes").show(1);
+            break;
+          case "2022.06":
+            UIkit.tab("#notes").show(2);
+            break;
         }
       }
     }
