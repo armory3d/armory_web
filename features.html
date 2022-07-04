@@ -22,73 +22,70 @@
   <link rel="stylesheet" href="css/style.css" />
   <!-- CSS Fonts -->
   <link rel="stylesheet" href="css/fonts.css" />
+  <!-- JS UIkit -->
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
   <!-- JS Query -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body class="ro-text-content">
-  <!-- Desktop Nav -->
+  <!-- Desktop - Nav -->
   <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <div class="uk-background-secondary">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <div class="uk-navbar-left uk-margin-left uk-light uk-text-center">
+        <div class="uk-navbar-left uk-margin-left uk-light">
           <ul class="uk-navbar-nav">
             <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
             <li>
               <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
-              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a class="uk-text-center" href="/">Home</a></li>
-                  <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
-                  <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="https://armorlab.org/">ArmorLab</a></li>
+              <div class="ro-navbar-light uk-text-center" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+                  <li><a class="ro-navbar" href="/"><span>Home</span></a></li>
+                  <li><a class="ro-navbar" href="https://armorpaint.org/"><span>ArmorPaint</span></a></li>
+                  <li><a class="ro-navbar" href="https://armorlab.org/"><span>ArmorLab</span></a></li>
                 </ul>
               </div>
             </li>
           </ul>
         </div>
-        <div class="uk-navbar-right uk-light uk-text-center">
+        <div class="uk-navbar-right uk-light">
           <ul class="uk-navbar-nav">
-            <!-- News Category -->
+            <!-- Desktop - News Category -->
             <li>
               <a class="ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
-              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a href="notes">Release Notes</a></li>
-                  <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="news">Newsletter</a></li>
+              <div class="ro-navbar-light uk-text-center" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+                  <li><a class="ro-navbar" href="notes"><span>Release Notes</span></a></li>
+                  <li><a class="ro-navbar" href="news"><span>Newsletter</span></a></li>
                 </ul>
               </div>
             </li>
-            <!-- Features Category -->
+            <!-- Desktop - Features Category -->
             <li><a class="ro-navbar" href="features"><span>FEATURES</span></a></li>
-            <!-- Showcase Category -->
+            <!-- Desktop - Showcase Category -->
             <li>
               <a class="ro-navbar" uk-icon="icon: chevron-down"><span>SHOWCASE</span></a>
-              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Demos</a></li>
-                  <li class="uk-nav-divider"></li>
-                  <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+              <div class="ro-navbar-light uk-text-center" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+                  <li><a class="ro-navbar" href="https://armory3d.github.io/armory_examples_browser/"><span>Online Demos</span></a></li>
+                  <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory"><span>Community Games</span></a></li>
                 </ul>
               </div>
             </li>
-            <!-- Learn Category -->
+            <!-- Desktop - Learn Category -->
             <li>
               <a class="ro-navbar" uk-icon="icon: chevron-down"><span>LEARN</span></a>
-              <div class="ro-navbar-light" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                  <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
-                  <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="https://api.armory3d.org">API</a></li>
-                  <li><div class="uk-nav-divider"></div></li>
-                  <li><a href="https://github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
+              <div class="ro-navbar-light uk-text-center" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
+                <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+                  <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki"><span>Manual</span></a></li>
+                  <li><a class="ro-navbar" href="https://api.armory3d.org"><span>API</span></a></li>
+                  <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/community_tutorials"><span>Tutorials</span></a></li>
                 </ul>
               </div>
             </li>
-            <!-- Community Category -->
+            <!-- Desktop - Community Category -->
             <li><a class="ro-navbar" href="community"><span>COMMUNITY</span></a></li>
-            <!-- Download Category -->
+            <!-- Desktop - Download Category -->
           </ul>
           <a class="uk-margin-left uk-height-1-1 uk-button ro-download" href="download">
             <div style="transform: translateY(50%)">
@@ -100,7 +97,7 @@
       </nav>
     </div>
   </div>
-  <!-- Mobile Nav-->
+  <!-- Mobile - Nav-->
   <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border: none" uk-sticky-fixed>
     <button type="button" class="uk-button uk-button-default uk-width-1-1" style="border: none" uk-toggle="target: #offcanvas-slide">
         <i class="uk-margin-small-bottom" uk-icon="icon: menu; ratio: 1.5"></i>
@@ -118,12 +115,10 @@
               <li>
                 <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
                 <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
-                  <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-                    <li><a href="/">Home</a></li>
-                    <li><div class="uk-nav-divider"></div></li>
-                    <li><a href="https://armorpaint.org/">ArmorPaint</a></li>
-                    <li><div class="uk-nav-divider"></div></li>
-                    <li><a href="https://armorlab.org/">ArmorLab</a></li>
+                  <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+                    <li><a class="ro-navbar" href="/"><span>Home</span></a></li>
+                    <li><a class="ro-navbar" href="https://armorpaint.org/"><span>ArmorPaint</span></a></li>
+                    <li><a class="ro-navbar" href="https://armorlab.org/"><span>ArmorLab</span></a></li>
                   </ul>
                 </div>
               </li>
@@ -131,58 +126,58 @@
           </div>
         </li>
         <hr>
-        <!-- News Category -->
+        <!-- Mobile - News Category -->
         <li>
           <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
-            <ul class="uk-nav uk-nav-default uk-nav-dropdown" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="notes">Release Notes</a></li>
-              <li><div class="uk-nav-divider"></div></li>
-              <li><a href="news">Newsletter</a></li>
+            <ul class="uk-nav uk-nav-default uk-nav-dropdown uk-text-large">
+              <li><a class="ro-navbar" href="notes"><span>Release Notes</span></a></li>
+              <li><a class="ro-navbar" href="news"><span>Newsletter</span></a></li>
             </ul>
           </div>
         </li>
-        <!-- Features Category -->
+        <!-- Mobile - Features Category -->
         <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="features"><span>FEATURES</span></a></li>
-        <!-- Showcase Category -->
+        <!-- Mobile - Showcase Category -->
         <li>
           <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>SHOWCASE</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
-            <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="https://armory3d.github.io/armory_examples_browser/">Online Demos</a></li>
-              <li class="uk-nav-divider"></li>
-              <li><a href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">Made with Armory</a></li>
+            <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+              <li><a class="ro-navbar" href="https://armory3d.github.io/armory_examples_browser/"><span>Online Demos</span></a></li>
+              <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory"><span>Community Games</span></a></li>
             </ul>
           </div>
         </li>
-        <!-- Learn Category -->
+        <!-- Mobile - Learn Category -->
         <li>
           <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>LEARN</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
-            <ul class="uk-nav uk-nav-default uk-dropdown-nav" style="border: 1px solid rgb(255,255,255,0.25)">
-              <li><a href="https://github.com/armory3d/armory/wiki">Manual</a></li>
-              <li><div class="uk-nav-divider"></div></li>
-              <li><a href="https://api.armory3d.org">API</a></li>
-              <li><div class="uk-nav-divider"></div></li>
-              <li><a href="https://github.com/armory3d/armory/wiki/community_tutorials">Tutorials</a></li>
+            <ul class="uk-nav uk-nav-defaultuk-dropdown-nav uk-text-large">
+              <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki"><span>Manual</span></a></li>
+              <li><a class="ro-navbar" href="https://api.armory3d.org"><span>API</span></a></li>
+              <li><a class="ro-navbar"href="https://github.com/armory3d/armory/wiki/community_tutorials"><span>Tutorials</span></a></li>
             </ul>
           </div>
         </li>
-        <!-- Community Category -->
+        <!-- Mobile - Community Category -->
         <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="community"><span>COMMUNITY</span></a></li>
-        <!-- Download Category -->
+        <!-- Mobile - Download Category -->
         <li><a class="uk-button uk-button-default ro-navbar" href="download"><span>DOWNLOAD</span></a></li>
       </ul>
     </div>
-  </div>  <!-- Main Content -->
+  </div>
+  <!-- Main Content -->
+  <div class="uk-cover-container cover-container" style="height: 50vh">
+    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+  </div>
   <!-- Blender Integration -->
   <div id="blender-integration" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left uk-flex-last uk-flex-first@l" style="padding: 0">
+    <div class="uk-padding uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0; max-width: 512px">
         <img src="img/ArmoryInterface.png" alt="Armory Interface Example" />
       </div>
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">Blender Integration</h2>
           Armory is directly integrated into Blender as an add-on, so there is no need to leave your favorite 3D software to create awesome games.
           You can use the workflows you are used to without having to constantly switch between different programs.
@@ -192,9 +187,9 @@
   </div>
   <!-- Render Path -->
   <div id="render-path" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
       <div style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="uk-padding-remove-right text-container">
           <h2 class="uk-heading-divider ro-text-header">Render Path</h2>
           Armory's render path is designed to work with Blender's material nodes.
           You can create beautiful materials with ease and choose from a broad range of post-processing effects.
@@ -204,22 +199,20 @@
           <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/screen-effects">post-process</a>
         </div>
       </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="https://github.com/armory3d/armory_wiki_images/raw/master/graphics/se/SSRSearch.gif" alt="Screen-Spaced Reflections Comparisions Example" />
-      </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="https://github.com/armory3d/driver_celshade_example/raw/master/pic.jpg" alt="Celshader Driver Example" />
+      <div class="uk-block">
+        <img class="uk-position-relative uk-position-top-center" src="https://github.com/armory3d/armory_wiki_images/raw/master/graphics/se/SSRSearch.gif" alt="Screen-Spaced Reflections Comparisions Example" style="max-width: 512px" />
+        <img class="uk-position-relative uk-position-bottom-center" src="https://github.com/armory3d/driver_celshade_example/raw/master/pic.jpg" alt="Celshader Driver Example" style="max-width: 512px" />
       </div>
     </div>
   </div>
   <!-- Scripting -->
   <div id="scripting" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left uk-flex-last uk-flex-first@l" style="padding: 0">
-        <img src="https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/tanks/9.jpg" alt="Logic Node Editor Example" />
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-margin-top uk-flex-last uk-flex-first@l" style="padding: 0">
+        <img src="https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/tanks/9.jpg" alt="Logic Node Editor Example" style="max-width: 512px" />
       </div>
       <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">Scripting</h2>
           For creating the interactive behaviour of your game, you can decide between writing <a href="https://haxe.org">Haxe</a> code or using visual scripting in the form of logic nodes.
           Logic nodes are easy to learn and provide you with a great variety of functionality.
@@ -231,27 +224,27 @@
   </div>
   <!-- User Interface -->
   <div id="user-interface" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
       <div style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">User Interface</h2>
           Armory comes with its own UI library and a corresponding WYSIWYG editor, making it easy to add user interfaces to your game.<br /><br />
           <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory2d">2d editor</a>
         </div>
       </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
+      <div style="padding: 0">
         <img src="https://github.com/armory3d/armory2d/raw/master/img.jpg" alt="2D / UI Editor Example" />
       </div>
     </div>
   </div>
-  <!-- Cross-Platform Support -->
-  <div id="cross-platform-support" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left uk-flex-last uk-flex-first@l" style="padding: 0">
+  <!-- Cross-Platform -->
+  <div id="cross-platform" class="uk-section uk-section-secondary">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
         <img class="uk-position-relative uk-position-center" src="https://github.com/armory3d/armory_wiki_images/raw/master/getting_started/playground/13.jpg" alt="Armory Exporter Example" />
       </div>
-      <div class="uk-flex-first uk-flex-last@l" style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+      <div class="uk-margin-top uk-flex-first uk-flex-last@l" style="padding: 0">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">Cross-Platform Support</h2>
           Thanks to the underlying <a href="http://kha.tech">Kha</a> framework, Armory runs almost everywhere!
           Whether you want to target desktop computers, browsers, mobile phones or consoles, Armory can export your game to those platforms.
@@ -262,9 +255,9 @@
   </div>
   <!-- Physics -->
   <div id="physics" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
       <div style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">Physics</h2>
           Armory makes use of the Bullet physics engine to simulate all kinds of dynamic movements.
           It can also be configured to use the Oimo physics engine instead.
@@ -277,63 +270,57 @@
             <li>Collision groups</li>
             <li>Simulation of breaking / fractured meshes</li>
           </ul>
-          <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/physics" alt="Physics Example">physics</a>
+          <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/physics">physics</a>
         </div>
       </div>
-      <div class="uk-margin-right uk-margin-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/Ragdoll.webp" alt="Armory Exporter Example" />
+      <div style="padding: 0">
+        <img class="uk-position-relative uk-position-center" src="img/Ragdoll.webp" alt="Physics Example" />
       </div>
     </div>
   </div>
   <!-- Navigation -->
   <div id="navigation" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left uk-flex-last uk-flex-first@l" style="padding: 0">
-        <img src="img/Navmesh.webp" alt="Armory Interface Example" />
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
+        <img src="img/Navmesh.webp" alt="Navmesh Example" />
       </div>
-      <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
-        <h2 class="uk-heading-divider ro-text-header">Navigation</h2>
-        Add believable NPC behaviour to your game by letting actors move on navigation meshes.
-        Armory uses the Recast navigation system but can be configured to use any other navigation engine.<br /><br />
-        <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/navmesh" alt="Navmesh Example">navmesh</a>
+      <div class="uk-margin-top uk-flex-first uk-flex-last@l" style="padding: 0">
+        <div class="text-container">
+          <h2 class="uk-heading-divider ro-text-header">Navigation</h2>
+          Add believable NPC behaviour to your game by letting actors move on navigation meshes.
+          Armory uses the Recast navigation system but can be configured to use any other navigation engine.<br /><br />
+          <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/navmesh">navmesh</a>
+        </div>
       </div>
     </div>
   </div>
   <!-- Particles -->
   <div id="particles" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
       <div style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+        <div class="uk-margin-top text-container">
           <h2 class="uk-heading-divider ro-text-header">Particles</h2>
           Armory supports both emitter and hair particle systems that can be used to create stunning visual effects or grassy landscapes for example.
           Internally, GPU instancing is used to achieve the best possible performance.<br /><br />
           <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/supported_particles">supported particles</a>
         </div>
       </div>
-      <div class="uk-margin-right uk-margin-left" style="padding: 0">
-        <div>
-          <img src="img/Fire.webp" alt="Fire Example" />
-          <img src="img/Particles.webp" alt="Particles Example" />
-        </div>
-      </div>
-      <div class="uk-margin-right uk-margin-left" style="padding: 0">
-        <div>
-          <img src="img/Hair.png" alt="Hair Example" />
-          <img src="img/Asteroids.webp" alt="Asteroids Example" />
-        </div>
+      <div class="uk-block" style="padding: 0">
+        <img class="uk-position-relative uk-position-top-left" src="img/Fire.webp" alt="Fire Example" style="max-width: 256px" />
+        <img class="uk-position-relative uk-position-top-right" src="img/Particles.webp" alt="Particles Example" style="max-width: 256px" />
+        <img class="uk-position-relative uk-position-bottom-left" src="img/Hair.png" alt="Hair Example" style="max-width: 256px" />
+        <img class="uk-position-relative uk-position-bottom-right" src="img/Asteroids.webp" alt="Asteroids Example" style="max-width: 256px" />
       </div>
     </div>
   </div>
   <!-- Animation -->
   <div id="animation" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/Animations.webp" alt="Animations Example" />
+    <div class="uk-padding uk-padding-large-right uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-block uk-flex-last uk-flex-first@l" style="padding: 0">
+        <img class="uk-position-relative uk-position-top-center" src="img/Animations.webp" alt="Animations Example" style="max-width: 512px" />
+        <img class="uk-position-relative uk-position-bottom-center" src="img/Tilesheet.png" alt="Tilesheet Example" style="max-width: 512px" />
       </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/Tilesheet.png" alt="Tilesheet Example" />
-      </div>
-      <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+      <div class="text-container">
         <h2 class="uk-heading-divider ro-text-header">Animation</h2>
         <ul>
           <li>GPU skinning</li>
@@ -347,9 +334,9 @@
   </div>
   <!-- Lighting -->
   <div id="lighting" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left text-container">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div style="padding: 0">
+        <div class="text-container">
           <h2 class="uk-heading-divider ro-text-header">Lighting</h2>
           <ul>
             <li>Lightmapping</li>
@@ -360,21 +347,19 @@
           <a class="uk-button uk-button-default" href="https://github.com/armory3d/armory/wiki/global_illumination">lighting</a>
         </div>
       </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/2021-08-b.gif" alt="IES Lights Example" />
-      </div>
-      <div class="uk-margin-medium-right uk-margin-medium-left" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/ArmoryIESLights.png" alt="IES Lights Example" />
+      <div class="uk-block" style="padding: 0">
+        <img class="uk-position-relative uk-position-top-center" src="img/2021-08-b.gif" alt="IES Lights Example" style="max-width: 512px" />
+        <img class="uk-position-relative uk-position-bottom-center" src="img/ArmoryIESLights.png" alt="IES Lights Example" style="max-width: 512px" />
       </div>
     </div>
   </div>
   <!-- Free and Open-Source -->
-  <div id="free-and-open-source" class="uk-section uk-section-secondary">
-    <div class="uk-child-width-expand@l" uk-grid style="margin: 0">
-      <div class="uk-flex-last uk-flex-first@l" style="padding: 0">
-        <img class="uk-position-relative uk-position-center" src="img/Logo.png" alt="Armory Engine Example" />
+  <div id="armory-project" class="uk-section uk-section-secondary">
+    <div class="uk-padding uk-padding-remove-top uk-child-width-expand@l" uk-grid style="margin: 0">
+      <div class="uk-flex-last uk-flhex-first@l" style="padding: 0">
+        <img class="uk-position-relative uk-position-center" src="img/Logo.png" alt="Armory Software Example"/>
       </div>
-      <div class="uk-margin-top uk-margin-bottom uk-margin-right uk-margin-left uk-flex-last uk-flex-first@l text-container">
+      <div class="uk-padding-remove-left uk-flex-last uk-flex-first@l text-container">
         <h2 class="uk-heading-divider ro-text-header">Free and Open-Source</h2>
         Armory is completely free and its source code is available on <a href="https://github.com/armory3d/armory">Github</a>.
         Do want to change something specific to your game in the engine?
@@ -384,39 +369,36 @@
         Armory uses a <a href="https://github.com/armory3d/armory/blob/master/LICENSE.md">permissive license</a> and compared to another well-known Blender game engine your games aren't restricted by the GNU GPL license.
       </div>
     </div>
-  </div>  <!-- Footer Content -->
-  <div class="ro-background-darksecondary">
-    <br><br>
+  </div>
+  <!-- Footer Content -->
+  <div class="uk-padding uk-height-medium uk-section-secondary" style="border-top: 1px solid rgb(64, 64, 64)">
     <div class="uk-container uk-container-small">
-      <div class="uk-child-width-expand" uk-grid>
+      <div class="uk-child-width-expand" uk-grid style="color: lightgray">
         <div class="uk-text-left ro-footer">
-          <br><span class="ro-logocolor">Development</span>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory">GitHub</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory/issues">Tracker</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory/projects">Roadmap</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a>
+          <p class="uk-margin-small-bottom">DEVELOPMENT</p>
+          <a class="ro-navbar" href="https://github.com/armory3d/armory"><span>GitHub</span></a><br />
+          <a class="ro-navbar" href="https://github.com/armory3d/armory/issues"><span>Tracker</span></a><br />
+          <a class="ro-navbar" href="https://github.com/armory3d/armory/projects"><span>Roadmap</span></a><br />
+          <a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/contribute"><span>Contribute</span></a>
         </div>
         <div class="uk-text-center ro-footer">
-          <br><span class="ro-logocolor">Special Thanks</span>
-          <br><a style="color: #666" href="http://kode.tech">Kode</a>
-          <br><a style="color: #666" href="https://blender.org">Blender 3D</a>
-          <br><a style="color: #666" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a>
+          <p class="uk-margin-small-bottom" >SPECIAL THANKS</span></p>
+          <a class="ro-navbar" href="http://kode.tech"><span>Kode</span></a><br />
+          <a class="ro-navbar" href="https://blender.org"><span>Blender</span></a><br />
+          <a class="ro-navbar" href="https://github.com/armory3d/armory/graphs/contributors"><span>Contributors</span></a>
         </div>
         <div class="uk-text-right ro-footer">
-          <br><span class="ro-logocolor">Contact</span><br>
+          <p class="uk-margin-small-bottom">CONTACT</p>
           <script>
             var user_name = "lubos";
             var host_name = "armory3d.org";
-            document.write("<a href='" + "mail" + "to:" + user_name + "@" + host_name + "' style='color: #666'>Email</a>");
+            document.write("<a class='ro-navbar' href='" + "mail" + "to:" + user_name + "@" + host_name + "'><span>Email</span></a><br />");
           </script>
-          <br><a style="color: #666" href="community">Community</a>
+          <a class="ro-navbar" href="/community"><span>Community</span></a>
         </div>
       </div>
+      <p class="uk-inline uk-padding-small uk-text-center uk-position-relative uk-position-bottom-center" style="border: 1px solid rgb(64, 64, 64)">Copyright &copy; 2022</p>
     </div>
-    <br><br><br>
   </div>
-  <!-- JS UIkit -->
-  <script src="js/uikit.min.js"></script>
-  <script src="js/uikit-icons.min.js"></script>
 </body>
 </html>

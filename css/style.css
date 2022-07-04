@@ -138,14 +138,6 @@ html {
 
 /* Download - End */
 
-.ro-footer {
-  flex: 1;
-}
-
-.uk-height-large {
-  height: 550px;
-}
-
 .uk-section {
   padding: 0px;
 }
@@ -176,6 +168,10 @@ html {
   position: fixed;
   width: 100%;
   height: calc(100% - 38px);
+}
+
+.notes-text-container {
+  padding: 60px;
 }
 
 @media screen and (min-width : 1200px) {
