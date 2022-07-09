@@ -30,7 +30,7 @@
 </head>
 <body class="ro-text-content">
   <!-- Desktop - Nav -->
-  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+  <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar" style="border-bottom: 1px solid rgb(64,64,64)">
     <div class="uk-background-secondary">
       <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left uk-margin-left uk-light">
@@ -53,15 +53,30 @@
             <!-- Desktop - News Category -->
             <li>
               <a class="ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
-              <div class="ro-navbar-light uk-text-center" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0">
-                <ul class="uk-nav uk-nav-default uk-dropdown-nav uk-text-large">
-                  <li><a class="ro-navbar" href="notes"><span>Release Notes</span></a></li>
-                  <li><a class="ro-navbar" href="news"><span>Newsletter</span></a></li>
+              <div class="uk-background-secondary uk-text-center uk-padding-remove" uk-dropdown="delay-hide: 60; pos: bottom-center; offset: 0" style="border: 1px solid rgb(64,64,64)">
+                <ul class="uk-navbar-default uk-dropdown-nav uk-text-left" uk-nav style="padding: 0 !important">
+                  <li class="uk-margin-bottom">
+                    <div style="padding: 2em; padding-bottom: 0.5em">
+                      <i uk-icon="icon: file-text; ratio: 1.5" style="color: white"></i>
+                      <h4 class="uk-margin-remove-bottom" style="color: lightgray">RELEASE NOTES</h4>
+                      <a class="ro-navbar" href="/notes"><span class="uk-text-middle">View the latest release changes</span></a>
+                    </div>
+                  </li>
+                  <li style="border: 1px solid rgb(64,64,64)"></li>
+                  <li class="uk-margin-bottom">
+                    <a class="ro-navbar" href="/news" style="padding: 2em; padding-bottom: 0.5em">
+                      <i uk-icon="icon: mail; ratio: 1.5" style="color: white"></i>
+                      <div>
+                        <h4 class="uk-margin-remove-bottom" style="color: lightgray">NEWSLETTER</h4>
+                        <span class="uk-text-middle">Sign-up to get the latest news about Armory3D</span>
+                      </div>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
             <!-- Desktop - Features Category -->
-            <li><a class="ro-navbar" href="features"><span>FEATURES</span></a></li>
+            <li><a class="ro-navbar" href="/features"><span>FEATURES</span></a></li>
             <!-- Desktop - Showcase Category -->
             <li>
               <a class="ro-navbar" uk-icon="icon: chevron-down"><span>SHOWCASE</span></a>
@@ -84,10 +99,10 @@
               </div>
             </li>
             <!-- Desktop - Community Category -->
-            <li><a class="ro-navbar" href="community"><span>COMMUNITY</span></a></li>
+            <li><a class="ro-navbar" href="/community"><span>COMMUNITY</span></a></li>
             <!-- Desktop - Download Category -->
           </ul>
-          <a class="uk-margin-left uk-height-1-1 uk-button ro-download" href="download">
+          <a class="uk-margin-left uk-height-1-1 uk-button ro-download" href="/download">
             <div style="transform: translateY(50%)">
               <i uk-icon="icon: download; ratio: 1.5"></i>
               <span class="uk-text-middle">DOWNLOAD</span>
@@ -98,20 +113,20 @@
     </div>
   </div>
   <!-- Mobile - Nav-->
-  <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border: none" uk-sticky-fixed>
-    <button type="button" class="uk-button uk-button-default uk-width-1-1" style="border: none" uk-toggle="target: #offcanvas-slide">
-        <i class="uk-margin-small-bottom" uk-icon="icon: menu; ratio: 1.5"></i>
-        <span class="uk-text-middle">MENU</span>
+  <div class="uk-light uk-hidden@l uk-position-fixed uk-position-right uk-sticky-fixed" style="z-index: 980; border: none">
+    <button type="button" class="uk-background-secondary" uk-toggle="target: #offcanvas-slide" style="border: 0; border-bottom: 1px solid rgb(64,64,64); border-left: 1px solid rgb(64,64,64)">
+      <!-- <i class="uk-padding uk-background-secondary" uk-icon="icon: menu; ratio: 1.5"></i> -->
+      abc
     </button>
   </div>
-  <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+  <div id="offcanvas-slide" class="uk-hidden@l" uk-offcanvas="bg-close: true">
     <div class="uk-offcanvas-bar uk-background-secondary uk-light" style="width: 100vw">
       <button type="button" class="uk-offcanvas-close uk-close-large" uk-close style="transform: translateY(35%)"></button>
       <ul class="uk-nav uk-nav-default">
         <li>
           <div class="uk-navbar-left uk-text-center">
             <ul class="uk-navbar-nav">
-              <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a><li>
+              <li><a class="uk-padding-remove-left" href="/"><img src="img\Logo.png" style="max-height: 50px" alt="Logo Image" /></a>
               <li>
                 <a class="uk-padding-remove-left uk-padding-remove-right ro-navbar" uk-icon="icon: chevron-down" style="font-size: 20px !important"><span>ARMORY3D</span></a>
                 <div class="ro-navbar-light" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center">
@@ -122,7 +137,7 @@
                   </ul>
                 </div>
               </li>
-            </li>
+            </ul>
           </div>
         </li>
         <hr>
@@ -131,8 +146,8 @@
           <a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" uk-icon="icon: chevron-down"><span>NEWS</span></a>
           <div class="ro-navbar-light uk-text-center" uk-dropdown="mode: click; delay-hide: 60; pos: bottom-center; offset: 0">
             <ul class="uk-nav uk-nav-default uk-nav-dropdown uk-text-large">
-              <li><a class="ro-navbar" href="notes"><span>Release Notes</span></a></li>
-              <li><a class="ro-navbar" href="news"><span>Newsletter</span></a></li>
+              <li><a class="ro-navbar" href="/notes"><span>Release Notes</span></a></li>
+              <li><a class="ro-navbar" href="/news"><span>Newsletter</span></a></li>
             </ul>
           </div>
         </li>
@@ -155,14 +170,14 @@
             <ul class="uk-nav uk-nav-default uk-dropdown-nav uk-text-large">
               <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki"><span>Manual</span></a></li>
               <li><a class="ro-navbar" href="https://api.armory3d.org"><span>API</span></a></li>
-              <li><a class="ro-navbar"href="https://github.com/armory3d/armory/wiki/community_tutorials"><span>Tutorials</span></a></li>
+              <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/community_tutorials"><span>Tutorials</span></a></li>
             </ul>
           </div>
         </li>
         <!-- Mobile - Community Category -->
-        <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="community"><span>COMMUNITY</span></a></li>
+        <li><a class="uk-margin-small-bottom uk-button uk-button-default ro-navbar" href="/community"><span>COMMUNITY</span></a></li>
         <!-- Mobile - Download Category -->
-        <li><a class="uk-button uk-button-default ro-navbar" href="download"><span>DOWNLOAD</span></a></li>
+        <li><a class="uk-button uk-button-default ro-navbar" href="/download"><span>DOWNLOAD</span></a></li>
       </ul>
     </div>
   </div>

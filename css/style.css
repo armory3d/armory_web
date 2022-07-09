@@ -25,6 +25,13 @@ html {
   font-size: 1.5em;
 }
 
+.ro-banner {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 15px;
+  background-color: rgb(207,43,67);
+}
+
 .ro-text-header {
   font-family: "Noto Sans", sans-serif;
   font-size: 2.5em;
@@ -177,6 +184,11 @@ html {
 @media screen and (min-width : 1200px) {
   .text-container {
     padding: 60px;
+  }
+
+  .homepage-text-container {
+    margin-top: 30px;
+    padding: 120px;
   }
 
   .cover-container {
