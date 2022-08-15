@@ -1,37 +1,185 @@
-  <!-- Footer Content -->
-  <div class="uk-padding uk-section-secondary" style="border-top: 1px solid rgb(64,64,64)">
-    <div class="uk-flex" style="color: lightgray">
-      <ul class="uk-width-1-1 uk-width-1-6@m uk-nav uk-nav-default">
-        <li><p class="uk-margin-small-bottom">DEVELOPMENT</p></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory"><span>GitHub</span></a></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/issues"><span>Tracker</span></a></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/projects"><span>Roadmap</span></a></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/wiki/contribute"><span>Contribute</span></a></li>
-      </ul>
-      <ul class="uk-width-1-1 uk-width-1-6@m uk-nav uk-nav-default">
-        <li><p class="uk-margin-small-bottom uk-margin-remove-top">CONTACT</p></li>
-        <script>
-          var user_name = "lubos";
-          var host_name = "armory3d.org";
-          document.write("<li><a class='ro-navbar' href='" + "mail" + "to:" + user_name + "@" + host_name + "'><span>Email</span></a></li>");
-          </script>
-        <li><a class="ro-navbar" href="/community"><span>Community</span></a></li>
-      </ul>
-      <ul class="uk-width-1-1 uk-width-1-6@m uk-nav uk-nav-default">
-        <li><p class="uk-margin-small-bottom">CREDITS</p></li>
-        <li><a class="ro-navbar" href="http://kode.tech"><span>Kode</span></a></li>
-        <li><a class="ro-navbar" href="https://blender.org"><span>Blender</span></a></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/graphs/contributors"><span>Contributors</span></a></li>
-      </ul>
-    </div>
-    <hr style="margin-top: 20px" />
-    <div style="color: lightgray">
-      <ul class="uk-width-1-1 uk-width-1-6@m uk-nav uk-nav-default">
-        <li><p class="uk-margin-small-bottom">Copyright &copy; 2022 Armory3D</p></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/blob/main/LICENSE.md"><span>Armory3D Terms</span></a></li>
-        <li><a class="ro-navbar" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md"><span>Add-on License</span></a></li>
-      </ul>
-    </div>
-  </div>
-</body>
+    <!-- footer.html -->
+    <footer class="text-bg-dark border-top border-secondary" style="--bs-border-opacity: .375;">
+      <div class="container py-4 py-lg-5 px-4 px-lg-3">
+        <div class="row">
+          <!-- Development -->
+          <div class="col-6 col-lg-2 pb-3 pe-3">
+            <h5>DEVELOPMENT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory">GitHub</a></li>
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/issues">Tracker</a></li>
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/projects">Roadmap</a></li>
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a></li>
+            </ul>
+          </div>
+          <!-- Credits -->
+          <div class="col-6 col-lg-2 pb-3">
+            <h5>CREDITS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="http://kode.tech">Kode</a></li>
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://blender.org">Blender</a></li>
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>CONTACT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="/community">Community</a></li>
+              <script>
+                var user_name = "lubos";
+                var host_name = "armory3d.org";
+                document.write("<li class='nav-item mb-2'><a class='d-inline nav-link p-0 link-secondary' href='" + "mail" + "to:" + user_name + "@" + host_name + "'>Email</a></li>");
+              </script>
+            </ul>
+          </div>
+          <!-- Newsletter -->
+          <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3">
+            <form>
+              <h5 class="fw-bold p-2 ps-0 pb-0">Subscribe to our newsletter</h5>
+              <p class="fs-6 lh-1">Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-lg-row w-100 gap-2">
+                <label class="visually-hidden" for="newsletter1">Email address</label>
+                <input id="newsletter1" class="bg-light form-control" type="text" placeholder="Email address">
+                <a class="fw-bold btn btn-danger d-flex align-items-center justify-content-center" href="#">
+                  <i class="bi bi-envelope text-white me-2"></i>Subscribe
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;">
+          <!-- Copyright -->
+          <ul class="mb-3 nav flex-column">
+            <li class="nav-item"><p class="fs-6 lh-1 mb-2">&copy; 2022 Lubos Lenco & contributors</p></li>
+            <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
+            <li class="nav-item mb-2"><a class="d-inline nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
+          </ul>
+          <!-- Social -->
+          <ul class="list-unstyled d-flex justify-content-end">
+            <li class="ms-3">
+              <a class="link-light" href="https://twitter.com/armory3d">
+                <i class="text-light bi bi-twitter fs-4"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-light" href="https://facebook.com/armorytools/">
+                <i class="text-light bi bi-facebook fs-4"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-light" href="https://instagram.com/armory3d">
+                <i class="text-light bi bi-instagram fs-4"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+    /*jshint esversion: 6 */
+    // Dropdown Hover
+    // let d = document.getElementsByClassName("dropdown-toggle");
+    // for (let i=0; i<d.length; i++) {
+    //   d[i].addEventListener("mouseover", e => {
+    //     d[i].classList.add("show");
+    //     d[i].setAttribute("aria-expanded", true);
+    //     d[i].parentElement.children[1].classList.add("show");
+    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
+    //   });
+    //   d[i].addEventListener("mouseout", e => {
+    //     d[i].classList.remove("show");
+    //     d[i].setAttribute("aria-expanded", false);
+    //     d[i].parentElement.children[1].classList.remove("show");
+    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
+    //   });
+    //   d[i].parentElement.children[1].addEventListener("mouseover", e => {
+    //     d[i].parentElement.children[1].classList.add("show");
+    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
+    //   });
+    //   d[i].parentElement.children[1].addEventListener("mouseout", e => {
+    //     d[i].parentElement.children[1].classList.remove("show");
+    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
+    //   });
+    // }
+    // Theme Toggle
+    function toggleTheme(t) {
+      const e = document.querySelectorAll("body *");
+      for (let i=0; i<e.length; i++) {
+        // bg-light & bg-dark
+        if (e[i].classList.contains("bg-light")) {
+          e[i].classList.replace("bg-light", "bg-dark");
+        } else if (e[i].classList.contains("bg-dark")) {
+          e[i].classList.replace("bg-dark", "bg-light");
+        }
+        // & text-dark
+        if (e[i].classList.contains("text-light")) {
+          e[i].classList.replace("text-light", "text-dark");
+        } else if (e[i].classList.contains("text-dark")) {
+          e[i].classList.replace("text-dark", "text-light");
+        }
+        // text-white-50 & text-muted
+        if (e[i].classList.contains("text-white-50")) {
+          e[i].classList.replace("text-white-50", "text-muted");
+        } else if (e[i].classList.contains("text-muted")) {
+          e[i].classList.replace("text-muted", "text-white-50");
+        }
+        // navbar-light & navbar-dark
+        if (e[i].classList.contains("navbar-light")) {
+          e[i].classList.replace("navbar-light", "navbar-dark");
+        } else if (e[i].classList.contains("navbar-dark")) {
+          e[i].classList.replace("navbar-dark", "navbar-light");
+        }
+        // text-bg-light & text-bg-dark
+        if (e[i].classList.contains("text-bg-light")) {
+          e[i].classList.replace("text-bg-light", "text-bg-dark");
+        } else if (e[i].classList.contains("text-bg-dark")) {
+          e[i].classList.replace("text-bg-dark", "text-bg-light");
+        }
+      }
+      // bi-sun & bi-moon-stars
+      if (t.children[0].classList.contains("bi-sun")) {
+        t.children[0].classList.replace("bi-sun", "bi-moon-stars");
+      } else if (t.children[0].classList.contains("bi-moon-stars")) {
+        t.children[0].classList.replace("bi-moon-stars", "bi-sun");
+      }
+    }
+    // Docs Search - Variable
+    // var a = e.getAttribute("aria-expanded"); 
+    // if (a== "true")  {
+    // a = "false"
+    // } else {
+    // a = "true"
+    // } e.setAttribute("aria-expanded", a);
+    f = document.getElementById("formDocs");
+    // Docs Search - Form Reset
+    function formReset() {
+      formDocs.classList.remove("show");
+      formDocs.parentElement.children[2].classList.toggle("collapsed");
+      let a = formDocs.parentElement.children[2].getAttribute("aria-expanded"); 
+      a = "false";
+      formDocs.parentElement.children[2].setAttribute("aria-expanded", a);
+      f.children[0].value = "";
+    }
+    // Docs Search - Close Control
+    window.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        formReset();
+      }
+    });
+    // Docs Search - Search Destination
+    function checkValidation() {
+      if (f.children[0].value.length >= 3) {
+        // location.href = "https://github.com/armory3d/armory/search?q=" + String(f.value) + "&type=wikis";
+        location.href = "https://forums.armory3d.org/search?q=" + String(f.children[0].value);
+      } else {
+        alert("Search terms require minimum of three letters.");
+      }
+    }
+    // Docs Search - Init Undo
+    window.addEventListener("pageshow", function() {
+      formReset();
+    });
+    </script>
+  </body>
 </html>
