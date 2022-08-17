@@ -1,0 +1,346 @@
+<!-- header.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Armory | 3D Game Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Armory | 3D Game Engine" />
+    <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software." />
+    <meta name="author" content="Lubos Lenco & contributors">
+    <meta name="generator" content="Bootstrap 5.2">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://armory3d.org/" />
+    <meta property="og:title" content="Armory | 3D Game Engine">
+    <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+    <meta property="og:image" content="https://armory3d.org/git/img1.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://armory3d.org/" />
+    <meta property="twitter:title" content="Armory | 3D Game Engine" />
+    <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+    <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg" />
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap-icons.css" crossorigin="anonymous">
+    <style>
+    /* input {
+      border-width: 0px !important;
+      outline-width: 0px !important;
+    } */
+    /* input:hover { */
+      /* border: 1px solid gray !important; */
+      /* box-shadow: 0px 0px 10px gray !important; */
+    /* } */
+    /* input:focus { */
+      /* border: 1px solid darkgray !important; */
+      /* box-shadow: 0px 0px 10px darkgray !important; */
+    /* } */
+    /* ::placeholder {
+        color: gray !important;
+        opacity: 1 !important;
+    } */
+    /* Dark Scrollbar */
+    ::-webkit-scrollbar {width: 8px; height: 3px ;}
+    ::-webkit-scrollbar-button {background-color: #666;}
+    ::-webkit-scrollbar-track {background-color: #646464;}
+    ::-webkit-scrollbar-track-piece { background-color: #000;}
+    ::-webkit-scrollbar-thumb {height: 50px; background-color: #666; border-radius: 3px;}
+    ::-webkit-scrollbar-corner {background-color: #646464;}
+    body {
+      background: black;
+    }
+    /* Solid Black */
+    .bg-dark, .text-bg-dark {
+      background-color: black !important;
+    }
+    /* Dark Grey */
+    .bg-secondary, .text-bg-secondary {
+      background-color: rgb(17, 19, 21) !important;
+    }
+    .bg-thirdly, .text-bg-thirdly {
+      background-color: rgb(223, 223, 223);
+    }
+    /* Navbar Buttons */
+    .navbar-nav > li > a {
+      display: block;
+      height: 64px;
+      padding: 21px 8px;
+      line-height: normal;
+      box-shadow: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a:active,
+    .navbar-nav > li > a:focus {
+      box-shadow: 0px -4px 0px var(--bs-danger) inset;
+    }
+    .navbar-nav > li > .btn {
+      border: none;
+      box-shadow: none !important;
+    }
+    /* Navbar Download */
+    @media (min-width: 992px) {
+      #rightNav li a {
+        height: 64px;
+        padding: 21px !important;
+        padding-top: 22px !important;
+        display: block !important;
+        line-height: normal !important;
+      }
+    }
+    /* Resolution Fix */
+    @media (max-width: 1024px) {
+      #rightNav li a {
+        padding-top: 11px !important;
+      }
+    }
+    /* Navbar Dropdowns */
+    @media (min-width: 992px) {
+      .dropdown-menu {
+        right: auto !important;
+        left: 50% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        transform: translate(-50%, 0) !important;
+      }
+    }
+    .bg-dark.dropdown-menu li a:hover,
+    .bg-dark.dropdown-menu li a:active,
+    .bg-dark.dropdown-menu li a:focus {
+      background-color: #6c757d;
+    }
+    .bg-light.dropdown-menu li a:hover,
+    .bg-light.dropdown-menu li a:active,
+    .bg-light.dropdown-menu li a:focus {
+      background-color: #dee2e6;
+    }
+    .dropdown-menu li a {
+      padding: 8px 16px;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+    /* Homepage Vignette */
+    header {
+      position: relative;
+      background-color: black;
+      width: 100%;
+      height: 75vh;
+      min-height: 25rem;
+      overflow: hidden;
+    }
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+    }
+    header .container {
+      position: relative;
+    }
+    header .splash-vignette {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      
+      background: radial-gradient(transparent, black) rgba(0,0,0,0.5);
+      /* background-color: rgba(0,0,0.75); */
+      /* box-shadow: 0px 0px 100vw black inset; */
+    }
+    /* Homepage Buttons */
+    .btn-outline-light, .btn-outline-light * {
+      color: white !important;
+      border-color: rgba(255,255,255,0.25);
+    }
+    .btn-outline-light:hover {
+      background-color: transparent;
+      border-color: rgba(255,255,255,0.5);
+    }
+    </style>
+    <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="bg-dark navbar-dark px-lg-5-2 px-2 py-0">
+      <div class="container-fluid px-0">
+        <!-- Mobile -->
+        <div class="d-lg-none d-flex">
+          <div class="me-auto">
+            <!-- Brand -->
+            <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
+              <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-caret-down-fill"></i></sub>
+            </a>
+            <ul class="bg-dark rounded-0 dropdown-menu">
+              <li>
+                <a class="text-light dropdown-item" href="/">
+                  <i class="text-light bi bi-house-door me-2"></i>Home
+                </a>
+              </li>
+              <li>
+                <a class="text-light dropdown-item" href="https://armorpaint.org">
+                  <i class="text-light bi bi-brush me-2"></i>ArmorPaint
+                </a>
+              </li>
+              <li>
+                <a class="text-light dropdown-item" href="https://armorlab.org">
+                  <i class="text-light bi bi-palette me-2"></i>ArmorLab
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="text-danger navbar-toggler my-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-expanded="false" aria-controls="navbarLinks" aria-label="Toggle navigation">
+            <i class="navbar-toggler-icon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <nav class="bg-dark navbar-dark navbar navbar-expand-lg px-lg-5 py-0">
+      <div class="container-fluid px-0">
+        <!-- Desktop -->
+        <div class="collapse navbar-collapse" id="navbarLinks">
+          <ul class="navbar-nav me-auto">
+            <li>
+              <ul class="navbar-nav">
+                <!-- Brand -->
+                <li class="d-none d-lg-inline nav-item dropdown">
+                  <div class="dropdown">
+                    <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
+                      <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-caret-down-fill"></i></sub>
+                    </a>
+                    <ul class="bg-dark rounded-0 dropdown-menu">
+                      <li>
+                        <a class="text-light dropdown-item" href="/">
+                          <i class="text-light bi bi-house-door me-2"></i>Home
+                        </a>
+                      </li>
+                      <li>
+                        <a class="text-light dropdown-item" href="https://armorpaint.org">
+                          <i class="text-light bi bi-brush me-2"></i>ArmorPaint
+                        </a>
+                      </li>
+                      <li>
+                        <a class="text-light dropdown-item" href="https://armorlab.org">
+                          <i class="text-light bi bi-palette me-2"></i>ArmorLab
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- News -->
+            <li class="nav-item dropdown">
+              <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                News<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+              </a>
+              <ul class="bg-dark rounded-0 dropdown-menu">
+                <li>
+                  <a class="text-light dropdown-item" href="/notes">
+                    <i class="text-light bi bi-megaphone me-2"></i>Release Notes
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light dropdown-item" href="/news">
+                    <i class="text-light bi bi-newspaper me-2"></i>News
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Features -->
+            <li class="nav-item">
+              <a class="text-light nav-link" href="/features">Features</a>
+            </li>
+            <!-- Showcase -->
+            <li class="nav-item dropdown">
+              <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Showcase<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+              </a>
+              <ul class="bg-dark rounded-0 dropdown-menu">
+                <li>
+                  <a class="text-light dropdown-item" href="https://armory3d.github.io/armory_examples_browser/">
+                    <i class="text-light bi bi-play-circle me-2"></i>Online Demos
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">
+                    <i class="text-light bi bi-controller me-2"></i>Community Games
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Learn -->
+            <li class="nav-item dropdown">
+              <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Learn<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+              </a>
+              <ul class="bg-dark rounded-0 dropdown-menu">
+                <li>
+                  <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki">
+                    <i class="text-light bi bi-book me-2"></i>Manual
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light dropdown-item" href="https://api.armory3d.org">
+                    <i class="text-light bi bi-code me-2"></i>API
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki/community_tutorials">
+                    <i class="text-light bi bi-youtube me-2"></i>
+                    Tutorials
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- FAQ -->
+            <li class="nav-item">
+              <a class="text-light nav-link" href="/faq">FAQ</a>
+            </li>
+            <!-- Community -->
+            <li class="nav-item">
+              <a class="text-light nav-link" href="/community">Community</a>
+            </li>
+          </ul>
+          <ul id="rightNav" class="navbar-nav">
+            <!-- Documenation Search + Theme Toggle -->
+            <form class="d-flex align-items-center was-validated me-2" onsubmit="checkValidation(); return false;" method="post">
+              <button class="fw-bold btn" type="button" aria-expanded="false" onclick="toggleTheme(this);">
+                <i class="bi bi-sun text-light"></i>
+              </button>
+              <div id="formDocs" class="collapse">
+                <input required class="text-bg-light form-control" placeholder="Search forum" name="inputDocs" type="text" aria-label="Search">
+              </div>
+              <button class="fw-bold btn" type="button" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
+                <i class="bi bi-search text-light"></i>
+              </button>
+            </form>
+            <!-- Download -->
+            <li class="nav-item">
+              <a class="text-white fw-bold rounded-0 nav-link btn btn-danger mt-1 mt-lg-0 me-0 me-lg-2 p-3" href="#">
+                <i class="bi bi-download me-2"></i>Download
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
