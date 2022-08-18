@@ -1,0 +1,81 @@
+    <!-- $main.html -->
+    <div class="text-bg-dark">
+			<div id="accordionExample" class="container p-5 accordion">
+				<!-- Item 1 -->
+				<div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
+					<h2 id="h1" class="accordion-header">
+						<button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
+							<span class="w-100">Q1 - Is Armory3D still active?</span>
+							<i class="bi bi-chevron-down text-light"></i>
+						</button>
+					</h2>
+					<div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#accordionExample">
+						<div class="text-bg-light accordion-body">
+							Yes! - It's quite <a class="fw-bold text-reset" href="https://github.com/armory3d/armsdk/releases">active</a>.
+						</div>
+					</div>
+				</div>
+				<!-- Item 2 -->
+				<div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
+					<h2 id="h2" class="accordion-header">
+						<button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+							<span class="w-100">Q2 - Does Armory3D have Blender 3.x builds?</span>
+							<i class="bi bi-chevron-down text-light"></i>
+						</button>
+					</h2>
+					<div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accordionExample">
+						<div class="text-bg-light accordion-body">
+							Yes - But it's still in  alpha phase because <a class="fw-bold text-reset" href="https://www.blender.org/download/lts">Blender LTS</a> 3.3x has yet to be released.<br />
+							However, you can download Armory <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/tree/blender-3.3-lts">experimental builds</a> that are compatible with latest Blender <a class="fw-bold text-reset" href="https://builder.blender.org/download/daily">daily builds</a>, that are built on Blender 3.x, non-LTS source.
+						</div>
+					</div>
+				</div>
+				<!-- Item 3 -->
+				<div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
+					<h2 id="h3" class="accordion-header">
+						<button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+							<span class="w-100">Q3 - I have a bug and cannot run my game due to error(s).</span>
+							<i class="bi bi-chevron-down text-light"></i>
+						</button>
+					</h2>
+					<div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accordionExample">
+						<div class="text-bg-light accordion-body">
+							Please follow basic troubleshooting steps from <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/troubleshooting">here</a>.<br />
+							If error(s) still persist, please open an <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/issues">issue report</a> or ask the community for help at any of the Armory-related community platforms.
+						</div>
+					</div>
+				</div>
+				<!-- Item 4 -->
+				<div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
+					<h2 id="h4" class="accordion-header">
+						<button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+							<span class="w-100">Q4 - What does a certain logic node do, exactly?</span>
+							<i class="bi bi-chevron-down text-light"></i>
+						</button>
+					</h2>
+					<div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#accordionExample">
+						<div class="text-bg-light accordion-body">
+							Check the official Armory manual for logic node references.<br />
+							The references contain detailed descriptions of what each logic node is capable of and what features it comprises of.
+						</div>
+					</div>
+				</div>
+				<!-- Item 5 -->
+				<div class="text-bg-dark accordion-item border border-light border-opacity-25">
+					<h2 id="h5" class="accordion-header">
+						<button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+							<span class="w-100">Q5 - How good is Armory3D compared to UPBGE?</span>
+							<i class="bi bi-chevron-down text-light"></i>
+						</button>
+					</h2>
+					<div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#accordionExample">
+						<div class="text-bg-light accordion-body">
+							To avoid bias, you'll need to conclude that on your own.<br />
+							Here's a community list of strengths and cons for both game-engines <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge#readme">here</a>.<br />
+							Feel free to open a <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge/pulls">pull reqest</a> if you feel additional information should be added to the list.<br />
+							<span class="fs-italic">Note:</span> Contributions to either game-engines are weclome.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>

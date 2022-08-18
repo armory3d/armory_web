@@ -41,6 +41,11 @@
         color: gray !important;
         opacity: 1 !important;
     } */
+    /* CSS Variables */
+    :root {
+      --a3d-secondary: rgb(17, 19, 21);
+      --a3d-thirdly: rgb(223, 223, 223);
+    }
     /* Dark Scrollbar */
     ::-webkit-scrollbar {width: 8px; height: 3px ;}
     ::-webkit-scrollbar-button {background-color: #666;}
@@ -48,19 +53,17 @@
     ::-webkit-scrollbar-track-piece { background-color: #000;}
     ::-webkit-scrollbar-thumb {height: 50px; background-color: #666; border-radius: 3px;}
     ::-webkit-scrollbar-corner {background-color: #646464;}
-    body {
-      background: black;
-    }
     /* Solid Black */
     .bg-dark, .text-bg-dark {
       background-color: black !important;
     }
     /* Dark Grey */
     .bg-secondary, .text-bg-secondary {
-      background-color: rgb(17, 19, 21) !important;
+      background-color: var(--a3d-secondary) !important;
     }
     .bg-thirdly, .text-bg-thirdly {
-      background-color: rgb(223, 223, 223);
+      color: black;
+      background-color: var(--a3d-thirdly);
     }
     /* Navbar Buttons */
     .navbar-nav > li > a {
@@ -81,11 +84,11 @@
     .navbar-nav > li > a:focus {
       box-shadow: 0px -4px 0px var(--bs-danger) inset;
     }
+    /* Navbar Download */
     .navbar-nav > li > .btn {
       border: none;
       box-shadow: none !important;
     }
-    /* Navbar Download */
     @media (min-width: 992px) {
       #rightNav li a {
         height: 64px;
@@ -113,13 +116,21 @@
     }
     .bg-dark.dropdown-menu li a:hover,
     .bg-dark.dropdown-menu li a:active,
-    .bg-dark.dropdown-menu li a:focus {
-      background-color: #6c757d;
+    .bg-dark.dropdown-menu li a:focus,
+    .bg-dark.dropdown-menu li a:hover *,
+    .bg-dark.dropdown-menu li a:active *,
+    .bg-dark.dropdown-menu li a:focus * {
+      color: black !important;
+      background-color: white;
     }
     .bg-light.dropdown-menu li a:hover,
     .bg-light.dropdown-menu li a:active,
-    .bg-light.dropdown-menu li a:focus {
-      background-color: #dee2e6;
+    .bg-light.dropdown-menu li a:focus,
+    .bg-light.dropdown-menu li a:hover *,
+    .bg-light.dropdown-menu li a:active *,
+    .bg-light.dropdown-menu li a:focus * {
+      color: black !important;
+      background-color: var(--a3d-thirdly);
     }
     .dropdown-menu li a {
       padding: 8px 16px;
@@ -175,10 +186,29 @@
       background-color: transparent;
       border-color: rgba(255,255,255,0.5);
     }
+    /* FAQ Buttons */
+    .accordion-button {
+      color: unset;
+      background-color: unset;
+      box-shadow: inset 0px calc(var(--bs-accordion-border-width) * -1) 0px rgba(108, 117, 125, 0.375);
+    }
+    .accordion-button:not(.collapsed) {
+      color: unset;
+      background-color: unset;
+      box-shadow: inset 0px calc(var(--bs-accordion-border-width) * -1) 0px rgba(108, 117, 125, 0.375) !important;
+    }
+    .accordion-button::after, .accordion-button:not(.collapsed)::after {
+      content: none;
+      background-image: none;
+    }
+    .accordion-button:focus {
+      border: none;
+      box-shadow: none;
+    }
     </style>
     <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="text-bg-dark">
     <nav class="bg-dark navbar-dark px-lg-5-2 px-2 py-0">
       <div class="container-fluid px-0">
         <!-- Mobile -->
