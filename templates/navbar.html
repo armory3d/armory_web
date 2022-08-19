@@ -44,7 +44,7 @@
     /* CSS Variables */
     :root {
       --a3d-secondary: rgb(17, 19, 21);
-      --a3d-thirdly: rgb(223, 223, 223);
+      --a3d-thirdly: #e9ecef;
     }
     /* Dark Scrollbar */
     ::-webkit-scrollbar {width: 8px; height: 3px ;}
@@ -65,11 +65,16 @@
       color: black;
       background-color: var(--a3d-thirdly);
     }
+    /* btn-danger */
+    .btn-danger {
+      --bs-btn-bg:#cf2b43 !important;
+      --bs-btn-bg:#cf2b43 !important;
+    }
     /* Navbar Buttons */
     .navbar-nav > li > a {
       display: block;
       height: 64px;
-      padding: 21px 8px;
+      padding: 21px 12px;
       line-height: normal;
       box-shadow: none;
       -webkit-touch-callout: none;
@@ -89,31 +94,14 @@
       border: none;
       box-shadow: none !important;
     }
-    @media (min-width: 992px) {
-      #rightNav li a {
-        height: 64px;
-        padding: 21px !important;
-        padding-top: 22px !important;
-        display: block !important;
-        line-height: normal !important;
-      }
-    }
-    /* Resolution Fix */
-    @media (max-width: 1024px) {
-      #rightNav li a {
-        padding-top: 11px !important;
-      }
+    #rightNav li a {
+      height: 64px;
+      padding: 21px !important;
+      padding-top: 22px !important;
+      display: block !important;
+      line-height: normal !important;
     }
     /* Navbar Dropdowns */
-    @media (min-width: 992px) {
-      .dropdown-menu {
-        right: auto !important;
-        left: 50% !important;
-        margin: 0px !important;
-        padding: 0px !important;
-        transform: translate(-50%, 0) !important;
-      }
-    }
     .bg-dark.dropdown-menu li a:hover,
     .bg-dark.dropdown-menu li a:active,
     .bg-dark.dropdown-menu li a:focus,
@@ -150,7 +138,7 @@
       min-height: 25rem;
       overflow: hidden;
     }
-    header video {
+    header video, header img {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -205,6 +193,16 @@
       border: none;
       box-shadow: none;
     }
+    /* Custom Responsive */
+    @media (min-width: 992px) {
+      .dropdown-menu {
+        right: auto !important;
+        left: 50% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        transform: translate(-50%, 0) !important;
+      }
+    }
     </style>
     <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
@@ -217,7 +215,7 @@
             <!-- Brand -->
             <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
-              <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-caret-down-fill"></i></sub>
+              <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-chevron-down"></i></sub>
             </a>
             <ul class="bg-dark rounded-0 dropdown-menu">
               <li>
@@ -237,7 +235,8 @@
               </li>
             </ul>
           </div>
-          <button class="text-danger navbar-toggler my-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-expanded="false" aria-controls="navbarLinks" aria-label="Toggle navigation">
+          <!-- Collapse Button -->
+          <button class="navbar navbar-dark navbar-toggler my-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-expanded="false" aria-controls="navbarLinks" aria-label="Toggle navigation">
             <i class="navbar-toggler-icon"></i>
           </button>
         </div>
@@ -255,7 +254,7 @@
                   <div class="dropdown">
                     <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
-                      <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-caret-down-fill"></i></sub>
+                      <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-chevron-down"></i></sub>
                     </a>
                     <ul class="bg-dark rounded-0 dropdown-menu">
                       <li>
@@ -281,7 +280,7 @@
             <!-- News -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                News<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+                NEWS<i class="text-light bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -298,12 +297,12 @@
             </li>
             <!-- Features -->
             <li class="nav-item">
-              <a class="text-light nav-link" href="/features">Features</a>
+              <a class="text-light nav-link" href="/features">FEATURES</a>
             </li>
             <!-- Showcase -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Showcase<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+                SHOWCASE<i class="text-light bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -321,7 +320,7 @@
             <!-- Learn -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Learn<sub class="ms-1"><i class="text-light bi bi-caret-down-fill"></i></sub>
+                LEARN<i class="text-light bi bi-chevron-down ms-1"></i>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -348,7 +347,7 @@
             </li>
             <!-- Community -->
             <li class="nav-item">
-              <a class="text-light nav-link" href="/community">Community</a>
+              <a class="text-light nav-link" href="/community">COMMUNITY</a>
             </li>
           </ul>
           <ul id="rightNav" class="navbar-nav">
@@ -360,7 +359,7 @@
               <div id="formDocs" class="collapse">
                 <input required class="text-bg-light form-control" placeholder="Search forum" name="inputDocs" type="text" aria-label="Search">
               </div>
-              <button class="fw-bold btn" type="button" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
+              <button class="fw-bold btn" type="button" onclick="docsToggle(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
                 <i class="bi bi-search text-light"></i>
               </button>
             </form>

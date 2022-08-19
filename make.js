@@ -23,9 +23,9 @@ buildHTML();
 FS.watch("templates/", e => {
   buildHTML();
 });
-// Create Server
+// Server Variables
 let PORT = process.argv[2] || 80,
-    WEBPAGES = ["/notes", "/news", "/features", "/faq", "/community", "/download"]
+WEBPAGES = ["/notes", "/news", "/features", "/faq", "/community", "/download"]
 MIME_TYPES = {
   "html": "text/html",
   "css": "text/css",
@@ -41,33 +41,36 @@ MIME_TYPES = {
   "webm": "video/webm",
   "json": "application/json"
 };
+// Create Server
 HTTP.createServer(function(req, res) {
   // Variables
   let URI = URL.parse(req.url).pathname, 
       fileName = PATH.join(process.cwd(), URI);
-  // 302 - Redirect URLs
+  // 302 - Redirect Valid URLs
   if (URI == "" || URI == "/") {
     fileName = "index.html";
   } else if (WEBPAGES.includes(URI)) {
     fileName += ".html";
   }
-  FS.readFile(fileName, "binary", function(err, file) {
-    // 404 - File Not Found
-    if (err) {
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.write("404 Not Found\n", "binary");
-      res.end();
-      return;
-    } else {
-      // Get Extension Types
-      let mimeType = MIME_TYPES[fileName.split(".").pop()];
-      if (!mimeType) {
-        mimeType = "text/plain";
-      }
-      // Send Data
+  FS.exists(fileName, function(exists) {
+    // Get Extension Types
+    let mimeType = MIME_TYPES[fileName.split(".").pop()];
+    if (!mimeType) {
+      mimeType = "text/plain";
+    }
+    if (exists) {
+      // 200 - OK success
       res.writeHead(200, { "Content-Type": mimeType });
-      res.write(file, "binary");
-      res.end();
+      FS.readFile(fileName, function (err, data) {
+        res.end(data);
+      });
+    } else {
+      // 404 - Page Not Found
+      fileName = "404.html";
+      res.writeHead(404, { "Content-Type": "text/html" });
+      FS.readFile(fileName, function (err, data) {
+        res.end(data);
+      });
     }
   });
 }).listen(parseInt(PORT, 10));

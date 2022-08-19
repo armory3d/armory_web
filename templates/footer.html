@@ -144,7 +144,6 @@
         }
         // border-light & border-dark
         if (e[i].classList.contains("border-light")) {
-          console.log('a');
           e[i].classList.replace("border-light", "border-dark");
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
@@ -165,6 +164,16 @@
     // a = "true"
     // } e.setAttribute("aria-expanded", a);
     f = document.getElementById("formDocs");
+    // Docs Search Toggle - Search/Close Icons
+    function docsToggle(e) {
+      if (!e.classList.contains("collapsed")) {
+        e.children[0].classList.replace("bi-search", "bi-x");
+        // e.children[0].style.fontSize = "200%";
+      } else {
+        e.children[0].classList.replace("bi-x", "bi-search");
+        // e.children[0].style.fontSize = "100%";
+      }
+    }
     // Docs Search - Form Reset
     function formReset() {
       formDocs.classList.remove("show");
