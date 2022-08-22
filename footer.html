@@ -346,112 +346,229 @@
         </div>
       </div>
     </nav>
-    <!-- $main.html -->
-    <main class="text-bg-dark">
-      <div id="accordionMain" class="container-lg p-lg-5 accordion">
-        <!-- FAQ 1 -->
-        <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
-          <h2 id="h1" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
-              <span class="w-100">Q1 - Is Armory3D still active?</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              Yes! - It's quite <a class="fw-bold text-reset" href="/notes">active</a>!
-            </div>
+    <!-- footer.html -->
+    <footer class="text-bg-dark">
+      <div class="container py-4 py-lg-5 px-4 px-lg-3">
+        <div class="row">
+          <!-- Development -->
+          <div class="col-6 col-lg-2 pb-3 pe-3">
+            <h5>DEVELOPMENT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/notes">Release Notes</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory">GitHub</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/issues">Tracker</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a></li>
+            </ul>
+          </div>
+          <!-- Credits -->
+          <div class="col-6 col-lg-2 pb-3">
+            <h5>CREDITS</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="http://kode.tech">Kode</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://blender.org">Blender</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/graphs/contributors">Contributors</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>CONTACT</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/community">Community</a></li>
+              <script>
+                var user_name = "lubos";
+                var host_name = "armory3d.org";
+                document.write("<li class='nav-item mb-2'><a class='nav-link p-0 link-secondary' href='" + "mail" + "to:" + user_name + "@" + host_name + "'>Email</a></li>");
+              </script>
+            </ul>
+          </div>
+          <!-- Newsletter -->
+          <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3">
+            <form>
+              <h5 class="fw-bold p-2 ps-0 pb-0">Subscribe to our newsletter</h5>
+              <p class="fs-6 lh-1">Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-lg-row w-100 gap-2">
+                <label class="visually-hidden" for="newsletter1">Email address</label>
+                <input id="newsletter1" class="text-bg-light form-control" type="text" placeholder="Email address">
+                <a class="fw-bold btn btn-danger d-flex align-items-center justify-content-center" href="#">
+                  <i class="bi bi-envelope text-white me-2"></i>Subscribe
+                </a>
+              </div>
+            </form>
           </div>
         </div>
-        <!-- FAQ 2 -->
-        <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
-          <h2 id="h2" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
-              <span class="w-100">Q2 - Does Armory3D have Blender 3.x builds?</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              Yes - But it's still in  alpha phase because
-              <a class="fw-bold text-reset" href="https://www.blender.org/download/lts">Blender LTS</a> 3.3x has yet to be released.<br />
-              However, you can download Armory <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/tree/blender-3.3-lts">experimental builds</a>
-              that are compatible with latest Blender <a class="fw-bold text-reset" href="https://builder.blender.org/download/daily">daily builds</a>, that are built on Blender 3.x, non-LTS source.
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 3 -->
-        <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
-          <h2 id="h3" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
-              <span class="w-100">Q3 - I have a bug and cannot run my game due to error(s).</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              Please follow basic troubleshooting steps from
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/troubleshooting">here</a>.<br />
-              If error(s) still persist, please open an
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/issues">issue report</a> 
-              or ask the community for help at any of the Armory-related community platforms.
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 4 -->
-        <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
-          <h2 id="h4" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
-              <span class="w-100">Q4 - What does a certain logic node do, exactly?</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              The official Armory manual has a full list of logic node
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/reference">references</a>.<br />
-              The references contain detailed descriptions of what each logic node is capable of and what features it comprises of.
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 5 -->
-        <div class="text-bg-dark accordion-item border border-light border-opacity-25">
-          <h2 id="h5" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
-              <span class="w-100">Q5 - How good is Armory3D compared to UPBGE?</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              To avoid bias, you'll need to conclude that on your own.<br />
-              Here is a <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge#readme">list</a> 
-              of pros and cons of both game-engines that is maintained by the community.<br />
-              Feel free to open a <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge/pulls">pull request</a> 
-              if you feel additional information could be added to the list.
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 6 -->
-        <div class="text-bg-dark accordion-item border border-light border-opacity-25">
-          <h2 id="h6" class="accordion-header">
-            <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
-              <span class="w-100">Q6. How can I contribute to Armory3D development?</span>
-              <i class="bi bi-plus-circle text-light"></i>
-            </button>
-          </h2>
-          <div id="c6" class="accordion-collapse collapse" aria-labelledby="h6" data-bs-parent="#accordionMain">
-            <div class="fs-5 text-bg-light lead accordion-body">
-              Whether your contributions relate to <a class="fw-bold text-reset" href="https://github.com/armory3d/armory">engine</a> development,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki">documentation</a> development,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory_web">website</a> development,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/community_tutorials">tutorials</a>
-              or <a class="fw-bold text-reset" href="https://armory.gumroad.com/l/armory">financial donations</a>, they are always welcome and appreciated!
-            </div>
-          </div>
+        <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;">
+          <!-- Copyright -->
+          <ul class="mb-3 nav flex-column">
+            <li class="nav-item"><p class="fs-6 lh-1 mb-2">&copy; 2022 Lubos Lenco & contributors</p></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
+            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
+          </ul>
+          <!-- Social -->
+          <ul class="list-unstyled d-flex justify-content-end">
+            <li class="ms-3">
+              <a class="link-light" href="https://twitter.com/armory3d">
+                <i class="text-light bi bi-twitter fs-4"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-light" href="https://facebook.com/armorytools/">
+                <i class="text-light bi bi-facebook fs-4"></i>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-light" href="https://instagram.com/armory3d">
+                <i class="text-light bi bi-instagram fs-4"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </main>
+    </footer>
+    <script>
+    /* jshint esversion: 6 */
+    // Dropdown Hover
+    // let d = document.getElementsByClassName("dropdown-toggle");
+    // for (let i=0; i<d.length; i++) {
+    //   d[i].addEventListener("mouseover", e => {
+    //     d[i].classList.add("show");
+    //     d[i].setAttribute("aria-expanded", true);
+    //     d[i].parentElement.children[1].classList.add("show");
+    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
+    //   });
+    //   d[i].addEventListener("mouseout", e => {
+    //     d[i].classList.remove("show");
+    //     d[i].setAttribute("aria-expanded", false);
+    //     d[i].parentElement.children[1].classList.remove("show");
+    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
+    //   });
+    //   d[i].parentElement.children[1].addEventListener("mouseover", e => {
+    //     d[i].parentElement.children[1].classList.add("show");
+    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
+    //   });
+    //   d[i].parentElement.children[1].addEventListener("mouseout", e => {
+    //     d[i].parentElement.children[1].classList.remove("show");
+    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
+    //   });
+    // }
+    // Theme Toggle
+    function toggleTheme(t) {
+      const e = document.querySelectorAll("*");
+      for (let i=0; i<e.length; i++) {
+        // bg-light & bg-dark & bg-secondary & bg-thirdly
+        if (e[i].classList.contains("bg-light")) {
+          e[i].classList.replace("bg-light", "bg-dark");
+        } else if (e[i].classList.contains("bg-dark")) {
+          e[i].classList.replace("bg-dark", "bg-light");
+        } else if (e[i].classList.contains("bg-secondary")) {
+          e[i].classList.replace("bg-secondary", "bg-thirdly");
+        } else if (e[i].classList.contains("bg-thirdly")) {
+          e[i].classList.replace("bg-thirdly", "bg-secondary");
+        }
+        // text-light & text-dark & text-white-50 & text-muted
+        if (e[i].classList.contains("text-light")) {
+          e[i].classList.replace("text-light", "text-dark");
+        } else if (e[i].classList.contains("text-dark")) {
+          e[i].classList.replace("text-dark", "text-light");
+        } else if (e[i].classList.contains("text-white-50")) {
+          e[i].classList.replace("text-white-50", "text-muted");
+        } else if (e[i].classList.contains("text-muted")) {
+          e[i].classList.replace("text-muted", "text-white-50");
+        }
+        // navbar-light & navbar-dark
+        if (e[i].classList.contains("navbar-light")) {
+          e[i].classList.replace("navbar-light", "navbar-dark");
+        } else if (e[i].classList.contains("navbar-dark")) {
+          e[i].classList.replace("navbar-dark", "navbar-light");
+        }
+        // text-bg-light & text-bg-dark & text-bg-secondary & text-bg-thirdly
+        if (e[i].classList.contains("text-bg-light")) {
+          e[i].classList.replace("text-bg-light", "text-bg-dark");
+        } else if (e[i].classList.contains("text-bg-dark")) {
+          e[i].classList.replace("text-bg-dark", "text-bg-light");
+        } else if (e[i].classList.contains("text-bg-secondary")) {
+          e[i].classList.replace("text-bg-secondary", "text-bg-thirdly");
+        } else if (e[i].classList.contains("text-bg-thirdly")) {
+          e[i].classList.replace("text-bg-thirdly", "text-bg-secondary");
+        }
+        // border-light & border-dark
+        if (e[i].classList.contains("border-light")) {
+          e[i].classList.replace("border-light", "border-dark");
+        } else if (e[i].classList.contains("border-dark")) {
+          e[i].classList.replace("border-dark", "border-light");
+        }
+      }
+      // bi-sun & bi-moon-stars
+      if (t.children[0].classList.contains("bi-sun")) {
+        t.children[0].classList.replace("bi-sun", "bi-moon-stars");
+      } else if (t.children[0].classList.contains("bi-moon-stars")) {
+        t.children[0].classList.replace("bi-moon-stars", "bi-sun");
+      }
+    }
+    // Docs Search - Variable
+    // var a = e.getAttribute("aria-expanded");
+    // if (a=== "true")  {
+    // a = "false"
+    // } else {
+    // a = "true"
+    // } e.setAttribute("aria-expanded", a);
+    f = document.getElementById("formDocs");
+    // Docs Search Toggle - Search/Close Icons
+    function docsToggle(e) {
+      if (!e.classList.contains("collapsed")) {
+        e.children[0].classList.replace("bi-search", "bi-x");
+        // e.children[0].style.fontSize = "200%";
+      } else {
+        e.children[0].classList.replace("bi-x", "bi-search");
+        // e.children[0].style.fontSize = "100%";
+      }
+    }
+    // Docs Search - Form Reset
+    function formReset() {
+      formDocs.classList.remove("show");
+      formDocs.parentElement.children[2].classList.toggle("collapsed");
+      let a = formDocs.parentElement.children[2].getAttribute("aria-expanded");
+      a = "false";
+      formDocs.parentElement.children[2].setAttribute("aria-expanded", a);
+      f.children[0].value = "";
+    }
+    // Docs Search - Close Control
+    window.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        formReset();
+      }
+    });
+    // Docs Search - Search Destination
+    function checkValidation() {
+      if (f.children[0].value.length >= 3) {
+        // location.href = "https://github.com/armory3d/armory/search?q=" + String(f.value) + "&type=wikis";
+        location.href = "https://forums.armory3d.org/search?q=" + String(f.children[0].value);
+      } else {
+        alert("Search terms require minimum of three letters.");
+      }
+    }
+    // Docs Search - Init Undo
+    window.addEventListener("pageshow", function() {
+      formReset();
+    });
+    // FAQ - Toggle Arrows
+    function faqToggle(e) {
+      // Reset All FAQ Buttons
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[1].classList.contains("bi-dash-circle")) {
+          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Toggle Arrows Only For Active
+      if (!e.classList.contains("collapsed")) {
+        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
+      } else {
+        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+      }
+    }
+    </script>
+  </body>
+</html>
     <!-- footer.html -->
     <footer class="text-bg-dark">
       <div class="container py-4 py-lg-5 px-4 px-lg-3">

@@ -68,13 +68,15 @@
     /* btn-danger */
     .btn-danger {
       --bs-btn-bg:#cf2b43 !important;
-      --bs-btn-bg:#cf2b43 !important;
+      --bs-btn-border-radius: 0.375rem;
     }
     /* Navbar Buttons */
+    #brand > div > a,
+    #brand > div > div > a,
     .navbar-nav > li > a {
       display: block;
       height: 64px;
-      padding: 21px 12px;
+      padding: 22px 12px;
       line-height: normal;
       box-shadow: none;
       -webkit-touch-callout: none;
@@ -84,9 +86,12 @@
       -ms-user-select: none;
       user-select: none;
     }
-    .navbar-nav > li > a:hover,
-    .navbar-nav > li > a:active,
-    .navbar-nav > li > a:focus {
+    #brand > div > div > a:hover,
+    #brand > div > div > a:active,
+    #brand > div > div > a:focus,
+    .navbar-nav > li:not(.desktopNavLogo) > a:hover,
+    .navbar-nav > li:not(.desktopNavLogo) > a:active,
+    .navbar-nav > li:not(.desktopNavLogo) > a:focus {
       box-shadow: 0px -4px 0px var(--bs-danger) inset;
     }
     /* Navbar Download */
@@ -94,12 +99,8 @@
       border: none;
       box-shadow: none !important;
     }
-    #rightNav li a {
-      height: 64px;
-      padding: 21px !important;
-      padding-top: 22px !important;
-      display: block !important;
-      line-height: normal !important;
+    #navRight li a {
+      padding: 22px !important;
     }
     /* Navbar Dropdowns */
     .bg-dark.dropdown-menu li a:hover,
@@ -108,8 +109,10 @@
     .bg-dark.dropdown-menu li a:hover *,
     .bg-dark.dropdown-menu li a:active *,
     .bg-dark.dropdown-menu li a:focus * {
-      color: black !important;
-      background-color: white;
+      /* color: black !important;
+      background-color: white; */
+      color: white !important;
+      background-color: var(--bs-danger);
     }
     .bg-light.dropdown-menu li a:hover,
     .bg-light.dropdown-menu li a:active,
@@ -117,8 +120,10 @@
     .bg-light.dropdown-menu li a:hover *,
     .bg-light.dropdown-menu li a:active *,
     .bg-light.dropdown-menu li a:focus * {
+      /* color: black !important;
+      background-color: var(--a3d-thirdly); */
       color: black !important;
-      background-color: var(--a3d-thirdly);
+      background-color: var(--bs-danger);
     }
     .dropdown-menu li a {
       padding: 8px 16px;
@@ -206,81 +211,49 @@
     </style>
     <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
+  <!-- Navbar -->
   <body class="text-bg-dark">
-    <nav class="bg-dark navbar-dark px-lg-5-2 px-2 py-0">
-      <div class="container-fluid px-0">
-        <!-- Mobile -->
-        <div class="d-lg-none d-flex">
-          <div class="me-auto">
-            <!-- Brand -->
-            <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
-              <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-chevron-down"></i></sub>
-            </a>
-            <ul class="bg-dark rounded-0 dropdown-menu">
-              <li>
-                <a class="text-light dropdown-item" href="/">
-                  <i class="text-light bi bi-house-door me-2"></i>Home
-                </a>
-              </li>
-              <li>
-                <a class="text-light dropdown-item" href="https://armorpaint.org">
-                  <i class="text-light bi bi-brush me-2"></i>ArmorPaint
-                </a>
-              </li>
-              <li>
-                <a class="text-light dropdown-item" href="https://armorlab.org">
-                  <i class="text-light bi bi-palette me-2"></i>ArmorLab
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- Collapse Button -->
-          <button class="navbar navbar-dark navbar-toggler my-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-expanded="false" aria-controls="navbarLinks" aria-label="Toggle navigation">
-            <i class="navbar-toggler-icon"></i>
-          </button>
+    <nav id="brand" class="bg-dark navbar-dark navbar navbar-expand-lg px-lg-5 py-0">
+      <!-- Brand -->
+      <div class="d-flex align-items-center">
+        <a class="nav-link pe-0" href="/">
+          <img class="position-relative top-50 start-0 translate-middle-y" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
+        </a>
+        <div class="dropdown">
+          <a class="fs-5 text-light fw-bold lh-1 nav-link dropdown-toggle me-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ARMORY3D<sub class="ms-1"><i class="bi bi-chevron-down"></i></sub>
+          </a>
+          <ul class="bg-dark rounded-0 dropdown-menu">
+            <li>
+              <a class="text-light dropdown-item" href="/">
+                <i class="text-light bi bi-house-door me-2"></i>Home
+              </a>
+            </li>
+            <li>
+              <a class="text-light dropdown-item" href="https://armorpaint.org">
+                <i class="text-light bi bi-brush me-2"></i>ArmorPaint
+              </a>
+            </li>
+            <li>
+              <a class="text-light dropdown-item" href="https://armorlab.org">
+                <i class="text-light bi bi-palette me-2"></i>ArmorLab
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
-    <nav class="bg-dark navbar-dark navbar navbar-expand-lg px-lg-5 py-0">
+      <!-- Mobile Toggle -->
+      <button class="navbar navbar-dark navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+        <i class="navbar-toggler-icon"></i>
+      </button>
+      <!-- Navbar Links -->
       <div class="container-fluid px-0">
-        <!-- Desktop -->
-        <div class="collapse navbar-collapse" id="navbarLinks">
+        <div class="collapse navbar-collapse" id="navLinks">
           <ul class="navbar-nav me-auto">
-            <li>
-              <ul class="navbar-nav">
-                <!-- Brand -->
-                <li class="d-none d-lg-inline nav-item dropdown">
-                  <div class="dropdown">
-                    <a class="text-light fw-bold navbar-brand nav-link dropdown-toggle py-2" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img class="me-1" src="/img/Logo.png" width="48" height="48" alt="Armory3D Logo" />
-                      <span class="align-middle">ARMORY3D</span><sub class="ms-1"><i class="bi bi-chevron-down"></i></sub>
-                    </a>
-                    <ul class="bg-dark rounded-0 dropdown-menu">
-                      <li>
-                        <a class="text-light dropdown-item" href="/">
-                          <i class="text-light bi bi-house-door me-2"></i>Home
-                        </a>
-                      </li>
-                      <li>
-                        <a class="text-light dropdown-item" href="https://armorpaint.org">
-                          <i class="text-light bi bi-brush me-2"></i>ArmorPaint
-                        </a>
-                      </li>
-                      <li>
-                        <a class="text-light dropdown-item" href="https://armorlab.org">
-                          <i class="text-light bi bi-palette me-2"></i>ArmorLab
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
             <!-- News -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                NEWS<i class="text-light bi bi-chevron-down ms-1"></i>
+                News<sub class="ms-1"><i class="text-light bi bi-chevron-down"></i></sub>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -297,12 +270,12 @@
             </li>
             <!-- Features -->
             <li class="nav-item">
-              <a class="text-light nav-link" href="/features">FEATURES</a>
+              <a class="text-light nav-link" href="/features">Features</a>
             </li>
             <!-- Showcase -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                SHOWCASE<i class="text-light bi bi-chevron-down ms-1"></i>
+                Showcase<sub class="ms-1"><i class="text-light bi bi-chevron-down"></i></sub>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -320,7 +293,7 @@
             <!-- Learn -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                LEARN<i class="text-light bi bi-chevron-down ms-1"></i>
+                Learn<sub class="ms-1"><i class="text-light bi bi-chevron-down"></i></sub>
               </a>
               <ul class="bg-dark rounded-0 dropdown-menu">
                 <li>
@@ -347,11 +320,11 @@
             </li>
             <!-- Community -->
             <li class="nav-item">
-              <a class="text-light nav-link" href="/community">COMMUNITY</a>
+              <a class="text-light nav-link" href="/community">Community</a>
             </li>
           </ul>
-          <ul id="rightNav" class="navbar-nav">
-            <!-- Documenation Search + Theme Toggle -->
+          <ul id="navRight" class="navbar-nav">
+            <!-- Documentation Search + Theme Toggle -->
             <form class="d-flex align-items-center was-validated me-2" onsubmit="checkValidation(); return false;" method="post">
               <button class="fw-bold btn" type="button" aria-expanded="false" onclick="toggleTheme(this);">
                 <i class="bi bi-sun text-light"></i>
@@ -365,7 +338,7 @@
             </form>
             <!-- Download -->
             <li class="nav-item">
-              <a class="text-white fw-bold rounded-0 nav-link btn btn-danger mt-1 mt-lg-0 me-0 me-lg-2 p-3" href="#">
+              <a class="text-white fw-bold rounded-0 nav-link btn btn-danger mt-1 mt-lg-0 me-0 me-lg-2 p-3" href="/download">
                 <i class="bi bi-download me-2"></i>Download
               </a>
             </li>
@@ -406,7 +379,7 @@
           <p class="lead mb-3">
             Armory's render path is designed to work with Blender's material nodes.
             You can create beautiful materials with ease and choose from a broad range of post-processing effects.
-            Projects can configure multiple render paths so that the optimal one can be selected for the target plaform and hardware.
+            Projects can configure multiple render paths so that the optimal one can be selected for the target platform and hardware.
             If you need more fine-grained control, you can code your own shaders and even create your own render path from scratch!
           </p>
           <div class="d-grid gap-2 d-lg-flex justify-content-lg-end">
@@ -419,7 +392,7 @@
           </div>
         </div>
         <div class="col-lg-4 mb-lg-0 p-lg-4">
-          <img class="ratio ratio-21x9" src="/img/SSRSearch.gif" alt="Screen-Spaced Reflections Comparisions Example" />
+          <img class="ratio ratio-21x9" src="/img/SSRSearch.gif" alt="Screen-Spaced Reflections Comparisons Example" />
           <img class="ratio ratio-21x9" src="/img/pic.jpg" alt="Celshader Driver Example" />
         </div>
       </div>
@@ -434,7 +407,7 @@
           </a>
           <hr />
           <p class="lead mb-3">
-            For creating the interactive behaviour of your game, you can decide between writing <a class="fw-bold text-reset" href="https://haxe.org">Haxe</a> code or using visual scripting in the form of logic nodes.
+            For creating the interactive behavior of your game, you can decide between writing <a class="fw-bold text-reset" href="https://haxe.org">Haxe</a> code or using visual scripting in the form of logic nodes.
             Logic nodes are easy to learn and provide you with a great variety of functionality.
             Creating your own logic nodes to encapsulate specific functionality is very straightforward.
           </p>
@@ -528,7 +501,7 @@
           </a>
           <hr />
           <p class="lead mb-3">
-            Add realistic NPC behaviour to your game by letting actors move on navigation meshes.
+            Add realistic NPC behavior to your game by letting actors move on navigation meshes.
             Armory uses the Recast navigation system but can be configured to use any other navigation engine.
           </p>
           <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
@@ -615,7 +588,7 @@
         </div>
       </div>
       <!-- Free & Open-Source -->
-      <div id="armory-statement" class="bg-secondary position-relative row g-0 px-lg-5 border-bottom border-light border-opacity-25">
+      <div id="armory-statement" class="bg-secondary position-relative row g-0 px-lg-5 border-light border-opacity-25">
         <div class="col-lg-3 mb-lg-0 p-lg-4">
           <img class="ratio ratio-21x9 position-relative top-50 start-50 translate-middle" src="/img/Logo.png" alt="Armory Software Example"/>
         </div>
@@ -800,7 +773,7 @@
     }
     // Docs Search - Variable
     // var a = e.getAttribute("aria-expanded");
-    // if (a== "true")  {
+    // if (a=== "true")  {
     // a = "false"
     // } else {
     // a = "true"
@@ -846,10 +819,18 @@
     });
     // FAQ - Toggle Arrows
     function faqToggle(e) {
+      // Reset All FAQ Buttons
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[1].classList.contains("bi-dash-circle")) {
+          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Toggle Arrows Only For Active
       if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-chevron-down", "bi-chevron-up");
+        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
       } else {
-        e.children[1].classList.replace("bi-chevron-up", "bi-chevron-down");
+        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
       }
     }
     </script>

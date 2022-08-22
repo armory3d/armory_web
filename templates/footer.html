@@ -158,7 +158,7 @@
     }
     // Docs Search - Variable
     // var a = e.getAttribute("aria-expanded");
-    // if (a== "true")  {
+    // if (a=== "true")  {
     // a = "false"
     // } else {
     // a = "true"
@@ -204,10 +204,18 @@
     });
     // FAQ - Toggle Arrows
     function faqToggle(e) {
+      // Reset All FAQ Buttons
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[1].classList.contains("bi-dash-circle")) {
+          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Toggle Arrows Only For Active
       if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-chevron-down", "bi-chevron-up");
+        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
       } else {
-        e.children[1].classList.replace("bi-chevron-up", "bi-chevron-down");
+        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
       }
     }
     </script>

@@ -6,13 +6,15 @@ let HTTP = require("http");
     FS = require("fs")
 // Build Function
 let buildHTML = function() {
-  FS.readdir(".", (err, file) => {
+  FS.readdir("templates/", (err, file) => {
     file.forEach(file => {
       if (PATH.extname(file) == ".html") {
-        let n = FS.readFileSync("templates/navbar.html", "utf8");
-        let m = FS.readFileSync("templates/" + file, "utf8");
-        let f = FS.readFileSync("templates/footer.html", "utf8");
-        FS.writeFileSync(file, n + "\n" + m + "\n" + f);
+        if (PATH.basename(file) !== "navbar.html" && "footer.html") {
+          let n = FS.readFileSync("templates/navbar.html", "utf8");
+          let m = FS.readFileSync("templates/" + file, "utf8");
+          let f = FS.readFileSync("templates/footer.html", "utf8");
+          FS.writeFileSync(file, n + "\n" + m + "\n" + f);
+        }
       }
     });
   });
