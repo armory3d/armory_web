@@ -393,10 +393,10 @@
       </script>
     <!-- footer.html -->
     <footer class="text-bg-dark">
-      <div class="container py-4 py-lg-5 px-4 px-lg-3">
+      <div class="vh-100 container py-4 py-lg-5 px-4 px-lg-3">
         <div class="row">
           <!-- Development -->
-          <div class="col-6 col-lg-2 pb-3 pe-3">
+          <div class="col-6 col-lg-2">
             <h5>DEVELOPMENT</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/notes">Release Notes</a></li>
@@ -406,7 +406,7 @@
             </ul>
           </div>
           <!-- Credits -->
-          <div class="col-6 col-lg-2 pb-3">
+          <div class="col-6 col-lg-2">
             <h5>CREDITS</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="http://kode.tech">Kode</a></li>
@@ -415,7 +415,7 @@
             </ul>
           </div>
           <!-- Contact -->
-          <div class="col-6 col-lg-2 mb-3">
+          <div class="col-6 col-lg-2">
             <h5>CONTACT</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="/community">Community</a></li>
@@ -426,9 +426,17 @@
               </script>
             </ul>
           </div>
+          <!-- Copyright -->
+          <div class="col-6 col-lg-3">
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">&copy; 2022 Lubos Lenco & contributors</li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
+            </ul>
+          </div>
           <!-- Newsletter -->
-          <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3">
-            <form>
+          <!-- <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3"> -->
+            <!-- <form>
               <h5 class="fw-bold p-2 ps-0 pb-0">Subscribe to our newsletter</h5>
               <p class="fs-6 lh-1">Monthly digest of what's new and exciting from us.</p>
               <div class="d-flex flex-column flex-lg-row w-100 gap-2">
@@ -438,18 +446,37 @@
                   <i class="bi bi-envelope text-white me-2"></i>Subscribe
                 </a>
               </div>
-            </form>
-          </div>
+            </form> -->
         </div>
-        <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;">
+      </div>
+    </footer>
+            <!-- Social -->
+            <!-- <ul class="list-unstyled d-flex justify-content-end">
+              <li class="ms-3">
+                <a class="link-light" href="https://twitter.com/armory3d">
+                  <i class="text-light bi bi-twitter fs-4"></i>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a class="link-light" href="https://facebook.com/armorytools/">
+                  <i class="text-light bi bi-facebook fs-4"></i>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a class="link-light" href="https://instagram.com/armory3d">
+                  <i class="text-light bi bi-instagram fs-4"></i>
+                </a>
+              </li>
+            </ul> -->
+        <!-- <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;"> -->
           <!-- Copyright -->
-          <ul class="mb-3 nav flex-column">
+          <!-- <ul class="mb-3 nav flex-column">
             <li class="nav-item"><p class="fs-6 lh-1 mb-2">&copy; 2022 Lubos Lenco & contributors</p></li>
             <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
             <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-          </ul>
+          </ul> -->
           <!-- Social -->
-          <ul class="list-unstyled d-flex justify-content-end">
+          <!-- <ul class="list-unstyled d-flex justify-content-end">
             <li class="ms-3">
               <a class="link-light" href="https://twitter.com/armory3d">
                 <i class="text-light bi bi-twitter fs-4"></i>
@@ -465,10 +492,8 @@
                 <i class="text-light bi bi-instagram fs-4"></i>
               </a>
             </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+          </ul> -->
+        <!-- </div> -->
     <script>
     // Dropdown Hover
     // let d = document.getElementsByClassName("dropdown-toggle");
@@ -540,6 +565,21 @@
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
         }
+        // bi-discourse & bi-artstation
+        // if (e[i].classList.contains("bi-discourse")) {
+        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
+        //     e[i].setAttribute("fill", "#000000");
+        //   } else if (e[i].getAttribute("fill") === "#000000") {
+        //     e[i].setAttribute("fill", "#FFFFFF");
+        //   }
+        // }
+        // if (e[i].classList.contains("bi-artstation")) {
+        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
+        //     e[i].setAttribute("fill", "#000000");
+        //   } else if (e[i].getAttribute("fill") === "#000000") {
+        //     e[i].setAttribute("fill", "#FFFFFF");
+        //   }
+        // }
       }
       // bi-sun & bi-moon-stars
       if (t.children[0].classList.contains("bi-sun")) {
@@ -559,10 +599,10 @@
     // Docs Search Toggle - Search/Close Icons
     function docsToggle(e) {
       if (!e.classList.contains("collapsed")) {
-        e.children[0].classList.replace("bi-search", "bi-x");
+        e.children[0].classList.replace("bi-search", "bi-x-lg");
         // e.children[0].style.fontSize = "200%";
       } else {
-        e.children[0].classList.replace("bi-x", "bi-search");
+        e.children[0].classList.replace("bi-x-lg", "bi-search");
         // e.children[0].style.fontSize = "100%";
       }
     }
