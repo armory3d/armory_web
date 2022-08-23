@@ -7,3 +7,6 @@ Bootstrap
 	- https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff2
 * JS
 	- https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js
+Twitter_Timeline
+* JS
+	- [August 22, 2022] https://platform.twitter.com/widgets.js
