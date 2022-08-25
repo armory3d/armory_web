@@ -105,3 +105,20 @@
         </div>
       </div>
     </main>
+    <script>
+    function faqToggle(e) {
+      // Reset Uncollapsed
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[1].classList.contains("bi-dash-circle")) {
+          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Collapse Icons Only For Active
+      if (!e.classList.contains("collapsed")) {
+        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
+      } else {
+        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+      }
+    }
+    </script>

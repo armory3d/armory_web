@@ -179,11 +179,21 @@
       background-color: transparent;
       border-color: rgba(255,255,255,0.5);
     }
+    /* Notes */
+    .notes {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
     /* FAQ Buttons */
+    .collapsing {
+      transition: none !important;
+    }
     .accordion-button {
       color: unset;
       background-color: unset;
       box-shadow: inset 0px calc(var(--bs-accordion-border-width) * -1) 0px rgba(108, 117, 125, 0.375);
+      transition: none !important;
     }
     .accordion-button:not(.collapsed) {
       color: unset;
@@ -193,6 +203,7 @@
     .accordion-button::after, .accordion-button:not(.collapsed)::after {
       content: none;
       background-image: none;
+      transition: none !important;
     }
     .accordion-button:focus {
       border: none;
@@ -361,9 +372,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Discord
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Discord</h1>
               <p class="card-text lead">Official server.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://discord.gg/axq6qWV">
@@ -375,16 +384,14 @@
           <!-- Forums -->
           <div id="forums" class="text-bg-secondary card border border-light border-opacity-25">
             <!-- Icon -->
-            <div class="d-flex justify-content-center align-items-center">
-              <a href="#forums" style="font-size: 4rem;">
+            <div class="d-flex justify-content-center align-items-center" style="height: 96px">
+              <a href="#forums">
                 <svg class="text-light" style="width: 64px; height: 85px;" fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="32px" height="32px"><path d="M 16.109375 3 C 8.994375 3 3 8.7164375 3 15.773438 C 3 15.999438 3.0058594 29 3.0058594 29 L 16.109375 28.988281 C 23.230375 28.988281 29 23.051141 29 15.994141 C 29 8.9371406 23.230375 3 16.109375 3 z M 16 8 C 20.418 8 24 11.582 24 16 C 24 20.418 20.418 24 16 24 C 14.58 24 13.247797 23.625563 12.091797 22.976562 L 8 24 L 9.1210938 20.070312 C 8.4130937 18.877312 8 17.489 8 16 C 8 11.582 11.582 8 16 8 z"/></svg>
               </a>
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Forums
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Forums</h1>
               <p class="card-text lead">Armory & Blender forums.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="http://forums.armory3d.org">
@@ -406,9 +413,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Github
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Github</h1>
               <p class="card-text lead">Official repository.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory">
@@ -433,9 +438,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Twitter
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Twitter</h1>
               <p class="card-text lead">Official handle.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://twitter.com/armory3d">
@@ -457,9 +460,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Instagram
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Instagram</h1>
               <p class="card-text lead">Official handle.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://instagram.com/armory3d">
@@ -481,9 +482,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Facebook
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Facebook</h1>
               <p class="card-text lead">Official handle.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://facebook.com/armorytools">
@@ -508,9 +507,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                YouTube
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">YouTube</h1>
               <p class="card-text lead">Official channel.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://youtube.com/c/Armory3d">
@@ -525,16 +522,14 @@
           <!-- Artstation -->
           <div id="artstation" class="text-bg-secondary card border border-light border-opacity-25">
             <!-- Icon -->
-            <div class="d-flex justify-content-center align-items-center">
-              <a href="#artstation" style="font-size: 4rem;">
+            <div class="d-flex justify-content-center align-items-center" style="height: 96px">
+              <a href="#artstation">
                 <svg class="text-light" style="width: 64px; height: 85px;" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32px" height="32px"><path d="M 13.730469 5 L 26 27 L 27.994141 22.488281 C 28.457141 21.562281 28.410094 20.463078 27.871094 19.580078 L 20.095703 6.4355469 C 19.550703 5.5445469 18.580156 5 17.535156 5 L 13.730469 5 z M 11.511719 7.1777344 L 5.6308594 18 L 17.546875 18 L 11.511719 7.1777344 z M 4 21 L 6.171875 25.341797 C 6.679875 26.357797 7.7175156 27 8.8535156 27 L 22.566406 27 L 19.220703 21 L 4 21 z"/></svg>
               </a>
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Artstation
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Artstation</h1>
               <p class="card-text lead">Community hashtag.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://artstation.com/search?sort_by=relevance&query=armory3d">
@@ -553,9 +548,7 @@
             </div>
             <!-- Body -->
             <div class="card-body pt-0">
-              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
-                Reddit
-              </h1>
+              <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Reddit</h1>
               <p class="card-text lead">Unofficial subreddit.</p>
               <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
                 <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://reddit.com/r/armory3d">
@@ -569,7 +562,7 @@
           </div>
         </div>
       </div>
-      <p class="text-center container pb-3">Discourse & Artstation icons provided by <a class="fw-bold text-reset" href="https://icons8.com">icons8.com</a>.</p>
+      <p class="lead text-center container pb-3">Discourse & Artstation icons provided by <a class="fw-bold text-reset" href="https://icons8.com">icons8.com</a>.</p>
     </main>
     <!-- footer.html -->
     <footer class="text-bg-dark">
@@ -814,22 +807,6 @@
     window.addEventListener("pageshow", function() {
       formReset();
     });
-    // FAQ - Toggle Arrows
-    function faqToggle(e) {
-      // Reset All FAQ Buttons
-      const a = document.getElementsByClassName("accordion-button");
-      for (let i=0; i<a.length; i++) {
-        if (a[i].children[1].classList.contains("bi-dash-circle")) {
-          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-        }
-      }
-      // Toggle Arrows Only For Active
-      if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
-      } else {
-        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-      }
-    }
     </script>
   </body>
 </html>

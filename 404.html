@@ -179,11 +179,21 @@
       background-color: transparent;
       border-color: rgba(255,255,255,0.5);
     }
+    /* Notes */
+    .notes {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
     /* FAQ Buttons */
+    .collapsing {
+      transition: none !important;
+    }
     .accordion-button {
       color: unset;
       background-color: unset;
       box-shadow: inset 0px calc(var(--bs-accordion-border-width) * -1) 0px rgba(108, 117, 125, 0.375);
+      transition: none !important;
     }
     .accordion-button:not(.collapsed) {
       color: unset;
@@ -193,6 +203,7 @@
     .accordion-button::after, .accordion-button:not(.collapsed)::after {
       content: none;
       background-image: none;
+      transition: none !important;
     }
     .accordion-button:focus {
       border: none;
@@ -353,7 +364,7 @@
         <div class="splash-vignette"></div>
         <div class="container position-relative top-50 start-0 translate-middle-y py-4">   
           <div class="mb-4">
-            <div class="container-fluid py-5">
+            <div class="text-white container-fluid py-5">
               <h1 class="display-3 fw-bold fst-italic mb-4">404<br />Page Not Found</h1>
               <p class="fs-4 lead lh-1" style="margin-bottom: 1.5rem;">The page you are looking for cannot be found at this location.</p>
               <div class="d-lg-flex justify-content-lg-center">
@@ -609,22 +620,6 @@
     window.addEventListener("pageshow", function() {
       formReset();
     });
-    // FAQ - Toggle Arrows
-    function faqToggle(e) {
-      // Reset All FAQ Buttons
-      const a = document.getElementsByClassName("accordion-button");
-      for (let i=0; i<a.length; i++) {
-        if (a[i].children[1].classList.contains("bi-dash-circle")) {
-          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-        }
-      }
-      // Toggle Arrows Only For Active
-      if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
-      } else {
-        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-      }
-    }
     </script>
   </body>
 </html>

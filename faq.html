@@ -179,11 +179,21 @@
       background-color: transparent;
       border-color: rgba(255,255,255,0.5);
     }
+    /* Notes */
+    .notes {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
     /* FAQ Buttons */
+    .collapsing {
+      transition: none !important;
+    }
     .accordion-button {
       color: unset;
       background-color: unset;
       box-shadow: inset 0px calc(var(--bs-accordion-border-width) * -1) 0px rgba(108, 117, 125, 0.375);
+      transition: none !important;
     }
     .accordion-button:not(.collapsed) {
       color: unset;
@@ -193,6 +203,7 @@
     .accordion-button::after, .accordion-button:not(.collapsed)::after {
       content: none;
       background-image: none;
+      transition: none !important;
     }
     .accordion-button:focus {
       border: none;
@@ -453,6 +464,23 @@
         </div>
       </div>
     </main>
+    <script>
+    function faqToggle(e) {
+      // Reset Uncollapsed
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[1].classList.contains("bi-dash-circle")) {
+          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Collapse Icons Only For Active
+      if (!e.classList.contains("collapsed")) {
+        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
+      } else {
+        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+      }
+    }
+    </script>
     <!-- footer.html -->
     <footer class="text-bg-dark">
       <div class="vh-100 container py-4 py-lg-5 px-4 px-lg-3">
@@ -696,22 +724,6 @@
     window.addEventListener("pageshow", function() {
       formReset();
     });
-    // FAQ - Toggle Arrows
-    function faqToggle(e) {
-      // Reset All FAQ Buttons
-      const a = document.getElementsByClassName("accordion-button");
-      for (let i=0; i<a.length; i++) {
-        if (a[i].children[1].classList.contains("bi-dash-circle")) {
-          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-        }
-      }
-      // Toggle Arrows Only For Active
-      if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
-      } else {
-        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
-      }
-    }
     </script>
   </body>
 </html>
