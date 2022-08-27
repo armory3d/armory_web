@@ -359,40 +359,58 @@
     </nav>
     <!-- $main.html -->
     <main class="text-bg-secondary"></main>
-    <script src="/templates/notes/cover.json" crossorigin="anonymous"></script>
     <script>
-    let j = JSON.parse(notes_data);
-    let MAX_MONTHS =Object.keys(j).length;
-    fetch("templates/notes/panel.html").then(function(response) {
-      return response.text();
-    }).then(function(html) {
-      let p = new DOMParser();
-      let h = p.parseFromString(html, "text/html");
-      let c = h.querySelector("*").innerHTML;
-      let m = document.querySelector("main");
-      let d = document.createElement("d");
-      if (!c.includes("404")) {
-        for (let i=MAX_MONTHS; i!=0; i--) {
-          // Main -> HTML
-          d.innerHTML = html;
-          // div -> #anchor
-          d.querySelector(".notesAnchorDiv").id = d.querySelector(".notesAnchorDiv").id.replace("Placeholder", j[i][2]);
-          console.log(d.querySelector(".notesAnchorDiv").id);
-          // img -> src
-          d.querySelector("#notesImg").src = "/img/" + j[i][0];
-          // a -> anchor
-          d.querySelector("#notesAnchorBtn").href = "#" + j[i][2];
-          // a -> text
-          d.querySelector("#notesAnchorBtn").children[1].innerHTML = d.querySelector("#notesAnchorBtn").children[1].innerHTML.replace("Placeholder", j[i][1]);
-          // a -> link
-          d.querySelector("#notesLink").href = "#" + j[i][2];
-          // Duplicate Elements
-          m.appendChild(d.cloneNode(d));
-        }
-      } else {
-        window.location.href = "/404";
+    // Function - Set Anchor
+    function setAnchor() {
+      if (window.location.hash) {
+        window.location.href = window.location.hash;
       }
+    }
+    // Get JSON
+    fetch("/templates/notes/cover.json")
+    .then(res => res.json())
+    .then(json => {
+      DATA = json;
+      MAX_MONTHS = Object.keys(json).length;
+      // Get HTML
+      fetch("/templates/notes/panel.html")
+      .then(res => res.text())
+      .then(html => {
+        let m = document.querySelector("main");
+        if (!html.includes("404")) {
+          for (let i=MAX_MONTHS; i>0; i--) {
+            let d = document.createElement("div");
+            // Inject - HTML
+            d.innerHTML = html;
+            // Inject - Anchor ID
+            d.querySelector(".notesAnchorDiv").id = DATA[i].link;
+            // Inject - Image Source
+            d.querySelector("#notesImg").src = "/img/" + DATA[i].image;
+            // Inject - Anchor Link
+            d.querySelector("#notesAnchorBtn").href = "#" + DATA[i].link;
+            // Inject - Title
+            d.querySelector("#notesAnchorBtn").children[1].innerHTML = d.querySelector("#notesAnchorBtn").children[1].innerHTML.replace("Placeholder", DATA[i].title);
+            // Inject - Notes Link
+            d.querySelector("#notesLink").href = "#" + DATA[i].link;
+            // Parent New Elements
+            m.appendChild(d.cloneNode(d));
+          }
+        } else {
+          window.location.href = "/404";
+        }
+        // Init - Set Anchor
+        setAnchor();
+      })
+      .catch(err => {
+        console.log(err);
+        window.location.href = "/404";
+      });
     })
+    .catch(err => {
+      console.log(err);
+    });
+    // Remember Anchor
+    window.addEventListener("pageshow", setAnchor);
     </script>
     <!-- footer.html -->
     <footer class="text-bg-dark">
