@@ -3,7 +3,12 @@
     <script>
     // Function - Set Anchor
     function setAnchor() {
-      window.location.href = window.location.hash;
+      if (window.location.hash !== "") {
+        if (document.getElementById(window.location.hash.substr(1)) !== null) {
+          let y = document.getElementById(window.location.hash.substr(1)).offsetTop;
+          window.scrollTo(0, y);
+        }
+      }
     }
     // Get JSON
     fetch("/templates/notes/cover.json")
@@ -48,6 +53,7 @@
       console.log(err);
     });
     // Set Anchor
+    window.addEventListener("load", setAnchor);
     window.addEventListener("popstate", setAnchor);
     window.addEventListener("pageshow", setAnchor);
     </script>
