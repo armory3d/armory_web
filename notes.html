@@ -362,9 +362,7 @@
     <script>
     // Function - Set Anchor
     function setAnchor() {
-      if (window.location.hash) {
-        window.location.href = window.location.hash;
-      }
+      window.location.href = window.location.hash;
     }
     // Get JSON
     fetch("/templates/notes/cover.json")
@@ -398,7 +396,6 @@
         } else {
           window.location.href = "/404";
         }
-        // Init - Set Anchor
         setAnchor();
       })
       .catch(err => {
@@ -409,7 +406,8 @@
     .catch(err => {
       console.log(err);
     });
-    // Remember Anchor
+    // Set Anchor
+    window.addEventListener("popstate", setAnchor);
     window.addEventListener("pageshow", setAnchor);
     </script>
     <!-- footer.html -->

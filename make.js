@@ -9,7 +9,7 @@ let buildHTML = function() {
   FS.readdir("templates/", (err, file) => {
     file.forEach(file => {
       if (PATH.extname(file) == ".html") {
-        if (PATH.basename(file) !== "navbar.html" && "footer.html") {
+        if (PATH.basename(file) !== "navbar.html" && PATH.basename(file) !== "footer.html") {
           let n = FS.readFileSync("templates/navbar.html", "utf8");
           let m = FS.readFileSync("templates/" + file, "utf8");
           let f = FS.readFileSync("templates/footer.html", "utf8");
