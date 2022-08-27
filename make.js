@@ -1,4 +1,3 @@
-/* jshint esversion: 6 */
 // Import modules
 let HTTP = require("http");
     URL = require("url"),

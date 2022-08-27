@@ -5,8 +5,8 @@
         <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
           <h2 id="h1" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q1 - Is Armory3D still active?</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#accordionMain">
@@ -19,8 +19,8 @@
         <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
           <h2 id="h2" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q2 - Does Armory3D have Blender 3.x builds?</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accordionMain">
@@ -36,8 +36,8 @@
         <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
           <h2 id="h3" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q3 - I have a bug and cannot run my game due to error(s).</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accordionMain">
@@ -54,8 +54,8 @@
         <div class="text-bg-dark accordion-item border border-bottom-0 border-light border-opacity-25">
           <h2 id="h4" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q4 - What does a certain logic node do, exactly?</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#accordionMain">
@@ -70,8 +70,8 @@
         <div class="text-bg-dark accordion-item border border-light border-opacity-25">
           <h2 id="h5" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q5 - How good is Armory3D compared to UPBGE?</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#accordionMain">
@@ -88,18 +88,13 @@
         <div class="text-bg-dark accordion-item border border-light border-opacity-25">
           <h2 id="h6" class="accordion-header">
             <button class="text-bg-secondary accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
+              <i class="bi bi-plus-circle text-light me-3"></i>
               <span class="w-100">Q6. How can I contribute to Armory3D development?</span>
-              <i class="bi bi-plus-circle text-light"></i>
             </button>
           </h2>
           <div id="c6" class="accordion-collapse collapse" aria-labelledby="h6" data-bs-parent="#accordionMain">
             <div class="fs-5 text-bg-light lead accordion-body">
-              Whether your contributions relate to <a class="fw-bold text-reset" href="https://github.com/armory3d/armory">engine</a> development,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki">documentation</a> development,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/community_tutorials">tutorials</a>,
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory_web">website</a> development
-              or <a class="fw-bold text-reset" href="https://armory.gumroad.com/l/armory">financial donations</a>, they are always welcome and appreciated!
-              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/contribute">Here</a> is a guide on on how to contribute to Armory.
+              See <a class="fw-bold text-reset" href="/download#contribute">here</a> on ways you can contribute to Armory. Thank you for being interested!
             </div>
           </div>
         </div>
@@ -110,15 +105,15 @@
       // Reset Uncollapsed
       const a = document.getElementsByClassName("accordion-button");
       for (let i=0; i<a.length; i++) {
-        if (a[i].children[1].classList.contains("bi-dash-circle")) {
-          a[i].children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        if (a[i].children[0].classList.contains("bi-dash-circle")) {
+          a[i].children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
         }
       }
       // Collapse Icons Only For Active
       if (!e.classList.contains("collapsed")) {
-        e.children[1].classList.replace("bi-plus-circle", "bi-dash-circle");
+        e.children[0].classList.replace("bi-plus-circle", "bi-dash-circle");
       } else {
-        e.children[1].classList.replace("bi-dash-circle", "bi-plus-circle");
+        e.children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
       }
     }
     </script>
