@@ -70,6 +70,24 @@
       --bs-btn-bg:#cf2b43 !important;
       --bs-btn-border-radius: 0.375rem;
     }
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+      color: white !important;
+      --bs-nav-pills-link-active-bg: #cf2b43;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .nav-pills .nav-link {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
     /* Navbar Buttons */
     #brand > div > a,
     #brand > div > div > a,
@@ -109,8 +127,6 @@
     .bg-dark.dropdown-menu li a:hover *,
     .bg-dark.dropdown-menu li a:active *,
     .bg-dark.dropdown-menu li a:focus * {
-      /* color: black !important;
-      background-color: white; */
       color: white !important;
       background-color: var(--bs-danger);
     }
@@ -120,8 +136,6 @@
     .bg-light.dropdown-menu li a:hover *,
     .bg-light.dropdown-menu li a:active *,
     .bg-light.dropdown-menu li a:focus * {
-      /* color: black !important;
-      background-color: var(--a3d-thirdly); */
       color: black !important;
       background-color: var(--bs-danger);
     }
@@ -358,7 +372,40 @@
       </div>
     </nav>
     <!-- $main.html -->
-    <main class="text-bg-secondary"></main>
+    <main class="text-bg-secondary">
+      <div class="d-flex container p-5 pb-0">
+        <!-- SELECTION - YEARS -->
+        <ul id="tabsY" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+          <!-- Year - 2022 -->
+          <li class="nav-item" role="presentation">
+            <button class="text-light nav-link active" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="true">2022</button>
+          </li>
+          <!-- Year - 2021 -->
+          <li class="nav-item" role="presentation">
+            <button class="text-light nav-link" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2021" type="button" role="tab" aria-selected="false">2021</button>
+          </li>
+        </ul>
+        <div class="d-flex"><div class="vr mx-3"></div></div>
+        <!-- SELECTION - MONTHS -->
+        <div class="tab-content">
+          <!-- Months - 2022 -->
+          <div id="m2022" class="y2022 tab-pane show active" role="tabpanel" tabindex="0">
+            <ul class="nav nav-pills nav-justified" role="tablist"></ul>  
+          </div>
+          <!-- Months - 2021 -->
+          <div id="m2021" class="y2021 tab-pane" role="tabpanel" tabindex="0">
+            <ul class="nav nav-pills nav-justified" role="tabpanel" tabindex="0"></ul>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENTS -->
+      <div class="tab-content">
+        <!-- Content - 2022 -->
+        <div id="c2022" class="y2022 tab-content container p-5"></div>
+        <!-- Content - 2021 -->
+        <div id="c2021" class="d-none y2021 tab-content container p-5"></div>
+      </div>
+    </main>
     <script>
     // Function - Set Anchor
     function setAnchor() {
@@ -369,47 +416,143 @@
         }
       }
     }
+    // Function - Set Year
+    function setYear(e) {
+      let c2022 = document.getElementById("c2022");
+      let c2021 = document.getElementById("c2021");
+      if (e.innerHTML.includes("2022")) {
+        c2022.classList.remove("d-none");
+        c2021.classList.add("d-none");
+      } else if (e.innerHTML.includes("2021")) {
+        c2021.classList.remove("d-none");
+        c2022.classList.add("d-none");
+      }
+    }
+    // NAVIGATION - HORIZONTAL TABS
     // Get JSON
     fetch("/templates/notes/cover.json")
     .then(res => res.json())
     .then(json => {
       DATA = json;
       MAX_MONTHS = Object.keys(json).length;
-      // Get HTML
-      fetch("/templates/notes/panel.html")
+      // Get HTML - Tabs
+      fetch("/templates/notes/changelog.html")
       .then(res => res.text())
       .then(html => {
-        let m = document.querySelector("main");
+        let m2022 = document.getElementById("m2022");
+        let m2021 = document.getElementById("m2021");
+        let c2022 = document.getElementById("c2022");
+        let c2021 = document.getElementById("c2021");
         if (!html.includes("404")) {
           for (let i=MAX_MONTHS; i>0; i--) {
+            let l = document.createElement("li");
+            let b = document.createElement("button");
             let d = document.createElement("div");
-            // Inject - HTML
-            d.innerHTML = html;
-            // Inject - Anchor ID
-            d.querySelector(".notesAnchorDiv").id = DATA[i].link;
-            // Inject - Image Source
-            d.querySelector("#notesImg").src = "/img/" + DATA[i].image;
-            // Inject - Anchor Link
-            d.querySelector("#notesAnchorBtn").href = "#" + DATA[i].link;
-            // Inject - Title
-            d.querySelector("#notesAnchorBtn").children[1].innerHTML = d.querySelector("#notesAnchorBtn").children[1].innerHTML.replace("Placeholder", DATA[i].title);
-            // Inject - Notes Link
-            d.querySelector("#notesLink").href = "#" + DATA[i].link;
-            // Parent New Elements
-            m.appendChild(d.cloneNode(d));
+            if (DATA[i].link.includes("2022")) {
+              // LI - 2022
+              l.classList.add("nav-item");
+              l.setAttribute("role", "presentation");
+              // BUTTON - 2022
+              l.appendChild(b.cloneNode(b));
+              l.children[0].classList.add("text-light", "nav-link");
+              l.children[0].setAttribute("data-bs-toggle", "pill");
+              l.children[0].setAttribute("data-bs-target", "#" + "c" + i);
+              l.children[0].setAttribute("type", "button");
+              l.children[0].setAttribute("role", "tab");
+              l.children[0].setAttribute("arial-selected", false);
+              l.children[0].innerHTML = DATA[i].link;
+              // PARENT NEW
+              m2022.children[0].appendChild(l.cloneNode(l));
+              // DIV - 2022
+              d.id = "c" + i;
+              d.classList.add("y2022", "tab-pane");
+              d.setAttribute("role", "tabpanel");
+              d.setAttribute("tabindex", "0");
+              d.innerHTML = DATA[i].link;
+              // PARENT NEW
+              c2022.appendChild(d.cloneNode(d));
+            } else if (DATA[i].link.includes("2021")) {
+              // LI - 2021
+              l.classList.add("nav-item");
+              l.setAttribute("role", "presentation");
+              // BUTTON - 2022
+              l.appendChild(b.cloneNode(b));
+              l.children[0].classList.add("text-light", "nav-link");
+              l.children[0].setAttribute("data-bs-toggle", "pill");
+              l.children[0].setAttribute("data-bs-target", "#" + "c" + i);
+              l.children[0].setAttribute("type", "button");
+              l.children[0].setAttribute("role", "tab");
+              l.children[0].setAttribute("arial-selected", false);
+              l.children[0].innerHTML = DATA[i].link;
+              l.querySelector("button").innerHTML = DATA[i].link;
+              l.querySelector("button").setAttribute("data-bs-target", "#" + "c" + i);
+              // PARENT NEW
+              m2021.children[0].appendChild(l.cloneNode(l));
+              // DIV - 2021
+              d.id = "c" + i;
+              d.classList.add("y2021", "tab-pane");
+              d.setAttribute("role", "tabpanel");
+              d.setAttribute("tabindex", "0");
+              d.innerHTML = DATA[i].link;
+              // PARENT NEW
+              c2021.appendChild(d.cloneNode(d));
+            }
           }
-        } else {
-          window.location.href = "/404";
+          // Set - Active
+          m2022.children[0].children[0].children[0].classList.add("show", "active");
+          m2022.children[0].children[0].children[0].setAttribute("aria-selected", "true");
+          m2021.children[0].children[0].children[0].classList.add("show", "active");
+          m2021.children[0].children[0].children[0].setAttribute("aria-selected", "true");
+          c2022.children[0].classList.add("show", "active");
+          c2021.children[0].classList.add("show", "active");
         }
-        setAnchor();
       })
       .catch(err => {
         console.log(err);
         window.location.href = "/404";
       });
-    })
-    .catch(err => {
-      console.log(err);
+
+
+
+
+      // CONTENT - PREVIEWS
+      // Get HTML - Content
+    //   fetch("/templates/notes/panel.html")
+    //   .then(res => res.text())
+    //   .then(html => {
+    //     let u = document.getElementById("tabsX");
+    //     let m = document.querySelector("main");
+    //     if (!html.includes("404")) {
+    //       for (let i=MAX_MONTHS; i>0; i--) {
+    //         // Content Previews
+    //         let d = document.createElement("div");
+    //         // Set - HTML
+    //         d.innerHTML = html;
+    //         // Set - Anchor ID
+    //         d.querySelector(".notesAnchorDiv").id = DATA[i].link;
+    //         // Set - Image Source
+    //         d.querySelector("#notesImg").src = "/img/" + DATA[i].image;
+    //         // Set - Anchor Link
+    //         d.querySelector("#notesAnchorBtn").href = "#" + DATA[i].link;
+    //         // Set - Title
+    //         d.querySelector("#notesAnchorBtn").children[1].innerHTML = d.querySelector("#notesAnchorBtn").children[1].innerHTML.replace("Placeholder", DATA[i].title);
+    //         // Set - Notes Link
+    //         d.querySelector("#notesLink").href = "#" + DATA[i].link;
+    //         // Parent New Elements
+    //         m.appendChild(d.cloneNode(d));
+    //       }
+    //     } else {
+    //       window.location.href = "/404";
+    //     }
+    //     setAnchor();
+    //   })
+    //   .catch(err => {
+    //     console.log(err);
+    //     window.location.href = "/404";
+    //   });
+    // })
+    // .catch(err => {
+    //   console.log(err);
     });
     // Set Anchor
     window.addEventListener("load", setAnchor);
