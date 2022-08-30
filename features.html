@@ -70,24 +70,6 @@
       --bs-btn-bg:#cf2b43 !important;
       --bs-btn-border-radius: 0.375rem;
     }
-    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-      color: white !important;
-      --bs-nav-pills-link-active-bg: #cf2b43;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    .nav-pills .nav-link {
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
     /* Navbar Buttons */
     #brand > div > a,
     #brand > div > div > a,
@@ -194,10 +176,56 @@
       border-color: rgba(255,255,255,0.5);
     }
     /* Notes */
-    .notes {
+    /* .notes {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    } */
+    .notes_img {
+      max-width: 100%;
+    }
+    .nav-pills {
+      --bs-nav-pills-link-active-bg: #cf2b43 !important;
+    }
+    .nav-outline {
+      --bs-nav-pills-border-radius: 0.375rem !important;
+    }
+    .nav-outline .nav-link {
+      background: 0 0;
+      border: 0;
+      border-radius: var(--bs-nav-pills-border-radius);
+    }
+    .nav-outline .nav-link:disabled {
+      color: var(--bs-nav-link-disabled-color);
+      background-color: transparent;
+      border-color: transparent;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link,
+    .nav-outline .nav-link.active,
+    .nav-outline .show > .nav-link {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      color: white !important;
+    }
+    .nav-outline .nav-link.active,
+    .nav-outline .show > .nav-link {
+      outline: 1px solid #cf2b43;
+    }
+    .nav-pills .nav-link, .nav-outline .nav-link {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
     /* FAQ Buttons */
     .collapsing {
@@ -231,6 +259,9 @@
         margin: 0px !important;
         padding: 0px !important;
         transform: translate(-50%, 0) !important;
+      }
+      .notes_img {
+        max-width: 50%;
       }
     }
     </style>
