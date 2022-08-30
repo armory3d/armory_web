@@ -2,7 +2,7 @@
     <main class="text-bg-secondary">
       <div class="d-flex container p-3 pb-0 p-lg-5 pb-lg-0">
         <!-- SELECTION - YEARS -->
-        <ul id="tabsY" class="nav flex-column nav-pills ms-auto" role="tablist" aria-orientation="vertical">
+        <ul id="tabsY" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
           <!-- Year - 2022 -->
           <li class="nav-item" role="presentation">
             <button class="text-light nav-link active" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="true">2022</button>
@@ -14,7 +14,7 @@
         </ul>
         <div class="d-flex"><div class="vr mx-3"></div></div>
         <!-- SELECTION - MONTHS -->
-        <div class="tab-content me-auto">
+        <div class="tab-content">
           <!-- Months - 2022 -->
           <div id="m2022" class="y2022 tab-pane show active" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tablist"></ul>  
@@ -54,7 +54,7 @@
       }
     }
     // Function - Inject LI
-    function injectLI(l, i, b) {
+    function injectLI(html_main, html_releases, i, l, b, d, m, c) {
       l.classList.add("nav-item");
       l.setAttribute("role", "presentation");
       l.appendChild(b.cloneNode(b));
@@ -65,9 +65,11 @@
       l.children[0].setAttribute("role", "tab");
       l.children[0].setAttribute("arial-selected", false);
       l.children[0].innerHTML = DATA[i].date;
+      m.children[0].appendChild(l.cloneNode(l));
+      injectDIV(html_main, html_releases, i, l, b, d, m, c);
     }
     // Function - Inject DIV
-    function injectDIV(html_main, html_releases, d, i, m, c) {
+    function injectDIV(html_main, html_releases, i, l, b, d, m, c) {
       d.id = "c" + i;
       d.classList.add("y2022", "tab-pane");
       d.setAttribute("role", "tabpanel");
@@ -102,6 +104,7 @@
       d.children[0].children[2].children[7].innerHTML = html_releases.split("%NEW - START%").pop().split("%NEW - END%")[0];
       d.children[0].children[2].children[10].innerHTML = html_releases.split("%BUG FIXES - START%").pop().split("%BUG FIXES - END%")[0];
       d.children[0].children[2].children[13].innerHTML = html_releases.split("%OTHER CHANGES - START%").pop().split("%OTHER CHANGES - END%")[0];
+      c.appendChild(d.cloneNode(d));
     }
     // Get JSON
     fetch("/templates/changelogs/main.json")
@@ -126,15 +129,9 @@
               let b = document.createElement("button");
               let d = document.createElement("div");
               if (DATA[i].date.includes("2022")) {
-                injectLI(l, i, b);
-                m2022.children[0].appendChild(l.cloneNode(l));
-                injectDIV(html_main, html_releases, d, i, m2022, c2022);
-                c2022.appendChild(d.cloneNode(d));
+                injectLI(html_main, html_releases, i, l, b, d, m2022, c2022);
               } else if (DATA[i].date.includes("2021")) {
-                injectLI(l, i, b);
-                m2021.children[0].appendChild(l.cloneNode(l));
-                injectDIV(html_main, html_releases, d, i, m2021, c2021);
-                c2021.appendChild(d.cloneNode(d));
+                injectLI(html_main, html_releases, i, l, b, d, m2021, c2021);
               }
             })
             .catch(err => {
