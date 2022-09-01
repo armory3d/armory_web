@@ -9,14 +9,13 @@ let buildHTML = function() {
     file.forEach(file => {
       if (PATH.extname(file) == ".html") {
         if (PATH.basename(file) !== "navbar.html" && PATH.basename(file) !== "footer.html") {
+          let n = FS.readFileSync("templates/navbar.html", "utf8");
+          let f = FS.readFileSync("templates/footer.html", "utf8");
           if (PATH.basename(file) !== "notes.html") {
-            let n = FS.readFileSync("templates/navbar.html", "utf8");
             let m = FS.readFileSync("templates/" + file, "utf8");
-            let f = FS.readFileSync("templates/footer.html", "utf8");
             FS.writeFileSync(file, n + "\n" + m + "\n" + f);
           } else if (PATH.basename(file) === "notes.html") {
-            let n = FS.readFileSync("templates/navbar.html", "utf8");
-            let nav = FS.readFileSync("templates/changelogs/navigation.html", "utf8");
+            let notes = FS.readFileSync("templates/notes.html", "utf8");
             let content1 = FS.readFileSync("templates/changelogs/content.html", "utf8");
             let DATA = FS.readFileSync("templates/changelogs/data.json");
             let f = FS.readFileSync("templates/footer.html", "utf8");
@@ -29,8 +28,8 @@ let buildHTML = function() {
               let content6 = content5.replace('id="new_p"></p>', 'id="new_p">' + changelog.split("%NEW - START%").pop().split("%NEW - END%")[0] + '</p>');
               let content7 = content6.replace('id="bug_fixes_p"></p>', 'id="bug_fixes_p">' + changelog.split("%BUG FIXES - START%").pop().split("%BUG FIXES - END%")[0] + '</p>');
               let content8 = content7.replace('id="other_changes_p"></p>', 'id="other_changes_p">' + changelog.split("%OTHER CHANGES - START%").pop().split("%OTHER CHANGES - END%")[0] + '</p>');
-              nav = nav.replace("%c" + i + "%", content8);
-              FS.writeFileSync(file, n + "\n" + nav + "\n" + f);
+              notes = notes.replace("%c" + i + "%", content8);
+              FS.writeFileSync(file, n + "\n" + notes + "\n" + f);
             }
           }
         }

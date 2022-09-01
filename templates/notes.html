@@ -1,1 +1,78 @@
-abcsds
+    <!-- $main.html -->
+    <main class="text-bg-secondary">
+      <div class="d-flex container p-3 p-lg-5">
+        <!-- YEARS -->
+        <ul id="tabsY" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+          <!-- Year - 2022 -->
+          <li class="nav-item" role="presentation"><button class="text-light nav-link active" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="true">2022</button></li>
+          <!-- Year - 2021 -->
+          <li class="nav-item" role="presentation"><button class="text-light nav-link" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2021" type="button" role="tab" aria-selected="false">2021</button></li>
+        </ul>
+        <div class="d-flex"><div class="vr mx-3"></div></div>
+        <!-- MONTHS -->
+        <div class="tab-content">
+          <!-- Months - 2022 -->
+          <div id="m2022" class="y2022 tab-pane show active" role="tabpanel" tabindex="0">
+            <ul class="nav nav-outline nav-justified" role="tablist">
+              <li class="nav-item" role="presentation"><button class="text-light nav-link active" data-bs-toggle="pill" data-bs-target="#c15" type="button" role="tab" aria-controls="c15" aria-selected="true">2022.08</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c14" type="button" role="tab" aria-controls="c14" aria-selected="true">2022.07</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c13" type="button" role="tab" aria-controls="c13" aria-selected="false">2022.06</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c12" type="button" role="tab" aria-controls="c12" aria-selected="false">2022.05</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c11" type="button" role="tab" aria-controls="c11" aria-selected="false">2022.04</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c10" type="button" role="tab" aria-controls="c10" aria-selected="false">2022.03</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c9" type="button" role="tab" aria-controls="c9" aria-selected="false">2022.02</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c8" type="button" role="tab" aria-controls="c8" aria-selected="false">2022.01</button></li>
+            </ul>  
+          </div>
+          <!-- Months - 2021 -->
+          <div id="m2021" class="y2021 tab-pane" role="tabpanel" tabindex="0">
+            <ul class="nav nav-outline nav-justified" role="tabpanel" tabindex="0">
+              <li class="nav-item" role="presentation"><button class="text-light nav-link active" data-bs-toggle="pill" data-bs-target="#c7" type="button" role="tab" aria-controls="c7" aria-selected="true">2021.12</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c6" type="button" role="tab" aria-controls="c6" aria-selected="false">2021.11</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c5" type="button" role="tab" aria-controls="c5" aria-selected="false">2021.10</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c4" type="button" role="tab" aria-controls="c4" aria-selected="false">2021.09</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c3" type="button" role="tab" aria-controls="c3" aria-selected="false">2021.08</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c2" type="button" role="tab" aria-controls="c2" aria-selected="false">2021.07</button></li>
+              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c1" type="button" role="tab" aria-controls="c1" aria-selected="false">2021.06</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- CONTENTS -->
+      <div class="tab-content">
+        <!-- Contents - 2022 -->
+        <div id="c2022" class="y2022 tab-content">
+          <div id="c15" class="tab-pane show active" role="tabpanel" tabindex="0">%c15%</div>
+          <div id="c14" class="tab-pane" role="tabpanel" tabindex="0">%c14%</div>
+          <div id="c13" class="tab-pane" role="tabpanel" tabindex="0">%c13%</div>
+          <div id="c12" class="tab-pane" role="tabpanel" tabindex="0">%c12%</div>
+          <div id="c11" class="tab-pane" role="tabpanel" tabindex="0">%c11%</div>
+          <div id="c10" class="tab-pane" role="tabpanel" tabindex="0">%c10%</div>
+          <div id="c9" class="tab-pane" role="tabpanel" tabindex="0">%c9%</div>
+          <div id="c8" class="tab-pane" role="tabpanel" tabindex="0">%c8%</div>
+        </div>
+        <!-- Contents - 2021 -->
+        <div id="c2021" class="d-none y2021 tab-content">
+          <div id="c7" class="tab-pane show active" role="tabpanel" tabindex="0">%c7%</div>
+          <div id="c6" class="tab-pane" role="tabpanel" tabindex="0">%c6%</div>
+          <div id="c5" class="tab-pane" role="tabpanel" tabindex="0">%c5%</div>
+          <div id="c4" class="tab-pane" role="tabpanel" tabindex="0">%c4%</div>
+          <div id="c3" class="tab-pane" role="tabpanel" tabindex="0">%c3%</div>
+          <div id="c2" class="tab-pane" role="tabpanel" tabindex="0">%c2%</div>
+          <div id="c1" class="tab-pane" role="tabpanel" tabindex="0">%c1%</div>
+        </div>
+      </div>
+    </main>
+    <script>
+    // Function - Set Year
+    function setYear(e) {
+      if (e.innerHTML.includes("2022")) {
+        c2022.classList.remove("d-none");
+        c2021.classList.add("d-none");
+      } else if (e.innerHTML.includes("2021")) {
+        c2021.classList.remove("d-none");
+        c2022.classList.add("d-none");
+      }
+    }
+    window.scrollTo(0, 0);
+    </script>
