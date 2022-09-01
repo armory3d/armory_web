@@ -9,10 +9,30 @@ let buildHTML = function() {
     file.forEach(file => {
       if (PATH.extname(file) == ".html") {
         if (PATH.basename(file) !== "navbar.html" && PATH.basename(file) !== "footer.html") {
-          let n = FS.readFileSync("templates/navbar.html", "utf8");
-          let m = FS.readFileSync("templates/" + file, "utf8");
-          let f = FS.readFileSync("templates/footer.html", "utf8");
-          FS.writeFileSync(file, n + "\n" + m + "\n" + f);
+          if (PATH.basename(file) !== "notes.html") {
+            let n = FS.readFileSync("templates/navbar.html", "utf8");
+            let m = FS.readFileSync("templates/" + file, "utf8");
+            let f = FS.readFileSync("templates/footer.html", "utf8");
+            FS.writeFileSync(file, n + "\n" + m + "\n" + f);
+          } else if (PATH.basename(file) === "notes.html") {
+            let n = FS.readFileSync("templates/navbar.html", "utf8");
+            let nav = FS.readFileSync("templates/changelogs/navigation.html", "utf8");
+            let content1 = FS.readFileSync("templates/changelogs/content.html", "utf8");
+            let DATA = FS.readFileSync("templates/changelogs/data.json");
+            let f = FS.readFileSync("templates/footer.html", "utf8");
+            for (i=1; i<=Object.keys(JSON.parse(DATA)).length; i++) {
+              let changelog = FS.readFileSync("templates/changelogs/releases/" + JSON.parse(DATA)[i].date + ".html", "utf8");
+              let content2 = content1.replace('<span></span>', '<span>' + JSON.parse(DATA)[i].title + '</span>');
+              let content3 = content2.replace('src=""', 'src="/img/' + JSON.parse(DATA)[i].image + '"');
+              let content4 = content3.replace('id="info_d"></div>', 'id="info_d">' + changelog.split("%INFO - START%").pop().split("%INFO - END%")[0] + '</div>');
+              let content5 = content4.replace('id="highlights_p"></p>', 'id="highlights_p">' + changelog.split("%HIGHLIGHTS - START%").pop().split("%HIGHLIGHTS - END%")[0] + '</p>');
+              let content6 = content5.replace('id="new_p"></p>', 'id="new_p">' + changelog.split("%NEW - START%").pop().split("%NEW - END%")[0] + '</p>');
+              let content7 = content6.replace('id="bug_fixes_p"></p>', 'id="bug_fixes_p">' + changelog.split("%BUG FIXES - START%").pop().split("%BUG FIXES - END%")[0] + '</p>');
+              let content8 = content7.replace('id="other_changes_p"></p>', 'id="other_changes_p">' + changelog.split("%OTHER CHANGES - START%").pop().split("%OTHER CHANGES - END%")[0] + '</p>');
+              nav = nav.replace("%c" + i + "%", content8);
+              FS.writeFileSync(file, n + "\n" + nav + "\n" + f);
+            }
+          }
         }
       }
     });
@@ -21,7 +41,7 @@ let buildHTML = function() {
 // Init Build
 buildHTML();
 // Re-build On Changes
-FS.watch("templates/", e => {
+FS.watch("templates/", {recursive: true}, e => {
   buildHTML();
 });
 // Server Variables
