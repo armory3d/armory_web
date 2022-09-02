@@ -2298,6 +2298,15 @@ N/A
       // Set Active
       document.getElementById(c).classList.add("show", "active");
       document.getElementById(c).setAttribute("aria-selected", true);
+      setAnchor();
+    }
+    // Function - Set Anchor
+    function setAnchor() {
+      try {
+        window.location.hash = window.location.hash;
+      } catch {
+        console.log("No anchor found.");
+      }
     }
     // Function - Set Year / Month / Content / Anchor
     function checkAnchor() {
@@ -2317,12 +2326,6 @@ N/A
               if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
                 setMonth("m" + i);
                 setContent("c" + i);
-              }
-              // Set Anchor
-              try {
-                window.location.hash = window.location.hash;
-              } catch {
-                throw "No anchor found.";
               }
             }
           }
