@@ -23,12 +23,17 @@ let buildHTML = function() {
               let changelog = FS.readFileSync("templates/changelogs/releases/" + JSON.parse(DATA)[i].date + ".html", "utf8");
               let content2 = content1.replace('<span></span>', '<span>' + JSON.parse(DATA)[i].title + '</span>');
               let content3 = content2.replace('src=""', 'src="/img/' + JSON.parse(DATA)[i].image + '"');
-              let content4 = content3.replace('id="info_d"></div>', 'id="info_d">' + changelog.split("%INFO - START%").pop().split("%INFO - END%")[0] + '</div>');
-              let content5 = content4.replace('id="highlights_p"></p>', 'id="highlights_p">' + changelog.split("%HIGHLIGHTS - START%").pop().split("%HIGHLIGHTS - END%")[0] + '</p>');
-              let content6 = content5.replace('id="new_p"></p>', 'id="new_p">' + changelog.split("%NEW - START%").pop().split("%NEW - END%")[0] + '</p>');
-              let content7 = content6.replace('id="bug_fixes_p"></p>', 'id="bug_fixes_p">' + changelog.split("%BUG FIXES - START%").pop().split("%BUG FIXES - END%")[0] + '</p>');
-              let content8 = content7.replace('id="other_changes_p"></p>', 'id="other_changes_p">' + changelog.split("%OTHER CHANGES - START%").pop().split("%OTHER CHANGES - END%")[0] + '</p>');
-              notes = notes.replace("%c" + i + "%", content8);
+              let content4 = content3.replace('id="title" href="#title"', 'id="' + JSON.parse(DATA)[i].date + '-title"' + ' href="#' + JSON.parse(DATA)[i].date + '-title"');
+              let content5 = content4.replace('id="new" href="#new"', 'id="' + JSON.parse(DATA)[i].date + '-new"' + ' href="#' + JSON.parse(DATA)[i].date + '-new"');
+              let content6 = content5.replace('id="highlights" href="#highlights"', 'id="' + JSON.parse(DATA)[i].date + '-highlights"' + ' href="#' + JSON.parse(DATA)[i].date + '-highlights"');
+              let content7 = content6.replace('id="bug-fixes" href="#bug-fixes"', 'id="' + JSON.parse(DATA)[i].date + '-bug-fixes"' + ' href="#' + JSON.parse(DATA)[i].date + '-bug-fixes"');
+              let content8 = content7.replace('id="other-changes" href="#other-changes"', 'id="' + JSON.parse(DATA)[i].date + '-other-changes"' + ' href="#' + JSON.parse(DATA)[i].date + '-other-changes"');
+              let content9 = content8.replace('id="info_d"></div>', 'id="info_d">' + changelog.split("%INFO - START%").pop().split("%INFO - END%")[0] + '</div>');
+              let content10 = content9.replace('id="highlights_p"></p>', 'id="highlights_p">' + changelog.split("%HIGHLIGHTS - START%").pop().split("%HIGHLIGHTS - END%")[0] + '</p>');
+              let content11 = content10.replace('id="new_p"></p>', 'id="new_p">' + changelog.split("%NEW - START%").pop().split("%NEW - END%")[0] + '</p>');
+              let content12 = content11.replace('id="bug_fixes_p"></p>', 'id="bug_fixes_p">' + changelog.split("%BUG FIXES - START%").pop().split("%BUG FIXES - END%")[0] + '</p>');
+              let content13 = content12.replace('id="other_changes_p"></p>', 'id="other_changes_p">' + changelog.split("%OTHER CHANGES - START%").pop().split("%OTHER CHANGES - END%")[0] + '</p>');
+              notes = notes.replace("%c" + i + "%", content13);
               FS.writeFileSync(file, n + "\n" + notes + "\n" + f);
             }
           }

@@ -25,22 +25,6 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bootstrap-icons.css" crossorigin="anonymous">
     <style>
-    /* input {
-      border-width: 0px !important;
-      outline-width: 0px !important;
-    } */
-    /* input:hover { */
-      /* border: 1px solid gray !important; */
-      /* box-shadow: 0px 0px 10px gray !important; */
-    /* } */
-    /* input:focus { */
-      /* border: 1px solid darkgray !important; */
-      /* box-shadow: 0px 0px 10px darkgray !important; */
-    /* } */
-    /* ::placeholder {
-        color: gray !important;
-        opacity: 1 !important;
-    } */
     /* CSS Variables */
     :root {
       --a3d-secondary: rgb(17, 19, 21);
@@ -163,8 +147,6 @@
       height: 100%;
       
       background: radial-gradient(transparent, black) rgba(0,0,0,0.5);
-      /* background-color: rgba(0,0,0.75); */
-      /* box-shadow: 0px 0px 100vw black inset; */
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
@@ -176,11 +158,6 @@
       border-color: rgba(255,255,255,0.5);
     }
     /* Notes */
-    /* .notes {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    } */
     .notes_img {
       max-width: 100%;
     }
@@ -410,38 +387,38 @@
     <main class="text-bg-secondary">
       <div class="d-flex container p-3 p-lg-5">
         <!-- YEARS -->
-        <ul id="tabsY" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+        <ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
           <!-- Year - 2022 -->
-          <li class="nav-item" role="presentation"><button class="text-light nav-link active" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="true">2022</button></li>
+          <li class="nav-item" role="presentation"><button id="y2022" class="y y2022 text-light nav-link" onclick='setYear("2022");' data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="false">2022</button></li>
           <!-- Year - 2021 -->
-          <li class="nav-item" role="presentation"><button class="text-light nav-link" onclick="setYear(this);" data-bs-toggle="pill" data-bs-target="#m2021" type="button" role="tab" aria-selected="false">2021</button></li>
+          <li class="nav-item" role="presentation"><button id="y2021" class="y y2021 text-light nav-link" onclick='setYear("2021");' data-bs-toggle="pill" data-bs-target="#m2021" type="button" role="tab" aria-selected="false">2021</button></li>
         </ul>
         <div class="d-flex"><div class="vr mx-3"></div></div>
         <!-- MONTHS -->
         <div class="tab-content">
           <!-- Months - 2022 -->
-          <div id="m2022" class="y2022 tab-pane show active" role="tabpanel" tabindex="0">
+          <div id="m2022" class="y y2022 tab-pane" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tablist">
-              <li class="nav-item" role="presentation"><button class="text-light nav-link active" data-bs-toggle="pill" data-bs-target="#c15" type="button" role="tab" aria-controls="c15" aria-selected="true">2022.08</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c14" type="button" role="tab" aria-controls="c14" aria-selected="true">2022.07</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c13" type="button" role="tab" aria-controls="c13" aria-selected="false">2022.06</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c12" type="button" role="tab" aria-controls="c12" aria-selected="false">2022.05</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c11" type="button" role="tab" aria-controls="c11" aria-selected="false">2022.04</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c10" type="button" role="tab" aria-controls="c10" aria-selected="false">2022.03</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c9" type="button" role="tab" aria-controls="c9" aria-selected="false">2022.02</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c8" type="button" role="tab" aria-controls="c8" aria-selected="false">2022.01</button></li>
+              <li class="nav-item" role="presentation"><button id="m15" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c15" type="button" role="tab" aria-controls="c15" aria-selected="false">2022.08</button></li>
+              <li class="nav-item" role="presentation"><button id="m14" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c14" type="button" role="tab" aria-controls="c14" aria-selected="false">2022.07</button></li>
+              <li class="nav-item" role="presentation"><button id="m13" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c13" type="button" role="tab" aria-controls="c13" aria-selected="false">2022.06</button></li>
+              <li class="nav-item" role="presentation"><button id="m12" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c12" type="button" role="tab" aria-controls="c12" aria-selected="false">2022.05</button></li>
+              <li class="nav-item" role="presentation"><button id="m11" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c11" type="button" role="tab" aria-controls="c11" aria-selected="false">2022.04</button></li>
+              <li class="nav-item" role="presentation"><button id="m10" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c10" type="button" role="tab" aria-controls="c10" aria-selected="false">2022.03</button></li>
+              <li class="nav-item" role="presentation"><button id="m9" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c9" type="button" role="tab" aria-controls="c9" aria-selected="false">2022.02</button></li>
+              <li class="nav-item" role="presentation"><button id="m8" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c8" type="button" role="tab" aria-controls="c8" aria-selected="false">2022.01</button></li>
             </ul>  
           </div>
           <!-- Months - 2021 -->
-          <div id="m2021" class="y2021 tab-pane" role="tabpanel" tabindex="0">
+          <div id="m2021" class="y y2021 tab-pane" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tabpanel" tabindex="0">
-              <li class="nav-item" role="presentation"><button class="text-light nav-link active" data-bs-toggle="pill" data-bs-target="#c7" type="button" role="tab" aria-controls="c7" aria-selected="true">2021.12</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c6" type="button" role="tab" aria-controls="c6" aria-selected="false">2021.11</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c5" type="button" role="tab" aria-controls="c5" aria-selected="false">2021.10</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c4" type="button" role="tab" aria-controls="c4" aria-selected="false">2021.09</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c3" type="button" role="tab" aria-controls="c3" aria-selected="false">2021.08</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c2" type="button" role="tab" aria-controls="c2" aria-selected="false">2021.07</button></li>
-              <li class="nav-item" role="presentation"><button class="text-light nav-link" data-bs-toggle="pill" data-bs-target="#c1" type="button" role="tab" aria-controls="c1" aria-selected="false">2021.06</button></li>
+              <li class="nav-item" role="presentation"><button id="m7" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c7" type="button" role="tab" aria-controls="c7" aria-selected="false">2021.12</button></li>
+              <li class="nav-item" role="presentation"><button id="m6" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c6" type="button" role="tab" aria-controls="c6" aria-selected="false">2021.11</button></li>
+              <li class="nav-item" role="presentation"><button id="m5" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c5" type="button" role="tab" aria-controls="c5" aria-selected="false">2021.10</button></li>
+              <li class="nav-item" role="presentation"><button id="m4" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c4" type="button" role="tab" aria-controls="c4" aria-selected="false">2021.09</button></li>
+              <li class="nav-item" role="presentation"><button id="m3" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c3" type="button" role="tab" aria-controls="c3" aria-selected="false">2021.08</button></li>
+              <li class="nav-item" role="presentation"><button id="m2" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c2" type="button" role="tab" aria-controls="c2" aria-selected="false">2021.07</button></li>
+              <li class="nav-item" role="presentation"><button id="m1" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c1" type="button" role="tab" aria-controls="c1" aria-selected="false">2021.06</button></li>
             </ul>
           </div>
         </div>
@@ -449,10 +426,10 @@
       <!-- CONTENTS -->
       <div class="tab-content">
         <!-- Contents - 2022 -->
-        <div id="c2022" class="y2022 tab-content">
-          <div id="c15" class="tab-pane show active" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+        <div id="c2022" class="c y2022 tab-content">
+          <div id="c15" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>August - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.08-title" href="#2022.08-title"><i class="bi bi-link-45deg text-light me-2"></i><span>August - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-08-a.gif" alt="Cover Image" />
@@ -470,7 +447,7 @@
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -488,8 +465,8 @@
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -502,7 +479,7 @@
 August is here with <span class="display-6 fw-bold text-danger align-middle">7</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-highlights" href="#2022.08-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -514,7 +491,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-08-d.png" alt="2022.08-d Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-new" href="#2022.08-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -524,7 +501,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2499">#2499</a> - T3du added several Draw nodes: cameras, images, string, geometric figures, etc.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-bug-fixes" href="#2022.08-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -535,7 +512,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2509">#2509</a> - E2002e added firstPersonController.hx anti chess fool cheat.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-other-changes" href="#2022.08-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -554,7 +531,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -568,9 +545,9 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
     </div>
   </div>
 </div></div>
-          <div id="c14" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c14" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>July - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.07-title" href="#2022.07-title"><i class="bi bi-link-45deg text-light me-2"></i><span>July - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-07-a.jpg" alt="Cover Image" />
@@ -588,7 +565,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -606,8 +583,8 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -620,19 +597,19 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">7</
 July is here with <span class="display-6 fw-bold text-danger align-middle">6</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.07-highlights" href="#2022.07-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
     <p class="lead mb-3" id="highlights_p">
 <p class="mb-3">
-	Please note that for this release it is required to re-download the full SDK rather than using the "Update SDK" option in the user preferences, in order to ensure correct SDK updates with the "Update SDK" option in the future.<br />
+	Please note that for this release it is required to re-download the full SDK rather than using the "Update SDK" option in the user preferences, in order to ensure correct SDK updates with the "Update SDK" option in the future.<br /><br />
 	Also worth noting in this month's release is that the bug which was limiting point lights on DirectX has finally been resolved in Krafix (see <a class="fw-bold text-light" href="https://github.com/armory3d/armory/issues/1772#issuecomment-1172971955">#1772</a>):
 </p>
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-07-b.gif" alt="2022-07-b Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.07-new" href="#2022.07-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -640,7 +617,7 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2503">#2503</a> - MoritzBrueckner added object Info node: make "random" output random per GPU instance.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.07-bug-fixes" href="#2022.07-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -650,7 +627,7 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2500">#2500</a> - MoritzBrueckner added fix node tree caching.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.07-other-changes" href="#2022.07-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -670,7 +647,7 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -684,9 +661,9 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
     </div>
   </div>
 </div></div>
-          <div id="c13" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c13" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>June - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.06-title" href="#2022.06-title"><i class="bi bi-link-45deg text-light me-2"></i><span>June - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-06-a.jpg" alt="Cover Image" />
@@ -704,7 +681,7 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -722,8 +699,8 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -736,7 +713,7 @@ July is here with <span class="display-6 fw-bold text-danger align-middle">6</sp
 June is here with <span class="display-6 fw-bold text-danger align-middle">3</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.06-highlights" href="#2022.06-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -744,7 +721,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
 <p class="mb-3">N/A</p>
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.06-new" href="#2022.06-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -752,7 +729,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2493">#2493</a> - MoritzBrueckner added better shader node tree warnings.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.06-bug-fixes" href="#2022.06-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -761,7 +738,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2488">#2488</a> - MoritzBrueckner added fix exporting node sockets when using live patch or unconnected reroutes.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.06-other-changes" href="#2022.06-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -783,7 +760,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -797,9 +774,9 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
     </div>
   </div>
 </div></div>
-          <div id="c12" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c12" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>May - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.05-title" href="#2022.05-title"><i class="bi bi-link-45deg text-light me-2"></i><span>May - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-05-a.png" alt="Cover Image" />
@@ -817,7 +794,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -835,8 +812,8 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -849,7 +826,7 @@ June is here with <span class="display-6 fw-bold text-danger align-middle">3</sp
 May is here with <span class="display-6 fw-bold text-danger align-middle">8</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.05-highlights" href="#2022.05-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -861,7 +838,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-05-c.png" alt="2022-05-c Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.05-new" href="#2022.05-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -872,7 +849,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2474">#2474</a> - MoritzBrueckner added allow materials to read from a depth texture.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.05-bug-fixes" href="#2022.05-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -883,7 +860,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2470">#2470</a> - MoritzBrueckner added fix printing WASM errors when using ammo.js
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.05-other-changes" href="#2022.05-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -907,7 +884,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -921,9 +898,9 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
     </div>
   </div>
 </div></div>
-          <div id="c11" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c11" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>April - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.04-title" href="#2022.04-title"><i class="bi bi-link-45deg text-light me-2"></i><span>April - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-04-a.jpg" alt="Cover Image" />
@@ -941,7 +918,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -959,8 +936,8 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -973,7 +950,7 @@ May is here with <span class="display-6 fw-bold text-danger align-middle">8</spa
 April is here with <span class="display-6 fw-bold text-danger align-middle">17</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.04-highlights" href="#2022.04-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -985,7 +962,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-04-b.png" alt="2022-04-b Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.04-new" href="#2022.04-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -998,7 +975,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2446">#2446</a> - MoritzBrueckner added add support for VS2022.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.04-bug-fixes" href="#2022.04-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1016,7 +993,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2443">#2443</a> - MoritzBrueckner added prevent exception when exporting a world with an empty image texture node.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.04-other-changes" href="#2022.04-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1042,7 +1019,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1056,9 +1033,9 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
     </div>
   </div>
 </div></div>
-          <div id="c10" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c10" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>March - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.03-title" href="#2022.03-title"><i class="bi bi-link-45deg text-light me-2"></i><span>March - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-03-a.jpg" alt="Cover Image" />
@@ -1076,7 +1053,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1094,8 +1071,8 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1108,7 +1085,7 @@ April is here with <span class="display-6 fw-bold text-danger align-middle">17</
 March is here with <span class="display-6 fw-bold text-danger align-middle">5</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.03-highlights" href="#2022.03-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1120,7 +1097,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-03-c.png" alt="2022-03-c Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.03-new" href="#2022.03-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1130,7 +1107,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2439">#2439</a> - MoritzBrueckner added new logic tree variable system.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.03-bug-fixes" href="#2022.03-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1139,7 +1116,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2437">#2437</a> - MoritzBrueckner fixed don't count not exported lights when setting shader defines.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.03-other-changes" href="#2022.03-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1160,7 +1137,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1174,9 +1151,9 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
     </div>
   </div>
 </div></div>
-          <div id="c9" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c9" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>February - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.02-title" href="#2022.02-title"><i class="bi bi-link-45deg text-light me-2"></i><span>February - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-02-a.jpg" alt="Cover Image" />
@@ -1194,7 +1171,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1212,8 +1189,8 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1226,7 +1203,7 @@ March is here with <span class="display-6 fw-bold text-danger align-middle">5</s
 February is here with <span class="display-6 fw-bold text-danger align-middle">15</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.02-highlights" href="#2022.02-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1244,7 +1221,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-02-f.jpg" alt="2022-02-f Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.02-new" href="#2022.02-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1262,7 +1239,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2416">#2416</a> - T3du added add and remove objects from collections.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.02-bug-fixes" href="#2022.02-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1273,7 +1250,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2414">#2414</a> - MoritzBrueckner added fix SetRotationNode: don't change rotation of previous objects.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.02-other-changes" href="#2022.02-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1293,7 +1270,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1307,9 +1284,9 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
     </div>
   </div>
 </div></div>
-          <div id="c8" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c8" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>January - 2022</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.01-title" href="#2022.01-title"><i class="bi bi-link-45deg text-light me-2"></i><span>January - 2022</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2022-01-a.jpg" alt="Cover Image" />
@@ -1327,7 +1304,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1345,8 +1322,8 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1359,7 +1336,7 @@ February is here with <span class="display-6 fw-bold text-danger align-middle">1
 January is here with <span class="display-6 fw-bold text-danger align-middle">7</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.01-highlights" href="#2022.01-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1370,7 +1347,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
 <img class="ratio ratio-21x9 notes_img" src="/img/2022-01-c.jpg" alt="2022-01-c Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.01-new" href="#2022.01-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1383,7 +1360,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2403">#2403</a> - MoritzBrueckner added replace deprecated addChild()/removeChild() functions with setParent().
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.01-bug-fixes" href="#2022.01-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1391,7 +1368,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2411">#2411</a> - T3du added onCanvasElementNode: fix elements values for scaled canvas.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.01-other-changes" href="#2022.01-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1413,7 +1390,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1429,10 +1406,10 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
 </div></div>
         </div>
         <!-- Contents - 2021 -->
-        <div id="c2021" class="d-none y2021 tab-content">
-          <div id="c7" class="tab-pane show active" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+        <div id="c2021" class="c y2021 tab-content">
+          <div id="c7" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>December - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.12-title" href="#2021.12-title"><i class="bi bi-link-45deg text-light me-2"></i><span>December - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-12-a.jpg" alt="Cover Image" />
@@ -1450,7 +1427,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1468,8 +1445,8 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1482,7 +1459,7 @@ January is here with <span class="display-6 fw-bold text-danger align-middle">7<
 December is here with <span class="display-6 fw-bold text-danger align-middle">20</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.12-highlights" href="#2021.12-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1493,7 +1470,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-12-c.jpg" alt="2021-12-c Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.12-new" href="#2021.12-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1506,7 +1483,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2373">#2373</a> - QuantumCoderQC added add normal output for pick rb node.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.12-bug-fixes" href="#2021.12-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1527,7 +1504,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2367">#2367</a> - MoritzBrueckner added fix exporting textures from linked libraries.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.12-other-changes" href="#2021.12-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1548,7 +1525,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1562,9 +1539,9 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
     </div>
   </div>
 </div></div>
-          <div id="c6" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c6" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>November - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.11-title" href="#2021.11-title"><i class="bi bi-link-45deg text-light me-2"></i><span>November - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-11-a.jpg" alt="Cover Image" />
@@ -1582,7 +1559,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1600,8 +1577,8 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1614,7 +1591,7 @@ December is here with <span class="display-6 fw-bold text-danger align-middle">2
 November is here with <span class="display-6 fw-bold text-danger align-middle">16</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.11-highlights" href="#2021.11-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1623,7 +1600,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-11-b.jpg" alt="2021-11-b Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.11-new" href="#2021.11-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1637,7 +1614,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2353">#2353</a> - MoritzBrueckner added allow to set default renderpath for debugging.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.11-bug-fixes" href="#2021.11-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1653,7 +1630,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2352">#2352</a> - MoritzBrueckner added fix CPU count parameter for cmft.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.11-other-changes" href="#2021.11-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1676,7 +1653,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1690,9 +1667,9 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
     </div>
   </div>
 </div></div>
-          <div id="c5" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c5" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>October - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.10-title" href="#2021.10-title"><i class="bi bi-link-45deg text-light me-2"></i><span>October - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-10-a.jpg" alt="Cover Image" />
@@ -1710,7 +1687,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1728,8 +1705,8 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1742,7 +1719,7 @@ November is here with <span class="display-6 fw-bold text-danger align-middle">1
 October is here with <span class="display-6 fw-bold text-danger align-middle">14</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.10-highlights" href="#2021.10-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1757,7 +1734,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-10-e.png" alt="2021-10-e Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.10-new" href="#2021.10-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1772,7 +1749,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2325">#2325</a> - Onelsonic added update props.py.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.10-bug-fixes" href="#2021.10-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1785,7 +1762,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2329">#2329</a> - MoritzBrueckner added fix ArmNodeAddInputOutputButton.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.10-other-changes" href="#2021.10-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1808,7 +1785,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1822,9 +1799,9 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
     </div>
   </div>
 </div></div>
-          <div id="c4" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c4" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>September - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.09-title" href="#2021.09-title"><i class="bi bi-link-45deg text-light me-2"></i><span>September - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-09-a.gif" alt="Cover Image" />
@@ -1842,7 +1819,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1860,8 +1837,8 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1874,7 +1851,7 @@ October is here with <span class="display-6 fw-bold text-danger align-middle">14
 September is here with <span class="display-6 fw-bold text-danger align-middle">25</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.09-highlights" href="#2021.09-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
@@ -1885,7 +1862,7 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-09-c.png" alt="2022.09-c Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.09-new" href="#2021.09-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -1901,7 +1878,7 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2285">#2285</a> - Tong added the axis trait prop to ArcBall. For direction and speed control.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.09-bug-fixes" href="#2021.09-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -1920,7 +1897,7 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2286">#2286</a> - MoritzBrueckner fixed filepath error if project is on Windows drive root.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.09-other-changes" href="#2021.09-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -1942,7 +1919,7 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1956,9 +1933,9 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
     </div>
   </div>
 </div></div>
-          <div id="c3" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c3" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>August - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.08-title" href="#2021.08-title"><i class="bi bi-link-45deg text-light me-2"></i><span>August - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-09-a.gif" alt="Cover Image" />
@@ -1976,7 +1953,7 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -1994,8 +1971,8 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2008,18 +1985,20 @@ September is here with <span class="display-6 fw-bold text-danger align-middle">
 August is here with <span class="display-6 fw-bold text-danger align-middle">12</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
 </div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.08-highlights" href="#2021.08-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
     <p class="lead mb-3" id="highlights_p">
 <p class="mb-3">MoritzBrueckner added an immense overhaul of the existing live patching system. The new additional features includes support for light color and strength, as well as support for live patching nodes and more!</p>
-<iframe width="560" height="315" src="https://youtube.com/embed/mxklu7TfwBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://youtube.com/watch?v=mxklu7TfwBw">
+	<i class="text-white bi bi-link-45deg me-2"></i>View Video
+</a>
 <p class="my-3">Knowledgenude improved the Input map and added nodes to it.</p>
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-08-b.png" alt="2021-08-b Screenshot">
 </p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.08-new" href="#2021.08-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
@@ -2034,7 +2013,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">12<
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2220">#2220</a> - MoritzBrueckner added add Select node.
 </p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.08-bug-fixes" href="#2021.08-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
@@ -2045,7 +2024,7 @@ August is here with <span class="display-6 fw-bold text-danger align-middle">12<
 <a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2228">#2228</a> - MoritzBrueckner fixed rendering multiple movie textures.
 </p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.08-other-changes" href="#2021.08-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -2064,7 +2043,7 @@ N/A
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2078,9 +2057,9 @@ N/A
     </div>
   </div>
 </div></div>
-          <div id="c2" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c2" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>July - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.07-title" href="#2021.07-title"><i class="bi bi-link-45deg text-light me-2"></i><span>July - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-09-a.gif" alt="Cover Image" />
@@ -2098,7 +2077,7 @@ N/A
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2116,8 +2095,8 @@ N/A
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2128,25 +2107,25 @@ N/A
     </div>
     <div class="text-center p-5" id="info_d">Release notes for July are in progress.</div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.07-highlights" href="#2021.07-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
     <p class="lead mb-3" id="highlights_p">Release notes for July are in progress.</p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.07-new" href="#2021.07-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
     <p id="bug-fixes" class="lead mb-5" id="new_p">Release notes for July are in progress.</p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.07-bug-fixes" href="#2021.07-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
     <p class="lead mb-5" id="bug_fixes_p">Release notes for July are in progress.</p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.07-other-changes" href="#2021.07-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -2163,7 +2142,7 @@ N/A
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2177,9 +2156,9 @@ N/A
     </div>
   </div>
 </div></div>
-          <div id="c1" class="tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+          <div id="c1" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
-    <a class="display-3 fw-bold text-reset text-decoration-none lh-1"><i class="bi bi-link-45deg text-light me-2"></i><span>June - 2021</span></a>
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.06-title" href="#2021.06-title"><i class="bi bi-link-45deg text-light me-2"></i><span>June - 2021</span></a>
   </div>
   <div class="d-flex justify-content-center mb-5">
     <img class="ratio ratio-21x9 notes_img" src="/img/2021-09-a.gif" alt="Cover Image" />
@@ -2197,7 +2176,7 @@ N/A
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
-          <p class="card-text lead">Start using Armory today!</p>
+          <p class="card-text lead">Start Armory today!</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2215,8 +2194,8 @@ N/A
         </div>
         <!-- Body -->
         <div class="card-body pt-0">
-          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need information?</h1>
-          <p class="card-text lead">Learn more at the official Armory3D wiki.</p>
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2227,25 +2206,25 @@ N/A
     </div>
     <div class="text-center p-5" id="info_d">Release notes for June are in progress.</div>
     <!-- HIGHLIGHTS -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.06-highlights" href="#2021.06-highlights">
       <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
     </a>
     <hr />
     <p class="lead mb-3" id="highlights_p">Release notes for June are in progress.</p>
     <!-- NEW -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.06-new" href="#2021.06-new">
       <i class="bi bi-link-45deg text-light me-2"></i>NEW
     </a>
     <hr />
     <p id="bug-fixes" class="lead mb-5" id="new_p">Release notes for June are in progress.</p>
     <!-- BUG FIXES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.06-bug-fixes" href="#2021.06-bug-fixes">
       <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
     </a>
     <hr />
     <p class="lead mb-5" id="bug_fixes_p">Release notes for June are in progress.</p>
     <!-- OTHER CHANGES -->
-    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.06-other-changes" href="#2021.06-other-changes">
       <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
     </a>
     <hr />
@@ -2262,7 +2241,7 @@ N/A
         <!-- Body -->
         <div class="card-body pt-0">
           <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
-          <p class="card-text lead">Here's a few ways you can help Armory continue to grow.</p>
+          <p class="card-text lead">Here's a few ways you can.</p>
           <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
             <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
               <i class="bi bi-link-45deg text-white me-2"></i>Contribute
@@ -2280,17 +2259,87 @@ N/A
       </div>
     </main>
     <script>
+    let INIT_MONTH = "2022.08";
     // Function - Set Year
-    function setYear(e) {
-      if (e.innerHTML.includes("2022")) {
-        c2022.classList.remove("d-none");
-        c2021.classList.add("d-none");
-      } else if (e.innerHTML.includes("2021")) {
-        c2021.classList.remove("d-none");
-        c2022.classList.add("d-none");
+    function setYear(y) {
+      years = document.getElementsByClassName("y");
+      years_children = document.getElementsByClassName("y" + y);
+      // Reset
+      for (let i=0; i<years.length; i++) {
+        years[i].classList.remove("show", "active");
+        years[i].setAttribute("aria-selected", false);
+      }
+      // Set Active
+      for (let i=0; i<years_children.length; i++) {
+        years_children[i].classList.add("show", "active");
+        years_children[i].setAttribute("aria-selected", true);
       }
     }
-    window.scrollTo(0, 0);
+    // Function - Set Month
+    function setMonth(m) {
+      all_months = document.getElementsByClassName("m");
+      // Reset
+      for (let i=0; i<all_months.length; i++) {
+        all_months[i].classList.remove("show", "active");
+        all_months[i].setAttribute("aria-selected", false);
+      }
+      // Set Active
+      document.getElementById(m).classList.add("show", "active");
+      document.getElementById(m).setAttribute("aria-selected", true);
+    }
+    // Function - Set Content
+    function setContent(c) {
+      all_contents = document.getElementsByClassName("c");
+      // Reset
+      for (let i=0; i<all_contents.length; i++) {
+        all_contents[i].classList.remove("show", "active");
+        all_contents[i].setAttribute("aria-selected", false);
+      }
+      // Set Active
+      document.getElementById(c).classList.add("show", "active");
+      document.getElementById(c).setAttribute("aria-selected", true);
+    }
+    // Function - Set Year / Month / Content / Anchor
+    function checkAnchor() {
+      if (window.location.hash.substr(1)) {
+        fetch("templates/changelogs/data.json").then(function(r) {
+          return r.text();
+        }).then(function(DATA) {
+          for (let i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+            if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
+              // Set Year
+              if (window.location.hash.includes("2022")) {
+                setYear("2022");
+              } else if (window.location.hash.includes("2021")) {
+                setYear("2021");
+              }
+              // Set Month
+              if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
+                setMonth("m" + i);
+                setContent("c" + i);
+              }
+              // Set Anchor
+              try {
+                window.location.hash = window.location.hash;
+              } catch {
+                throw "No anchor found.";
+              }
+            }
+          }
+        }).catch(e => {
+          window.location.href = "/404";
+          console.log(e);
+        })
+      } else {
+        window.location.href = "/notes#" + INIT_MONTH;
+      }
+    }
+    // Function - Set URL
+    function updateURL(e) {
+      window.location.hash = e.innerHTML;
+    }
+    window.addEventListener("pageshow", checkAnchor);
+    window.addEventListener("popstate", checkAnchor);
     </script>
     <!-- footer.html -->
     <footer class="text-bg-dark">
@@ -2335,91 +2384,10 @@ N/A
               <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
             </ul>
           </div>
-          <!-- Newsletter -->
-          <!-- <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3"> -->
-            <!-- <form>
-              <h5 class="fw-bold p-2 ps-0 pb-0">Subscribe to our newsletter</h5>
-              <p class="fs-6 lh-1">Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-lg-row w-100 gap-2">
-                <label class="visually-hidden" for="newsletter1">Email address</label>
-                <input id="newsletter1" class="text-bg-light form-control" type="text" placeholder="Email address">
-                <a class="fw-bold btn btn-danger d-flex align-items-center justify-content-center" href="#">
-                  <i class="bi bi-envelope text-white me-2"></i>Subscribe
-                </a>
-              </div>
-            </form> -->
         </div>
       </div>
     </footer>
-            <!-- Social -->
-            <!-- <ul class="list-unstyled d-flex justify-content-end">
-              <li class="ms-3">
-                <a class="link-light" href="https://twitter.com/armory3d">
-                  <i class="text-light bi bi-twitter fs-4"></i>
-                </a>
-              </li>
-              <li class="ms-3">
-                <a class="link-light" href="https://facebook.com/armorytools/">
-                  <i class="text-light bi bi-facebook fs-4"></i>
-                </a>
-              </li>
-              <li class="ms-3">
-                <a class="link-light" href="https://instagram.com/armory3d">
-                  <i class="text-light bi bi-instagram fs-4"></i>
-                </a>
-              </li>
-            </ul> -->
-        <!-- <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;"> -->
-          <!-- Copyright -->
-          <!-- <ul class="mb-3 nav flex-column">
-            <li class="nav-item"><p class="fs-6 lh-1 mb-2">&copy; 2022 Lubos Lenco & contributors</p></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-          </ul> -->
-          <!-- Social -->
-          <!-- <ul class="list-unstyled d-flex justify-content-end">
-            <li class="ms-3">
-              <a class="link-light" href="https://twitter.com/armory3d">
-                <i class="text-light bi bi-twitter fs-4"></i>
-              </a>
-            </li>
-            <li class="ms-3">
-              <a class="link-light" href="https://facebook.com/armorytools/">
-                <i class="text-light bi bi-facebook fs-4"></i>
-              </a>
-            </li>
-            <li class="ms-3">
-              <a class="link-light" href="https://instagram.com/armory3d">
-                <i class="text-light bi bi-instagram fs-4"></i>
-              </a>
-            </li>
-          </ul> -->
-        <!-- </div> -->
     <script>
-    // Dropdown Hover
-    // let d = document.getElementsByClassName("dropdown-toggle");
-    // for (let i=0; i<d.length; i++) {
-    //   d[i].addEventListener("mouseover", e => {
-    //     d[i].classList.add("show");
-    //     d[i].setAttribute("aria-expanded", true);
-    //     d[i].parentElement.children[1].classList.add("show");
-    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
-    //   });
-    //   d[i].addEventListener("mouseout", e => {
-    //     d[i].classList.remove("show");
-    //     d[i].setAttribute("aria-expanded", false);
-    //     d[i].parentElement.children[1].classList.remove("show");
-    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
-    //   });
-    //   d[i].parentElement.children[1].addEventListener("mouseover", e => {
-    //     d[i].parentElement.children[1].classList.add("show");
-    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
-    //   });
-    //   d[i].parentElement.children[1].addEventListener("mouseout", e => {
-    //     d[i].parentElement.children[1].classList.remove("show");
-    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
-    //   });
-    // }
     // Theme Toggle
     function toggleTheme(t) {
       const e = document.querySelectorAll("*");
@@ -2466,21 +2434,6 @@ N/A
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
         }
-        // bi-discourse & bi-artstation
-        // if (e[i].classList.contains("bi-discourse")) {
-        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
-        //     e[i].setAttribute("fill", "#000000");
-        //   } else if (e[i].getAttribute("fill") === "#000000") {
-        //     e[i].setAttribute("fill", "#FFFFFF");
-        //   }
-        // }
-        // if (e[i].classList.contains("bi-artstation")) {
-        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
-        //     e[i].setAttribute("fill", "#000000");
-        //   } else if (e[i].getAttribute("fill") === "#000000") {
-        //     e[i].setAttribute("fill", "#FFFFFF");
-        //   }
-        // }
       }
       // bi-sun & bi-moon-stars
       if (t.children[0].classList.contains("bi-sun")) {
@@ -2489,22 +2442,13 @@ N/A
         t.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
     }
-    // Docs Search - Variable
-    // var a = e.getAttribute("aria-expanded");
-    // if (a=== "true")  {
-    // a = "false"
-    // } else {
-    // a = "true"
-    // } e.setAttribute("aria-expanded", a);
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons
     function docsToggle(e) {
       if (!e.classList.contains("collapsed")) {
         e.children[0].classList.replace("bi-search", "bi-x-lg");
-        // e.children[0].style.fontSize = "200%";
       } else {
         e.children[0].classList.replace("bi-x-lg", "bi-search");
-        // e.children[0].style.fontSize = "100%";
       }
     }
     // Docs Search - Form Reset
@@ -2525,7 +2469,6 @@ N/A
     // Docs Search - Search Destination
     function checkValidation() {
       if (f.children[0].value.length >= 3) {
-        // location.href = "https://github.com/armory3d/armory/search?q=" + String(f.value) + "&type=wikis";
         location.href = "https://forums.armory3d.org/search?q=" + String(f.children[0].value);
       } else {
         alert("Search terms require minimum of three letters.");

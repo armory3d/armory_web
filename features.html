@@ -25,22 +25,6 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/bootstrap-icons.css" crossorigin="anonymous">
     <style>
-    /* input {
-      border-width: 0px !important;
-      outline-width: 0px !important;
-    } */
-    /* input:hover { */
-      /* border: 1px solid gray !important; */
-      /* box-shadow: 0px 0px 10px gray !important; */
-    /* } */
-    /* input:focus { */
-      /* border: 1px solid darkgray !important; */
-      /* box-shadow: 0px 0px 10px darkgray !important; */
-    /* } */
-    /* ::placeholder {
-        color: gray !important;
-        opacity: 1 !important;
-    } */
     /* CSS Variables */
     :root {
       --a3d-secondary: rgb(17, 19, 21);
@@ -163,8 +147,6 @@
       height: 100%;
       
       background: radial-gradient(transparent, black) rgba(0,0,0,0.5);
-      /* background-color: rgba(0,0,0.75); */
-      /* box-shadow: 0px 0px 100vw black inset; */
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
@@ -176,11 +158,6 @@
       border-color: rgba(255,255,255,0.5);
     }
     /* Notes */
-    /* .notes {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    } */
     .notes_img {
       max-width: 100%;
     }
@@ -716,91 +693,10 @@
               <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
             </ul>
           </div>
-          <!-- Newsletter -->
-          <!-- <div class="d-lg-flex flex-lg-row-reverse col-lg-5 offset-lg-1 mb-3"> -->
-            <!-- <form>
-              <h5 class="fw-bold p-2 ps-0 pb-0">Subscribe to our newsletter</h5>
-              <p class="fs-6 lh-1">Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-lg-row w-100 gap-2">
-                <label class="visually-hidden" for="newsletter1">Email address</label>
-                <input id="newsletter1" class="text-bg-light form-control" type="text" placeholder="Email address">
-                <a class="fw-bold btn btn-danger d-flex align-items-center justify-content-center" href="#">
-                  <i class="bi bi-envelope text-white me-2"></i>Subscribe
-                </a>
-              </div>
-            </form> -->
         </div>
       </div>
     </footer>
-            <!-- Social -->
-            <!-- <ul class="list-unstyled d-flex justify-content-end">
-              <li class="ms-3">
-                <a class="link-light" href="https://twitter.com/armory3d">
-                  <i class="text-light bi bi-twitter fs-4"></i>
-                </a>
-              </li>
-              <li class="ms-3">
-                <a class="link-light" href="https://facebook.com/armorytools/">
-                  <i class="text-light bi bi-facebook fs-4"></i>
-                </a>
-              </li>
-              <li class="ms-3">
-                <a class="link-light" href="https://instagram.com/armory3d">
-                  <i class="text-light bi bi-instagram fs-4"></i>
-                </a>
-              </li>
-            </ul> -->
-        <!-- <div class="d-flex flex-column flex-lg-row justify-content-between py-4 my-4 border-top border-secondary" style="--bs-border-opacity: .375;"> -->
-          <!-- Copyright -->
-          <!-- <ul class="mb-3 nav flex-column">
-            <li class="nav-item"><p class="fs-6 lh-1 mb-2">&copy; 2022 Lubos Lenco & contributors</p></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory3D License</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-          </ul> -->
-          <!-- Social -->
-          <!-- <ul class="list-unstyled d-flex justify-content-end">
-            <li class="ms-3">
-              <a class="link-light" href="https://twitter.com/armory3d">
-                <i class="text-light bi bi-twitter fs-4"></i>
-              </a>
-            </li>
-            <li class="ms-3">
-              <a class="link-light" href="https://facebook.com/armorytools/">
-                <i class="text-light bi bi-facebook fs-4"></i>
-              </a>
-            </li>
-            <li class="ms-3">
-              <a class="link-light" href="https://instagram.com/armory3d">
-                <i class="text-light bi bi-instagram fs-4"></i>
-              </a>
-            </li>
-          </ul> -->
-        <!-- </div> -->
     <script>
-    // Dropdown Hover
-    // let d = document.getElementsByClassName("dropdown-toggle");
-    // for (let i=0; i<d.length; i++) {
-    //   d[i].addEventListener("mouseover", e => {
-    //     d[i].classList.add("show");
-    //     d[i].setAttribute("aria-expanded", true);
-    //     d[i].parentElement.children[1].classList.add("show");
-    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
-    //   });
-    //   d[i].addEventListener("mouseout", e => {
-    //     d[i].classList.remove("show");
-    //     d[i].setAttribute("aria-expanded", false);
-    //     d[i].parentElement.children[1].classList.remove("show");
-    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
-    //   });
-    //   d[i].parentElement.children[1].addEventListener("mouseover", e => {
-    //     d[i].parentElement.children[1].classList.add("show");
-    //     d[i].parentElement.children[1].setAttribute("data-bs-popper", "static");
-    //   });
-    //   d[i].parentElement.children[1].addEventListener("mouseout", e => {
-    //     d[i].parentElement.children[1].classList.remove("show");
-    //     d[i].parentElement.children[1].removeAttribute("data-bs-popper");
-    //   });
-    // }
     // Theme Toggle
     function toggleTheme(t) {
       const e = document.querySelectorAll("*");
@@ -847,21 +743,6 @@
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
         }
-        // bi-discourse & bi-artstation
-        // if (e[i].classList.contains("bi-discourse")) {
-        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
-        //     e[i].setAttribute("fill", "#000000");
-        //   } else if (e[i].getAttribute("fill") === "#000000") {
-        //     e[i].setAttribute("fill", "#FFFFFF");
-        //   }
-        // }
-        // if (e[i].classList.contains("bi-artstation")) {
-        //   if (e[i].getAttribute("fill") === "#FFFFFF") {
-        //     e[i].setAttribute("fill", "#000000");
-        //   } else if (e[i].getAttribute("fill") === "#000000") {
-        //     e[i].setAttribute("fill", "#FFFFFF");
-        //   }
-        // }
       }
       // bi-sun & bi-moon-stars
       if (t.children[0].classList.contains("bi-sun")) {
@@ -870,22 +751,13 @@
         t.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
     }
-    // Docs Search - Variable
-    // var a = e.getAttribute("aria-expanded");
-    // if (a=== "true")  {
-    // a = "false"
-    // } else {
-    // a = "true"
-    // } e.setAttribute("aria-expanded", a);
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons
     function docsToggle(e) {
       if (!e.classList.contains("collapsed")) {
         e.children[0].classList.replace("bi-search", "bi-x-lg");
-        // e.children[0].style.fontSize = "200%";
       } else {
         e.children[0].classList.replace("bi-x-lg", "bi-search");
-        // e.children[0].style.fontSize = "100%";
       }
     }
     // Docs Search - Form Reset
@@ -906,7 +778,6 @@
     // Docs Search - Search Destination
     function checkValidation() {
       if (f.children[0].value.length >= 3) {
-        // location.href = "https://github.com/armory3d/armory/search?q=" + String(f.value) + "&type=wikis";
         location.href = "https://forums.armory3d.org/search?q=" + String(f.children[0].value);
       } else {
         alert("Search terms require minimum of three letters.");
