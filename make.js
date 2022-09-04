@@ -50,7 +50,7 @@ FS.watch("templates/", {recursive: true}, e => {
 });
 // Server Variables
 let PORT = process.argv[2] || 80,
-WEBPAGES = ["/notes", "/news", "/features", "/faq", "/community", "/download"]
+WEBPAGES = ["/404", "/notes", "/news", "/features", "/faq", "/community", "/download"]
 MIME_TYPES = {
   "html": "text/html",
   "css": "text/css",

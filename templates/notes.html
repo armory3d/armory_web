@@ -64,7 +64,7 @@
       </div>
     </main>
     <script>
-    let INIT_MONTH = "2022.08";
+    let INIT_DATE = "2022.08";
     // Function - Set Year
     function setYear(y) {
       years = document.getElementsByClassName("y");
@@ -114,38 +114,43 @@
       }
     }
     // Function - Set Year / Month / Content / Anchor
-    function checkAnchor() {
+    function init() {
       if (window.location.hash.substr(1)) {
         fetch("templates/changelogs/data.json").then(function(r) {
           return r.text();
         }).then(function(DATA) {
-          for (let i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
-            if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
-              // Set Year
-              if (window.location.hash.includes("2022")) {
-                setYear("2022");
-              } else if (window.location.hash.includes("2021")) {
-                setYear("2021");
-              }
-              // Set Month
-              if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
-                setMonth("m" + i);
-                setContent("c" + i);
+          if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
+            for (let i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+              if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
+                // Set Year
+                if (window.location.hash.includes("2022")) {
+                  setYear("2022");
+                } else if (window.location.hash.includes("2021")) {
+                  setYear("2021");
+                }
+                // Set Month
+                if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
+                  setMonth("m" + i);
+                  setContent("c" + i);
+                }
               }
             }
+          } else {
+            window.location.href = "/404";
+            console.log(e);
           }
         }).catch(e => {
           window.location.href = "/404";
           console.log(e);
         })
       } else {
-        window.location.href = "/notes#" + INIT_MONTH;
+        window.location.href = "/notes#" + INIT_DATE;
       }
     }
     // Function - Set URL
     function updateURL(e) {
-      window.location.hash = e.innerHTML;
+      window.location.hash = e.innerText;
     }
-    window.addEventListener("pageshow", checkAnchor);
-    window.addEventListener("popstate", checkAnchor);
+    window.addEventListener("pageshow", init);
+    window.addEventListener("popstate", init);
     </script>
