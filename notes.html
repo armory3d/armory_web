@@ -399,6 +399,7 @@
           <!-- Months - 2022 -->
           <div id="m2022" class="y y2022 tab-pane" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tablist">
+              <li class="nav-item" role="presentation"><button id="m16" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c16" type="button" role="tab" aria-controls="c16" aria-selected="false">2022.09</button></li>
               <li class="nav-item" role="presentation"><button id="m15" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c15" type="button" role="tab" aria-controls="c15" aria-selected="false">2022.08</button></li>
               <li class="nav-item" role="presentation"><button id="m14" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c14" type="button" role="tab" aria-controls="c14" aria-selected="false">2022.07</button></li>
               <li class="nav-item" role="presentation"><button id="m13" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c13" type="button" role="tab" aria-controls="c13" aria-selected="false">2022.06</button></li>
@@ -427,6 +428,137 @@
       <div class="tab-content">
         <!-- Contents - 2022 -->
         <div id="c2022" class="c y2022 tab-content">
+          <div id="c16" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
+  <div class="d-flex justify-content-center pb-5">
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.09-title" href="#2022.09-title"><i class="bi bi-link-45deg text-light me-2"></i><span>September - 2022</span></a>
+  </div>
+  <div class="d-flex justify-content-center mb-5">
+    <img class="ratio ratio-21x9 notes_img" src="/img/2022-09-a.webp" alt="Cover Image" />
+  </div>
+  <div class="container p-3 pt-0 notes_container">
+    <div class="card-group text-center mx-auto" style="max-width: 54rem">
+      <!-- Download -->
+      <div id="download" class="text-bg-secondary card border border-light border-opacity-25">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#download">
+            <i class="bi bi-download text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
+          <p class="card-text lead">Start Armory today!</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
+              <i class="bi bi-link-45deg text-white me-2"></i>Contribute
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Manual -->
+      <div id="manual" class="text-bg-secondary card border border-light border-opacity-25">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#manual">
+            <i class="bi bi-book text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead">Learn more at the Armory wiki.</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="https://github.com/armory3d/armory/wiki">
+              <i class="bi bi-link-45deg text-white me-2"></i>Contribute
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-5" id="info_d">
+September is here with <span class="display-6 fw-bold text-danger align-middle">19</span> new pull requests from some very awesome <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!<br />
+On top of that, the long awaited release that provides compatibility with Blender 3.x is finally here!
+</div>
+    <!-- HIGHLIGHTS -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.09-highlights" href="#2022.09-highlights">
+      <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
+    </a>
+    <hr />
+    <p class="lead mb-3" id="highlights_p">
+<p class="mb-3">Armory is now compatible with Blender 3.x! </p>
+<img class="ratio ratio-21x9 notes_img" src="/img/2022-09-d.webp" alt="2022.09-d Screenshot">
+<p class="my-3">Onek8 added created node for setting canvas input text.</p>
+<img class="ratio ratio-21x9 notes_img" src="/img/2022-09-c.jpg" alt="2022.09-c Screenshot">
+<p class="my-3">e2002e added support for screen-space reflections when using water.</p>
+<img class="ratio ratio-21x9 notes_img" src="/img/2022-09-b.png" alt="2022.09-c Screenshot">
+</p>
+    <!-- NEW -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.09-new" href="#2022.09-new">
+      <i class="bi bi-link-45deg text-light me-2"></i>NEW
+    </a>
+    <hr />
+    <p id="bug-fixes" class="lead mb-5" id="new_p">
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2565">#2565</a> - Tong/MoritzBrueckner added Support for Blender 3.3 LTS.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2564">#2564</a> - Onek8 added created node for setting canvas input text.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2560">#2560</a> - MoritzBrueckner added remove no longer supported proxy system and add support for library overrides.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2544">#2544</a> - e2002e added SSR support for water.<br />
+</p>
+    <!-- BUG FIXES -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.09-bug-fixes" href="#2022.09-bug-fixes">
+      <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
+    </a>
+    <hr />
+    <p class="lead mb-5" id="bug_fixes_p">
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2574">#2574</a> - MoritzBrueckner added Fix int overflow in Nishita LUT calculations [HL].<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2573">#2573</a> - QuantumCoderQC added fix rigid body angular/ rolling friction.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2561">#2561</a> - MoritzBrueckner added fix export of particle objects outside of the current scene and other collections.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2559">#2559</a> - QuantumCoderQC added fix image texture parameters.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2557">#2557</a> - QuantumCoderQC added fix shape key export in optimized mesh export.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2553">#2553</a> - MoritzBrueckner added fix depth buffer access in SSS pass & fix numerical robustness of packFloatInt16().<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2552">#2552</a> - MoritzBrueckner added fix compilation error in Draw String node when Zui is disabled.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2548">#2548</a> - QuantumCoderQC added fix sleep node.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2546">#2546</a> - MoritzBrueckner added fix "Set Scene Active" node when using asset compression.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2540">#2540</a> - MoritzBrueckner added fix initialization of tween and group nodes and ensure correct file version numbers.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/armory/pull/2538">#2538</a> - MoritzBrueckner added tree variables: fix missing synchronization when adding getters/setters.<br />
+</p>
+    <!-- OTHER CHANGES -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.09-other-changes" href="#2022.09-other-changes">
+      <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
+    </a>
+    <hr />
+    <p class="lead mb-5" id="other_changes_p">
+<a class="fw-bold text-light" href="https://github.com/armory3d/iron/pull/170">Iron: #170</a> - QuantumCoderQC added Parse typedef or anonymous struct.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/iron/pull/169">Iron: #169</a> - QuantumCoderQC added Fix shape keys in HL targets.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/iron/pull/168">Iron: #168</a> - MoritzBrueckner added Fix particle positions.<br />
+<a class="fw-bold text-light" href="https://github.com/armory3d/iron/pull/167">Iron: #167</a> - QuantumCoderQC added Shape Keys per object basis.<br />
+</p>
+    <div class="card-group text-center mx-auto" style="max-width: 27rem">
+      <!-- Help -->
+      <div id="help" class="text-bg-secondary card border border-light border-opacity-25">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#help">
+            <i class="bi bi-gift text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
+          <p class="card-text lead">Here's a few ways you can.</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
+              <i class="bi bi-link-45deg text-white me-2"></i>Contribute
+            </a>
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#donate">
+              <i class="bi bi-link-45deg text-white me-2"></i>Donate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
           <div id="c15" class="c tab-pane" role="tabpanel" tabindex="0"><div class="text-bg-secondary">
   <div class="d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.08-title" href="#2022.08-title"><i class="bi bi-link-45deg text-light me-2"></i><span>August - 2022</span></a>
@@ -2259,7 +2391,7 @@ N/A
       </div>
     </main>
     <script>
-    let INIT_DATE = "2022.08";
+    let INIT_DATE = "2022.09";
     // Function - Set Year
     function setYear(y) {
       years = document.getElementsByClassName("y");
