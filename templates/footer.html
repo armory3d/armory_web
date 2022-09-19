@@ -32,7 +32,7 @@
           <!-- ScrollToTop -->
           <div class="text-end col-lg-5 offset-lg-1 mb-3 px-lg-0">
             <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false">
-              Back to Top<i class="bi bi-chevron-double-up text-light ms-2"></i>
+              Back to Top<i class="bi bi-chevron-double-up ms-2"></i>
             </button>
           </div>
         </div>
@@ -194,16 +194,22 @@
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
         }
-        p.blur();
+        // btn-outline-light
+        if (e[i].classList.contains("btn-outline-light")) {
+          e[i].classList.replace("btn-outline-light", "btn-outline-dark");
+        // btn-outline-dark
+        } else if (e[i].classList.contains("btn-outline-dark")) {
+          e[i].classList.replace("btn-outline-dark", "btn-outline-light");
+        }
       }
       // bi-sun
-      if (t.children[0].classList.contains("bi-sun")) {
-        t.children[0].classList.replace("bi-sun", "bi-moon-stars");
-      // bi-moon-stars
-      } else if (t.children[0].classList.contains("bi-moon-stars")) {
-        t.children[0].classList.replace("bi-moon-stars", "bi-sun");
+      if (p.children[0].classList.contains("bi-sun")) {
+        p.children[0].classList.replace("bi-sun", "bi-moon-stars");
+        // bi-moon-stars
+      } else if (p.children[0].classList.contains("bi-moon-stars")) {
+        p.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
-      t.blur();
+      p.blur();
     }
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons

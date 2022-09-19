@@ -23,7 +23,6 @@ let PATH = require("path");
     };
 // Function - Compile Notes
 function compileHTML() {
-  console.log('a');
   FS.readdir("templates/", (err, file) => {
     file.forEach(file => {
       if (PATH.extname(file) === ".html") {

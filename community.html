@@ -65,8 +65,11 @@
       --bs-btn-bg: var(--a3d-danger) !important;
       --bs-btn-border-radius: 0.25rem;
     }
-    .navBtn:hover {
+    .navBtn.text-light:hover {
       border-color: rgba(255,255,255,0.5);
+    }
+    .navBtn.text-dark:hover {
+      border-color: rgba(0,0,0,0.5);
     }
     /* Navbar Buttons */
     #brand > div > a,
@@ -169,6 +172,15 @@
     .btn-outline-light:hover {
       background-color: transparent;
       border-color: rgba(255,255,255,0.75);
+    }
+    .btn-outline-dark, .btn-outline-dark * {
+      color: black !important;
+      border-color: rgba(0,0,0,0.5);
+      border-radius: 0.25rem;
+    }
+    .btn-outline-dark:hover {
+      background-color: transparent;
+      border-color: rgba(0,0,0,0.75);
     }
     /* Notes */
     .notes_img {
@@ -381,14 +393,14 @@
           <div id="navRight" class="navbar-nav">
             <!-- Documentation Search + Theme Toggle -->
             <form class="d-flex align-items-center was-validated me-3" onsubmit="checkValidation(); return false;" method="post">
-              <button class="navBtn btn" type="button" aria-expanded="false" onclick="toggleTheme(this);">
-                <i class="bi bi-sun text-light"></i>
+              <button class="navBtn btn text-light" type="button" aria-expanded="false" onclick="toggleTheme(this);">
+                <i class="bi bi-sun"></i>
               </button>
               <div id="formDocs" class="collapse">
                 <input required class="text-bg-thirdly form-control" placeholder="Search forum" name="inputDocs" type="text" aria-label="Search">
               </div>
-              <button class="navBtn btn" type="button" onclick="docsToggle(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
-                <i class="bi bi-search text-light"></i>
+              <button class="navBtn btn text-light" type="button" onclick="docsToggle(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
+                <i class="bi bi-search"></i>
               </button>
             </form>
             <!-- Download -->
@@ -644,7 +656,7 @@
           <!-- ScrollToTop -->
           <div class="text-end col-lg-5 offset-lg-1 mb-3 px-lg-0">
             <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false">
-              Back to Top<i class="bi bi-chevron-double-up text-light ms-2"></i>
+              Back to Top<i class="bi bi-chevron-double-up ms-2"></i>
             </button>
           </div>
         </div>
@@ -806,16 +818,22 @@
         } else if (e[i].classList.contains("border-dark")) {
           e[i].classList.replace("border-dark", "border-light");
         }
-        p.blur();
+        // btn-outline-light
+        if (e[i].classList.contains("btn-outline-light")) {
+          e[i].classList.replace("btn-outline-light", "btn-outline-dark");
+        // btn-outline-dark
+        } else if (e[i].classList.contains("btn-outline-dark")) {
+          e[i].classList.replace("btn-outline-dark", "btn-outline-light");
+        }
       }
       // bi-sun
-      if (t.children[0].classList.contains("bi-sun")) {
-        t.children[0].classList.replace("bi-sun", "bi-moon-stars");
-      // bi-moon-stars
-      } else if (t.children[0].classList.contains("bi-moon-stars")) {
-        t.children[0].classList.replace("bi-moon-stars", "bi-sun");
+      if (p.children[0].classList.contains("bi-sun")) {
+        p.children[0].classList.replace("bi-sun", "bi-moon-stars");
+        // bi-moon-stars
+      } else if (p.children[0].classList.contains("bi-moon-stars")) {
+        p.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
-      t.blur();
+      p.blur();
     }
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons
