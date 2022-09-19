@@ -23,6 +23,7 @@ let PATH = require("path");
     };
 // Function - Compile Notes
 function compileHTML() {
+  console.log('a');
   FS.readdir("templates/", (err, file) => {
     file.forEach(file => {
       if (PATH.extname(file) === ".html") {
@@ -78,8 +79,12 @@ function compileHTML() {
 // Compile - Init
 compileHTML();
 // Compile - On Detected Changes
+var fsTimeout;
 FS.watch("templates/", {recursive: true}, e => {
-  compileHTML();
+  if (!fsTimeout) {
+    compileHTML();
+    fsTimeout = setTimeout(function() { fsTimeout=null }, 1000)
+  }
 });
 // Create Server
 HTTP.createServer(function(req, res) {

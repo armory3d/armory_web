@@ -3,7 +3,7 @@
 * [`make.js`](https://github.com/armory3d/armory_web/blob/main/make.js) is a [Node.js](https://nodejs.org/) script that:
   * Compiles webpages in [`/templates/`](https://github.com/armory3d/armory_web/tree/main/templates) and its sub-directories, both on init and when new changes are detected.
     * **Warning:** For Linux users, new changes are _not_ automatically detected for files in sub-folders. This is a Node.js limitation, officially stated [here](https://nodejs.org/docs/latest/api/fs.html#fs_caveats).
-  * Compiling of release notes can slow due to the large amount of changelog files needed to be compiled. If you don't need to compile release notes, change the `COMPILE_NOTES` variable in `make.js` to `false` to disable compiling of release notes. Don't forget to re-enable this variable when you're modifying existing release notes or creating new ones, otherwise changes won't be compiled.
+  * Compiling of release notes can sometimes be slow due to the large amount of changelog files needed to be compiled. If you don't need to compile release notes, change the `COMPILE_NOTES` variable in `make.js` to `false` to disable compiling of release notes. Don't forget to re-enable this variable when you're modifying existing release notes or creating new ones, otherwise changes won't be compiled.
   * Changes to the `make.js` script itself require any active instances of `make.js` terminals to be closed and restarted in order for changes to be updated.
   * Serves webpages via HTTP on port `80` (feel free to change it to a different port).
   * Sends 302 redirect if you attempt to access a webpage without inserting its `.html` extension.
