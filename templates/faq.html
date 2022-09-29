@@ -1,0 +1,102 @@
+    <!-- $main.html -->
+    <main class="text-bg-secondary">
+      <div id="accordionMain" class="accordion container p-3 p-lg-5">
+        <!-- FAQ 1 -->
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+          <h2 id="h1" class="accordion-header">
+            <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
+              <i class="bi bi-plus-circle text-light me-3"></i>
+              <span class="w-100">Q1 - Is Armory3D still active?</span>
+            </button>
+          </h2>
+          <div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#accordionMain">
+            <div class="fs-6 text-bg-light lead-dark accordion-body">
+              Yes! - It's quite <a class="fw-bold text-reset" href="/notes">active</a>!
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+          <h2 id="h2" class="accordion-header">
+            <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+              <i class="bi bi-plus-circle text-light me-3"></i>
+              <span class="w-100">Q2 - I have a bug and cannot run my game due to errors.</span>
+            </button>
+          </h2>
+          <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accordionMain">
+            <div class="fs-6 text-bg-light lead-dark accordion-body">
+              Please follow basic troubleshooting steps from
+              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/troubleshooting">here</a>.<br />
+              If error(s) still persist, please open an
+              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/issues">issue report</a> 
+              or ask the community for help at any of the Armory-related community platforms.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+          <h2 id="h3" class="accordion-header">
+            <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+              <i class="bi bi-plus-circle text-light me-3"></i>
+              <span class="w-100">Q3 - Where can I found information describing what a certain logic node does?</span>
+            </button>
+          </h2>
+          <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accordionMain">
+            <div class="fs-6 text-bg-light lead-dark accordion-body">
+              The official Armory manual has a full list of logic node
+              <a class="fw-bold text-reset" href="https://github.com/armory3d/armory/wiki/reference">references</a>.<br />
+              The references contain detailed descriptions of what each logic node is capable of and what features it comprises of.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="text-bg-dark accordion-item border border-light border-opacity-10">
+          <h2 id="h4" class="accordion-header">
+            <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+              <i class="bi bi-plus-circle text-light me-3"></i>
+              <span class="w-100">Q4 - How good is Armory3D compared to UPBGE?</span>
+            </button>
+          </h2>
+          <div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#accordionMain">
+            <div class="fs-6 text-bg-light lead-dark accordion-body">
+              To avoid bias, you'll need to conclude that on your own.<br />
+              Here is a <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge#readme">list</a> 
+              of pros and cons of both game-engines that is maintained by the community.<br />
+              Feel free to open a <a class="fw-bold text-reset" href="https://github.com/rpaladin/armory3d-vs-upbge/pulls">pull request</a> 
+              if you feel additional information could be added to the list.
+            </div>
+          </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="text-bg-dark accordion-item border border-light border-opacity-10">
+          <h2 id="h5" class="accordion-header">
+            <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+              <i class="bi bi-plus-circle text-light me-3"></i>
+              <span class="w-100">Q5. How can I contribute to Armory3D development?</span>
+            </button>
+          </h2>
+          <div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#accordionMain">
+            <div class="fs-6 text-bg-light lead-dark accordion-body">
+              See <a class="fw-bold text-reset" href="/download#contribute">here</a> on ways you can contribute to Armory. Thank you for being interested!
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+    function faqToggle(e) {
+      // Reset Un-collapsed
+      const a = document.getElementsByClassName("accordion-button");
+      for (let i=0; i<a.length; i++) {
+        if (a[i].children[0].classList.contains("bi-dash-circle")) {
+          a[i].children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
+        }
+      }
+      // Collapse Icons Only For Active
+      if (!e.classList.contains("collapsed")) {
+        e.children[0].classList.replace("bi-plus-circle", "bi-dash-circle");
+      } else {
+        e.children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
+      }
+    }
+    </script>

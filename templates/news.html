@@ -1,11 +1,35 @@
-
-  <div class="uk-cover-container cover-container">
-    <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
-  </div>
-
-  <div class="uk-section uk-section-secondary">
-    <div class="uk-text-center">
-        <br><br><a href="https://tinyletter.com/armory">Sign up</a> for Armory news.<br><br><br>
-        <a class="twitter-timeline" data-width="800" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d">Tweets by armory3d</a> <script async src="https://platform.twitter.com/widgets.js"></script>
-    </div>
-  </div>
+    <!-- $main.html -->
+    <main class="text-bg-dark text-center">
+      <header id="adblockWarning">
+        <img src="/img/background-river.webp" loading="lazy" alt="Background Image">
+        <div class="splash-vignette"></div>
+        <div class="container position-relative top-50 start-0 translate-middle-y py-4">   
+          <div class="mb-4">
+            <div class="text-white container-fluid py-5">
+              <h1 class="display-3 fw-bold fst-italic mb-4">Oof...</h1>
+              <p class="fs-4 lead lh-1" style='color: rgb(225,225,225); font-family: "Open Sans", sans-serif; margin-bottom: 1.5rem;'>
+                An ad-blocker was detected.<br />
+                Consider disabling it to view tweets from <a class="fw-bold text-reset" href="https://twitter.com/armory3d">armory3d</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="twitterIframe" class="container">
+        <a class="twitter-timeline" data-width="100%" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d"></a>
+      </div>
+    </main>
+    <script src="/js/twitter_timeline.js" crossorigin="anonymous"></script>
+    <script>
+      // Adblock Detection
+      setTimeout(adBlock, 500);
+      setTimeout(adBlock, 1000);
+      setTimeout(adBlock, 2000);
+      let i = document.getElementsByTagName("iframe");
+      let e = document.getElementById("adblockWarning");
+      function adBlock() {
+        if (i.length > 1) {
+          e.style.display = "none";
+        }
+      }
+      </script>
