@@ -22,9 +22,9 @@
     <!-- Favicons -->
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/bootstrap-icons.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/fonts.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/fonts/fonts.css" crossorigin="anonymous">
     <style>
     /* CSS Variables */
     :root {
@@ -160,8 +160,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      
-      background: radial-gradient(rgba(0,0,0,0), black);
+      /* background: radial-gradient(transparent, rgb(0,0,0)); */
+      background-color: rgba(0,0,0,0.625);
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
@@ -181,6 +181,9 @@
     .btn-outline-dark:hover {
       background-color: transparent;
       border-color: rgba(0,0,0,0.75);
+    }
+    .btn-outline-light:active, .btn-outline-light:focus, .btn-outline-dark:active, .btn-outline-dark:focus {
+      background-color: inherit;
     }
     /* Notes */
     .notes_img {
@@ -259,7 +262,7 @@
       --bs-card-border-color: none;
     }
     /* Custom Responsive */
-    @media (min-width: 992px) {
+    @media (min-width: 1336px) {
       .dropdown-menu {
         right: auto !important;
         left: 50% !important;
@@ -274,9 +277,17 @@
         padding-right: 12rem !important;
         padding-left: 12rem !important;
       }
+      .homepage-body {
+        padding-left: 5rem;
+      }
+    }
+    @media (min-width: 1920px) {
+      .homepage-body {
+        padding-left: 15rem;
+      }
     }
     </style>
-    <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
   <!-- Navbar -->
   <body class="text-bg-secondary">

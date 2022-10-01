@@ -19,7 +19,7 @@
           * **Warning:** Make sure you really choose the correct conversion type! Otherwise it won't work.
         * **Step 2:** Upload or state URL path to image or video.
         * **Step 3:** Resize your image or video using provided `Resize` service tools that should appear after format conversion.
-        * **Step 4:** Set resize type to `Stretch to fit` to maintain original aspect ratio.
+        * **Step 4:** Choose resize size (`960x540` is current standard) and appropriate resize type to maintain a pleasing view.
 # Development - Setup
 * The Armory SDK ([armsdk](https://github.com/armory3d/armsdk)) ships with Node.js: no need to download it seperately.<br />
   * The Node.js executables can be found in your `armsdk/nodejs` directory.<br />
@@ -79,15 +79,12 @@ node $MAKE_SCRIPT
   * `/templates/changelogs/data.json`
   * `/templates/changelogs/releases/%MONTH_&_YEAR_CONTENT.html%`
   * `/templates/footer.html`
+  * `README.md` (homepage download button)
 ### Compile - Examples:
-
 **How to update Header or Footer content**
 * Same setup, as described above.
-
 **How to update Month/Year selection content**
-
 * With: `/templates/notes.html`.
-
 **How to update Monthly content**
 * `/templates/changelogs/data.json` & `/templates/changelogs/releases/%MONTH_&_YEAR_CONTENT%.html`
   * Replace `%MONTH_&_YEAR_CONTENT` from the string above with the date of the webpage for that particular month + year.<br />

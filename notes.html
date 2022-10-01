@@ -22,9 +22,9 @@
     <!-- Favicons -->
     <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/bootstrap-icons.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/fonts.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/fonts/fonts.css" crossorigin="anonymous">
     <style>
     /* CSS Variables */
     :root {
@@ -160,8 +160,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      
-      background: radial-gradient(rgba(0,0,0,0), black);
+      /* background: radial-gradient(transparent, rgb(0,0,0)); */
+      background-color: rgba(0,0,0,0.625);
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
@@ -181,6 +181,9 @@
     .btn-outline-dark:hover {
       background-color: transparent;
       border-color: rgba(0,0,0,0.75);
+    }
+    .btn-outline-light:active, .btn-outline-light:focus, .btn-outline-dark:active, .btn-outline-dark:focus {
+      background-color: inherit;
     }
     /* Notes */
     .notes_img {
@@ -259,7 +262,7 @@
       --bs-card-border-color: none;
     }
     /* Custom Responsive */
-    @media (min-width: 992px) {
+    @media (min-width: 1336px) {
       .dropdown-menu {
         right: auto !important;
         left: 50% !important;
@@ -274,9 +277,17 @@
         padding-right: 12rem !important;
         padding-left: 12rem !important;
       }
+      .homepage-body {
+        padding-left: 5rem;
+      }
+    }
+    @media (min-width: 1920px) {
+      .homepage-body {
+        padding-left: 15rem;
+      }
     }
     </style>
-    <script src="/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
   <!-- Navbar -->
   <body class="text-bg-secondary">
@@ -2613,24 +2624,24 @@
           <h1 class="fs-6 text-light">&copy; 2022 Lubos Lenco & contributors</h1>
           <ul class="nav me-auto">
             <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory License</a></li>
-            <li class="text-muted nav-item me-2">|</li>
+            <li class="text-secondary nav-item me-2">|</li>
             <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-            <li class="text-muted nav-item me-2">|</li>
+            <li class="text-secondary nav-item me-2">|</li>
             <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Armory Privacy Policy</a></li>
-            <li class="text-muted nav-item me-2">|</li>
+            <li class="text-secondary nav-item me-2">|</li>
             <li class="nav-item"><a class="nav-link p-0 link-secondary" href="https://www.blender.org/privacy-policy">Blender Privacy Policy</a></li>
           </ul>
         </div>
         <ul class="list-unstyled d-flex">
           <!-- Discord -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://discord.gg/xqrKhGjVJk">
               <i class="bi bi-discord text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Discourse -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://forums.armory3d.org">
               <svg class="text-light" style="padding-top: 0.25rem; width: 24px;" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32px" height="32px">
                 <path d="M 16.109375 3 C 8.994375 3 3 8.7164375 3 15.773438 C 3 15.999438 3.0058594 29 3.0058594 29 L 16.109375 28.988281 C 23.230375 28.988281 29 23.051141 29 15.994141 C 29 8.9371406 23.230375 3 16.109375 3 z M 16 8 C 20.418 8 24 11.582 24 16 C 24 20.418 20.418 24 16 24 C 14.58 24 13.247797 23.625563 12.091797 22.976562 L 8 24 L 9.1210938 20.070312 C 8.4130937 18.877312 8 17.489 8 16 C 8 11.582 11.582 8 16 8 z"/>
               </svg>
@@ -2638,43 +2649,43 @@
           </li>
           <!-- Github -->
           <li style="margin-left: 0.125rem;">
-            <a href="#">
+            <a href="https://github.com/armory3d/armory">
               <i class="bi bi-github text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Twitter -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://twitter.com/armory3d">
               <i class="bi bi-twitter text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Instagram -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://instagram.com/armory3d">
               <i class="bi bi-instagram text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Facebook -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://facebook.com/armorytools">
               <i class="bi bi-facebook text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Reddit -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://reddit.com/r/armory3d">
               <i class="bi bi-reddit text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- YouTube -->
           <li class="ms-1">
-            <a href="#">
+            <a href="https://youtube.com/c/Armory3d">
               <i class="bi bi-youtube text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
           <!-- Artstation -->
           <li>
-            <a href="#">
+            <a href="https://artstation.com/search?sort_by=relevance&query=armory3d">
               <svg class="text-light" style="padding-top: 0.25rem; width: 24px;" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32px" height="32px">
                 <path d="M 13.730469 5 L 26 27 L 27.994141 22.488281 C 28.457141 21.562281 28.410094 20.463078 27.871094 19.580078 L 20.095703 6.4355469 C 19.550703 5.5445469 18.580156 5 17.535156 5 L 13.730469 5 z M 11.511719 7.1777344 L 5.6308594 18 L 17.546875 18 L 11.511719 7.1777344 z M 4 21 L 6.171875 25.341797 C 6.679875 26.357797 7.7175156 27 8.8535156 27 L 22.566406 27 L 19.220703 21 L 4 21 z"/>
               </svg>
@@ -2765,11 +2776,13 @@
           e[i].classList.replace("border-dark", "border-light");
         }
         // btn-outline-light
-        if (e[i].classList.contains("btn-outline-light")) {
-          e[i].classList.replace("btn-outline-light", "btn-outline-dark");
-        // btn-outline-dark
-        } else if (e[i].classList.contains("btn-outline-dark")) {
-          e[i].classList.replace("btn-outline-dark", "btn-outline-light");
+        if (!e[i].classList.contains("homepage-outline-btn")) {
+          if (e[i].classList.contains("btn-outline-light")) {
+            e[i].classList.replace("btn-outline-light", "btn-outline-dark");
+          // btn-outline-dark
+          } else if (e[i].classList.contains("btn-outline-dark")) {
+              e[i].classList.replace("btn-outline-dark", "btn-outline-light");
+          }
         }
       }
       // bi-sun
