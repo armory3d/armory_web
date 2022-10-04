@@ -125,11 +125,8 @@
     .dropdown-menu li a {
       padding: 8px 16px;
     }
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
     .dropdown-toggle::after {
-      display: none !important;
+      display: none;
     }
     /* Homepage Vignette */
     header {
@@ -150,6 +147,7 @@
       -moz-transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
+      /* filter: blur(1rem); */
     }
     header .container {
       position: relative;
@@ -160,18 +158,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* background: radial-gradient(transparent, rgb(0,0,0)); */
-      background-color: rgba(0,0,0,0.625);
+      background-color: rgba(0,0,0,0.5);
+    }
+    #homepage-body {
+      /* background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.5));*/
+      background-color: rgba(0,0,0,0.75);
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
       color: white !important;
-      border-color: rgba(255,255,255,0.5);
+      border-color: rgba(255,255,255,0.75);
       border-radius: 0.25rem;
     }
     .btn-outline-light:hover {
       background-color: transparent;
-      border-color: rgba(255,255,255,0.75);
+      border-color: white;
     }
     .btn-outline-dark, .btn-outline-dark * {
       color: black !important;
@@ -261,7 +262,12 @@
     .card {
       --bs-card-border-color: none;
     }
-    /* Custom Responsive */
+    /* Custom Responsiveness */
+    @media (min-width: 767.98px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
     @media (min-width: 1336px) {
       .dropdown-menu {
         right: auto !important;
@@ -277,13 +283,13 @@
         padding-right: 12rem !important;
         padding-left: 12rem !important;
       }
-      .homepage-body {
-        padding-left: 5rem;
+      #homepage-body {
+        margin-left: 5rem;
       }
     }
     @media (min-width: 1920px) {
-      .homepage-body {
-        padding-left: 15rem;
+      #homepage-body {
+        margin-left: 15rem;
       }
     }
     </style>
@@ -327,7 +333,10 @@
       <!-- Navbar Links -->
       <div class="container-fluid px-0">
         <div class="collapse navbar-collapse" id="navLinks">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav me-auto border-light border-top" style="--bs-border-opacity: 0.125">
+            <!-- <li>
+              <hr />
+            </li> -->
             <!-- News -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -390,11 +399,13 @@
                     Tutorials
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a class="text-light dropdown-item" href="/faq">
+                    <i class="text-light bi bi-question-circle me-2"></i>
+                    FAQ
+                  </a>
+                </li>
               </ul>
-            </li>
-            <!-- FAQ -->
-            <li class="nav-item">
-              <a class="text-light nav-link" href="/faq">FAQ</a>
             </li>
             <!-- Community -->
             <li class="nav-item">
@@ -523,7 +534,7 @@
                 </div>
                 <div class="text-center lead-dark p-5" id="2022.10-info">
 									October is here with <span class="display-6 fw-semibold text-danger align-middle">26</span> new pull requests from some very awesome <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!<br /><br />
-									On top of that, the website have gotten a refreshing new design thanks to RPaladin
+									On top of that, the website have gotten a refreshing new design thanks to RPaladin.
                 </div>
                 <!-- HIGHLIGHTS -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.10-highlights" href="#2022.10-highlights">
@@ -538,7 +549,7 @@
 									<p class="my-3">QuantumCoderQC added draw to material image texture.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-10-d.webp" alt="2022.10-d Screenshot">
 									<p class="my-3">New developer bounties are now available! Earn rewards by developing new features:</p>
-									<a href="/img/2022-10-e.webp"><img class="notes_img" loading="lazy" src="/img/2022-10-e.webp" alt="2022.10-e Screenshot"></a><br /><br />
+									<img class="notes_img" loading="lazy" src="/img/2022-10-e.webp" alt="2022.10-e Screenshot"><br /><br />
 									<p class="fw-semibold text-light">List of current bounties:</p>
 									<ul>
 										<li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/issues/2609">https://github.com/armory3d/armory/issues/2609</a></li>
@@ -592,7 +603,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.10-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/51">ArmSDK: #51</a> - MoritzBrueckner addded option to automatically decide amount of Khamake processes.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/51">ArmSDK: #51</a> - MoritzBrueckner added option to automatically decide amount of Khamake processes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/50">ArmSDK: #50</a> - RPaladin removed non-existent submodule reference.<br />
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
@@ -935,8 +946,8 @@
                 <hr />
                 <div class="lead-dark mb-3" id="2022.07-highlights_d">
 									<p class="mb-3">
-										Please note that for this release it is required to re-download the full SDK rather than using the "Update SDK" option in the user preferences, in order to ensure correct SDK updates with the "Update SDK" option in the future.<br /><br />
-										Also worth noting in this month's release is that the bug which was limiting point lights on DirectX has finally been resolved in Krafix (see <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/issues/1772#issuecomment-1172971955">#1772</a>):
+										<span class="fw-semibold">Note:</span> that for this release it is required to re-download the full SDK rather than using the "Update SDK" option in the user preferences, in order to ensure correct SDK updates with the "Update SDK" option in the future.<br /><br />
+										Also worth noting in this month's release is that the bug which was limiting point lights on DirectX has finally been resolved in Krafix (see <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/issues/1772#issuecomment-1172971955">#1772</a>):
 									</p>
 									<img class="notes_img" src="/img/2022-07-b.webp" loading="lazy" alt="2022-07-b Screenshot">
                 </div>
@@ -1432,7 +1443,7 @@
                 <div class="lead-dark mb-3" id="2022.03-highlights_d">
 									<p class="mb-3">MoritzBrueckner added a new logic tree variable system that was implemented alongside a complete rewrite of the logic ID system. Thanks to these changes, options for using logic node variables have been extended and made much more dynamic:</p>
 									<img class="notes_img" src="/img/2022-03-b.webp" loading="lazy" alt="2022-03-b Screenshot">
-									<p class="my-3">You can find out more about the new tree variable system at the <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/wiki">Armory Wiki</a>.</p>
+									<p class="my-3">You can find out more about the new tree variable system at the <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/wiki">Armory wiki</a>.</p>
 									<p class="my-3">MoritzBrueckner also added bitwise math nodes for bit masking (for users who need more advanced options):</p>
 									<img class="notes_img" src="/img/2022-03-c.webp" loading="lazy" alt="2022-03-c Screenshot">
                 </div>
@@ -2078,9 +2089,9 @@
                 <div class="lead-dark mb-3" id="2021.10-highlights_d">
 									<p class="mb-3">MoritzBrueckner created <span class="fw-semibold">Aura</span> - A fast and lightweight 3D audio engine for Kha & Armory3D.</p>
 									<img class="notes_img" src="/img/2021-10-b.webp" loading="lazy" alt="2021-10-b Screenshot">
-									<p class="my-3">Tong created the <a class="fw-semibold text-light" href="https://armory3d.github.io/armory_examples_browser/">Armory3D Examples browser</a> - Try it out online now!</p>
+									<p class="my-3">Tong created the <a class="fw-semibold text-reset" href="https://armory3d.github.io/armory_examples_browser/">Armory3D examples browser</a> - Try it out online now!</p>
 									<img class="notes_img" src="/img/2021-10-c.webp" loading="lazy" alt="2021-10-c Screenshot">
-									<p class="my-3">The Armory3D Community Game Jam 2.0 has commenced, hosted by Willbot Studios. It will run throughout October. Join <a class="fw-semibold text-light" href="https://itch.io/jam/armory-3d-community-game-jam-20">here</a>.</p>
+									<p class="my-3">The Armory3D Community Game Jam 2.0 has commenced, hosted by Willbot Studios. It will run throughout October.<br /><br />Join <a class="fw-semibold text-reset" href="https://itch.io/jam/armory-3d-community-game-jam-20">here</a>.</p>
 									<img class="notes_img" src="/img/2021-10-d.webp" loading="lazy" alt="2021-10-d Screenshot">
 									<p class="my-3">QuantumCoderQC added 3 new nodes for tweening values for both floats, vectors and rotations:</p>
 									<img class="notes_img" src="/img/2021-10-e.webp" loading="lazy" alt="2021-10-e Screenshot">
@@ -2763,7 +2774,7 @@
           </div>
           <!-- ScrollToTop -->
           <div class="text-end col-lg-5 offset-lg-1 mb-3 px-lg-0">
-            <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false">
+            <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse">
               Back to Top<i class="bi bi-chevron-double-up ms-2"></i>
             </button>
           </div>
@@ -2943,7 +2954,6 @@
       } else if (p.children[0].classList.contains("bi-moon-stars")) {
         p.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
-      p.blur();
     }
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons
@@ -2953,11 +2963,10 @@
       } else {
         e.children[0].classList.replace("bi-x-lg", "bi-search");
       }
-      e.blur();
     }
     // Docs Search - Form Reset
     function formReset() {
-      document.getElementById("navRight").children[0].children[2].children[0].classList.replace("bi-x-lg", "bi-search");
+      document.getElementById("navRight").children[0].children[0].classList.replace("bi-x-lg", "bi-search");
       formDocs.classList.remove("show");
       formDocs.parentElement.children[2].classList.toggle("collapsed");
       let a = formDocs.parentElement.children[2].getAttribute("aria-expanded");
@@ -2989,7 +2998,6 @@
         top: 0,
         behavior: "smooth"
       });
-      e.blur();
     }
     </script>
   </body>

@@ -125,11 +125,8 @@
     .dropdown-menu li a {
       padding: 8px 16px;
     }
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
     .dropdown-toggle::after {
-      display: none !important;
+      display: none;
     }
     /* Homepage Vignette */
     header {
@@ -150,6 +147,7 @@
       -moz-transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
+      /* filter: blur(1rem); */
     }
     header .container {
       position: relative;
@@ -160,18 +158,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* background: radial-gradient(transparent, rgb(0,0,0)); */
-      background-color: rgba(0,0,0,0.625);
+      background-color: rgba(0,0,0,0.5);
+    }
+    #homepage-body {
+      /* background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.5));*/
+      background-color: rgba(0,0,0,0.75);
     }
     /* Homepage Buttons */
     .btn-outline-light, .btn-outline-light * {
       color: white !important;
-      border-color: rgba(255,255,255,0.5);
+      border-color: rgba(255,255,255,0.75);
       border-radius: 0.25rem;
     }
     .btn-outline-light:hover {
       background-color: transparent;
-      border-color: rgba(255,255,255,0.75);
+      border-color: white;
     }
     .btn-outline-dark, .btn-outline-dark * {
       color: black !important;
@@ -261,7 +262,12 @@
     .card {
       --bs-card-border-color: none;
     }
-    /* Custom Responsive */
+    /* Custom Responsiveness */
+    @media (min-width: 767.98px) {
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
     @media (min-width: 1336px) {
       .dropdown-menu {
         right: auto !important;
@@ -277,13 +283,13 @@
         padding-right: 12rem !important;
         padding-left: 12rem !important;
       }
-      .homepage-body {
-        padding-left: 5rem;
+      #homepage-body {
+        margin-left: 5rem;
       }
     }
     @media (min-width: 1920px) {
-      .homepage-body {
-        padding-left: 15rem;
+      #homepage-body {
+        margin-left: 15rem;
       }
     }
     </style>
@@ -327,7 +333,10 @@
       <!-- Navbar Links -->
       <div class="container-fluid px-0">
         <div class="collapse navbar-collapse" id="navLinks">
-          <ul class="navbar-nav me-auto">
+          <ul class="navbar-nav me-auto border-light border-top" style="--bs-border-opacity: 0.125">
+            <!-- <li>
+              <hr />
+            </li> -->
             <!-- News -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -390,11 +399,13 @@
                     Tutorials
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a class="text-light dropdown-item" href="/faq">
+                    <i class="text-light bi bi-question-circle me-2"></i>
+                    FAQ
+                  </a>
+                </li>
               </ul>
-            </li>
-            <!-- FAQ -->
-            <li class="nav-item">
-              <a class="text-light nav-link" href="/faq">FAQ</a>
             </li>
             <!-- Community -->
             <li class="nav-item">
@@ -430,17 +441,16 @@
     <main class="text-white">
       <!-- Home Splash -->
       <header>
-        <video playsinline autoplay muted loop>
-          <source src="/img/river_2.webm" loading="lazy" type="video/webm">
-          <!-- <source src="/img/river_2.mp4" loading="lazy" type="video/mp4"> -->
-          <!-- <img src="/img/river_2.png" loading="lazy" alt="Background Image"> -->
-          Your browser doesn't seem to support MP4 video. Try using a different browser.
+        <video playsinline autoplay muted loop poster="/img/river_2.png">
+          <source src="/img/river_2.webm" type="video/webm">
+          <source src="/img/river_2.mp4" type="video/mp4">
+          Your browser doesn't seem to support video. Try using a different browser.
         </video>
         <div class="splash-vignette"></div>
         <div class="position-relative top-50 start-0 translate-middle-y px-3">   
-          <div class="homepage-body">
+          <div id="homepage-body" class="d-inline-block p-4 pt-2">
             <h1 class="display-3 fw-bold mb-2 mb-lg-3">Build games in Blender</h1>
-            <p class="fs-4 col-lg-8 mb-3 mb-lg-4" style='color: rgb(225,225,225); font-family: "Open Sans", sans-serif;'>
+            <p class="fs-4 col-lg-12 mb-3 mb-lg-4" style='color: rgb(225,225,225); font-family: "Open Sans", sans-serif;'>
               A powerful, cross-platform, free & open source game engine,<br />integrated in Blender.
             </p>
             <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
@@ -555,7 +565,7 @@
           </div>
           <!-- ScrollToTop -->
           <div class="text-end col-lg-5 offset-lg-1 mb-3 px-lg-0">
-            <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false">
+            <button class="btn btn-outline-light" type="button" onclick="scrollToTop(this);" data-bs-toggle="collapse">
               Back to Top<i class="bi bi-chevron-double-up ms-2"></i>
             </button>
           </div>
@@ -735,7 +745,6 @@
       } else if (p.children[0].classList.contains("bi-moon-stars")) {
         p.children[0].classList.replace("bi-moon-stars", "bi-sun");
       }
-      p.blur();
     }
     f = document.getElementById("formDocs");
     // Docs Search Toggle - Search/Close Icons
@@ -745,11 +754,10 @@
       } else {
         e.children[0].classList.replace("bi-x-lg", "bi-search");
       }
-      e.blur();
     }
     // Docs Search - Form Reset
     function formReset() {
-      document.getElementById("navRight").children[0].children[2].children[0].classList.replace("bi-x-lg", "bi-search");
+      document.getElementById("navRight").children[0].children[0].classList.replace("bi-x-lg", "bi-search");
       formDocs.classList.remove("show");
       formDocs.parentElement.children[2].classList.toggle("collapsed");
       let a = formDocs.parentElement.children[2].getAttribute("aria-expanded");
@@ -781,7 +789,6 @@
         top: 0,
         behavior: "smooth"
       });
-      e.blur();
     }
     </script>
   </body>
