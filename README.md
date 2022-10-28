@@ -23,6 +23,7 @@
       * Other usused/useful tools:
         * [TubeRipper](https://tuberipper.com).
         * [CloudConvert](https://cloudconvert.com/).
+    * For retrieving or storing past files, see the Armory website archives [here](https://github.com/armoury3d).
 # Development - Setup
 * The Armory SDK ([armsdk](https://github.com/armory3d/armsdk)) ships with Node.js: no need to download it seperately.<br />
   * The Node.js executables can be found in your `armsdk/nodejs` directory.<br />

@@ -102,29 +102,29 @@
       </div>
     </main>
     <script>
-    let INIT_DATE = "2022.10";
+    var INIT_DATE = "2022.10";
     // Function - Set Year
     function setYear(y) {
       years = document.getElementsByClassName("y");
       years_children = document.getElementsByClassName("y" + y);
       // Reset
-      for (let i=0; i<years.length; i++) {
-        years[i].classList.remove("show", "active");
-        years[i].setAttribute("aria-selected", false);
+      for (var yr=0; yr<years.length; yr++) {
+        years[yr].classList.remove("show", "active");
+        years[yr].setAttribute("aria-selected", false);
       }
       // Set Active
-      for (let i=0; i<years_children.length; i++) {
-        years_children[i].classList.add("show", "active");
-        years_children[i].setAttribute("aria-selected", true);
+      for (var ya=0; ya<years_children.length; ya++) {
+        years_children[ya].classList.add("show", "active");
+        years_children[ya].setAttribute("aria-selected", true);
       }
     }
     // Function - Set Month
     function setMonth(m) {
       all_months = document.getElementsByClassName("m");
       // Reset
-      for (let i=0; i<all_months.length; i++) {
-        all_months[i].classList.remove("show", "active");
-        all_months[i].setAttribute("aria-selected", false);
+      for (var mr=0; mr<all_months.length; mr++) {
+        all_months[mr].classList.remove("show", "active");
+        all_months[mr].setAttribute("aria-selected", false);
       }
       // Set Active
       document.getElementById(m).classList.add("show", "active");
@@ -134,9 +134,9 @@
     function setContent(c) {
       all_contents = document.getElementsByClassName("c");
       // Reset
-      for (let i=0; i<all_contents.length; i++) {
-        all_contents[i].classList.remove("show", "active");
-        all_contents[i].setAttribute("aria-selected", false);
+      for (var cr=0; cr<all_contents.length; cr++) {
+        all_contents[cr].classList.remove("show", "active");
+        all_contents[cr].setAttribute("aria-selected", false);
       }
       // Set Active
       document.getElementById(c).classList.add("show", "active");
@@ -147,8 +147,9 @@
     function setAnchor() {
       try {
         window.location.hash = window.location.hash;
-      } catch {
+      } catch(e) {
         console.log("No anchor found.");
+        console.log(e);
       }
     }
     // Function - Set Year / Month / Content / Anchor
@@ -158,7 +159,7 @@
           return r.text();
         }).then(function(DATA) {
           if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
-            for (let i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+            for (var i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
               if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
                 // Set Year
                 if (window.location.hash.includes("2022")) {
@@ -177,10 +178,10 @@
             window.location.href = "/404";
             console.log(e);
           }
-        }).catch(e => {
+        }).catch(function(e) {
           window.location.href = "/404";
           console.log(e);
-        })
+        });
       } else {
         window.location.href = "/notes#" + INIT_DATE;
       }
