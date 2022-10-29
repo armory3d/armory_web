@@ -2,7 +2,7 @@
     <main class="text-bg-dark text-center">
       <header id="adblockWarning">
         <img src="/img/background-river.webp" loading="lazy" alt="Background Image">
-        <div class="splash-vignette"></div>
+        <div class="splash-vignette homepage-theme-dark"></div>
         <div class="container position-relative top-50 start-0 translate-middle-y py-4">   
           <div class="mb-4">
             <div class="text-white container-fluid py-5">
@@ -19,17 +19,17 @@
         <a class="twitter-timeline" data-width="100%" data-dnt="true" data-theme="dark" href="https://twitter.com/armory3d"></a>
       </div>
     </main>
-    <script src="/js/twitter/twitter_timeline.js" crossorigin="anonymous"></script>
+    <script src="https://platform.twitter.com/widgets.js" crossorigin="anonymous"></script>
     <script>
-      // Adblock Detection
-      setTimeout(adBlock, 500);
-      setTimeout(adBlock, 1000);
-      setTimeout(adBlock, 2000);
-      let i = document.getElementsByTagName("iframe");
-      let e = document.getElementById("adblockWarning");
-      function adBlock() {
-        if (i.length > 1) {
-          e.style.display = "none";
-        }
+    // Adblock Detection
+    setTimeout(adBlock, 500);
+    setTimeout(adBlock, 1000);
+    setTimeout(adBlock, 2000);
+    var i = document.getElementsByTagName("iframe");
+    var e = document.getElementById("adblockWarning");
+    function adBlock() {
+      if (i.length > 1) {
+        e.style.display = "none";
       }
-      </script>
+    }
+    </script>

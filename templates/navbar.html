@@ -28,9 +28,12 @@
     <style>
     /* CSS Variables */
     :root {
-      --a3d-secondary: #191919;
-      --a3d-thirdly: #e9ecef;
+      --a3d-dark: black;
+      --a3d-secondary: rgb(25,25,25);
+      --a3d-thirdly: rgb(230,230,230);
       --a3d-danger: #cf2b43;
+      --transition-duration: 0.2s;
+      --transition-timing: ease-out;
     }
     /* Dark Scrollbar */
     ::-webkit-scrollbar {width: 8px; height: 3px ;}
@@ -39,18 +42,41 @@
     ::-webkit-scrollbar-track-piece { background-color: #000;}
     ::-webkit-scrollbar-thumb {height: 50px; background-color: #666; border-radius: 3px;}
     ::-webkit-scrollbar-corner {background-color: #646464;}
-    .bg-light, .text-bg-light {
-      background-color: white !important;
-    }
     .bg-dark, .text-bg-dark {
-      background-color: black !important;
+      color: white !important;
+      background-color: var(--a3d-dark) !important;
+      -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
+      -moz-transition: background-color var(--transition-duration) var(--transition-timing);
+      -ms-transition: background-color var(--transition-duration) var(--transition-timing);
+      -o-transition: background-color var(--transition-duration) var(--transition-timing);
+      transition: background-color var(--transition-duration) var(--transition-timing);
+    }
+    .bg-light, .text-bg-light {
+      color: black !important;
+      background-color: white !important;
+      -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
+      -moz-transition: background-color var(--transition-duration) var(--transition-timing);
+      -ms-transition: background-color var(--transition-duration) var(--transition-timing);
+      -o-transition: background-color var(--transition-duration) var(--transition-timing);
+      transition: background-color var(--transition-duration) var(--transition-timing);
     }
     .bg-secondary, .text-bg-secondary {
+      color: white !important;
       background-color: var(--a3d-secondary) !important;
+      -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
+      -moz-transition: background-color var(--transition-duration) var(--transition-timing);
+      -ms-transition: background-color var(--transition-duration) var(--transition-timing);
+      -o-transition: background-color var(--transition-duration) var(--transition-timing);
+      transition: background-color var(--transition-duration) var(--transition-timing);
     }
     .bg-thirdly, .text-bg-thirdly {
-      color: black;
+      color: black !important;
       background-color: var(--a3d-thirdly);
+      -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
+      -moz-transition: background-color var(--transition-duration) var(--transition-timing);
+      -ms-transition: background-color var(--transition-duration) var(--transition-timing);
+      -o-transition: background-color var(--transition-duration) var(--transition-timing);
+      transition: background-color var(--transition-duration) var(--transition-timing);
     }
     .lead-light {
       color: rgba(0,0,0,0.7);
@@ -104,29 +130,32 @@
       padding: 22px !important;
     }
     /* Navbar Dropdowns */
-    .text-bg-secondary.dropdown-menu li a:hover,
-    .text-bg-secondary.dropdown-menu li a:active,
-    .text-bg-secondary.dropdown-menu li a:focus,
-    .text-bg-secondary.dropdown-menu li a:hover *,
-    .text-bg-secondary.dropdown-menu li a:active *,
-    .text-bg-secondary.dropdown-menu li a:focus * {
-      color: black !important;
-      background-color: var(--bs-danger);
-    }
-    .text-bg-light.dropdown-menu li a:hover,
-    .text-bg-light.dropdown-menu li a:active,
-    .text-bg-light.dropdown-menu li a:focus,
-    .text-bg-light.dropdown-menu li a:hover *,
-    .text-bg-light.dropdown-menu li a:active *,
-    .text-bg-light.dropdown-menu li a:focus * {
-      color: white !important;
-      background-color: var(--bs-danger);
+    ul .dropdown-menu {
+      margin-top: -1px !important;
     }
     .dropdown-menu li a {
       padding: 8px 16px;
     }
     .dropdown-toggle::after {
       display: none;
+    }
+    .text-bg-dark.dropdown-menu li a:hover,
+    .text-bg-dark.dropdown-menu li a:active,
+    .text-bg-dark.dropdown-menu li a:focus,
+    .text-bg-dark.dropdown-menu li a:hover *,
+    .text-bg-dark.dropdown-menu li a:active *,
+    .text-bg-dark.dropdown-menu li a:focus * {
+      color: black !important;
+      background-color: var(--bs-danger) !important;
+    }
+    .text-bg-thirdly.dropdown-menu li a:hover,
+    .text-bg-thirdly.dropdown-menu li a:active,
+    .text-bg-thirdly.dropdown-menu li a:focus,
+    .text-bg-thirdly.dropdown-menu li a:hover *,
+    .text-bg-thirdly.dropdown-menu li a:active *,
+    .text-bg-thirdly.dropdown-menu li a:focus * {
+      color: white !important;
+      background-color: var(--bs-danger) !important;
     }
     /* Homepage Vignette */
     header {
@@ -147,44 +176,52 @@
       -moz-transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
-      /* filter: blur(1rem); */
     }
-    header .container {
+    header.container {
       position: relative;
     }
-    header .splash-vignette {
+    .splash-vignette {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.5);
     }
-    #homepage-body {
-      /* background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.5));*/
-      background-color: rgba(0,0,0,0.75);
+    .splash-vignette.homepage-theme-dark {
+      background-image: radial-gradient(transparent, black);
+    }
+    .splash-vignette.homepage-theme-light {
+      background-image: radial-gradient(transparent, rgba(0,0,0,0.5));
+    }
+    #homepage-body.homepage-theme-dark {
+      background-color: rgba(0,0,0,0.75) !important;
+    }
+    #homepage-body.homepage-theme-light {
+      color: black;
+      background-color: rgba(255,255,255,0.875);
     }
     /* Homepage Buttons */
-    .btn-outline-light, .btn-outline-light * {
-      color: white !important;
-      border-color: rgba(255,255,255,0.75);
-      border-radius: 0.25rem;
-    }
-    .btn-outline-light:hover {
-      background-color: transparent;
-      border-color: white;
-    }
     .btn-outline-dark, .btn-outline-dark * {
       color: black !important;
       border-color: rgba(0,0,0,0.5);
       border-radius: 0.25rem;
     }
+    .btn-outline-light, .btn-outline-light * {
+      color: white !important;
+      border-color: rgba(255,255,255,0.75);
+      border-radius: 0.25rem;
+    }
     .btn-outline-dark:hover {
       background-color: transparent;
-      border-color: rgba(0,0,0,0.75);
+      border-color: black;
     }
-    .btn-outline-light:active, .btn-outline-light:focus, .btn-outline-dark:active, .btn-outline-dark:focus {
+    .btn-outline-light:hover {
+      background-color: transparent;
+      border-color: white;
+    }
+    .btn-outline-dark:active, .btn-outline-dark:focus, .btn-outline-light:active, .btn-outline-light:focus {
       background-color: inherit;
+      border-color: inherit;
     }
     /* Notes */
     .notes_img {
@@ -262,8 +299,19 @@
     .card {
       --bs-card-border-color: none;
     }
+    /* Docs Search */
+    .input-group {
+      width: inherit;
+    }
+    /* Footer */
+    .btn-danger {
+      background-color: var(--a3d-danger);
+    }
     /* Custom Responsiveness */
-    @media (min-width: 767.98px) {
+    @media (min-width: 768px) {
+      #brand {
+        height: 64px;
+      }
       .dropdown:hover .dropdown-menu {
         display: block;
       }
@@ -285,6 +333,7 @@
       }
       #homepage-body {
         margin-left: 5rem;
+        margin-bottom: 2rem;
       }
     }
     @media (min-width: 1920px) {
@@ -292,12 +341,17 @@
         margin-left: 15rem;
       }
     }
+    @media (max-width: 992px) {
+      #homepage-body {
+        width: 100%;
+      }
+    }
     </style>
     <script src="/js/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
   <!-- Navbar -->
   <body class="text-bg-secondary">
-    <nav id="brand" class="navbar-dark navbar navbar-expand-lg px-lg-5 py-0">
+    <nav id="brand" class="navbar navbar-expand-lg px-lg-5 py-0">
       <!-- Brand -->
       <div class="d-flex align-items-center">
         <a class="nav-link ps-2 pe-0" href="/">
@@ -307,7 +361,7 @@
           <a class="fs-5 text-light fw-semibold lh-1 nav-link dropdown-toggle me-2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ARMORY3D<i class="bi bi-chevron-down ms-1"></i>
           </a>
-          <ul class="text-bg-secondary border-0 rounded-0 dropdown-menu">
+          <ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
             <li>
               <a class="text-light dropdown-item" href="/">
                 <i class="text-light bi bi-house-door me-2"></i>Home
@@ -327,22 +381,19 @@
         </div>
       </div>
       <!-- Mobile Toggle -->
-      <button class="navbar navbar-dark navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <button class="navbar-dark navbar navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
         <i class="navbar-toggler-icon"></i>
       </button>
       <!-- Navbar Links -->
       <div class="container-fluid px-0">
         <div class="collapse navbar-collapse" id="navLinks">
           <ul class="navbar-nav me-auto border-light border-top" style="--bs-border-opacity: 0.125">
-            <!-- <li>
-              <hr />
-            </li> -->
             <!-- News -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 News<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
               </a>
-              <ul class="text-bg-secondary border-0 rounded-0 dropdown-menu">
+              <ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
                 <li>
                   <a class="text-light dropdown-item" href="/notes">
                     <i class="text-light bi bi-megaphone me-2"></i>Release Notes
@@ -359,30 +410,12 @@
             <li class="nav-item">
               <a class="text-light nav-link" href="/features">Features</a>
             </li>
-            <!-- Showcase -->
-            <li class="nav-item dropdown">
-              <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Showcase<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
-              </a>
-              <ul class="text-bg-secondary border-0 rounded-0 dropdown-menu">
-                <li>
-                  <a class="text-light dropdown-item" href="https://armory3d.github.io/armory_examples_browser/">
-                    <i class="text-light bi bi-play-circle me-2"></i>Online Demos
-                  </a>
-                </li>
-                <li>
-                  <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">
-                    <i class="text-light bi bi-controller me-2"></i>Community Games
-                  </a>
-                </li>
-              </ul>
-            </li>
             <!-- Learn -->
             <li class="nav-item dropdown">
               <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Learn<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
               </a>
-              <ul class="text-bg-secondary border-0 rounded-0 dropdown-menu">
+              <ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
                 <li>
                   <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki">
                     <i class="text-light bi bi-book me-2"></i>Manual
@@ -407,6 +440,24 @@
                 </li>
               </ul>
             </li>
+            <!-- Showcase -->
+            <li class="nav-item dropdown">
+              <a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Showcase<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+              </a>
+              <ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
+                <li>
+                  <a class="text-light dropdown-item" href="https://armory3d.github.io/armory_examples_browser/">
+                    <i class="text-light bi bi-play-circle me-2"></i>Online Demos
+                  </a>
+                </li>
+                <li>
+                  <a class="text-light dropdown-item" href="https://github.com/armory3d/armory/wiki/Games-made-with-Armory">
+                    <i class="text-light bi bi-controller me-2"></i>Community Games
+                  </a>
+                </li>
+              </ul>
+            </li>
             <!-- Community -->
             <li class="nav-item">
               <a class="text-light nav-link" href="/community">Community</a>
@@ -414,15 +465,17 @@
           </ul>
           <div id="navRight" class="navbar-nav">
             <!-- Documentation Search + Theme Toggle -->
-            <form class="d-flex align-items-center was-validated me-3" onsubmit="checkValidation(); return false;" method="post">
-              <button class="navBtn btn text-light" type="button" aria-expanded="false" onclick="toggleTheme(this);">
-                <i class="bi bi-sun"></i>
-              </button>
-              <div id="formDocs" class="collapse">
-                <input required class="text-bg-thirdly form-control" placeholder="Search forum" name="inputDocs" type="text" aria-label="Search">
+            <form class="d-flex align-items-center was-validated me-lg-3" onsubmit="checkValidation(); return false;" method="post">
+              <div class="input-group">
+                <div id="formCollapse" class="collapse flex-grow-1">
+                  <input id="formInput" class="text-bg-secondary rounded-0 form-control" spellcheck="true" placeholder="Search forum" name="inputDocs" type="text" aria-label="Search" required minlength="3">
+                </div>
+                <button id="formBtn" class="navBtn btn text-light" type="button" onclick="docsToggle(this);" data-bs-toggle="collapse" data-bs-target="#formCollapse" aria-expanded="false" aria-controls="formCollapse">
+                  <i class="bi bi-search"></i>
+                </button>
               </div>
-              <button class="navBtn btn text-light" type="button" onclick="docsToggle(this);" data-bs-toggle="collapse" data-bs-target="#formDocs" aria-expanded="false" aria-controls="formDocs">
-                <i class="bi bi-search"></i>
+              <button id="themeToggle" class="navBtn btn text-light" type="button" aria-expanded="false" onclick="toggleTheme();">
+                <i class="bi bi-sun"></i>
               </button>
             </form>
             <!-- Download -->
