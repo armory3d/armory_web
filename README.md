@@ -24,6 +24,7 @@
         * [TubeRipper](https://tuberipper.com).
         * [CloudConvert](https://cloudconvert.com/).
     * For retrieving or storing past files, see the Armory website archives [here](https://github.com/armoury3d).
+    * Please use a dedicated JavaScript validator such as [JSHint](https://jshint.com) or [JSLint](https://jslint.com) to validate your JavaScript code to reduce potential errors.
 # Development - Setup
 * The Armory SDK ([armsdk](https://github.com/armory3d/armsdk)) ships with Node.js: no need to download it seperately.<br />
   * The Node.js executables can be found in your `armsdk/nodejs` directory.<br />
