@@ -155,6 +155,12 @@
         console.log("No anchor found.");
         console.log(e);
       }
+      // var scrollpos = sessionStorage.getItem("scrollpos");
+      // if (scrollpos) {
+      //   console.log(window.scrollY);
+      //   window.scrollTo(0, scrollpos);
+      //   console.log(window.scrollY);
+      // }
     }
     // Function - Set Year / Month / Content / Anchor
     function init() {
@@ -196,4 +202,7 @@
     }
     window.addEventListener("pageshow", init);
     window.addEventListener("popstate", init);
+    // document.addEventListener("scroll", function() {
+    //   sessionStorage.setItem("scrollpos", window.scrollY);
+    // });
     </script>

@@ -1,4 +1,4 @@
-// Import modules
+// Import Modules
 let PATH = require("path");
     FS = require("fs");
     HTTP = require("http");

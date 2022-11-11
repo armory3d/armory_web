@@ -282,6 +282,7 @@
     .accordion-button:not(.collapsed) {
       color: unset;
       background-color: unset;
+      box-shadow: none;
     }
     .accordion-button::after, .accordion-button:not(.collapsed)::after {
       content: none;
@@ -587,7 +588,7 @@
                   </div>
                 </div>
                 <div class="text-center lead-dark p-5" id="2022.11-info">
-									November is here with <span class="display-6 fw-semibold text-danger align-middle">15</span> new pull requests from some great <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - fantastic work!<br /><br />
+									November is here with <span class="display-6 fw-semibold text-danger align-middle">14</span> new pull requests from some great <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - fantastic work!<br /><br />
 									Halloween just passed and that means we've got a new month and a new release!
                 </div>
                 <!-- HIGHLIGHTS -->
@@ -596,7 +597,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-3" id="2022.11-highlights_d">
-									<p class="my-3">Tong added custom letterbox color.</p>
+									<p class="my-3">tong added custom letterbox color.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-11-b.webp" alt="2022.11-b Screenshot">
 									<p class="my-3">MoritzBrueckner added full support for emission colors in all supported shaders.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-11-c.webp" alt="2022.11-c Screenshot">
@@ -614,7 +615,7 @@
 										<li>High-Quality Bloom: <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/issues/2612">https://github.com/armory3d/armory/issues/2612</a></li>
 										<li>Box Projected Cube Environment Mapping (BPCEM): <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/issues/2613">https://github.com/armory3d/armory/issues/2613</a></li>
 									</ul>
-									<p class="my-3">Exceptional3D added a bunch of nice new Armory3D tutorials this month!:</p>
+									<p class="my-3">Exceptional3D added a bunch of nice new Armory3D tutorials this month:</p>
 									<a href="https://youtu.be/5btwJpfj8AE"><img class="notes_img" loading="lazy" src="/img/2022-11-f.webp" alt="2022.11-f Screenshot"></a><br /><br />
 									<a href="https://youtu.be/-ZCg7SUpNSI"><img class="notes_img" loading="lazy" src="/img/2022-11-g.webp" alt="2022.11-g Screenshot"></a><br /><br />
                 </div>
@@ -624,9 +625,9 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.11-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2641">#2641</a> - Tong added allow to set custom letterbox color <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2641">#2641</a> - tong added allow to set custom letterbox color <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2638">#2638</a> - MoritzBrueckner added fully support emission colors in all supported shader nodes <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2632">#2632</a> - Tong added write errors to stderr <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2632">#2632</a> - tong added write errors to stderr <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2623">#2623</a> - QuantumCoderQC added add option for NavAgent height offset <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2617">#2617</a> - QuantumCoderQC added add option to set playback volume <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2614">#2614</a> - MoritzBrueckner added new "Combine RGBA" node and add alpha output to "Separate RGB" node <br />
@@ -639,12 +640,11 @@
                 <div class="lead-dark mb-5" id="2022.11-bug_fixes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2640">#2640</a> - QuantumCoderQC added fix Get RB Velocity node <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2637">#2637</a> - MoritzBrueckner added fix position of trait debug views if the debug console is left-aligned  <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2631">#2631</a> - Tong added fix typo <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2629">#2629</a> - E2002e added tesselation missing consts <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2626">#2626</a> - Tong added fix webbrowser get name <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2620">#2620</a> - E2002e added disp color mix <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2631">#2631</a> - tong added fix typo <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2629">#2629</a> - e2002e added tesselation missing consts <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2626">#2626</a> - tong added fix webbrowser get name <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2620">#2620</a> - e2002e added disp color mix <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2615">#2615</a> - MoritzBrueckner added fix building for Krom on Windows <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2606">#2606</a> - MoritzBrueckner added fix socket indices of Principled BSDF node <br />
                 </div>
                 <!-- OTHER CHANGES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.11-other-changes" href="#2022.11-other-changes">
@@ -731,8 +731,8 @@
                   </div>
                 </div>
                 <div class="text-center lead-dark p-5" id="2022.10-info">
-									October is here with <span class="display-6 fw-semibold text-danger align-middle">26</span> new pull requests from some very awesome <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!<br /><br />
-									On top of that, the website have gotten a refreshing new design thanks to RPaladin.
+									October is here with <span class="display-6 fw-semibold text-danger align-middle">27</span> new pull requests from some very awesome <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!<br /><br />
+									On top of that, the website have gotten a refreshing new design thanks to rpaladin.
                 </div>
                 <!-- HIGHLIGHTS -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.10-highlights" href="#2022.10-highlights">
@@ -742,7 +742,7 @@
                 <div class="lead-dark mb-3" id="2022.10-highlights_d">
 									<p class="my-3">MoritzBrueckner added a new Set Canvas Color node.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-10-b.webp" alt="2022.10-b Screenshot">
-									<p class="my-3">RPaladin added tree variables to scene node.</p>
+									<p class="my-3">rpaladin added tree variables to scene node.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-10-c.webp" alt="2022.10-c Screenshot">
 									<p class="my-3">QuantumCoderQC added draw to material image texture.</p>
 									<img class="notes_img" loading="lazy" src="/img/2022-10-d.webp" alt="2022.10-d Screenshot">
@@ -764,15 +764,15 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.10-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2608">#2608</a> - MoritzBrueckner added add new "Set Canvas Color" node <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2605">#2605</a> - Tong added custom play launch commands <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2605">#2605</a> - tong added custom play launch commands <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2603">#2603</a> - MoritzBrueckner added warn about precision issues for very large UV coordinates <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2602">#2602</a> - Tong added start browser using proc_play <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2602">#2602</a> - tong added start browser using proc_play <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2601">#2601</a> - MoritzBrueckner added debug Console: show active camera in outliner and hide "Set Active Camera" button for active cameras <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2600">#2600</a> - RPaladin added add tree variables to scene node <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2600">#2600</a> - rpaladin added add tree variables to scene node <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2599">#2599</a> - MoritzBrueckner added [windows-hl] Fix "After Publish" actions and add "Open in Visual Studio" operator <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2596">#2596</a> - MoritzBrueckner added add option to automatically decide amount of Khamake processes <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2594">#2594</a> - MoritzBrueckner added edit scripts button: use Haxe icon instead of Python icon <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2591">#2591</a> - RPaladin added upgrade for remove object node <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2591">#2591</a> - rpaladin added upgrade for remove object node <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2589">#2589</a> - Onek8 added new node for setting canvas input text focus <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2587">#2587</a> - MoritzBrueckner added support multiple canvas onReady callbacks <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2585">#2585</a> - QuantumCoderQC added draw to material image texture <br />
@@ -783,11 +783,12 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.10-bug_fixes_d">
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2606">#2606</a> - MoritzBrueckner added fix socket indices of Principled BSDF node <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2604">#2604</a> - Naxela added update the Lightmapper to support Blender 3.3 <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2597">#2597</a> - MoritzBrueckner added fix editing values in debug console <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2593">#2593</a> - MoritzBrueckner added canvas: fix theme issues when Zui theme == canvas theme <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2592">#2592</a> - RPaladin added update outdated readme <br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2590">#2590</a> - Notwarp added fix webassemblystudio link <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2592">#2592</a> - rpaladin added update outdated readme <br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2590">#2590</a> - notwarp added fix webassemblystudio link <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2588">#2588</a> - MoritzBrueckner added fix compilation of PhysicsBreak.hx <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2586">#2586</a> - MoritzBrueckner added fix exception when drawing the UI for bundled traits <br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2584">#2584</a> - QuantumCoderQC added fix rigid body copy parameters <br />
@@ -802,7 +803,7 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.10-other_changes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/51">ArmSDK: #51</a> - MoritzBrueckner added option to automatically decide amount of Khamake processes.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/50">ArmSDK: #50</a> - RPaladin removed non-existent submodule reference.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/50">ArmSDK: #50</a> - rpaladin removed non-existent submodule reference.<br />
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -903,7 +904,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.09-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2565">#2565</a> - Tong/MoritzBrueckner added Support for Blender 3.3 LTS.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2565">#2565</a> - tong/MoritzBrueckner added Support for Blender 3.3 LTS.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2564">#2564</a> - Onek8 added created node for setting canvas input text.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2560">#2560</a> - MoritzBrueckner added remove no longer supported proxy system and add support for library overrides.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2544">#2544</a> - e2002e added SSR support for water.<br />
@@ -1023,10 +1024,10 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-3" id="2022.08-highlights_d">
-									<p class="mb-3">T3du added a bunch of useful new nodes that allow drawing of the camera viewport, as well as shapes.</p>
+									<p class="mb-3">t3du added a bunch of useful new nodes that allow drawing of the camera viewport, as well as shapes.</p>
 									<img class="notes_img" src="/img/2022-08-b.webp" loading="lazy" alt="2022.08-b Screenshot">
 									<img class="notes_img" src="/img/2022-08-c.webp" loading="lazy" alt="2022.08-c Screenshot">
-									<p class="my-3">Knowledgenude added a new pulse node, which is useful for controlling weapon firing rates, as well as similar features.</p>
+									<p class="my-3">knowledgenude added a new pulse node, which is useful for controlling weapon firing rates, as well as similar features.</p>
 									<img class="notes_img" src="/img/2022-08-d.webp" loading="lazy" alt="2022.08-d Screenshot">
                 </div>
                 <!-- NEW -->
@@ -1036,8 +1037,8 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.08-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2521">#2521</a> - QuantumCoderQC added add parent relative bone constraint option.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2517">#2517</a> - Knowledgenude added introduce Pulse Node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2499">#2499</a> - T3du added several Draw nodes: cameras, images, string, geometric figures, etc.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2517">#2517</a> - knowledgenude added introduce Pulse Node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2499">#2499</a> - t3du added several Draw nodes: cameras, images, string, geometric figures, etc.
                 </div>
                 <!-- BUG FIXES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-bug-fixes" href="#2022.08-bug-fixes">
@@ -1048,7 +1049,7 @@
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2523">#2523</a> - MoritzBrueckner added deferred renderpath: fix volumetric light combined with translucent materials.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2514">#2514</a> - QuantumCoderQC added stop tweening when NavAgent is removed.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2513">#2513</a> - MoritzBrueckner added fix for RotationNode.set(): get rid of invalid input length check.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2509">#2509</a> - E2002e added firstPersonController.hx anti chess fool cheat.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2509">#2509</a> - e2002e added firstPersonController.hx anti chess fool cheat.
                 </div>
                 <!-- OTHER CHANGES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.08-other-changes" href="#2022.08-other-changes">
@@ -1174,7 +1175,7 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.07-other_changes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/46">ArmSDK: #46 </a> - MoritzBrueckner fixed SDK updater: also update armory.py.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/165">Iron: #165</a> - Lampysprites added Initialize scene's object properties.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/165">Iron: #165</a> - lampysprites added Initialize scene's object properties.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -1389,8 +1390,8 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.05-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2483">#2483</a> - MoritzBrueckner added support for texture bindings for custom (json) materials.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2477">#2477 -</a> - QuantumCoderQC added key Interpolation Node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2475">#2475</a> - Tong added use port from prefs for html5 player path.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2477">#2477</a> - QuantumCoderQC added key Interpolation Node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2475">#2475</a> - tong added use port from prefs for html5 player path.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2474">#2474</a> - MoritzBrueckner added allow materials to read from a depth texture.
                 </div>
                 <!-- BUG FIXES -->
@@ -1399,9 +1400,9 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.05-bug_fixes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2481">#2481</a> - Tong added remove head style element.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2481">#2481</a> - tong added remove head style element.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2480">#2480</a> - MoritzBrueckner added fix export of logic nodes with Blender standard sockets.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2479">#2479</a> - Tong added search ffmpeg if not set.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2479">#2479</a> - tong added search ffmpeg if not set.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2470">#2470</a> - MoritzBrueckner added fix printing WASM errors when using ammo.js
                 </div>
                 <!-- OTHER CHANGES -->
@@ -1410,12 +1411,12 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.05-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/50">Armory Examples: #50</a> - Tong updated api links.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/49">Armory Examples: #49</a> - Tong added sun Fix logic node errors.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/50">Armory Examples: #50</a> - tong updated api links.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/49">Armory Examples: #49</a> - tong added sun Fix logic node errors.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/161">Iron: #161</a> - MoritzBrueckner added sun world matrix uniform.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/160">Iron: #160</a> - MoritzBrueckner added Allow materials to read from a depth texture.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_tutorials/pull/17">Armory Tutorials: #17</a> - Tong updated workflows.<br />
-									<a class="fw-semibold text-light" href="ttps://github.com/armory3d/armory_tutorials/pull/16">Armory Tutorials: #16</a> - Tong updated projects.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_tutorials/pull/17">Armory Tutorials: #17</a> - tong updated workflows.<br />
+									<a class="fw-semibold text-light" href="ttps://github.com/armory3d/armory_tutorials/pull/16">Armory Tutorials: #16</a> - tong updated projects.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -1505,7 +1506,7 @@
 									<p class="mb-3">MoritzBrueckner added follow reroutes for group nodes, as well as update call group node upon changes:</p>
 									<img class="notes_img" src="/img/2022-04-b.webp" loading="lazy" alt="2022-04-b Screenshot">
 									<img class="notes_img" src="/img/2022-04-c.webp" loading="lazy" alt="2022-04-c Screenshot">
-									<p class="my-3">RPaladin added upgrades for the onEvent nodes:</p>
+									<p class="my-3">rpaladin added upgrades for the onEvent nodes:</p>
 									<img class="notes_img" src="/img/2022-04-d.webp" loading="lazy" alt="2022-04-d Screenshot">
                 </div>
                 <!-- NEW -->
@@ -1514,7 +1515,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.04-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2466">#2466</a> - RPaladin added upgrade OnEvent node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2466">#2466</a> - rpaladin added upgrade OnEvent node.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2462">#2462</a> - MoritzBrueckner added improve output socket handling of the Value Changed .<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2461">#2461</a> - MoritzBrueckner added add support for particle emission from faces.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2455">#2455</a> - MoritzBrueckner added follow reroutes for group nodes and update call group node upon changes.<br />
@@ -1545,13 +1546,13 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.04-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/44">ArmSDK: #144 </a> - RPaladin added fix for relocating Armory addon to Game Engine category.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/44">ArmSDK: #144 </a> - rpaladin added fix for relocating Armory addon to Game Engine category.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/159">Iron: #159</a> - MoritzBrueckner added Add support for particle emission from faces and fix scaled volume particles.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/158">Iron: #158</a> - MoritzBrueckner added Fix LZ4 encoding/decoding for new Kha array types.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/157">Iron: #157</a> - MoritzBrueckner added Set sceneParent object before calling trait inits.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/156">Iron: #156</a> -  MoritzBrueckner added fix for MeshBatch.remove().<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/48">Armory Examples: #48</a> - QuantumCoderQC fixed and updated examples. Added documentation to some examples.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/47">Armory Examples: #47</a> - Yangol-oleksiy added fix script_rigidbody_trigger sample bug.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/47">Armory Examples: #47</a> -  yangol-oleksiy added fix script_rigidbody_trigger sample bug.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_tutorials/pull/15">Armory Tutorials: #15</a> - QuantumCoderQC updated nodes in Tanks example.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
@@ -1671,8 +1672,8 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.03-other_changes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/155">Iron: #155</a> - MoritzBrueckner added support for arbitrary spotlight scales.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/46">Armory Examples: #46</a> - Tong added armpack macro usage example.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/14">Armory Tutorials: #14</a> - Tong updated the armory tutorial projects to work with the latest SDK.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/46">Armory Examples: #46</a> - tong added armpack macro usage example.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/14">Armory Tutorials: #14</a> - tong updated the armory tutorial projects to work with the latest SDK.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -1759,7 +1760,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-3" id="2022.02-highlights_d">
-									<p class="mb-3">Many new nodes were added thanks to: T3du & QuantumCoderQC:</p>
+									<p class="mb-3">Many new nodes were added thanks to: t3du & QuantumCoderQC:</p>
 									<div class="d-flex">
 										<img class="notes_img flex-fill" src="/img/2022-02-b.webp" loading="lazy" alt="2022-02-b Screenshot">
 										<img class="notes_img flex-fill" src="/img/2022-02-c.webp" loading="lazy" alt="2022-02-c Screenshot">
@@ -1780,16 +1781,16 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.02-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2433">#2433</a> - MoritzBrueckner added add detailed documentation for read/write json/file/storage nodes.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2431">#2431</a> - T3du added lights - Add nodes to control spot and area size, and spot blend.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2431">#2431</a> - t3du added lights - Add nodes to control spot and area size, and spot blend.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2430">#2430</a> - MoritzBrueckner added new sidebar panel to ease logic node development.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2429">#2429</a> - T3du added array - ArraySampleNode and ArrayShuffleNode.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2427">#2427</a> - T3du added alternate Output - alternate outputs with several outputs.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2429">#2429</a> - t3du added array - ArraySampleNode and ArrayShuffleNode.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2427">#2427</a> - t3du added alternate Output - alternate outputs with several outputs.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2425">#2425</a> - Naxela added update lightmapper to v0.6.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2423">#2423</a> - T3du added add Gamepad Sticks node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2422">#2422</a> - Tong added export speaker distance fields.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2423">#2423</a> - t3du added add Gamepad Sticks node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2422">#2422</a> - tong added export speaker distance fields.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2419">#2419</a> - QuantumCoderQC added retain Value Node, Float Delta Interpolation Node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2419">#2418</a> - T3du added math node - add precision for round.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2416">#2416</a> - T3du added add and remove objects from collections.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2419">#2418</a> - t3du added math node - add precision for round.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2416">#2416</a> - t3du added add and remove objects from collections.
                 </div>
                 <!-- BUG FIXES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.02-bug-fixes" href="#2022.02-bug-fixes">
@@ -1797,9 +1798,9 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.02-bug_fixes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2426">#2426</a> - T3du added fix NavigableLocationNode error.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2426">#2426</a> - t3du added fix NavigableLocationNode error.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2421">#2421</a> - MoritzBrueckner added fix is_transluc_type(): do not activate translucency with Principled BSDF emission strength.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2420">#2420</a> - T3du added get Gamepad Started - fix node input.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2420">#2420</a> - t3du added get Gamepad Started - fix node input.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2414">#2414</a> - MoritzBrueckner added fix SetRotationNode: don't change rotation of previous objects.
                 </div>
                 <!-- OTHER CHANGES -->
@@ -1809,7 +1810,7 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2022.02-other_changes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/154">Iron: #154</a> - QuantumCoderQC fixed billboard scaling.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/153">Iron: #153</a> - Tong added speaker distance fields.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/153">Iron: #153</a> - tong added speaker distance fields.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -1907,11 +1908,11 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.01-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2412">#2412</a> - T3du added add Remove Parent Bone Node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2412">#2412</a> - t3du added add Remove Parent Bone Node.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2410">#2410</a> - MoritzBrueckner added improve node library handling.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2409">#2409</a> - Tong added update custom icons.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2409">#2409</a> - tong added update custom icons.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2408">#2408</a> - QuantumCoderQC added introducing Node Groups.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2406">#2406</a> - Sh-dave added add IsRigidBodyActive node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2406">#2406</a> - sh-dave added add IsRigidBodyActive node.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2403">#2403</a> - MoritzBrueckner added replace deprecated addChild()/removeChild() functions with setParent().
                 </div>
                 <!-- BUG FIXES -->
@@ -1920,7 +1921,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.01-bug_fixes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2411">#2411</a> - T3du added onCanvasElementNode: fix elements values for scaled canvas.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2411">#2411</a> - t3du added onCanvasElementNode: fix elements values for scaled canvas.
                 </div>
                 <!-- OTHER CHANGES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.01-other-changes" href="#2022.01-other-changes">
@@ -1928,9 +1929,9 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2022.01-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/151">Iron: #151</a> - T3du added functions for add/remove object in collection.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/150">Iron: #150</a> - Tong added Use inverse distance model to calculate audio volume (Same as Blender).<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/149">Iron: #149</a> - T3du added remove bone child function.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/151">Iron: #151</a> - t3du added functions for add/remove object in collection.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/150">Iron: #150</a> - tong added Use inverse distance model to calculate audio volume (Same as Blender).<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/149">Iron: #149</a> - t3du added remove bone child function.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/148">Iron: #148</a> - MoritzBrueckner refactored object parenting.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
@@ -2032,10 +2033,10 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.12-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2399">#2399</a> - T3du added raycast for non physics objects.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2399">#2399</a> - t3du added raycast for non physics objects.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2395">#2395</a> - MoritzBrueckner added add option to enable Haxe's --no-traces param.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2391">#2391</a> - T3du added add tween transform node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2389">#2389</a> - Sh-dave added run eventnode output, even if the events could not be delivered.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2391">#2391</a> - t3du added add tween transform node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2389">#2389</a> - sh-dave added run eventnode output, even if the events could not be delivered.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2375">#2375</a> - QuantumCoderQC added Shape keys.
                 </div>
                 <!-- BUG FIXES -->
@@ -2062,7 +2063,7 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.12-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/147">Iron: #147</a> - T3du added 2 functions used in raycast objects nodes.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/147">Iron: #147</a> - t3du added 2 functions used in raycast objects nodes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/146">Iron: #146</a> - MoritzBrueckner added Fix vertex buffer locking on html5 for deinterleaved buffers and batched meshes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/145">Iron: #145</a> - QuantumCoderQC added Implement Shape keys.
                 </div>
@@ -2161,11 +2162,11 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2021.11-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2373">#2373</a> - QuantumCoderQC added add normal output for pick rb node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2369">#2369</a> - T3du added add Between and Not Equal to Compare Logic.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2368">#2368</a> - T3du added add Not Equal to Gate Node.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2363">#2363</a> - T3du added add get object uid nodes / agg args to call Haxe static function / add Between to gate node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2369">#2369</a> - t3du added add Between and Not Equal to Compare Logic.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2368">#2368</a> - t3du added add Not Equal to Gate Node.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2363">#2363</a> - t3du added add get object uid nodes / agg args to call Haxe static function / add Between to gate node.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2361">#2361</a> - SaxonGao-SZ added use project name for web title.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2359">#2359</a> - T3du added add logic nodes: set/get canvas font size and set progress bar color.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2359">#2359</a> - t3du added add logic nodes: set/get canvas font size and set progress bar color.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2353">#2353</a> - MoritzBrueckner added allow to set default renderpath for debugging.
                 </div>
                 <!-- BUG FIXES -->
@@ -2174,11 +2175,11 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.11-bug_fixes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2374">#2374</a> - Tong added fix switch expression.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2374">#2374</a> - tong added fix switch expression.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2372">#2372</a> - QuantumCoderQC added decal fix.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2367">#2367</a> - MoritzBrueckner added fix exporting textures from linked libraries.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2366">#2366</a> - MoritzBrueckner added fix exporting collections with parent object in another collection.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2362">#2362</a> - Tong added fix dox when using special characters.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2362">#2362</a> - tong added fix dox when using special characters.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2357">#2357</a> - QuantumCoderQC added random color node fix.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2356">#2356</a> - MoritzBrueckner added fix Geometry and Texture Coordinate nodes for world shaders.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2355">#2355</a> - MoritzBrueckner added fix deprecated nodes and improve deprecation handling.<br />
@@ -2191,9 +2192,9 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2021.11-other_changes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/144">Iron: #144</a> - QuantumCoderQC Added support for decal object uniforms.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/143">Iron: #143</a> - Tong added Fix undefined markerevents.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/143">Iron: #143</a> - tong added Fix undefined markerevents.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/142">Iron: #142</a> - MoritzBrueckner added fix vector trait properties on HTML5.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/141">Iron: #141</a> - Tong added fix dox when using special characters.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/141">Iron: #141</a> - tong added fix dox when using special characters.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/140">Iron: #140</a> - MoritzBrueckner fix world geometry.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
@@ -2283,7 +2284,7 @@
                 <div class="lead-dark mb-3" id="2021.10-highlights_d">
 									<p class="mb-3">MoritzBrueckner created <span class="fw-semibold">Aura</span> - A fast and lightweight 3D audio engine for Kha & Armory3D.</p>
 									<img class="notes_img" src="/img/2021-10-b.webp" loading="lazy" alt="2021-10-b Screenshot">
-									<p class="my-3">Tong created the <a class="fw-semibold text-reset" href="https://armory3d.github.io/armory_examples_browser/">Armory3D examples browser</a> - Try it out online now!</p>
+									<p class="my-3">tong created the <a class="fw-semibold text-reset" href="https://armory3d.github.io/armory_examples_browser/">Armory3D examples browser</a> - Try it out online now!</p>
 									<img class="notes_img" src="/img/2021-10-c.webp" loading="lazy" alt="2021-10-c Screenshot">
 									<p class="my-3">The Armory3D Community Game Jam 2.0 has commenced, hosted by Willbot Studios. It will run throughout October.<br /><br />Join <a class="fw-semibold text-reset" href="https://itch.io/jam/armory-3d-community-game-jam-20">here</a>.</p>
 									<img class="notes_img" src="/img/2021-10-d.webp" loading="lazy" alt="2021-10-d Screenshot">
@@ -2300,12 +2301,12 @@
                 <div class="lead-dark mb-5" id="2021.10-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2351">#2351</a> - MoritzBrueckner added debug console: make log output more readable.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2349">#2349</a> - MoritzBrueckner added add nodes to get/set global canvas scale.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2342">#2342</a> - Tong added improve log messages.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2338">#2338</a> - Tong added remove Haxe --times param per default.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2342">#2342</a> - tong added improve log messages.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2338">#2338</a> - tong added remove Haxe --times param per default.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2336">#2336</a> - QuantumCoderQC added introducing Tween nodes.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2331">#2331</a> - Tong added do not open build directory in background mode.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2326">#2326</a> - Onelsonic added update props_ui.py.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2325">#2325</a> - Onelsonic added update props.py.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2331">#2331</a> - tong added do not open build directory in background mode.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2326">#2326</a> - onelsonic added update props_ui.py.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2325">#2325</a> - onelsonic added update props.py.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2319">#2319</a> - MoritzBrueckner added the possibility of using more complex string expressions for assert() messages.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2318">#2318</a> - QuantumCoderQC added a node to get NavAgent data and improved the Go To Location node.
                 </div>
@@ -2316,13 +2317,13 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2021.10-bug_fixes_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2350">#2350</a> - MoritzBrueckner added fix add-on reloading when there are new unimported node files.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2339">#2339</a> - Tong added fix invalid fp when using local sdk.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2339">#2339</a> - tong added fix invalid fp when using local sdk.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2335">#2335</a> - MoritzBrueckner added fix fake user export for traits.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2334">#2334</a> - Tong added fix assert throw error.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2334">#2334</a> - tong added fix assert throw error.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2332">#2332</a> - MoritzBrueckner added fix realtime postprocess & cleanup arm.lib.make_datas.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2329">#2329</a> - MoritzBrueckner added fix ArmNodeAddInputOutputButton.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2320">#2320</a> - QuantumCoderQC added a trait fix.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2316">#2316</a> - Onelsonic fixed some Haxe warnings related to type check.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2316">#2316</a> - onelsonic fixed some Haxe warnings related to type check.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2315">#2315</a> - MoritzBrueckner fixed some postprocess uniform warnings.
                 </div>
                 <!-- OTHER CHANGES -->
@@ -2334,7 +2335,7 @@
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/139">Iron: #139</a> - MoritzBrueckner added deferred unloading the world shader until the new shader is loaded.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/138">Iron: #138</a> - MoritzBrueckner added a fix for switching scenes with different light objects.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/137">Iron: #137</a> - QuantumCoderQC added reset collection transform after spawn.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/136">Iron: #136</a> - Tong added Armpack macro compatibility.<br /><br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/136">Iron: #136</a> - tong added Armpack macro compatibility.<br /><br />
 									<span class="fw-bold text-light">Additional</span>: Release notes for <a class="fw-semibold text-reset" href="/notes#2021.08">August - 2021</a> have been added.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
@@ -2432,11 +2433,11 @@
                 <hr />
                 <div class="lead-dark mb-5" id="2021.09-new_d">
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2309">#2309</a> - MoritzBrueckner added the assert() macro for better error handling.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2308">#2308</a> - Tong added the option to disable http logging and change web-server port if pre-used.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2305">#2305</a> - Niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2304">#2304</a> - Tong added the option to play without building (Shift + Play).<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2308">#2308</a> - tong added the option to disable http logging and change web-server port if pre-used.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2305">#2305</a> - niacdoial added a rotation socket for nodes. Revamped most nodes that uses rotations.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2304">#2304</a> - tong added the option to play without building (Shift + Play).<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2298">#2298</a> - MoritzBrueckner added basic add-on reloading. Great feature for Armory developers!<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2296">#2296</a> - Tong added linear and angular control properties to the PhysicsDrag.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2296">#2296</a> - tong added linear and angular control properties to the PhysicsDrag.
                 </div>
                 <!-- BUG FIXES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.09-bug-fixes" href="#2021.09-bug-fixes">
@@ -2458,10 +2459,10 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.09-other_changes_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/135">Iron: #135</a> - Niacdoial added a complimentary commit for rotation socket (#2305).<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/135">Iron: #135</a> - niacdoial added a complimentary commit for rotation socket (#2305).<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/134">Iron: #134</a> - MoritzBrueckner added the exp() exponent function to vector classes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/133">Iron: #133</a> - QuantumCoderQC added a fix for the particle system related to scale and locations.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/30">Armory Examples: #30</a> - Tong added miscellaneous improvements to the examples.
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/30">Armory Examples: #30</a> - tong added miscellaneous improvements to the examples.
                 </div>
                 <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
                   <!-- Help -->
@@ -2552,7 +2553,7 @@
 									<a class="fw-semibold btn btn-danger align-items-center justify-content-center" href="https://youtube.com/watch?v=mxklu7TfwBw">
 										<i class="text-white bi bi-link-45deg me-2"></i>View Video
 									</a>
-									<p class="my-3">Knowledgenude improved the Input map and added nodes to it.</p>
+									<p class="my-3">knowledgenude improved the Input map and added nodes to it.</p>
 									<img class="ratio ratio-21x9 notes_img" src="/img/2021-08-b.webp" loading="lazy" alt="2021-08-b Screenshot">
                 </div>
                 <!-- NEW -->
@@ -2561,9 +2562,9 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.08-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2285">#2285</a> - Tong added the axis trait prop to ArcBall. For direction and speed control.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2285">#2285</a> - tong added the axis trait prop to ArcBall. For direction and speed control.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2283">#2283</a> - MoritzBrueckner added an immense overhaul of the existing live patching system.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2260">#2260</a> - Knowledgenude improved the Input map and added nodes to it.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2260">#2260</a> - knowledgenude improved the Input map and added nodes to it.<br />
                 </div>
                 <!-- BUG FIXES -->
                 <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2021.08-bug-fixes" href="#2021.08-bug-fixes">
@@ -2675,10 +2676,10 @@
                 </a>
                 <hr />
                 <div class="lead-dark mb-5" id="2021.07-new_d">
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2242">#2242</a> - Knowledgenude added "Parent Relative" option to location nodes.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2242">#2242</a> - knowledgenude added "Parent Relative" option to location nodes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2240">#2240</a> - QuantumCoderQC added option for relative physics constraint.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2239">#2239</a> - QuantumCoderQC added set material parameter on per object basis.<br />
-									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2235">#2235</a> - Knowledgenude added cleanup in UI Ext.<br />
+									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2235">#2235</a> - knowledgenude added cleanup in UI Ext.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2221">#2221</a> - QuantumCoderQC added extra logic nodes.<br />
 									<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2220">#2220</a> - MoritzBrueckner added add Select node.
                 </div>
@@ -2690,7 +2691,7 @@
                 <div class="lead-dark mb-5" id="2021.07-bug_fixes_d">
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2238">#2238</a> - MoritzBrueckner fixed threading and publishing for when in background mode.<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2233">#2233</a> - MoritzBrueckner fixed compilation of some nodes.<br />
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2231">#2231</a> - Knowledgenude fixed GetBoneFkIkOnly node & add new input nodes.<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2231">#2231</a> - knowledgenude fixed GetBoneFkIkOnly node & add new input nodes.<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2228">#2228</a> - MoritzBrueckner fixed rendering multiple movie textures.
                 </div>
                 <!-- OTHER CHANGES -->
@@ -2901,6 +2902,12 @@
         console.log("No anchor found.");
         console.log(e);
       }
+      // var scrollpos = sessionStorage.getItem("scrollpos");
+      // if (scrollpos) {
+      //   console.log(window.scrollY);
+      //   window.scrollTo(0, scrollpos);
+      //   console.log(window.scrollY);
+      // }
     }
     // Function - Set Year / Month / Content / Anchor
     function init() {
@@ -2942,6 +2949,9 @@
     }
     window.addEventListener("pageshow", init);
     window.addEventListener("popstate", init);
+    // document.addEventListener("scroll", function() {
+    //   sessionStorage.setItem("scrollpos", window.scrollY);
+    // });
     </script>
     <!-- footer.html -->
     <footer class="text-bg-dark" style="padding-bottom: 50vh;">
