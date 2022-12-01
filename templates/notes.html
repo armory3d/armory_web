@@ -14,6 +14,7 @@
           <!-- Months - 2022 -->
           <div id="m2022" class="y y2022 tab-pane" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tablist">
+              <li class="nav-item" role="presentation"><button id="m19" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c19" type="button" role="tab" aria-controls="c19" aria-selected="false">2022.12</button></li>
               <li class="nav-item" role="presentation"><button id="m18" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c18" type="button" role="tab" aria-controls="c18" aria-selected="false">2022.11</button></li>
               <li class="nav-item" role="presentation"><button id="m17" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c17" type="button" role="tab" aria-controls="c17" aria-selected="false">2022.10</button></li>
               <li class="nav-item" role="presentation"><button id="m16" class="m text-light nav-link" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c16" type="button" role="tab" aria-controls="c16" aria-selected="false">2022.09</button></li>
@@ -45,6 +46,9 @@
       <div class="tab-content">
         <!-- Contents - 2022 -->
         <div id="c2022" class="c y2022 tab-content">
+          <div id="c19" class="c tab-pane" role="tabpanel" tabindex="0">
+            %c19%
+          </div>
           <div id="c18" class="c tab-pane" role="tabpanel" tabindex="0">
             %c18%
           </div>
@@ -106,7 +110,7 @@
       </div>
     </main>
     <script>
-    var INIT_DATE = "2022.11";
+    var INIT_DATE = "2022.12";
     // Function - Set Year
     function setYear(y) {
       years = document.getElementsByClassName("y");
