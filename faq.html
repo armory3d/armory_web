@@ -495,7 +495,7 @@
     <main class="text-bg-secondary">
       <div id="accordionMain" class="accordion container p-3 p-lg-5">
         <!-- FAQ 1 -->
-        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="armory-status-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#armory-status-body" aria-expanded="false" aria-controls="armory-status-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -509,7 +509,7 @@
           </div>
         </div>
         <!-- FAQ 2 -->
-        <div class="text-bg-dark accordion-item border border-light border-opacity-10">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="how-to-contribute-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#how-to-contribute-body" aria-expanded="false" aria-controls="how-to-contribute-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -524,7 +524,7 @@
           </div>
         </div>
         <!-- FAQ 3 -->
-        <div class="text-bg-dark accordion-item border border-light border-opacity-10">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="commercial-use-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#commercial-use-body" aria-expanded="false" aria-controls="commercial-use-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -540,7 +540,7 @@
           </div>
         </div>
         <!-- FAQ 4 -->
-        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="bug-reporting-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#bug-reporting-body" aria-expanded="false" aria-controls="bug-reporting-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -558,7 +558,7 @@
           </div>
         </div>
         <!-- FAQ 5 -->
-        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.125;">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="logic-node-references-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#logic-node-references-body" aria-expanded="false" aria-controls="logic-node-references-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -574,7 +574,7 @@
           </div>
         </div>
         <!-- FAQ 6 -->
-        <div class="text-bg-dark accordion-item border border-light border-opacity-10">
+        <div class="text-bg-dark accordion-item border border-light" style="--bs-border-opacity: 0.1875;">
           <h2 id="armory-vs-upbge-title" class="accordion-header">
             <button class="text-bg-dark accordion-button d-flex collapsed" onclick="faqToggle(this);" type="button" data-bs-toggle="collapse" data-bs-target="#armory-vs-upbge-body" aria-expanded="false" aria-controls="armory-vs-upbge-body">
               <i class="bi bi-plus-circle text-light me-3"></i>
@@ -702,6 +702,12 @@
               <i class="bi bi-facebook text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
+          <!-- TikTok -->
+          <li class="ms-1">
+            <a href="https://tiktok.com/amp/tag/armory3d">
+              <i class="bi bi-tiktok text-light" style="font-size: 1.5rem;"></i>
+            </a>
+          </li>
           <!-- Reddit -->
           <li class="ms-1">
             <a href="https://reddit.com/r/armory3d">
@@ -727,21 +733,21 @@
     </footer>
     <script>
     // Navbar Scroll Transition
-    var nav = document.getElementById("brand");
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset >= 64) {
-        if (nav.classList.contains("navbar-dark")) {
-          nav.classList.add("text-bg-dark");
-          nav.classList.remove("text-bg-light");
-        } else if (nav.classList.contains("navbar-light")) {
-          nav.classList.add("text-bg-light");
-          nav.classList.remove("text-bg-dark");
-        }
-      } else if (window.pageYOffset < 256) {
-        nav.classList.remove("text-bg-dark");
-        nav.classList.remove("text-bg-light");
-      }
-    });
+    // var nav = document.getElementById("brand");
+    // window.addEventListener("scroll", function () {
+    //   if (window.pageYOffset >= 64) {
+    //     if (nav.classList.contains("navbar-dark")) {
+    //       nav.classList.add("text-bg-dark");
+    //       nav.classList.remove("text-bg-light");
+    //     } else if (nav.classList.contains("navbar-light")) {
+    //       nav.classList.add("text-bg-light");
+    //       nav.classList.remove("text-bg-dark");
+    //     }
+    //   } else if (window.pageYOffset < 256) {
+    //     nav.classList.remove("text-bg-dark");
+    //     nav.classList.remove("text-bg-light");
+    //   }
+    // });
     // Theme Toggle
     var fb = document.getElementById("formBtn");
     var fc = document.getElementById("formCollapse");
@@ -787,6 +793,10 @@
           // border-dark
           if (e[id].classList.contains("border-dark")) {
             e[id].classList.replace("border-dark", "border-light");
+            if (e[id].classList.contains("accordion-item")) {
+              console.log('a');
+              e[id].style.setProperty("--bs-border-opacity", 0.1875);
+            }
           }
           // btn-outline-dark
           if (e[id].classList.contains("btn-outline-dark")) {
@@ -828,6 +838,9 @@
           // border-light
           if (e[il].classList.contains("border-light")) {
             e[il].classList.replace("border-light", "border-dark");
+            if (e[il].classList.contains("accordion-item")) {
+              e[il].style.setProperty("--bs-border-opacity", 0.125);
+            }
           }
           // btn-outline-light
           if (e[il].classList.contains("btn-outline-light")) {

@@ -494,7 +494,7 @@
     <!-- $main.html -->
     <main class="text-bg-dark text-center">
       <header id="adblockWarning">
-        <img src="/img/background-river.jpg" loading="lazy" alt="Background Image">
+        <img src="/img/river-1.jpg" loading="lazy" alt="Background Image">
         <div class="splash-vignette homepage-theme-dark"></div>
         <div class="container position-relative top-50 start-0 translate-middle-y py-4">   
           <div class="mb-4">
@@ -618,6 +618,12 @@
               <i class="bi bi-facebook text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
+          <!-- TikTok -->
+          <li class="ms-1">
+            <a href="https://tiktok.com/amp/tag/armory3d">
+              <i class="bi bi-tiktok text-light" style="font-size: 1.5rem;"></i>
+            </a>
+          </li>
           <!-- Reddit -->
           <li class="ms-1">
             <a href="https://reddit.com/r/armory3d">
@@ -643,21 +649,21 @@
     </footer>
     <script>
     // Navbar Scroll Transition
-    var nav = document.getElementById("brand");
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset >= 64) {
-        if (nav.classList.contains("navbar-dark")) {
-          nav.classList.add("text-bg-dark");
-          nav.classList.remove("text-bg-light");
-        } else if (nav.classList.contains("navbar-light")) {
-          nav.classList.add("text-bg-light");
-          nav.classList.remove("text-bg-dark");
-        }
-      } else if (window.pageYOffset < 256) {
-        nav.classList.remove("text-bg-dark");
-        nav.classList.remove("text-bg-light");
-      }
-    });
+    // var nav = document.getElementById("brand");
+    // window.addEventListener("scroll", function () {
+    //   if (window.pageYOffset >= 64) {
+    //     if (nav.classList.contains("navbar-dark")) {
+    //       nav.classList.add("text-bg-dark");
+    //       nav.classList.remove("text-bg-light");
+    //     } else if (nav.classList.contains("navbar-light")) {
+    //       nav.classList.add("text-bg-light");
+    //       nav.classList.remove("text-bg-dark");
+    //     }
+    //   } else if (window.pageYOffset < 256) {
+    //     nav.classList.remove("text-bg-dark");
+    //     nav.classList.remove("text-bg-light");
+    //   }
+    // });
     // Theme Toggle
     var fb = document.getElementById("formBtn");
     var fc = document.getElementById("formCollapse");
@@ -703,6 +709,10 @@
           // border-dark
           if (e[id].classList.contains("border-dark")) {
             e[id].classList.replace("border-dark", "border-light");
+            if (e[id].classList.contains("accordion-item")) {
+              console.log('a');
+              e[id].style.setProperty("--bs-border-opacity", 0.1875);
+            }
           }
           // btn-outline-dark
           if (e[id].classList.contains("btn-outline-dark")) {
@@ -744,6 +754,9 @@
           // border-light
           if (e[il].classList.contains("border-light")) {
             e[il].classList.replace("border-light", "border-dark");
+            if (e[il].classList.contains("accordion-item")) {
+              e[il].style.setProperty("--bs-border-opacity", 0.125);
+            }
           }
           // btn-outline-light
           if (e[il].classList.contains("btn-outline-light")) {

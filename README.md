@@ -1,4 +1,6 @@
 [website_armory3d]: https://armory3d.org
+[website_ezgif]: https://ezgif.com
+[website_get_youtube_thumbnail]: https://www.get-youtube-thumbnail.com
 [website_github_pages]: https://pages.github.com
 [website_pagespeed]: https://pagespeed.web.dev
 [website_nodejs]: https://nodejs.org
@@ -19,7 +21,6 @@
 [directory_armory_web]: https://github.com/armory3d/armory_web
 [directory_armory_web_templates]: https://github.com/armory3d/armory_web/templates
 [directory_armsdk]: https://github.com/armory3d/armsdk
-[directory_cloudconvert]: https://cloudconvert.com
 [directory_jshint]: https://jshint.com
 [directory_jslint]: https://jslint.com
 [directory_releases]: https://github.com/armory3d/armory_web/templates/changelogs/releases
@@ -84,14 +85,15 @@ node $MAKE_SCRIPT
   * Final format should be `WebP` format for optimal web experiences.
   * Final format should be `WebP` or `WebM` format for optimal web experiences.
 # Development - resources
-* [PageSpeed][website_pagespeed] (good website analyzer: speed, tips, etc.)
-* [Armory3D archive][directory_armory_archive] (original, missing, or unlisted asset content)
-* [CloudConvert][directory_cloudconvert] (epic image/video format converter + editor).
+* [Ezgif][website_ezgif] (Multi-format image & video converter).
+* [GetYouTubeThumbnail][website_get_youtube_thumbnail] (gets URL links for Youtube video thumbnails).
 * [TubeRipper][website_tuberipper] (Youtube ripper).
-* [W3C - HTML][directory_w3c_html] (HTML validator)
-* [W3C - CSS][directory_w3c_css] (CSS validator)
-* [JSHint][directory_jshint] (JavaScript validator)
-* [JSLint][directory_jslint] (JavaScript validator)
+* [Armory3D archive][directory_armory_archive] (original, missing, or unlisted/private asset content).
+* [PageSpeed][website_pagespeed] (good website analyzer: speed, tips, etc.).
+* [W3C - HTML][directory_w3c_html] (HTML validator).
+* [W3C - CSS][directory_w3c_css] (CSS validator).
+* [JSHint][directory_jshint] (JavaScript validator).
+* [JSLint][directory_jslint] (JavaScript validator).
 # Development - process
 ## Compiling - introduction
 * The webpages that reside in the root [/armory_web/][directory_armory_web] directory are the webpages meant to be hosted, not the components.

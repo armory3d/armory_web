@@ -537,7 +537,10 @@
           </div>
         </div>
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/features-render-path.gif" loading="lazy" alt="Screen-Spaced Reflections Comparisons Example" />
+          <video class="ratio ratio-21x9 h-100" playsinline autoplay muted loop>
+            <source src="/img/features-render-path.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
       </div>
       <!-- Scripting -->
@@ -631,13 +634,19 @@
           </div>
         </div>
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/features-physics.gif" loading="lazy" alt="Physics Example" />
+          <video class="ratio ratio-21x9 h-100" style="object-fit: fill" autoplay muted loop>
+            <source src="/img/features-physics.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
       </div>
       <!-- Navigation -->
       <div id="navigation" class="position-relative row g-0">
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/features-navigation.gif" loading="lazy" alt="Navmesh Example" />
+          <video class="ratio ratio-21x9 h-100" playsinline autoplay muted loop>
+            <source src="/img/features-navigation.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
         <div class="col-lg-6 p-4">
           <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" href="#navigation">
@@ -673,13 +682,19 @@
           </div>
         </div>
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/features-particles.gif" loading="lazy" alt="Particles Example" />
+          <video class="ratio ratio-21x9 h-100" playsinline autoplay muted loop>
+            <source src="/img/features-particles.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
       </div>
       <!-- Animation -->
       <div id="animation" class="position-relative row g-0">
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/features-animation.gif" loading="lazy" alt="Animations Example" />
+          <video class="ratio ratio-21x9 h-100" playsinline autoplay muted loop>
+            <source src="/img/features-animation.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
         <div class="col-lg-6 p-4">
           <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" href="#animation">
@@ -720,7 +735,10 @@
           </div>
         </div>
         <div class="col-lg-6 mb-lg-0">
-          <img class="ratio ratio-21x9 h-100" src="/img/2021-09-b.gif" loading="lazy" alt="IES Lights Example" />
+          <video class="ratio ratio-21x9 h-100" playsinline autoplay muted loop> -->
+            <source src="/img/2021-09-b.mp4" type="video/mp4">
+            This browser doesn't support MP4. Try using a different browser.
+          </video>
         </div>
       </div>
       <!-- Free & Open Source -->
@@ -841,6 +859,12 @@
               <i class="bi bi-facebook text-light" style="font-size: 1.5rem;"></i>
             </a>
           </li>
+          <!-- TikTok -->
+          <li class="ms-1">
+            <a href="https://tiktok.com/amp/tag/armory3d">
+              <i class="bi bi-tiktok text-light" style="font-size: 1.5rem;"></i>
+            </a>
+          </li>
           <!-- Reddit -->
           <li class="ms-1">
             <a href="https://reddit.com/r/armory3d">
@@ -866,21 +890,21 @@
     </footer>
     <script>
     // Navbar Scroll Transition
-    var nav = document.getElementById("brand");
-    window.addEventListener("scroll", function () {
-      if (window.pageYOffset >= 64) {
-        if (nav.classList.contains("navbar-dark")) {
-          nav.classList.add("text-bg-dark");
-          nav.classList.remove("text-bg-light");
-        } else if (nav.classList.contains("navbar-light")) {
-          nav.classList.add("text-bg-light");
-          nav.classList.remove("text-bg-dark");
-        }
-      } else if (window.pageYOffset < 256) {
-        nav.classList.remove("text-bg-dark");
-        nav.classList.remove("text-bg-light");
-      }
-    });
+    // var nav = document.getElementById("brand");
+    // window.addEventListener("scroll", function () {
+    //   if (window.pageYOffset >= 64) {
+    //     if (nav.classList.contains("navbar-dark")) {
+    //       nav.classList.add("text-bg-dark");
+    //       nav.classList.remove("text-bg-light");
+    //     } else if (nav.classList.contains("navbar-light")) {
+    //       nav.classList.add("text-bg-light");
+    //       nav.classList.remove("text-bg-dark");
+    //     }
+    //   } else if (window.pageYOffset < 256) {
+    //     nav.classList.remove("text-bg-dark");
+    //     nav.classList.remove("text-bg-light");
+    //   }
+    // });
     // Theme Toggle
     var fb = document.getElementById("formBtn");
     var fc = document.getElementById("formCollapse");
@@ -926,6 +950,10 @@
           // border-dark
           if (e[id].classList.contains("border-dark")) {
             e[id].classList.replace("border-dark", "border-light");
+            if (e[id].classList.contains("accordion-item")) {
+              console.log('a');
+              e[id].style.setProperty("--bs-border-opacity", 0.1875);
+            }
           }
           // btn-outline-dark
           if (e[id].classList.contains("btn-outline-dark")) {
@@ -967,6 +995,9 @@
           // border-light
           if (e[il].classList.contains("border-light")) {
             e[il].classList.replace("border-light", "border-dark");
+            if (e[il].classList.contains("accordion-item")) {
+              e[il].style.setProperty("--bs-border-opacity", 0.125);
+            }
           }
           // btn-outline-light
           if (e[il].classList.contains("btn-outline-light")) {
