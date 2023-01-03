@@ -3,6 +3,8 @@
       <div class="d-flex container p-3 p-lg-5">
         <!-- YEARS -->
         <ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+          <!-- Year - 2023 -->
+          <li class="nav-item" role="presentation"><button id="y2023" class="y y2023 text-light nav-link" onclick='setYear("2023");' data-bs-toggle="pill" data-bs-target="#m2023" type="button" role="tab" aria-selected="false">2023</button></li>
           <!-- Year - 2022 -->
           <li class="nav-item" role="presentation"><button id="y2022" class="y y2022 text-light nav-link" onclick='setYear("2022");' data-bs-toggle="pill" data-bs-target="#m2022" type="button" role="tab" aria-selected="false">2022</button></li>
           <!-- Year - 2021 -->
@@ -11,6 +13,12 @@
         <div class="d-flex"><div class="vr mx-3"></div></div>
         <!-- MONTHS -->
         <div class="tab-content">
+          <!-- Months - 2023 -->
+          <div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
+            <ul class="nav nav-outline nav-justified">
+              <li class="nav-item" role="presentation"><a id="m20" class="m text-light nav-link" href="#2023.01" onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c20" type="button" role="tab" aria-controls="c20" aria-selected="false">2023.01</a></li>
+            </ul>
+          </div>
           <!-- Months - 2022 -->
           <div id="m2022" class="y y2022 tab-pane" role="tabpanel" tabindex="0">
             <ul class="nav nav-outline nav-justified" role="tablist">
@@ -44,6 +52,12 @@
       </div>
       <!-- CONTENTS -->
       <div class="tab-content">
+        <!-- Contents - 2023 -->
+        <div id="c2023" class="c y2023 tab-content">
+          <div id="c20" class="c tab-pane" role="tabpanel" tabindex="0">
+            %c20%
+          </div>
+        </div>
         <!-- Contents - 2022 -->
         <div id="c2022" class="c y2022 tab-content">
           <div id="c19" class="c tab-pane" role="tabpanel" tabindex="0">
@@ -110,7 +124,7 @@
       </div>
     </main>
     <script>
-    var INIT_DATE = "2022.12";
+    var INIT_DATE = "2023.01";
     // Function - Set Year
     function setYear(y) {
       years = document.getElementsByClassName("y");
@@ -176,7 +190,9 @@
             for (var i=1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
               if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
                 // Set Year
-                if (window.location.hash.includes("2022")) {
+                if (window.location.hash.includes("2023")) {
+                  setYear("2023");
+                } else if (window.location.hash.includes("2022")) {
                   setYear("2022");
                 } else if (window.location.hash.includes("2021")) {
                   setYear("2021");
