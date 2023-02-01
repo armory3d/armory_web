@@ -1,0 +1,11 @@
+{
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"[html]": {
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+	},
+}
