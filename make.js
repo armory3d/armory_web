@@ -1,28 +1,28 @@
 // jshint esversion: 6
 // Import Modules
-const PATH = require("path");
-FS = require("fs");
-HTTP = require("http");
-URL = require("url");
-COMPILE_NOTES = true;
-PORT = process.argv[2] || 80,
-	WEBPAGES = ["/404", "/notes", "/news", "/features", "/faq", "/community", "/download", "/privacy"];
-MIME_TYPES = {
-	"ico": "image/vnd.microsoft.icon",
-	"woff2": "font/woff2",
-	"html": "text/html; charset=utf-8",
-	"css": "text/css; charset=utf-8",
-	"js": "text/javascript; charset=utf-8",
-	"json": "application/json",
-	"mp4": "video/mp4",
-	"jpeg": "image/jpeg",
-	"jpg": "image/jpeg",
-	"png": "image/png",
-	"gif": "image/gif",
-	"svg": "image/svg+xml",
-	"webp": "image/webp",
-	"webm": "video/webm"
-};
+const PATH = require("path"),
+	FS = require("fs"),
+	HTTP = require("http"),
+	URL = require("url"),
+	COMPILE_NOTES = true,
+	PORT = 80,
+	WEBPAGES = ["/404", "/notes", "/news", "/features", "/faq", "/community", "/download", "/privacy", "/license"],
+	MIME_TYPES = {
+		"ico": "image/vnd.microsoft.icon",
+		"woff2": "font/woff2",
+		"html": "text/html; charset=utf-8",
+		"css": "text/css; charset=utf-8",
+		"js": "text/javascript; charset=utf-8",
+		"json": "application/json",
+		"mp4": "video/mp4",
+		"jpeg": "image/jpeg",
+		"jpg": "image/jpeg",
+		"png": "image/png",
+		"gif": "image/gif",
+		"svg": "image/svg+xml",
+		"webp": "image/webp",
+		"webm": "video/webm"
+	};
 // Function - Compile Notes
 function compileHTML() {
 	FS.readdir("templates/", (err, file) => {

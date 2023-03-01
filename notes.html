@@ -118,9 +118,13 @@
     #brand>div>div>a,
     .navbar-nav>li>a,
     .nav-pills .nav-link.active,
+    .nav-pills .nav-link.focus,
+    .nav-pills .nav-link.visited,
     .nav-pills .show>.nav-link,
     .nav-pills .nav-link,
     .nav-outline .nav-link.active,
+    .nav-outline .nav-link.focus,
+    .nav-outline .nav-link.visited,
     .nav-outline .show>.nav-link,
     .nav-outline .nav-link {
       -webkit-touch-callout: none;
@@ -170,9 +174,11 @@
     #brand>div>div>a:hover,
     #brand>div>div>a:active,
     #brand>div>div>a:focus,
+    #brand>div>div>a:visited,
     .navbar-nav>li:not(.desktopNavLogo)>a:hover,
     .navbar-nav>li:not(.desktopNavLogo)>a:active,
-    .navbar-nav>li:not(.desktopNavLogo)>a:focus {
+    .navbar-nav>li:not(.desktopNavLogo)>a:focus,
+    .navbar-nav>li:not(.desktopNavLogo)>a:visited {
       box-shadow: 0 -4px 0 var(--bs-danger) inset;
     }
 
@@ -202,9 +208,11 @@
     .text-bg-dark.dropdown-menu li a:hover,
     .text-bg-dark.dropdown-menu li a:active,
     .text-bg-dark.dropdown-menu li a:focus,
+    .text-bg-dark.dropdown-menu li a:visited,
     .text-bg-dark.dropdown-menu li a:hover *,
     .text-bg-dark.dropdown-menu li a:active *,
-    .text-bg-dark.dropdown-menu li a:focus * {
+    .text-bg-dark.dropdown-menu li a:focus *,
+    .text-bg-dark.dropdown-menu li a:visited * {
       color: black !important;
       background-color: var(--bs-danger) !important;
     }
@@ -212,9 +220,11 @@
     .text-bg-thirdly.dropdown-menu li a:hover,
     .text-bg-thirdly.dropdown-menu li a:active,
     .text-bg-thirdly.dropdown-menu li a:focus,
+    .text-bg-thirdly.dropdown-menu li a:visited,
     .text-bg-thirdly.dropdown-menu li a:hover *,
     .text-bg-thirdly.dropdown-menu li a:active *,
-    .text-bg-thirdly.dropdown-menu li a:focus * {
+    .text-bg-thirdly.dropdown-menu li a:focus *,
+    .text-bg-thirdly.dropdown-menu li a:visited * {
       color: white !important;
       background-color: var(--bs-danger) !important;
     }
@@ -298,14 +308,19 @@
 
     .btn-outline-dark:active,
     .btn-outline-dark:focus,
+    .btn-outline-dark:visited,
     .btn-outline-light:active,
-    .btn-outline-light:focus {
+    .btn-outline-light:focus,
+    .btn-outline-light:visited {
       background-color: inherit;
       border-color: inherit;
     }
 
     /* Notes */
-    .notes_img {
+    .notes_img,
+    iframe,
+    object,
+    embed {
       max-width: 100%;
     }
 
@@ -316,8 +331,10 @@
 
     .nav-pills .nav-link.active:hover,
     .nav-pills .nav-link.active:active,
+    .nav-pills .nav-link.active:visited,
     .nav-pills .show>.nav-link:hover,
-    .nav-pills .show>.nav-link:active {
+    .nav-pills .show>.nav-link:active,
+    .nav-pills .show>.nav-link:visited {
       background: transparent;
       outline: 1px solid var(--a3d-danger);
     }
@@ -325,25 +342,30 @@
     /* Pills - Inactive */
     .nav-pills .lead-dark.nav-link.active:hover,
     .nav-pills .lead-dark.nav-link.active:active,
-    .nav-pills .lead-dar.show>.nav-link:hover,
-    .nav-pills .lead-dar.show>.nav-link:active {
+    .nav-pills .lead-dark.nav-link.active:focus,
+    .nav-pills .lead-dark.nav-link.active:visited,
+    .nav-pills .lead-dark.show>.nav-link:hover,
+    .nav-pills .lead-dark.show>.nav-link:active,
+    .nav-pills .lead-dark.show>.nav-link:focus,
+    .nav-pills .lead-dark.show>.nav-link:visited,
+    .nav-pills .lead-dark.nav-link:not(.active):hover,
+    .nav-pills .lead-dark.nav-link:not(.active):active,
+    .nav-pills .lead-dark.nav-link:not(.active):focus,
+    .nav-pills .lead-dark.nav-link:not(.active):visited {
       color: white;
     }
 
     .nav-pills .lead-light.nav-link.active:hover,
     .nav-pills .lead-light.nav-link.active:active,
+    .nav-pills .lead-light.nav-link.active:focus,
+    .nav-pills .lead-light.nav-link.active:visited,
     .nav-pills .lead-light.show>.nav-link:hover,
-    .nav-pills .lead-light.show>.nav-link:active {
-      color: black;
-    }
-
-    .nav-pills .lead-dark.nav-link:not(.active):hover,
-    .nav-pills .lead-dark.nav-link:not(.active):active {
-      color: white;
-    }
-
+    .nav-pills .lead-light.show>.nav-link:active,
+    .nav-pills .lead-light.show>.nav-link:focus,
     .nav-pills .lead-light.nav-link:not(.active):hover,
-    .nav-pills .lead-light.nav-link:not(.active):active {
+    .nav-pills .lead-light.nav-link:not(.active):active,
+    .nav-pills .lead-light.nav-link:not(.active):focus,
+    .nav-pills .lead-light.nav-link:not(.active):visited {
       color: black;
     }
 
@@ -415,7 +437,10 @@
         transform: translate(-50%, 0) !important;
       }
 
-      .notes_img {
+      .notes_img,
+      iframe,
+      object,
+      embed {
         max-width: 50%;
       }
 
@@ -605,6 +630,30 @@
   </nav>
 <!-- $main.html -->
 <main class="text-bg-secondary">
+  <div id="cookies_banner" class="text-center notes_img container position-sticky top-50 start-0 translate-middle-y"
+    style="z-index: 999">
+    <div class="mb-4">
+      <div class="text-bg-dark container-fluid ms-0 px-5 py-3">
+        <h1 class="display-4 fw-bold fst-italic mb-4">Cookies Policy</h1>
+        <p class="fs-4 lead lh-1" style='font-family: "Open Sans", sans-serif; margin-bottom: 1.5rem;'>
+        <p class="lead-dark mb-4">
+          This page's YouTube videos uses cookies. If you decline cookies, those videos will be replaced with video
+          thumbnails and URL links instead. More information about cookies can be found <a
+            class="fw-semibold text-reset" href="/privacy">here</a>.
+        </p>
+        <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+          <a class="fw-semibold btn btn-danger align-items-center justify-content-center"
+            onclick="setPageCookies(true);">
+            <i class="bi bi-check-lg text-white me-2"></i>Allow Cookies
+          </a>
+          <a class="fw-semibold btn btn-danger align-items-center justify-content-center"
+            onclick="setPageCookies(false);">
+            <i class="bi bi-x-lg text-white me-2"></i>Decline Cookies
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="d-flex container p-3 p-lg-5">
     <!-- YEARS -->
     <ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
@@ -629,6 +678,9 @@
       <!-- Months - 2023 -->
       <div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
         <ul class="nav nav-pills nav-justified">
+          <li class="nav-item" role="presentation"><a id="m22" class="m lead-light nav-link" href="#2023.03"
+              onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c22" type="button" role="tab"
+              aria-controls="c22" aria-selected="false">2023.03</a></li>
           <li class="nav-item" role="presentation"><a id="m21" class="m lead-light nav-link" href="#2023.02"
               onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c21" type="button" role="tab"
               aria-controls="c21" aria-selected="false">2023.02</a></li>
@@ -710,9 +762,387 @@
   <div class="tab-content">
     <!-- Contents - 2023 -->
     <div id="c2023" class="c y2023 tab-content">
+      <div id="c22" class="c tab-pane" role="tabpanel" tabindex="0">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
+    <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2023.03-title" href="#2023.03-title">
+      <i class="bi bi-link-45deg text-light me-2"></i><span>March - 2023</span>
+    </a>
+  </div>
+  <div id="image" class="d-none d-flex justify-content-center">
+    <img class="ratio ratio-21x9 notes_img" loading="lazy" src="/img/notes/notes-placeholder.png" alt="Cover Image" />
+  </div>
+  <div id="video" class="d-flex justify-content-center">
+    <video class="ratio ratio-21x9 notes_img" playsinline autoplay muted loop>
+      <source src="/img/2023-03/2023-03-a.mp4" type="video/mp4">
+      This browser doesn't support MP4. Try using a different browser.
+    </video>
+  </div>
+  <div class="text-center lead-dark px-5 py-3" id="2023.03-info">
+<sup>(Credits: render - Naxela <a class="fw-semibold text-reset"
+    href="https://opensource.org/licenses/MIT">[MIT]</a>.)</sup><br />
+March is here with <span class="display-6 fw-semibold text-danger align-middle">30</span> new pull requests from some
+great <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> -
+great work!
+</div>
+  <div class="container p-3 pt-0 notes_container">
+    <div class="card-group text-center mx-auto" style="max-width: 54rem">
+      <!-- Download -->
+      <div id="2023.03-download" class="text-bg-dark rounded card m-1">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#2023.03-download">
+            <i class="bi bi-download text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Get Armored</h1>
+          <p class="card-text lead-dark">Start Armory today!</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#releases">
+              <i class="bi bi-link-45deg text-white me-2"></i>Download
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Manual -->
+      <div id="2023.03-manual" class="text-bg-dark rounded card m-1">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#2023.03-manual">
+            <i class="bi bi-book text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Need info?</h1>
+          <p class="card-text lead-dark">Learn more at the Armory wiki.</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center"
+              href="https://github.com/armory3d/armory/wiki">
+              <i class="bi bi-link-45deg text-white me-2"></i>Manual
+            </a>
+          </div>
+        </div>
+      </div>
+    </div><br />
+    <!-- HIGHLIGHTS -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.03-highlights" href="#2023.03-highlights">
+      <i class="bi bi-link-45deg text-light me-2"></i>HIGHLIGHTS
+    </a>
+    <hr />
+    <div class="lead-dark mb-3" id="2023.03-highlights_d">
+<p class="my-3">QuantumCoderQC added Improved Node Groups.<br />
+  <span class="fw-semibold">Note:</span> Some points about the new system:
+<ul>
+  <li>Works and feels more Blender-like.</li>
+  <li>Option to change socket names and socket order.</li>
+  <li>Supports nested groups.</li>
+  <li>Easy grouping and un-grouping in the Logic Node editor with dedicated buttons.</li>
+  <li>Logic Node editor breadcrumbs to show node hierarchy.</li>
+</ul>
+After the update, exiting node groups in a file will automatically be replaced by new empty group nodes. One must
+select the nodes to be grouped and then use the side panel to group the selected nodes.
+</p>
+<!-- Armory3D New Group System -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=eGdXT1ndkcw">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/eGdXT1ndkcw/maxresdefault.jpg"
+      alt="Armory3D New Group System" />
+  </a>
+  <iframe id="eGdXT1ndkcw" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Armory3D New Group System" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<p class="my-3">knowledgenude added Add Vec4 moveTowards function and a new logic node for it.</p>
+<video class="notes_img" playsinline autoplay muted loop>
+  <source src="/img/2023-03/2023-03-b.mp4" type="video/mp4">
+  This browser doesn't support MP4. Try using a different browser.
+</video>
+<p class="my-3">rpaladin added End frame for "Play Action From" node.<br />
+  <span class="fw-semibold">Note:</span> Bone scaling animation is still unsupported, but there is an experimental
+  branch being developed to officially incorporate it.
+</p>
+<video class="notes_img" playsinline autoplay muted loop>
+  <source src="/img/2023-03/2023-03-c.mp4" type="video/mp4">
+  This browser doesn't support MP4. Try using a different browser.
+</video>
+<p class="my-3">t3du added Logic Nodes: Array Filter and Array Display<br /></p>
+<img class="notes_img" loading="lazy" src="/img/2023-03/2023-03-d.jpg" alt="2023.03-d Screenshot">
+<p class="my-3">These developer bounties are still available! Earn rewards by developing new features:</p>
+<img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-h.jpg" alt="2023.01-i Screenshot"><br /><br />
+<p class="fw-semibold text-light">List of current bounties:</p>
+<ul>
+  <li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset"
+      href="https://github.com/armory3d/armory/issues/2609">https://github.com/armory3d/armory/issues/2609</a></li>
+  <li>Dynamic Diffuse Global Illumination (DDGI): <a class="fw-semibold text-reset"
+      href="https://github.com/armory3d/armory/issues/2610">https://github.com/armory3d/armory/issues/2610</a></li>
+  <li>Stochastic Screen-Space Reflections: <a class="fw-semibold text-reset"
+      href="https://github.com/armory3d/armory/issues/2611">https://github.com/armory3d/armory/issues/2611</a></li>
+  <li>Box Projected Cube Environment Mapping (BPCEM): <a class="fw-semibold text-reset"
+      href="https://github.com/armory3d/armory/issues/2613">https://github.com/armory3d/armory/issues/2613</a></li>
+</ul>
+<p class="my-3">Exceptional3D made <span class="display-6 fw-semibold text-danger align-middle">7</span> new community
+  tutorials this month - fantastic work!</p>
+<!-- Using 1 player controller across many levels in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=7lzT_IwGzgM">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/7lzT_IwGzgM/maxresdefault.jpg"
+      alt="Using 1 player controller across many levels in Armory 3D" />
+  </a>
+  <iframe id="7lzT_IwGzgM" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using 1 player controller across many levels in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Understanding Conditions in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=KuoQqb76MnU">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/KuoQqb76MnU/maxresdefault.jpg"
+      alt="Understanding Conditions in Armory 3D" />
+  </a>
+  <iframe id="KuoQqb76MnU" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Understanding Conditions in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to install Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=7mifu6Gkf-c">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/7mifu6Gkf-c/maxresdefault.jpg"
+      alt="How to install Armory 3D" />
+  </a>
+  <iframe id="7mifu6Gkf-c" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to install Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Using events in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=M_voAUxJCjI">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/M_voAUxJCjI/maxresdefault.jpg"
+      alt="Using events in Armory 3D" />
+  </a>
+  <iframe id="M_voAUxJCjI" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using events in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Collision collections and masks explained in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=1eAcW4X_0AI">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/1eAcW4X_0AI/maxresdefault.jpg"
+      alt="Collision collections and masks explained in Armory 3D" />
+  </a>
+  <iframe id="1eAcW4X_0AI" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Collision collections and masks explained in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Make your first game with Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=8g7IekE_jJ4">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/8g7IekE_jJ4/maxresdefault.jpg"
+      alt="Make your first game with Armory 3D" />
+  </a>
+  <iframe id="8g7IekE_jJ4" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Make your first game with Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- When to clean your projects in -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=KrNJcHKCh_0">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="/img/2023-03/2023-03-e.jpg" alt="When to clean your projects in" />
+  </a>
+  <iframe id="KrNJcHKCh_0" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="When to clean your projects in" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+</div>
+    <!-- NEW -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.03-new" href="#2023.03-new">
+      <i class="bi bi-link-45deg text-light me-2"></i>NEW
+    </a>
+    <hr />
+    <div class="lead-dark mb-5" id="2023.03-new_d">
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2810">#2810</a> - rpaladin added
+New getFramerate() method<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2806">#2806</a> - QuantumCoderQC added
+Improved Node Groups<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2803">#2803</a> - knowledgenude added
+Add Vec4 moveTowards function and a new logic node for it<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2799">#2799</a> - t3du added add
+replacement function for math node<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2797">#2797</a> - rpaladin added
+End frame for "Play Action From" node<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2796">#2796</a> - rpaladin added
+New copy to bundled operator/button<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2791">#2791</a> - rpaladin added
+Logic Node: Get Canvas Text<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2790">#2790</a> - t3du added Math
+Node:
+add Ping-Pong property<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2788">#2788</a> - t3du added ArrayAdd
+Node: comparison for other type of values<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2787">#2787</a> - t3du added Logic
+Node:
+Array get Previous Next<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2785">#2785</a> - t3du added Logic
+Nodes: Array Filter and Array Display<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2784">#2784</a> - t3du added Camera
+Logic Nodes: Get/Set Camera Aspect, Scale and Type<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2783">#2783</a> - t3du added Logic
+Nodes: Array Count and Array Distinct<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2781">#2781</a> - t3du added Logic
+Node:
+Array Compare<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2780">#2780</a> - t3du added Logic
+Node:
+Get Object Dimension<br />
+</div>
+    <!-- BUG FIXES -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.03-bug-fixes" href="#2023.03-bug-fixes">
+      <i class="bi bi-link-45deg text-light me-2"></i>BUG FIXES
+    </a>
+    <hr />
+    <div class="lead-dark mb-5" id="2023.03-bug_fixes_d">
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2809">#2809</a> - QuantumCoderQC added
+Fix node group polling<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2807">#2807</a> - QuantumCoderQC added
+Fix empty call group nodes<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2795">#2795</a> - MoritzBrueckner
+added
+Various micro shadowing fixes and improvements<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2794">#2794</a> - MoritzBrueckner
+added
+Fix roughness artifacts in specularBRDF()<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2788">#2788</a> - t3du added ArrayAdd
+Node: comparison for other type of values<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2786">#2786</a> - t3du added fix
+Random Vector variable definition<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2782">#2782</a> - t3du added fix
+ArrayContains and ArrayIndex Nodes<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2778">#2778</a> - rpaladin added fix
+realtime postprocessing<br />
+</div>
+    <!-- OTHER CHANGES -->
+    <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.03-other-changes" href="#2023.03-other-changes">
+      <i class="bi bi-link-45deg text-light me-2"></i>OTHER CHANGES
+    </a>
+    <hr />
+    <div class="lead-dark mb-5" id="2023.03-other_changes_d">
+<a class="fw-semibold text-light" href="https://github.com/armory3d/zui/pull/162">Zui: 162</a> -
+MathemanFlo added Right align line numbers<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/186">Iron: #186</a> - rpaladin added
+New animation setFrame() function<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/77">Armory Examples: #77</a>
+-
+rpaladin added Reenable disabled LUT texture setting<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/76">Armory Examples: #76</a>
+-
+Onek8 added Update README.md<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/75">Armory Examples: #75</a>
+-
+Onek9 added update readme<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/74">Armory Examples: #74</a>
+-
+MoritzBrueckner added fix bloom strength in graphics_settings example<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/73">Armory Examples: #73</a>
+-
+MoritzBrueckner added game_bowling example: fix texture & library paths<br />
+</div>
+    <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
+      <!-- Help -->
+      <div id="2023.03-help" class="text-bg-dark rounded card">
+        <!-- Icon -->
+        <div class="d-flex justify-content-center align-items-center">
+          <a href="#2023.03-help">
+            <i class="bi bi-gift text-light" style="font-size: 4rem;"></i>
+          </a>
+        </div>
+        <!-- Body -->
+        <div class="card-body pt-0">
+          <h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Want to help?</h1>
+          <p class="card-text lead-dark">Here's a few ways you can.</p>
+          <div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#contribute">
+              <i class="bi bi-link-45deg text-white me-2"></i>Contribute
+            </a>
+            <a class="fw-bold btn btn-danger align-items-center justify-content-center" href="/download#donate">
+              <i class="bi bi-link-45deg text-white me-2"></i>Donate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div id="c2023" class="c y2023 tab-content">
       <div id="c21" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2023.02-title" href="#2023.02-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>February - 2023</span>
     </a>
@@ -732,7 +1162,7 @@
     BY 4.0]</a> & Amatsukast@Sketchfab <a class="fw-semibold text-reset"
     href="https://creativecommons.org/licenses/by-nc-sa/4.0">[CC BY-NC-SA 4.0]</a> | render & modifications -
   rpaladin.)</sup><br />
-February is here with <span class="display-6 fw-semibold text-danger align-middle">30</span> new pull requests from some
+February is here with <span class="display-6 fw-semibold text-danger align-middle">31</span> new pull requests from some
 great <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> -
 great work!
 </div>
@@ -784,22 +1214,22 @@ great work!
     </a>
     <hr />
     <div class="lead-dark mb-3" id="2023.02-highlights_d">
-<p class="my-3">lampysprites added add player buttons to topbar</p>
+<p class="my-3">lampysprites added add player buttons to topbar.</p>
 <video class="notes_img" playsinline autoplay muted loop>
   <source src="/img/2023-02/2023-02-b.mp4" type="video/mp4">
   This browser doesn't support MP4. Try using a different browser.
 </video>
-<p class="my-3">MoritzBrueckner added option to disable OpenCL processing in CMFT to avoid driver freeze</p>
+<p class="my-3">MoritzBrueckner added option to disable OpenCL processing in CMFT to avoid driver freeze.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-c.jpg" alt="2023.02-c Screenshot">
-<p class="my-3">rpaladin added new compositing distort shader</p>
+<p class="my-3">rpaladin added new compositing distort shader.</p>
 <video class="notes_img" playsinline autoplay muted loop>
   <source src="/img/2023-02/2023-02-d.mp4" type="video/mp4">
   This browser doesn't support MP4. Try using a different browser.
 </video>
-<p class="my-3">t3du added Logic Node: Array Sort Node</p>
+<p class="my-3">t3du added logic node: Array Sort Node.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-e.jpg" alt="2023.02-d Screenshot">
 <p class="my-3">These developer bounties are still available! Earn rewards by developing new features:</p>
-<img class="notes_img" loading="lazy" src="/img/2022-10/2022-10-e.jpg" alt="2022.10-e Screenshot"><br /><br />
+<img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-h.jpg" alt="2023.01-i Screenshot"><br /><br />
 <p class="fw-semibold text-light">List of current bounties:</p>
 <ul>
   <li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset"
@@ -813,16 +1243,96 @@ great work!
 </ul>
 <p class="my-3">Exceptional3D made <span class="display-6 fw-semibold text-danger align-middle">5</span> new community
   tutorials this month - fantastic work!</p>
-<a href="https://youtube.com/watch?v=lSgbZNBQwkc"><img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-f.jpg"
-    alt="How to create a custom loading screen in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=jtmKOiGNDBs"><img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-g.jpg"
-    alt="Exporting Armory 3D games to HTML Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=N0E-WMIHsrI"><img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-h.jpg"
-    alt="Using shape keys in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=w0vQTVyGCyM"><img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-i.jpg"
-    alt="Character controller tutorial in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=8ymSPfgnY4Y"><img class="notes_img" loading="lazy" src="/img/2023-02/2023-02-j.jpg"
-    alt="How to use NodeTrees PROPERLY in Armory 3D Screenshot"></a><br /><br />
+<!-- How to create a custom loading screen in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=lSgbZNBQwkc">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/lSgbZNBQwkc/maxresdefault.jpg"
+      alt="How to create a custom loading screen in Armory 3D" />
+  </a>
+  <iframe id="lSgbZNBQwkc" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to create a custom loading screen in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Exporting Armory 3D games to HTML -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=jtmKOiGNDBs">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/jtmKOiGNDBs/maxresdefault.jpg"
+      alt="Exporting Armory 3D games to HTML" />
+  </a>
+  <iframe id="jtmKOiGNDBs" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Exporting Armory 3D games to HTML" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Using shape keys in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=N0E-WMIHsrI">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/N0E-WMIHsrI/maxresdefault.jpg"
+      alt="Using shape keys in Armory 3D" />
+  </a>
+  <iframe id="N0E-WMIHsrI" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using shape keys in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Character controller tutorial in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=w0vQTVyGCyM">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/w0vQTVyGCyM/maxresdefault.jpg"
+      alt="Character controller tutorial in Armory 3D" />
+  </a>
+  <iframe id="w0vQTVyGCyM" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Character controller tutorial in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!--  How to use NodeTrees PROPERLY in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=8ymSPfgnY4Y">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/8ymSPfgnY4Y/maxresdefault.jpg"
+      alt="How to use NodeTrees PROPERLY in Armory 3D" />
+  </a>
+  <iframe id="8ymSPfgnY4Y" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to use NodeTrees PROPERLY in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 </div>
     <!-- NEW -->
     <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.02-new" href="#2023.02-new">
@@ -830,11 +1340,11 @@ great work!
     </a>
     <hr />
     <div class="lead-dark mb-5" id="2023.02-new_d">
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2777">#2777</a> - t3du added Logic
-Nodes: Get/Set Camera Start End Node<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2777">#2777</a> - t3du added logic
+nodes: Get/Set Camera Start End Node<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2775">#2775</a> - MoritzBrueckner added
 option to disable OpenCL processing in CMFT to avoid driver freeze<br />
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2772">#2772</a> - t3du added Logic Node:
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2772">#2772</a> - t3du added logic node:
 Random String<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2771">#2771</a> - rpaladin added allow
 custom naming of lens texture<br />
@@ -842,27 +1352,27 @@ custom naming of lens texture<br />
 lut naming<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2768">#2768</a> - t3du added logic node:
 Array Index<br />
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2766">#2766</a> - t3du added Logic Node:
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2766">#2766</a> - t3du added logic node:
 Loop Continue<br />
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2765">#2765</a> - t3du added Logic
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2765">#2765</a> - t3du added logic
 Nodes: Array Sort Node<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2762">#2762</a> - MoritzBrueckner added
 rename "Khafile" option to "Append Khafile"<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2759">#2759</a> - rpaladin added
 export deform only option<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2758">#2758</a> - lampysprites added
-Add player buttons to topbar<br />
+add player buttons to topbar<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2757">#2757</a> - t3du added
-Draw section for draw nodes<br />
+draw section for draw nodes<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2756">#2756</a> - t3du added
-Logic nodes: Array Reverse and Array Concat<br />
+logic nodes: Array Reverse and Array Concat<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2755">#2755</a> - t3du added
 logic node: get object collection add array collection output<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2753">#2753</a> - t3du added
 logic node: Remove Trait from Object<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2752">#2752</a> - t3du added logic node:
-Get Object Collection<br />
-<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2751">#2751</a> - rpaladin added New
+get Object Collection<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2751">#2751</a> - rpaladin added new
 compositing distort shader<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory/pull/2749">#2749</a> - rpaladin added "Edit
 Script" button for WASM traits<br />
@@ -896,6 +1406,8 @@ StringReplace: fix output to string<br />
     <div class="lead-dark mb-5" id="2023.02-other_changes_d">
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/62">ArmSDK: #62</a> - MoritzBrueckner
 added add option to disable OpenCL processing in CMFT to avoid driver issue<br />
+<a class="fw-semibold text-light" href="https://github.com/armory3d/iron/pull/184">Iron: #184</a> - rpaladin added
+New getNumBones() method<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/72">Armory Examples: #72</a> -
 rpaladin added fix bowling demo<br />
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armory_examples/pull/70">Armory Examples: #70</a> -
@@ -935,8 +1447,8 @@ QuantumCoderQC added fix material_decal_colors example<br />
     </div>
     <div id="c2023" class="c y2023 tab-content">
       <div id="c20" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2023.01-title" href="#2023.01-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>January - 2023</span>
     </a>
@@ -1013,20 +1525,20 @@ Merry Christmas Armory community!
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-b.jpg" alt="2023.01-b Screenshot"><br /><br />
 <sup>(Credits: assets - LowPoly@Sketchfab, render - rpladin.)</sup>
 <hr />
-<p class="my-3">QuantumCoderQC added Cursor/ Touch in region</p>
+<p class="my-3">QuantumCoderQC added Cursor/ Touch in region.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-c.jpg" alt="2023.01-d Screenshot">
-<p class="my-3">knowledgenude added add getPointVelocity method</p>
+<p class="my-3">knowledgenude added add getPointVelocity method.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-d.jpg" alt="2023.01-e Screenshot">
-<p class="my-3">MoritzBrueckner added High-Quality Bloom</p>
+<p class="my-3">MoritzBrueckner added High-Quality Bloom.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-e.jpg" alt="2023.01-f Screenshot">
-<p class="my-3">rpaladin added new trait specials menu</p>
+<p class="my-3">rpaladin added new trait specials menu.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-f.jpg" alt="2023.01-g Screenshot">
-<p class="my-3">t3du added add Draw Text Area String node</p>
+<p class="my-3">t3du added add Draw Text Area String node.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-g.jpg" alt="2023.01-c Screenshot">
-<p class="my-3">tong added append khamake options to command on preset exporters</p>
+<p class="my-3">tong added append khamake options to command on preset exporters.</p>
 <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-h.jpg" alt="2022.12-h Screenshot">
 <p class="my-3">These developer bounties are still available! Earn rewards by developing new features:</p>
-<img class="notes_img" loading="lazy" src="/img/2022-10/2022-10-e.jpg" alt="2022.10-e Screenshot"><br /><br />
+<img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-i.jpg" alt="2023.01-i Screenshot"><br /><br />
 <p class="fw-semibold text-light">List of current bounties:</p>
 <ul>
   <li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset"
@@ -1043,16 +1555,95 @@ Merry Christmas Armory community!
 </ul>
 <p class="my-3">Exceptional3D made <span class="display-6 fw-semibold text-danger align-middle">5</span> new community
   tutorials this month - fantastic work!</p>
-<a href="https://youtube.com/watch?v=8ymSPfgnY4Y"><img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-i.jpg"
-    alt="Using TWEENS in Armory 3D for smooth animations Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=8ymSPfgnY4Y"><img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-j.jpg"
-    alt="Raycasting EXPLAINED in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=_Niwk5zHUzU"><img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-k.jpg"
-    alt="How to make a custom cursor in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/shorts/-HQox6rb3WQ"><img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-l.jpg"
-    alt="Fix camera overlaying frames issue. Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=lyX9WGR7lsg"><img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-m.jpg"
-    alt="How to change materials at runtime with Armory 3D Screenshot"></a><br /><br />
+<!-- Using TWEENS in Armory 3D for smooth animations -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=XHCyGScD4cM">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/XHCyGScD4cM/maxresdefault.jpg"
+      alt="Using TWEENS in Armory 3D for smooth animations" />
+  </a>
+  <iframe id="XHCyGScD4cM" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using TWEENS in Armory 3D for smooth animations" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Raycasting EXPLAINED in Armory 3D-->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=8ymSPfgnY4Y">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/8ymSPfgnY4Y/maxresdefault.jpg"
+      alt="Raycasting EXPLAINED in Armory 3D" />
+  </a>
+  <iframe id="8ymSPfgnY4Y" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Raycasting EXPLAINED in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to make a custom cursor in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=_Niwk5zHUzU">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/_Niwk5zHUzU/maxresdefault.jpg"
+      alt="How to make a custom cursor in Armory 3D" />
+  </a>
+  <iframe id="_Niwk5zHUzU" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to make a custom cursor in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Fix camera overlaying frames issue -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=-HQox6rb3WQ">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-i.jpg" alt="Fix camera overlaying frames issue" />
+  </a>
+  <iframe id="-HQox6rb3WQ" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Fix camera overlaying frames issue" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to change materials at runtime with Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=lyX9WGR7lsg">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/lyX9WGR7lsg/maxresdefault.jpg"
+      alt="How to change materials at runtime with Armory 3D" />
+  </a>
+  <iframe id="lyX9WGR7lsg" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to change materials at runtime with Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 </div>
     <!-- NEW -->
     <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2023.01-new" href="#2023.01-new">
@@ -1220,8 +1811,8 @@ Onek8 added Network Zui Chat Example<br />
     <!-- Contents - 2022 -->
     <div id="c2022" class="c y2022 tab-content">
       <div id="c19" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.12-title" href="#2022.12-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>December - 2022</span>
     </a>
@@ -1313,20 +1904,131 @@ additional new commit from some great <a class="fw-semibold text-reset"
 </ul>
 <p class="my-3">Exceptional3D made <span class="display-6 fw-semibold text-danger align-middle">7</span> new community
   tutorials this month - fantastic work!</p>
-<a href="https://youtube.com/shorts/W7RXxK_yQjI"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-d.jpg"
-    alt="Spawning any object in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=EyOP6kZFp9M"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-e.jpg"
-    alt="How to create INTERACTIVE 3D text in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/shorts/pwis6QY13EQ"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-f.jpg"
-    alt="Get access to networking nodes in armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=ZmaG_JFmn0Q"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-g.jpg"
-    alt="Networking tutorial / multiplayer games in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=6HqsRFteGKo"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-h.jpg"
-    alt="Animated plants in Armory 3D tutorial Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=tizOdOpXE6E"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-i.jpg"
-    alt="Post processing explained in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=gEYEfkIIjDk"><img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-j.jpg"
-    alt="Randomness explained in Armory 3D Screenshot"></a><br /><br />
+<!-- Spawning any object in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=W7RXxK_yQjI">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-d.jpg" alt="Spawning any object in Armory 3D" />
+  </a>
+  <iframe id="W7RXxK_yQjI" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Spawning any object in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to create INTERACTIVE 3D text in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=EyOP6kZFp9M">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/EyOP6kZFp9M/maxresdefault.jpg"
+      alt="How to create INTERACTIVE 3D text in Armory 3D" />
+  </a>
+  <iframe id="EyOP6kZFp9M" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to create INTERACTIVE 3D text in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Get access to networking nodes in armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=pwis6QY13EQ">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="/img/2022-12/2022-12-e.jpg"
+      alt="Get access to networking nodes in armory 3D" />
+  </a>
+  <iframe id="pwis6QY13EQ" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Get access to networking nodes in armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Networking tutorial / multiplayer games in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=ZmaG_JFmn0Q">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/ZmaG_JFmn0Q/maxresdefault.jpg"
+      alt="Networking tutorial / multiplayer games in Armory 3D" />
+  </a>
+  <iframe id="ZmaG_JFmn0Q" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Networking tutorial / multiplayer games in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Animated plants in Armory 3D tutorial -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=6HqsRFteGKo">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/6HqsRFteGKo/maxresdefault.jpg"
+      alt="Animated plants in Armory 3D tutorial" />
+  </a>
+  <iframe id="6HqsRFteGKo" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Animated plants in Armory 3D tutorial" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Post processing explained in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=tizOdOpXE6E">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/tizOdOpXE6E/maxresdefault.jpg"
+      alt="Post processing explained in Armory 3D" />
+  </a>
+  <iframe id="tizOdOpXE6E" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Post processing explained in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Randomness explained in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=gEYEfkIIjDk">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/gEYEfkIIjDk/maxresdefault.jpg"
+      alt="Randomness explained in Armory 3D" />
+  </a>
+  <iframe id="gEYEfkIIjDk" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Randomness explained in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 </div>
     <!-- NEW -->
     <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.12-new" href="#2022.12-new">
@@ -1430,8 +2132,8 @@ code that goes with Voxel GI<br />
 </div>
       </div>
       <div id="c18" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.11-title" href="#2022.11-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>November - 2022</span>
     </a>
@@ -1526,26 +2228,186 @@ Halloween just passed and that means we've got a new month and a new release!
 </ul>
 <p class="my-3">Exceptional3D made <span class="display-6 fw-semibold text-danger align-middle">10</span> new community
   tutorials this month - fantastic work!</p>
-<a href="https://youtube.com/watch?v=-ZCg7SUpNSI"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-f.jpg"
-    alt="Sounds explained in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=5btwJpfj8AE"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-g.jpg"
-    alt="Smooth vs crisp render in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=OqYfnhWavEo"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-h.jpg"
-    alt="Using draw nodes in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=k1vj5GFzwMM"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-i.jpg"
-    alt="How to display, modify, and save values/variables in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=4DfuXn0GgG4"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-j.jpg"
-    alt="How to call node trees in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=xLv_ftL5kkU"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-k.jpg"
-    alt="How to use tilesheets in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=8sWsOJDqNww"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-l.jpg"
-    alt="How to make outlines in Armory 3D without code 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=QzXmMlUEVS0"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-m.jpg"
-    alt="Mesh optimization is Armory 3D - LOD's explained  Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=5GSEGx2xZ_s"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-n.jpg"
-    alt="Using variables and variable trees in Armory 3D Screenshot"></a><br /><br />
-<a href="https://youtube.com/watch?v=e9I0ZzHn7gw"><img class="notes_img" loading="lazy" src="/img/2022-11/2022-11-o.jpg"
-    alt="Using the Console and debugger in Armory 3D Screenshot"></a><br /><br />
+<!-- Sounds explained in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=-ZCg7SUpNSI">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/-ZCg7SUpNSI/maxresdefault.jpg"
+      alt="Sounds explained in Armory 3D" />
+  </a>
+  <iframe id="-ZCg7SUpNSI" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Sounds explained in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Smooth vs crisp render in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=5btwJpfj8AE">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/5btwJpfj8AE/maxresdefault.jpg"
+      alt="Smooth vs crisp render in Armory 3D" />
+  </a>
+  <iframe id="5btwJpfj8AE" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Smooth vs crisp render in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Using draw nodes in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=OqYfnhWavEo">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/OqYfnhWavEo/maxresdefault.jpg"
+      alt="Using draw nodes in Armory 3D" />
+  </a>
+  <iframe id="OqYfnhWavEo" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using draw nodes in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to display, modify, and save values/variables in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=k1vj5GFzwMM">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/k1vj5GFzwMM/maxresdefault.jpg"
+      alt="How to display, modify, and save values/variables in Armory 3D" />
+  </a>
+  <iframe id="k1vj5GFzwMM" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to display, modify, and save values/variables in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to call node trees in Armory 3D  -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=4DfuXn0GgG4">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/4DfuXn0GgG4/maxresdefault.jpg"
+      alt="How to call node trees in Armory 3D" />
+  </a>
+  <iframe id="4DfuXn0GgG4" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to call node trees in Armory 3D " frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to use tilesheets in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=xLv_ftL5kkU">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/xLv_ftL5kkU/maxresdefault.jpg"
+      alt="How to use tilesheets in Armory 3D" />
+  </a>
+  <iframe id="xLv_ftL5kkU" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to use tilesheets in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- How to make outlines in Armory 3D without code 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=8sWsOJDqNww">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/8sWsOJDqNww/maxresdefault.jpg"
+      alt="How to make outlines in Armory 3D without code 3D" />
+  </a>
+  <iframe id="8sWsOJDqNww" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="How to make outlines in Armory 3D without code 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Mesh optimization is Armory 3D - LOD's explained -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=QzXmMlUEVS0">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/QzXmMlUEVS0/maxresdefault.jpg"
+      alt="Mesh optimization is Armory 3D - LOD's explained" />
+  </a>
+  <iframe id="QzXmMlUEVS0" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Mesh optimization is Armory 3D - LOD's explained" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Using variables and variable trees in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=5GSEGx2xZ_s">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/5GSEGx2xZ_s/maxresdefault.jpg"
+      alt="Using variables and variable trees in Armory 3D" />
+  </a>
+  <iframe id="5GSEGx2xZ_s" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using variables and variable trees in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
+<!-- Using the Console and debugger in Armory 3D -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=e9I0ZzHn7gw">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/e9I0ZzHn7gw/maxresdefault.jpg"
+      alt="Using the Console and debugger in Armory 3D" />
+  </a>
+  <iframe id="e9I0ZzHn7gw" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using the Console and debugger in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div><br />
 </div>
     <!-- NEW -->
     <a class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3" id="2022.11-new" href="#2022.11-new">
@@ -1595,9 +2457,9 @@ fix building for Krom on Windows <br />
     <div class="lead-dark mb-5" id="2022.11-other_changes_d">
 <a class="fw-semibold text-light" href="https://github.com/armory3d/armsdk/pull/54">ArmSDK: #54</a> - TriVoxel fixed
 long-standing permissions bug on Linux and macOS.<br /><br />
-<span class="fw-bold text-light">Additional</span>: Release notes for <a class="fw-semibold text-reset"
-  href="/notes#2021.06-title">June - 2021</a> & <a class="fw-semibold text-reset" href="/notes#2021.07-title">July -
-  2021</a> have been added.
+<span class="fw-semibold text-reset">Release Notes:</span> Backported <a class="fw-semibold text-reset"
+  href="/notes#2021.06-title">June</a> and <a class="fw-semibold text-reset" href="/notes#2021.07-title">July</a> 2021
+release notes.
 </div>
     <div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
       <!-- Help -->
@@ -1627,8 +2489,8 @@ long-standing permissions bug on Linux and macOS.<br /><br />
 </div>
       </div>
       <div id="c17" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.10-title" href="#2022.10-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>October - 2022</span>
     </a>
@@ -1826,8 +2688,8 @@ non-existent submodule reference.<br />
 </div>
       </div>
       <div id="c16" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.09-title" href="#2022.09-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>September - 2022</span>
     </a>
@@ -1998,8 +2860,8 @@ Shape Keys per object basis.<br />
 </div>
       </div>
       <div id="c15" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.08-title" href="#2022.08-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>August - 2022</span>
     </a>
@@ -2140,8 +3002,8 @@ Parent relative bone constraint.
 </div>
       </div>
       <div id="c14" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.07-title" href="#2022.07-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>July - 2022</span>
     </a>
@@ -2284,8 +3146,8 @@ Initialize scene's object properties.
 </div>
       </div>
       <div id="c13" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.06-title" href="#2022.06-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>June - 2022</span>
     </a>
@@ -2422,8 +3284,8 @@ added Fix compilation when using deinterleaved buffers.
 </div>
       </div>
       <div id="c12" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.05-title" href="#2022.05-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>May - 2022</span>
     </a>
@@ -2585,8 +3447,8 @@ tong updated projects.
 </div>
       </div>
       <div id="c11" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.04-title" href="#2022.04-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>April - 2022</span>
     </a>
@@ -2767,8 +3629,8 @@ yangol-oleksiy added fix script_rigidbody_trigger sample bug.<br />
 </div>
       </div>
       <div id="c10" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.03-title" href="#2022.03-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>March - 2022</span>
     </a>
@@ -2913,8 +3775,8 @@ tong updated the armory tutorial projects to work with the latest SDK.
 </div>
       </div>
       <div id="c9" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.02-title" href="#2022.02-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>February - 2022</span>
     </a>
@@ -3081,8 +3943,8 @@ distance fields.
 </div>
       </div>
       <div id="c8" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2022.01-title" href="#2022.01-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>January - 2022</span>
     </a>
@@ -3230,8 +4092,8 @@ refactored object parenting.
     <!-- Contents - 2021 -->
     <div id="c2021" class="c y2021 tab-content">
       <div id="c7" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.12-title" href="#2021.12-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>December - 2021</span>
     </a>
@@ -3396,8 +4258,8 @@ Implement Shape keys.
 </div>
       </div>
       <div id="c6" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.11-title" href="#2021.11-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>November - 2021</span>
     </a>
@@ -3561,8 +4423,8 @@ world geometry.
 </div>
       </div>
       <div id="c5" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.10-title" href="#2021.10-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>October - 2021</span>
     </a>
@@ -3744,8 +4606,8 @@ macro compatibility.<br /><br />
 </div>
       </div>
       <div id="c4" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.09-title" href="#2021.09-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>September - 2021</span>
     </a>
@@ -3904,8 +4766,8 @@ tong added miscellaneous improvements to the examples.
 </div>
       </div>
       <div id="c3" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.08-title" href="#2021.08-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>August - 2021</span>
     </a>
@@ -3976,8 +4838,24 @@ very awesome <a class="fw-semibold text-reset"
     <div class="lead-dark mb-3" id="2021.08-highlights_d">
 <p class="mb-3">MoritzBrueckner added an immense overhaul of the existing live patching system. The new additional
   features includes support for light color and strength, as well as support for live patching nodes and more!</p>
-<a href="https://youtube.com/watch?v=mxklu7TfwBw"><img class="notes_img" loading="lazy" src="/img/2021-08/2021-08-b.jpg"
-    alt="Armory 3D Live Patch update: logic nodes support and more Screenshot"></a><br /><br />
+<!-- Armory 3D Live Patch update: logic nodes support and more -->
+<div class="youtube_video">
+  <a class="position-relative" href="https://youtube.com/watch?v=mxklu7TfwBw">
+    <svg class="position-absolute top-50 start-50 translate-middle" width="200%" height="200%" version="1.1"
+      viewBox="0 0 68 48">
+      <path
+        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"
+        fill="#f00"></path>
+      <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+    </svg>
+    <img class="notes_img" loading="lazy" src="https://i3.ytimg.com/vi/mxklu7TfwBw/maxresdefault.jpg"
+      alt="Armory 3D Live Patch update: logic nodes support and more" />
+  </a>
+  <iframe id="mxklu7TfwBw" class="d-none" loading="lazy" width="560" height="315" src=""
+    title="Using 1 player controller across many levels in Armory 3D" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
 <p class="mt-0 mb-3">knowledgenude improved the Input map and added nodes to it.</p>
 <img class="ratio ratio-21x9 notes_img" src="/img/2021-08/2021-08-c.jpg" loading="lazy" alt="2021-08-b Screenshot">
 </div>
@@ -4041,8 +4919,8 @@ N/A
 </div>
       </div>
       <div id="c2" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.07-title" href="#2021.07-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>July - 2021</span>
     </a>
@@ -4188,8 +5066,8 @@ api docs generation.
 </div>
       </div>
       <div id="c1" class="c tab-pane" role="tabpanel" tabindex="0">
-        <div class="text-bg-secondary">
-  <div class="d-flex justify-content-center pb-5">
+        <div>
+  <div class=" d-flex justify-content-center pb-5">
     <a class="display-3 fw-bold text-reset text-decoration-none lh-1" id="2021.06-title" href="#2021.06-title">
       <i class="bi bi-link-45deg text-light me-2"></i><span>June - 2021</span>
     </a>
@@ -4333,7 +5211,8 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
 </main>
 <script>
   // jshint esversion: 6
-  const INIT_DATE = "2023.02";
+  const INIT_DATE = "2023.03";
+  const cookies_banner = document.getElementById("cookies_banner");
   // Function - Set Year
   function setYear(y) {
     const years = document.getElementsByClassName("y");
@@ -4373,6 +5252,42 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
     document.getElementById(c).classList.add("show", "active");
     document.getElementById(c).setAttribute("aria-selected", true);
     setAnchor();
+    resetVideoFrames();
+    correctBannerLocation();
+  }
+  function closeBanner() {
+    cookies_banner.classList.add("d-none");
+  }
+  // Function - Set Year / Month / Content / Anchor
+  function init() {
+    if (window.location.hash.substr(1)) {
+      fetch("templates/changelogs/data.json").then(function (r) {
+        return r.text();
+      }).then(function (DATA) {
+        if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
+          for (var i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+            if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
+              // Set Year
+              if (window.location.hash.includes("2023")) setYear("2023");
+              else if (window.location.hash.includes("2022")) setYear("2022");
+              else if (window.location.hash.includes("2021")) setYear("2021");
+              // Set Month
+              if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
+                setMonth("m" + i);
+                setContent("c" + i);
+              }
+            }
+          }
+        } else window.location.href = "/404";
+      }).catch(function (e) {
+        window.location.href = "/404";
+        console.log(e);
+      });
+    } else window.location.href = "/notes#" + INIT_DATE;
+  }
+  // Function - Set URL
+  function updateURL(e) {
+    window.location.hash = e.innerText;
   }
   // Function - Set Anchor
   function setAnchor() {
@@ -4389,45 +5304,31 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
     //   console.log(window.scrollY);
     // }
   }
-  // Function - Set Year / Month / Content / Anchor
-  function init() {
-    if (window.location.hash.substr(1)) {
-      fetch("templates/changelogs/data.json").then(function (r) {
-        return r.text();
-      }).then(function (DATA) {
-        if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
-          for (var i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
-            if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
-              // Set Year
-              if (window.location.hash.includes("2023")) {
-                setYear("2023");
-              } else if (window.location.hash.includes("2022")) {
-                setYear("2022");
-              } else if (window.location.hash.includes("2021")) {
-                setYear("2021");
-              }
-              // Set Month
-              if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
-                setMonth("m" + i);
-                setContent("c" + i);
-              }
-            }
-          }
-        } else {
-          window.location.href = "/404";
-        }
-      }).catch(function (e) {
-        window.location.href = "/404";
-        console.log(e);
-      });
-    } else {
-      window.location.href = "/notes#" + INIT_DATE;
+  function resetVideoFrames() {
+    const all_videos = document.getElementsByTagName("video");
+    for (var ev = 0; ev < all_videos.length; ev++) all_videos[ev].currentTime = 0.0;
+  }
+  function correctBannerLocation() {
+    cookies_banner.style.marginTop = `${-cookies_banner.offsetHeight}px`;
+  }
+  function setPageCookies(b) {
+    const all_youtube_videos = document.getElementsByClassName("youtube_video");
+    if (b) for (var yv = 0; yv < all_youtube_videos.length; yv++) {
+      // Thumbnails
+      all_youtube_videos[yv].children[0].classList.add("d-none");
+      // iFrames
+      all_youtube_videos[yv].children[1].classList.remove("d-none");
+      all_youtube_videos[yv].children[1].src = `https://www.youtube-nocookie.com/embed/${all_youtube_videos[yv].children[1].id}`;
     }
+    closeBanner();
   }
-  // Function - Set URL
-  function updateURL(e) {
-    window.location.hash = e.innerText;
-  }
+  // Cookies Banner - Close Banner
+  window.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeBanner();
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest("#cookies_banner")) closeBanner();
+  });
   window.addEventListener("pageshow", init);
   window.addEventListener("popstate", init);
     // document.addEventListener("scroll", function() {
@@ -4482,17 +5383,9 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
     <div class="row-8 row-lg-3 mb-3 px-0">
       <h1 class="fs-6 text-light">&copy; 2014 - 2023 Lubos Lenco & contributors</h1>
       <ul class="nav me-auto">
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary"
-            href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory License</a>
-        </li>
+        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Privacy Policy</a></li>
         <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary"
-            href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-        <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Armory Privacy Policy</a></li>
-        <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item"><a class="nav-link p-0 link-secondary"
-            href="https://www.blender.org/privacy-policy">Blender Privacy Policy</a></li>
+        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/license">License</a>
       </ul>
     </div>
     <ul class="list-unstyled d-flex">
