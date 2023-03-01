@@ -118,9 +118,13 @@
     #brand>div>div>a,
     .navbar-nav>li>a,
     .nav-pills .nav-link.active,
+    .nav-pills .nav-link.focus,
+    .nav-pills .nav-link.visited,
     .nav-pills .show>.nav-link,
     .nav-pills .nav-link,
     .nav-outline .nav-link.active,
+    .nav-outline .nav-link.focus,
+    .nav-outline .nav-link.visited,
     .nav-outline .show>.nav-link,
     .nav-outline .nav-link {
       -webkit-touch-callout: none;
@@ -170,9 +174,11 @@
     #brand>div>div>a:hover,
     #brand>div>div>a:active,
     #brand>div>div>a:focus,
+    #brand>div>div>a:visited,
     .navbar-nav>li:not(.desktopNavLogo)>a:hover,
     .navbar-nav>li:not(.desktopNavLogo)>a:active,
-    .navbar-nav>li:not(.desktopNavLogo)>a:focus {
+    .navbar-nav>li:not(.desktopNavLogo)>a:focus,
+    .navbar-nav>li:not(.desktopNavLogo)>a:visited {
       box-shadow: 0 -4px 0 var(--bs-danger) inset;
     }
 
@@ -202,9 +208,11 @@
     .text-bg-dark.dropdown-menu li a:hover,
     .text-bg-dark.dropdown-menu li a:active,
     .text-bg-dark.dropdown-menu li a:focus,
+    .text-bg-dark.dropdown-menu li a:visited,
     .text-bg-dark.dropdown-menu li a:hover *,
     .text-bg-dark.dropdown-menu li a:active *,
-    .text-bg-dark.dropdown-menu li a:focus * {
+    .text-bg-dark.dropdown-menu li a:focus *,
+    .text-bg-dark.dropdown-menu li a:visited * {
       color: black !important;
       background-color: var(--bs-danger) !important;
     }
@@ -212,9 +220,11 @@
     .text-bg-thirdly.dropdown-menu li a:hover,
     .text-bg-thirdly.dropdown-menu li a:active,
     .text-bg-thirdly.dropdown-menu li a:focus,
+    .text-bg-thirdly.dropdown-menu li a:visited,
     .text-bg-thirdly.dropdown-menu li a:hover *,
     .text-bg-thirdly.dropdown-menu li a:active *,
-    .text-bg-thirdly.dropdown-menu li a:focus * {
+    .text-bg-thirdly.dropdown-menu li a:focus *,
+    .text-bg-thirdly.dropdown-menu li a:visited * {
       color: white !important;
       background-color: var(--bs-danger) !important;
     }
@@ -298,14 +308,19 @@
 
     .btn-outline-dark:active,
     .btn-outline-dark:focus,
+    .btn-outline-dark:visited,
     .btn-outline-light:active,
-    .btn-outline-light:focus {
+    .btn-outline-light:focus,
+    .btn-outline-light:visited {
       background-color: inherit;
       border-color: inherit;
     }
 
     /* Notes */
-    .notes_img {
+    .notes_img,
+    iframe,
+    object,
+    embed {
       max-width: 100%;
     }
 
@@ -316,8 +331,10 @@
 
     .nav-pills .nav-link.active:hover,
     .nav-pills .nav-link.active:active,
+    .nav-pills .nav-link.active:visited,
     .nav-pills .show>.nav-link:hover,
-    .nav-pills .show>.nav-link:active {
+    .nav-pills .show>.nav-link:active,
+    .nav-pills .show>.nav-link:visited {
       background: transparent;
       outline: 1px solid var(--a3d-danger);
     }
@@ -325,25 +342,30 @@
     /* Pills - Inactive */
     .nav-pills .lead-dark.nav-link.active:hover,
     .nav-pills .lead-dark.nav-link.active:active,
-    .nav-pills .lead-dar.show>.nav-link:hover,
-    .nav-pills .lead-dar.show>.nav-link:active {
+    .nav-pills .lead-dark.nav-link.active:focus,
+    .nav-pills .lead-dark.nav-link.active:visited,
+    .nav-pills .lead-dark.show>.nav-link:hover,
+    .nav-pills .lead-dark.show>.nav-link:active,
+    .nav-pills .lead-dark.show>.nav-link:focus,
+    .nav-pills .lead-dark.show>.nav-link:visited,
+    .nav-pills .lead-dark.nav-link:not(.active):hover,
+    .nav-pills .lead-dark.nav-link:not(.active):active,
+    .nav-pills .lead-dark.nav-link:not(.active):focus,
+    .nav-pills .lead-dark.nav-link:not(.active):visited {
       color: white;
     }
 
     .nav-pills .lead-light.nav-link.active:hover,
     .nav-pills .lead-light.nav-link.active:active,
+    .nav-pills .lead-light.nav-link.active:focus,
+    .nav-pills .lead-light.nav-link.active:visited,
     .nav-pills .lead-light.show>.nav-link:hover,
-    .nav-pills .lead-light.show>.nav-link:active {
-      color: black;
-    }
-
-    .nav-pills .lead-dark.nav-link:not(.active):hover,
-    .nav-pills .lead-dark.nav-link:not(.active):active {
-      color: white;
-    }
-
+    .nav-pills .lead-light.show>.nav-link:active,
+    .nav-pills .lead-light.show>.nav-link:focus,
     .nav-pills .lead-light.nav-link:not(.active):hover,
-    .nav-pills .lead-light.nav-link:not(.active):active {
+    .nav-pills .lead-light.nav-link:not(.active):active,
+    .nav-pills .lead-light.nav-link:not(.active):focus,
+    .nav-pills .lead-light.nav-link:not(.active):visited {
       color: black;
     }
 
@@ -415,7 +437,10 @@
         transform: translate(-50%, 0) !important;
       }
 
-      .notes_img {
+      .notes_img,
+      iframe,
+      object,
+      embed {
         max-width: 50%;
       }
 
@@ -621,7 +646,7 @@
         <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
           <a class="fw-semibold btn btn-danger btn-lg d-flex align-items-center justify-content-center px-5 py-3"
             href="/download">
-            <i class="text-white bi bi-download me-2"></i>Download (2023.02)
+            <i class="text-white bi bi-download me-2"></i>Download (2023.03)
           </a>
           <a class="fw-semibold btn btn-outline-light btn-lg d-flex align-items-center justify-content-center px-5 py-3"
             href="https://armory3d.github.io/armory_examples_browser/">
@@ -665,7 +690,7 @@
           <i class="bi bi-link-45deg text-light me-2"></i>ArmorPaint
         </a>
         <hr />
-        <h2 class="display-6 fw-normal lh-1 mb-3">3D PBR Texture Painting</h2>
+        <h2 class="display-6 fw-normal lh-1 mb-3">3D Painting Software</h2>
         <p class="lead-dark mb-4">
           Powered by Armory engine - ArmorPaint is a stand-alone software designed for physically-based texture
           painting. Drag & drop your 3D models and start painting. Receive instant visual feedback in the viewport as
@@ -694,10 +719,10 @@
           <i class="bi bi-link-45deg text-light me-2"></i>ArmorLab
         </a>
         <hr />
-        <h2 class="display-6 fw-normal lh-1 mb-3">AI-Powered Texture Authoring</h2>
+        <h2 class="display-6 fw-normal lh-1 mb-3">Texture Authoring Software</h2>
         <p class="lead-dark mb-4">
-          Powered by Armory engine - ArmorLab is a stand-alone software designed for AI-powered texture authoring.
-          Generate PBR materials by drag & dropping your photos.
+          ArmorLab is a stand-alone software designed for AI-powered texture authoring. Generate PBR textures using text
+          prompts or by drag & dropping your photos.
         </p>
         <div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
           <a class="fw-semibold btn btn-danger btn-lg align-items-center justify-content-center"
@@ -757,17 +782,9 @@
     <div class="row-8 row-lg-3 mb-3 px-0">
       <h1 class="fs-6 text-light">&copy; 2014 - 2023 Lubos Lenco & contributors</h1>
       <ul class="nav me-auto">
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary"
-            href="https://github.com/armory3d/armory/blob/main/LICENSE.md#the-zliblibpng-license">Armory License</a>
-        </li>
+        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Privacy Policy</a></li>
         <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary"
-            href="https://github.com/armory3d/armory/blob/main/blender/arm/LICENSE.md">Blender License</a></li>
-        <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Armory Privacy Policy</a></li>
-        <li class="text-secondary nav-item me-2">|</li>
-        <li class="nav-item"><a class="nav-link p-0 link-secondary"
-            href="https://www.blender.org/privacy-policy">Blender Privacy Policy</a></li>
+        <li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/license">License</a>
       </ul>
     </div>
     <ul class="list-unstyled d-flex">
