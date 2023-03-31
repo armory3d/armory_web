@@ -7,18 +7,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="Armory | 3D Game Engine" />
-  <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta name="description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender." />
   <meta name="author" content="Lubos Lenco & contributors">
   <meta name="generator" content="Bootstrap 5.2">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://armory3d.org" />
   <meta property="og:title" content="Armory | 3D Game Engine">
-  <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta property="og:description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender." />
   <meta property="og:image" content="https://armory3d.org/git/img1.jpg" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://armory3d.org" />
   <meta property="twitter:title" content="Armory | 3D Game Engine" />
-  <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta property="twitter:description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender. " />
   <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg" />
   <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
@@ -71,7 +74,6 @@
 
     .bg-dark,
     .text-bg-dark {
-      color: white !important;
       background-color: var(--a3d-dark) !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -82,7 +84,6 @@
 
     .bg-light,
     .text-bg-light {
-      color: black !important;
       background-color: white !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -93,7 +94,6 @@
 
     .bg-secondary,
     .text-bg-secondary {
-      color: white !important;
       background-color: var(--a3d-secondary) !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -104,7 +104,6 @@
 
     .bg-thirdly,
     .text-bg-thirdly {
-      color: black !important;
       background-color: var(--a3d-thirdly);
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -208,11 +207,9 @@
     .text-bg-dark.dropdown-menu li a:hover,
     .text-bg-dark.dropdown-menu li a:active,
     .text-bg-dark.dropdown-menu li a:focus,
-    .text-bg-dark.dropdown-menu li a:visited,
     .text-bg-dark.dropdown-menu li a:hover *,
     .text-bg-dark.dropdown-menu li a:active *,
-    .text-bg-dark.dropdown-menu li a:focus *,
-    .text-bg-dark.dropdown-menu li a:visited * {
+    .text-bg-dark.dropdown-menu li a:focus * {
       color: black !important;
       background-color: var(--bs-danger) !important;
     }
@@ -220,13 +217,33 @@
     .text-bg-thirdly.dropdown-menu li a:hover,
     .text-bg-thirdly.dropdown-menu li a:active,
     .text-bg-thirdly.dropdown-menu li a:focus,
-    .text-bg-thirdly.dropdown-menu li a:visited,
     .text-bg-thirdly.dropdown-menu li a:hover *,
     .text-bg-thirdly.dropdown-menu li a:active *,
-    .text-bg-thirdly.dropdown-menu li a:focus *,
-    .text-bg-thirdly.dropdown-menu li a:visited * {
+    .text-bg-thirdly.dropdown-menu li a:focus * {
       color: white !important;
       background-color: var(--bs-danger) !important;
+    }
+
+    /* Heading Anchors */
+    .heading_anchor {
+      text-decoration: none;
+      text-underline-offset: 0.5rem;
+    }
+
+    .heading_anchor:hover {
+      text-decoration: underline;
+    }
+
+    .heading_anchor:not(.heading_anchor:hover) i {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.1s linear;
+    }
+
+    .heading_anchor:hover i {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.1s linear;
     }
 
     /* Homepage Vignette */
@@ -418,17 +435,24 @@
     }
 
     /* Custom Responsiveness */
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       #brand {
         height: 64px;
       }
 
-      .dropdown:hover .dropdown-menu {
+      .dropdown .dropdown-menu {
         display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
       }
-    }
 
-    @media (min-width: 1336px) {
+      .dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.2s linear;
+      }
+
       .dropdown-menu {
         right: auto !important;
         left: 50% !important;

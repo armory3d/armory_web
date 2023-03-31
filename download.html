@@ -7,18 +7,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="Armory | 3D Game Engine" />
-  <meta name="description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta name="description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender." />
   <meta name="author" content="Lubos Lenco & contributors">
   <meta name="generator" content="Bootstrap 5.2">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://armory3d.org" />
   <meta property="og:title" content="Armory | 3D Game Engine">
-  <meta property="og:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta property="og:description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender." />
   <meta property="og:image" content="https://armory3d.org/git/img1.jpg" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://armory3d.org" />
   <meta property="twitter:title" content="Armory | 3D Game Engine" />
-  <meta property="twitter:description" content="Armory is an open-source engine for creating 3D-enabled software." />
+  <meta property="twitter:description"
+    content="A powerful, cross-platform, free & open source game engine, integrated in Blender. " />
   <meta property="twitter:image" content="https://armory3d.org/git/img1.jpg" />
   <!-- Favicons -->
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
@@ -71,7 +74,6 @@
 
     .bg-dark,
     .text-bg-dark {
-      color: white !important;
       background-color: var(--a3d-dark) !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -82,7 +84,6 @@
 
     .bg-light,
     .text-bg-light {
-      color: black !important;
       background-color: white !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -93,7 +94,6 @@
 
     .bg-secondary,
     .text-bg-secondary {
-      color: white !important;
       background-color: var(--a3d-secondary) !important;
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -104,7 +104,6 @@
 
     .bg-thirdly,
     .text-bg-thirdly {
-      color: black !important;
       background-color: var(--a3d-thirdly);
       -webkit-transition: background-color var(--transition-duration) var(--transition-timing);
       -moz-transition: background-color var(--transition-duration) var(--transition-timing);
@@ -208,11 +207,9 @@
     .text-bg-dark.dropdown-menu li a:hover,
     .text-bg-dark.dropdown-menu li a:active,
     .text-bg-dark.dropdown-menu li a:focus,
-    .text-bg-dark.dropdown-menu li a:visited,
     .text-bg-dark.dropdown-menu li a:hover *,
     .text-bg-dark.dropdown-menu li a:active *,
-    .text-bg-dark.dropdown-menu li a:focus *,
-    .text-bg-dark.dropdown-menu li a:visited * {
+    .text-bg-dark.dropdown-menu li a:focus * {
       color: black !important;
       background-color: var(--bs-danger) !important;
     }
@@ -220,13 +217,33 @@
     .text-bg-thirdly.dropdown-menu li a:hover,
     .text-bg-thirdly.dropdown-menu li a:active,
     .text-bg-thirdly.dropdown-menu li a:focus,
-    .text-bg-thirdly.dropdown-menu li a:visited,
     .text-bg-thirdly.dropdown-menu li a:hover *,
     .text-bg-thirdly.dropdown-menu li a:active *,
-    .text-bg-thirdly.dropdown-menu li a:focus *,
-    .text-bg-thirdly.dropdown-menu li a:visited * {
+    .text-bg-thirdly.dropdown-menu li a:focus * {
       color: white !important;
       background-color: var(--bs-danger) !important;
+    }
+
+    /* Heading Anchors */
+    .heading_anchor {
+      text-decoration: none;
+      text-underline-offset: 0.5rem;
+    }
+
+    .heading_anchor:hover {
+      text-decoration: underline;
+    }
+
+    .heading_anchor:not(.heading_anchor:hover) i {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.1s linear;
+    }
+
+    .heading_anchor:hover i {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.1s linear;
     }
 
     /* Homepage Vignette */
@@ -418,17 +435,24 @@
     }
 
     /* Custom Responsiveness */
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       #brand {
         height: 64px;
       }
 
-      .dropdown:hover .dropdown-menu {
+      .dropdown .dropdown-menu {
         display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.2s linear;
       }
-    }
 
-    @media (min-width: 1336px) {
+      .dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.2s linear;
+      }
+
       .dropdown-menu {
         right: auto !important;
         left: 50% !important;
@@ -633,12 +657,18 @@
   <!-- Releases -->
   <div id="releases" class="position-relative row g-0">
     <div class="col-lg-6 mb-lg-0">
-      <img class="ratio ratio-21x9 h-100" src="/img/download/download-releases.jpg" loading="lazy"
+      <img class="ratio ratio-21x9" src="/img/download/download-releases.jpg" loading="lazy"
         alt="Armory Releases Example" />
+      <div class="text-bg-dark d-grid gap-2 d-lg-flex justify-content-center">
+        <p>
+          <sub>(<span class="fw-bold text-light">Credits:</span> render - luboslenco <a class="fw-semibold text-reset"
+              href="https://opensource.org/license/zlib-license-php">[zlib]</a>.)</sub>
+        </p>
+      </div>
     </div>
     <div class="col-lg-6 p-4">
-      <a class="display-6 fw-semibold text-reset text-decoration-none lh-1 mb-3" href="#releases">
-        <i class="bi bi-link-45deg text-light me-2"></i>Releases
+      <a class="heading_anchor display-6 fw-semibold text-reset lh-1 mb-3" href="#releases">
+        Releases<i class="bi bi-link-45deg text-light ms-2"></i>
       </a>
       <hr />
       <h2 class="display-6 fw-normal lh-1 mb-3">Get Armored</h2>
@@ -662,8 +692,8 @@
   <!-- Contribute -->
   <div id="contribute" class="position-relative row g-0">
     <div class="col-lg-6 p-4">
-      <a class="display-6 fw-semibold text-reset text-decoration-none lh-1 mb-3" href="#contribute">
-        <i class="bi bi-link-45deg text-light me-2"></i>Contribute
+      <a class="heading_anchor d-block display-6 fw-semibold text-reset lh-1 mb-3" href="#contribute">
+        Contribute<i class="bi bi-link-45deg text-light ms-2"></i>
       </a>
       <hr />
       <h2 class="display-6 fw-normal lh-1 mb-3">Armory Development</h2>
@@ -687,18 +717,30 @@
         </a>
       </div>
     </div>
-    <div class="col-lg-6 mb-lg-0">
-      <img class="ratio ratio-21x9 h-100" src="/img/download/download-fund.jpg" alt="Download Example" />
+    <div class="col-lg-6">
+      <img class="ratio ratio-21x9" src="/img/download/download-fund.jpg" alt="Download Example" />
+      <div class="text-bg-dark d-grid gap-2 d-lg-flex justify-content-center">
+        <p>
+          <sub>(<span class="fw-bold text-light">Credits:</span> render - luboslenco <a class="fw-semibold text-reset"
+              href="https://opensource.org/license/zlib-license-php">[zlib]</a>.)</sub>
+        </p>
+      </div>
     </div>
   </div>
   <!-- Donate -->
   <div id="donate" class="position-relative row g-0">
-    <div class="col-lg-6 mb-lg-0">
-      <img class="ratio ratio-21x9 h-100" src="/img/download/download-contribute.jpg" alt="Donate Example" />
+    <div class="col-lg-6">
+      <img class="ratio ratio-21x9" src="/img/download/download-contribute.jpg" alt="Donate Example" />
+      <div class="text-bg-dark d-grid gap-2 d-lg-flex justify-content-center">
+        <p>
+          <sub>(<span class="fw-bold text-light">Credits:</span> render - luboslenco <a class="fw-semibold text-reset"
+              href="https://opensource.org/license/zlib-license-php">[zlib]</a>.)</sub>
+        </p>
+      </div>
     </div>
     <div class="col-lg-6 p-4">
-      <a class="display-6 fw-semibold text-reset text-decoration-none lh-1 mb-3" href="#donate">
-        <i class="bi bi-link-45deg text-light me-2"></i>Donate
+      <a class="heading_anchor d-block display-6 fw-semibold text-reset lh-1 mb-3" href="#donate">
+        Donate<i class="bi bi-link-45deg text-light ms-2"></i>
       </a>
       <hr />
       <h2 class="display-6 fw-normal lh-1 mb-3">Maintenance Fund</h2>
@@ -729,7 +771,7 @@
           <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary"
               href="https://github.com/armory3d/armory">GitHub</a></li>
           <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary"
-              href="https://github.com/armory3d/armory/issues">Tracker</a></li>
+              href="https://github.com/armory3d/armory/issues">Issue Tracker</a></li>
           <li class="nav-item mb-2"><a class="nav-link p-0 link-secondary"
               href="https://github.com/armory3d/armory/wiki/contribute">Contribute</a></li>
         </ul>
@@ -788,7 +830,7 @@
           </svg>
         </a>
       </li>
-      <!-- Github -->
+      <!-- GitHub -->
       <li style="margin-left: 0.125rem;">
         <a href="https://github.com/armory3d/armory">
           <i class="bi bi-github text-light" style="font-size: 1.5rem;"></i>
@@ -886,6 +928,10 @@
         if (e[id].classList.contains("text-dark")) e[id].classList.replace("text-dark", "text-light");
         // text-white-50
         else if (e[id].classList.contains("text-white-50")) e[id].classList.replace("text-white-50", "text-muted");
+        // bg-light
+        if (e[id].classList.contains("bg-light")) e[id].classList.replace("bg-light", "bg-secondary");
+        // bg-thirdly
+        else if (e[id].classList.contains("bg-thirdly")) e[id].classList.replace("bg-thirdly", "bg-dark");
         // navbar-light
         if (e[id].classList.contains("navbar-light")) e[id].classList.replace("navbar-light", "navbar-dark");
         // lead-light
@@ -912,6 +958,10 @@
         if (e[il].classList.contains("text-light")) e[il].classList.replace("text-light", "text-dark");
         // text-muted
         else if (e[il].classList.contains("text-muted")) e[il].classList.replace("text-muted", "text-white-50");
+        // bg-dark
+        if (e[il].classList.contains("bg-dark")) e[il].classList.replace("bg-dark", "bg-thirdly");
+        // bg-secondary
+        else if (e[il].classList.contains("bg-secondary")) e[il].classList.replace("bg-secondary", "bg-light");
         // navbar-dark
         if (e[il].classList.contains("navbar-dark")) e[il].classList.replace("navbar-dark", "navbar-light");
         // lead-dark

@@ -1,4 +1,18 @@
 {
+	"23": {
+		"date": "2023.04",
+		"splash": "2023-04-a.mp4",
+		"title": "April - 2023",
+		"hash-title": "2023.04-title",
+		"hash-info": "2023.04-info",
+		"hash-highlights": "2023.04-highlights",
+		"hash-new": "2023.04-new",
+		"hash-bug-fixes": "2023.04-bug-fixes",
+		"hash-other-changes": "2023.04-other-changes",
+		"hash-download": "2023.04-download",
+		"hash-manual": "2023.04-manual",
+		"hash-help": "2023.04-help"
+	},
 	"22": {
 		"date": "2023.03",
 		"splash": "2023-03-a.mp4",
