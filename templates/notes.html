@@ -48,6 +48,9 @@
       <!-- Months - 2023 -->
       <div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
         <ul class="nav nav-pills nav-justified">
+          <li class="nav-item" role="presentation"><a id="m23" class="m lead-light nav-link" href="#2023.04"
+              onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c23" type="button" role="tab"
+              aria-controls="c23" aria-selected="false">2023.04</a></li>
           <li class="nav-item" role="presentation"><a id="m22" class="m lead-light nav-link" href="#2023.03"
               onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c22" type="button" role="tab"
               aria-controls="c22" aria-selected="false">2023.03</a></li>
@@ -132,6 +135,11 @@
   <div class="tab-content">
     <!-- Contents - 2023 -->
     <div id="c2023" class="c y2023 tab-content">
+      <div id="c23" class="c tab-pane" role="tabpanel" tabindex="0">
+        %c23%
+      </div>
+    </div>
+    <div id="c2023" class="c y2023 tab-content">
       <div id="c22" class="c tab-pane" role="tabpanel" tabindex="0">
         %c22%
       </div>
@@ -213,7 +221,7 @@
 </main>
 <script>
   // jshint esversion: 6
-  const INIT_DATE = "2023.03";
+  const INIT_DATE = "2023.04";
   const cookies_banner = document.getElementById("cookies_banner");
   // Function - Set Year
   function setYear(y) {
