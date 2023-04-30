@@ -6,7 +6,7 @@ const PATH = require("path"),
 	URL = require("url"),
 	COMPILE_NOTES = true,
 	PORT = 80,
-	WEBPAGES = ["/404", "/notes", "/news", "/features", "/faq", "/community", "/download", "/privacy", "/license"],
+	WEBPAGES = ["/404", "/privacy", "/license", "/notes", "/news", "/features", "/faq", "/community", "/download", "/donate"],
 	MIME_TYPES = {
 		"ico": "image/vnd.microsoft.icon",
 		"woff2": "font/woff2",
@@ -47,10 +47,10 @@ function compileHTML() {
 								// Set - Source (Image)
 								if (PATH.extname(JSON.parse(DATA)[i].splash) === ".jpg") {
 									var content3 = content2.replace('id="video" class="', 'id="video" class="d-none ');
-									var content4 = content3.replace('src="/img/notes/notes-placeholder.png" alt="Cover Image"', `src="/img/${JSON.parse(DATA)[i].splash.split("-").slice(0, 2).join("-")}/${JSON.parse(DATA)[i].splash}" alt="Cover Image"`);
+									var content4 = content3.replace('src="/img/notes/notes-placeholder.png"', `src="/img/${JSON.parse(DATA)[i].splash.split("-").slice(0, 2).join("-")}/${JSON.parse(DATA)[i].splash}"`);
 								} else if (PATH.extname(JSON.parse(DATA)[i].splash) === ".mp4") {
 									var content3 = content2.replace('id="image" class="', 'id="image" class="d-none ');
-									var content4 = content3.replace('src="/img/notes/notes-placeholder.mp4" type="video/mp4"', `src="/img/${JSON.parse(DATA)[i].splash.split("-").slice(0, 2).join("-")}/${JSON.parse(DATA)[i].splash}" type="video/mp4"`);
+									var content4 = content3.replace('src="/img/notes/notes-placeholder.mp4"', `src="/img/${JSON.parse(DATA)[i].splash.split("-").slice(0, 2).join("-")}/${JSON.parse(DATA)[i].splash}"`);
 								}
 								// Set - Anchors + Link (Title + New + Highlights + Bug-Fixes + Other-Changes)
 								let content5 = content4.replace('id="title" href="#title"', `id="${JSON.parse(DATA)[i].date}-title" href="#${JSON.parse(DATA)[i].date}-title"`);
