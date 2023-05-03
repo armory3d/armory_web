@@ -4,8 +4,12 @@
 	"editor.formatOnPaste": true,
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
-	"[html]": {
-		"editor.tabSize": 2,
-		"editor.insertSpaces": true,
+	"[css]": {
+		"editor.formatOnSave": false,
+		"editor.formatOnPaste": false,
+	},
+	"[javascript]": {
+		"editor.formatOnSave": false,
+		"editor.formatOnPaste": false,
 	},
 }
