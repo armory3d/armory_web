@@ -553,23 +553,8 @@
 			<div class="collapse navbar-collapse" id="navLinks">
 				<ul class="navbar-nav me-auto border-light border-top" style="--bs-border-opacity: 0.125">
 					<!-- News -->
-					<li class="nav-item dropdown">
-						<a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							News<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
-						</a>
-						<ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
-							<li>
-								<a class="text-light dropdown-item" href="/notes">
-									<i class="text-light bi bi-megaphone me-2"></i>Release Notes
-								</a>
-							</li>
-							<li>
-								<a class="text-light dropdown-item" href="/news">
-									<i class="text-light bi bi-twitter me-2"></i>Armory Twitter
-								</a>
-							</li>
-						</ul>
+					<li class="nav-item">
+						<a class="text-light nav-link" href="/notes">Release Notes</a>
 					</li>
 					<!-- Features -->
 					<li class="nav-item">
@@ -676,7 +661,7 @@
 	</nav>
 <!-- $main.html -->
 <main class="text-bg-secondary">
-	<div id="cookies_banner" class="text-center notes_img container position-sticky top-50 start-0 translate-middle-y"
+	<div id="cookiesBanner" class="text-center notes_img container position-sticky top-50 start-0 translate-middle-y"
 		style="z-index: 999">
 		<div class="mb-4">
 			<div class="text-bg-dark container-fluid ms-0 px-5 py-3">
@@ -724,6 +709,9 @@
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m25" class="m lead-light nav-link" href="#2023.06"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c25" type="button"
+							role="tab" aria-controls="c25" aria-selected="false">2023.06</a></li>
 					<li class="nav-item" role="presentation"><a id="m24" class="m lead-light nav-link" href="#2023.05"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c24" type="button"
 							role="tab" aria-controls="c24" aria-selected="false">2023.05</a></li>
@@ -813,6 +801,164 @@
 	<!-- CONTENTS -->
 	<div class="tab-content">
 		<!-- Contents - 2023 -->
+		<div id="c2023" class="c y2023 tab-content">
+			<div id="c25" class="c tab-pane" role="tabpanel" tabindex="0">
+				<div>
+	<div class="d-flex justify-content-center pb-5">
+		<a class="heading_anchor d-block text-center display-3 fw-bold text-reset lh-1
+    w-100" id="2023.06-title" href="#2023.06-title">
+			<span>June - 2023</span><i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+	</div>
+	<div id="image" class="d-flex justify-content-center">
+		<img class="ratio ratio-21x9 notes_img" loading="lazy" src="/img/2023-06/2023-06-a.jpg"
+			alt="Cover Image" />
+	</div>
+	<div id="video" class="d-none d-flex justify-content-center">
+		<video class="ratio ratio-21x9 notes_img" playsinline autoplay muted loop>
+			<source src="/img/notes/notes-placeholder.mp4" type="video/mp4">
+			This browser doesn't support MP4. Try using a different browser.
+		</video>
+	</div>
+	<div class="text-center lead-dark px-5 py-3" id="2023.06-info">
+June is here with <span class="display-6 fw-semibold text-danger align-middle">8</span> new pull requests from some
+great <a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> -
+great work!
+</div>
+	<div class="container p-3 pt-0 notes_container">
+		<div class="card-group text-center mx-auto" style="max-width: 54rem">
+			<!-- Download -->
+			<div id="2023.06-download" class="text-bg-dark rounded card m-1">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2023.06-download">
+						<i class="bi bi-download text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Get Armored.</h1>
+					<p class="card-text lead-dark">Start Armory3D today!</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#releases">
+							<i class="bi bi-link-45deg text-white me-2"></i>Download
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- Manual -->
+			<div id="2023.06-manual" class="text-bg-dark rounded card m-1">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2023.06-manual">
+						<i class="bi bi-book text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Need info?</h1>
+					<p class="card-text lead-dark">Learn more at the Armory3D wiki.</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="https://github.com/armory3d/armory/wiki">
+							<i class="bi bi-link-45deg text-white me-2"></i>Manual
+						</a>
+					</div>
+				</div>
+			</div>
+		</div><br />
+		<!-- HIGHLIGHTS -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.06-highlights" href="#2023.06-highlights">
+			HIGHLIGHTS<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-3" id="2023.06-highlights_d">
+<img class="notes_img" loading="lazy" src="/img/2023-01/2023-01-i.jpg" alt="2023.01-i Screenshot"><br /><br />
+<p class="fw-semibold text-light">List of current bounties:</p>
+<ul>
+	<li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset"
+			href="https://github.com/armory3d/armory/issues/2609">https://github.com/armory3d/armory/issues/2609</a>
+	</li>
+	<li>Dynamic Diffuse Global Illumination (DDGI): <a class="fw-semibold text-reset"
+			href="https://github.com/armory3d/armory/issues/2610">https://github.com/armory3d/armory/issues/2610</a>
+	</li>
+	<li>Stochastic Screen-Space Reflections: <a class="fw-semibold text-reset"
+			href="https://github.com/armory3d/armory/issues/2611">https://github.com/armory3d/armory/issues/2611</a>
+	</li>
+	<li>Box Projected Cube Environment Mapping (BPCEM): <a class="fw-semibold text-reset"
+			href="https://github.com/armory3d/armory/issues/2613">https://github.com/armory3d/armory/issues/2613</a>
+	</li>
+</ul>
+</div>
+		<!-- NEW -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.06-new" href="#2023.06-new">
+			NEW<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2023.06-new_d">
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2881">#2881</a> - MoritzBrueckner added
+Implement Clamp option for Map Range node.<br />
+</div>
+		<!-- BUG FIXES -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.06-bug-fixes" href="#2023.06-bug-fixes">
+			BUG FIXES<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2023.06-bug_fixes_d">
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2880">#2880</a> - MoritzBrueckner added
+Fix potential division by zero in GGX normal distribution function.<br />
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2876">#2876</a> - rpaladin added
+Fix new RP items.<br />
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2874">#2874</a> - MoritzBrueckner added
+Fix canvas deprecation warnings.<br />
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2873">#2873</a> - MoritzBrueckner added
+Fix runtime exception when non-camera object is used as scene camera.<br />
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/pull/2871">#2871</a> - rpaladin added
+Fix get letterbox size return value.<br />
+</div>
+		<!-- OTHER CHANGES -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.06-other-changes"
+			href="#2023.06-other-changes">
+			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2023.06-other_changes_d">
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/iron/pull/191">Iron: #191</a> - QuantumCoderQC added
+Add inverse function to Quat.<br />
+<a class="fw-semibold text-reset" href="https://github.com/armory3d/zui/pull/164">#164</a> - MoritzBrueckner added
+Fix deprecation warnings for kha.graphics2.GraphicsExtension.<br />
+</div>
+		<div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
+			<!-- Help -->
+			<div id="2023.06-help" class="text-bg-dark rounded card">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2023.06-help">
+						<i class="bi bi-gift text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Want to help?</h1>
+					<p class="card-text lead-dark">Here's a few ways you can.</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#contribute">
+							<i class="bi bi-link-45deg text-white me-2"></i>Contribute
+						</a>
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#donate">
+							<i class="bi bi-link-45deg text-white me-2"></i>Donate
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
 		<div id="c2023" class="c y2023 tab-content">
 			<div id="c24" class="c tab-pane" role="tabpanel" tabindex="0">
 				<div>
@@ -1093,8 +1239,8 @@ Declare type for HL static targets.<br />
 Fix shader generation for vertex displacement with procedural textures.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.05-other-changes"
+			href="#2023.05-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -1364,8 +1510,8 @@ export particle if instance isn't exported.<br />
 canvas text node directory.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.04-other-changes"
+			href="#2023.04-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -1756,8 +1902,8 @@ ArrayContains and ArrayIndex Nodes.<br />
 realtime postprocessing.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.03-other-changes"
+			href="#2023.03-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -2083,8 +2229,8 @@ don't delete actions if baking was not successful.<br />
 StringReplace: fix output to string.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.02-other-changes"
+			href="#2023.02-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -2428,8 +2574,8 @@ output cleanup.<br />
 node: fix removing output sockets.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2023.01-other-changes"
+			href="#2023.01-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -2770,8 +2916,8 @@ GetDateTimeNode.<br />
 fix exception when marking object as asset.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.12-other-changes"
+			href="#2022.12-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3127,8 +3273,8 @@ color mix.<br />
 fix building for Krom on Windows.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.11-other-changes"
+			href="#2022.11-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3336,8 +3482,8 @@ fix set parent node.<br />
 fix arm material parameter export.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.10-other-changes"
+			href="#2022.10-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3506,8 +3652,8 @@ fix initialization of tween and group nodes and ensure correct file version numb
 tree variables: fix missing synchronization when adding getters/setters.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.09-other-changes"
+			href="#2022.09-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3660,8 +3806,8 @@ fix for RotationNode.set(): get rid of invalid input length check.<br />
 firstPersonController.hx anti chess fool cheat.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.08-other-changes"
+			href="#2022.08-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3809,8 +3955,8 @@ align RGB to grayscale luminance with Blender.<br />
 fix node tree caching.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.07-other-changes"
+			href="#2022.07-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -3951,8 +4097,8 @@ fix and improve loading of libraries.<br />
 fix exporting node sockets when using live patch or unconnected reroutes.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.06-other-changes"
+			href="#2022.06-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4114,8 +4260,8 @@ ffmpeg if not set.<br />
 fix printing WASM errors when using ammo.js
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.05-other-changes"
+			href="#2022.05-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4296,8 +4442,8 @@ fix redefinition in volumetric light shader when using both sun and single spot 
 prevent exception when exporting a world with an empty image texture node.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.04-other-changes"
+			href="#2022.04-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4456,8 +4602,8 @@ prevent exception when exporting a world with an empty image texture node.<br />
 don't count not exported lights when setting shader defines.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.03-other-changes"
+			href="#2022.03-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4630,8 +4776,8 @@ Started - fix node input.<br />
 fix SetRotationNode: don't change rotation of previous objects.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.02-other-changes"
+			href="#2022.02-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4776,8 +4922,8 @@ replace deprecated addChild()/removeChild() functions with setParent().
 onCanvasElementNode: fix elements values for scaled canvas.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2022.01-other-changes"
+			href="#2022.01-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -4951,8 +5097,8 @@ correct depricated (and now removed) import.<br />
 fix cpu_count() for incomplete PATH var on Windows and improve error handling.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.12-other-changes"
+			href="#2021.12-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5116,8 +5262,8 @@ fix deprecated nodes and improve deprecation handling.<br />
 fix CPU count parameter for cmft.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.11-other-changes"
+			href="#2021.11-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5304,8 +5450,8 @@ Haxe warnings related to type check.<br />
 some postprocess uniform warnings.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.10-other-changes"
+			href="#2021.10-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5470,8 +5616,8 @@ Logic.hx that caused failed CI compilation.<br />
 a canvas fix when using non-default fonts.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.09-other-changes"
+			href="#2021.09-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5634,8 +5780,8 @@ thread polling being stopped after callback exception.<br />
 filepath error if project is on Windows drive root.<br />
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.08-other-changes"
+			href="#2021.08-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5780,8 +5926,8 @@ GetBoneFkIkOnly node & add new input nodes.<br />
 rendering multiple movie textures.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.07-other-changes"
+			href="#2021.07-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5929,8 +6075,8 @@ fix double-export of linked objects.<br />
 fix get object by name node.
 </div>
 		<!-- OTHER CHANGES -->
-		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="other-changes"
-			href="#other-changes">
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2021.06-other-changes"
+			href="#2021.06-other-changes">
 			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
 		</a>
 		<hr />
@@ -5972,86 +6118,96 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
 </main>
 <script>
 	// jshint esversion: 6
-	const INIT_DATE = "2023.05";
-	const cookies_banner = document.getElementById("cookies_banner");
+	const initDate = "2023.06";
+	const cookiesBanner = document.getElementById("cookiesBanner");
+
 	// Function - Set Year
-	function setYear(y) {
+	const setYear = y => {
 		const years = document.getElementsByClassName("y");
 		const years_children = document.getElementsByClassName("y" + y);
+
 		// Reset
-		for (var yr = 0; yr < years.length; yr++) {
-			years[yr].classList.remove("show", "active");
-			years[yr].setAttribute("aria-selected", false);
-		}
+		Array.from(years).forEach(yr => {
+			yr.classList.remove("show", "active");
+			yr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
-		for (var ya = 0; ya < years_children.length; ya++) {
-			years_children[ya].classList.add("show", "active");
-			years_children[ya].setAttribute("aria-selected", true);
-		}
-	}
+		Array.from(years_children).forEach(ya => {
+			ya.classList.add("show", "active");
+			ya.setAttribute("aria-selected", true);
+		});
+	};
+
 	// Function - Set Month
-	function setMonth(m) {
+	const setMonth = m => {
 		const all_months = document.getElementsByClassName("m");
+
 		// Reset
-		for (var mr = 0; mr < all_months.length; mr++) {
-			all_months[mr].classList.remove("show", "active");
-			all_months[mr].setAttribute("aria-selected", false);
-		}
+		Array.from(all_months).forEach(mr => {
+			mr.classList.remove("show", "active");
+			mr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
 		document.getElementById(m).classList.add("show", "active");
 		document.getElementById(m).setAttribute("aria-selected", true);
-	}
+	};
+
 	// Function - Set Content
-	function setContent(c) {
+	const setContent = c => {
 		const all_contents = document.getElementsByClassName("c");
+
 		// Reset
-		for (var cr = 0; cr < all_contents.length; cr++) {
-			all_contents[cr].classList.remove("show", "active");
-			all_contents[cr].setAttribute("aria-selected", false);
-		}
+		Array.from(all_contents).forEach(cr => {
+			cr.classList.remove("show", "active");
+			cr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
 		document.getElementById(c).classList.add("show", "active");
 		document.getElementById(c).setAttribute("aria-selected", true);
+
 		setAnchor();
 		resetVideoFrames();
 		correctBannerLocation();
-	}
-	function closeBanner() {
-		cookies_banner.classList.add("d-none");
-	}
+	};
+
+	closeBanner = () => cookiesBanner.classList.add("d-none");
+
 	// Function - Set Year / Month / Content / Anchor
-	function init() {
+	const init = () => {
 		if (window.location.hash.substr(1)) {
-			fetch("templates/changelogs/data.json").then(function (r) {
-				return r.text();
-			}).then(function (DATA) {
-				if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
-					for (var i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
-						if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
-							// Set Year
-							if (window.location.hash.includes("2023")) setYear("2023");
-							else if (window.location.hash.includes("2022")) setYear("2022");
-							else if (window.location.hash.includes("2021")) setYear("2021");
-							// Set Month
-							if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
-								setMonth("m" + i);
-								setContent("c" + i);
+			fetch("templates/changelogs/data.json")
+				.then((r) => r.ok ? r.text() : (() => { throw new Error(r.status); })())
+				.then(DATA => {
+					if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
+						for (let i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+							if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
+								// Set Year
+								window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
+
+								// Set Month
+								if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
+									setMonth("m" + i);
+									setContent("c" + i);
+								}
 							}
 						}
-					}
-				} else window.location.href = "/404";
-			}).catch(function (e) {
-				window.location.href = "/404";
-				console.log(e);
-			});
-		} else window.location.href = "/notes#" + INIT_DATE;
-	}
+					} else window.location.href = "/404";
+				})
+				.catch(e => {
+					window.location.href = "/404";
+					console.log(e);
+				});
+		} else window.location.href = "/notes#" + initDate;
+	};
+
 	// Function - Set URL
-	function updateURL(e) {
-		window.location.hash = e.innerText;
-	}
+	const updateURL = e => window.location.hash = e.innerText;
+
 	// Function - Set Anchor
-	function setAnchor() {
+	const setAnchor = () => {
 		try {
 			window.location.hash = window.location.hash;
 		} catch (e) {
@@ -6064,37 +6220,43 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
 		//   window.scrollTo(0, scrollpos);
 		//   console.log(window.scrollY);
 		// }
-	}
-	function resetVideoFrames() {
+	};
+
+	const resetVideoFrames = () => {
 		const all_videos = document.getElementsByTagName("video");
-		for (var ev = 0; ev < all_videos.length; ev++) all_videos[ev].currentTime = 0.0;
-	}
-	function correctBannerLocation() {
-		cookies_banner.style.marginTop = `${-cookies_banner.offsetHeight}px`;
-	}
-	function setPageCookies(b) {
+
+		Array.from(all_videos).forEach(ev => ev.currentTime = 0.0);
+	};
+
+	const correctBannerLocation = () => cookiesBanner.style.marginTop = `${-cookiesBanner.offsetHeight}px`;
+
+	const setPageCookies = b => {
 		const all_youtube_videos = document.getElementsByClassName("youtube_video");
-		if (b) for (var yv = 0; yv < all_youtube_videos.length; yv++) {
-			// Thumbnails
-			all_youtube_videos[yv].children[0].classList.add("d-none");
-			// iFrames
-			all_youtube_videos[yv].children[1].classList.remove("d-none");
-			all_youtube_videos[yv].children[1].src = `https://www.youtube-nocookie.com/embed/${all_youtube_videos[yv].children[1].id}`;
+
+		if (b) {
+			Array.from(all_youtube_videos).forEach(yv => {
+				let c2 = yv.children[1];
+
+				// Thumbnails
+				yv.children[0].classList.add("d-none");
+				// iFrames
+				c2.classList.remove("d-none");
+				c2.src = `https://www.youtube-nocookie.com/embed/${c2.id}`;
+			});
 		}
+
 		closeBanner();
-	}
+	};
+
 	// Cookies Banner - Close Banner
-	window.addEventListener("keydown", function (e) {
-		if (e.key === "Escape") closeBanner();
-	});
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest("#cookies_banner")) closeBanner();
-	});
+	document.addEventListener("keydown", e => e.key === "Escape" ? closeBanner() : {});
+	document.addEventListener("click", e => !e.target.closest("#cookiesBanner") ? closeBanner() : {});
+
+	// Init
 	window.addEventListener("pageshow", init);
 	window.addEventListener("popstate", init);
-    // document.addEventListener("scroll", function() {
-    //   sessionStorage.setItem("scrollpos", window.scrollY);
-    // });
+
+	// document.addEventListener("scroll", () => sessionStorage.setItem("scrollpos", window.scrollY));
 </script>
 <!-- footer.html -->
 <footer class="text-bg-dark" style="padding-bottom: 50vh;">
@@ -6229,142 +6391,154 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.
 	// jshint esversion: 6
 	// Navbar Scroll Transition
 	// const nav = document.getElementById("brand");
-	// window.addEventListener("scroll", function () {
-	//   if (window.pageYOffset >= 64) {
-	//     if (nav.classList.contains("navbar-dark")) {
-	//       nav.classList.add("text-bg-dark");
-	//       nav.classList.remove("text-bg-light");
-	//     } else if (nav.classList.contains("navbar-light")) {
-	//       nav.classList.add("text-bg-light");
-	//       nav.classList.remove("text-bg-dark");
-	//     }
-	//   } else if (window.pageYOffset < 256) {
-	//     nav.classList.remove("text-bg-dark");
-	//     nav.classList.remove("text-bg-light");
-	//   }
+	//
+	// window.addEventListener("scroll", () => {
+	// 	if (window.pageYOffset >= 64) {
+	// 		if (nav.classList.contains("navbar-dark")) {
+	// 			nav.classList.add("text-bg-dark");
+	// 			nav.classList.remove("text-bg-light");
+	// 		} else if (nav.classList.contains("navbar-light")) {
+	// 			nav.classList.add("text-bg-light");
+	// 			nav.classList.remove("text-bg-dark");
+	// 		}
+	// 	} else if (window.pageYOffset < 256) {
+	// 		nav.classList.remove("text-bg-dark");
+	// 		nav.classList.remove("text-bg-light");
+	// 	}
 	// });
-	// Theme Toggle
+	var darkTheme = "true";
 	const fb = document.getElementById("formBtn");
 	const fc = document.getElementById("formCollapse");
 	const fi = document.getElementById("formInput");
 	const tt = document.getElementById("themeToggle");
-	var darkTheme = "true";
-	function toggleTheme() {
-		if (darkTheme === "true") darkTheme = "false";
-		else darkTheme = "true";
+
+	// Theme - toggle
+	const toggleTheme = () => {
+		darkTheme = darkTheme === "true" ? "false" : "true";
+
 		localStorage.setItem("darkTheme", darkTheme);
+
 		setTheme();
-	}
-	// Set Theme
-	function setTheme() {
+	};
+
+	// Theme - set
+	const setTheme = () => {
 		const e = document.querySelectorAll("*");
+
 		if (darkTheme === "true") {
-			for (var id = 0; id < e.length; id++) {
+			Array.from(e).forEach(id => {
 				// text-bg-light
-				if (e[id].classList.contains("text-bg-light")) e[id].classList.replace("text-bg-light", "text-bg-secondary");
+				if (id.classList.contains("text-bg-light")) id.classList.replace("text-bg-light", "text-bg-secondary");
 				// text-bg-thirdly
-				else if (e[id].classList.contains("text-bg-thirdly")) e[id].classList.replace("text-bg-thirdly", "text-bg-dark");
+				else if (id.classList.contains("text-bg-thirdly")) id.classList.replace("text-bg-thirdly", "text-bg-dark");
 				// text-dark
-				if (e[id].classList.contains("text-dark")) e[id].classList.replace("text-dark", "text-light");
+				if (id.classList.contains("text-dark")) id.classList.replace("text-dark", "text-light");
 				// text-white-50
-				else if (e[id].classList.contains("text-white-50")) e[id].classList.replace("text-white-50", "text-muted");
+				else if (id.classList.contains("text-white-50")) id.classList.replace("text-white-50", "text-muted");
 				// bg-light
-				if (e[id].classList.contains("bg-light")) e[id].classList.replace("bg-light", "bg-secondary");
+				if (id.classList.contains("bg-light")) id.classList.replace("bg-light", "bg-secondary");
 				// bg-thirdly
-				else if (e[id].classList.contains("bg-thirdly")) e[id].classList.replace("bg-thirdly", "bg-dark");
+				else if (id.classList.contains("bg-thirdly")) id.classList.replace("bg-thirdly", "bg-dark");
 				// navbar-light
-				if (e[id].classList.contains("navbar-light")) e[id].classList.replace("navbar-light", "navbar-dark");
+				if (id.classList.contains("navbar-light")) id.classList.replace("navbar-light", "navbar-dark");
 				// lead-light
-				if (e[id].classList.contains("lead-light")) e[id].classList.replace("lead-light", "lead-dark");
+				if (id.classList.contains("lead-light")) id.classList.replace("lead-light", "lead-dark");
 				// border-dark
-				if (e[id].classList.contains("border-dark")) {
-					e[id].classList.replace("border-dark", "border-light");
-					if (e[id].classList.contains("accordion-item")) e[id].style.setProperty("--bs-border-opacity", 0.1875);
+				if (id.classList.contains("border-dark")) {
+					id.classList.replace("border-dark", "border-light");
+					if (id.classList.contains("accordion-item")) id.style.setProperty("--bs-border-opacity", 0.1875);
 				}
 				// btn-outline-dark
-				if (e[id].classList.contains("btn-outline-dark")) e[id].classList.replace("btn-outline-dark", "btn-outline-light");
+				if (id.classList.contains("btn-outline-dark")) id.classList.replace("btn-outline-dark", "btn-outline-light");
 				// homepage-theme-light
-				if (e[id].classList.contains("homepage-theme-light")) e[id].classList.replace("homepage-theme-light", "homepage-theme-dark");
-			}
+				if (id.classList.contains("homepage-theme-light")) id.classList.replace("homepage-theme-light", "homepage-theme-dark");
+			});
+
 			// bi-sun
 			if (tt.children[0].classList.contains("bi-sun")) tt.children[0].classList.replace("bi-sun", "bi-moon-stars");
 		} else {
-			for (var il = 0; il < e.length; il++) {
+			Array.from(e).forEach(il => {
 				// text-bg-dark
-				if (e[il].classList.contains("text-bg-dark")) e[il].classList.replace("text-bg-dark", "text-bg-thirdly");
+				if (il.classList.contains("text-bg-dark")) il.classList.replace("text-bg-dark", "text-bg-thirdly");
 				// text-bg-secondary
-				else if (e[il].classList.contains("text-bg-secondary")) e[il].classList.replace("text-bg-secondary", "text-bg-light");
+				else if (il.classList.contains("text-bg-secondary")) il.classList.replace("text-bg-secondary", "text-bg-light");
 				// text-light
-				if (e[il].classList.contains("text-light")) e[il].classList.replace("text-light", "text-dark");
+				if (il.classList.contains("text-light")) il.classList.replace("text-light", "text-dark");
 				// text-muted
-				else if (e[il].classList.contains("text-muted")) e[il].classList.replace("text-muted", "text-white-50");
+				else if (il.classList.contains("text-muted")) il.classList.replace("text-muted", "text-white-50");
 				// bg-dark
-				if (e[il].classList.contains("bg-dark")) e[il].classList.replace("bg-dark", "bg-thirdly");
+				if (il.classList.contains("bg-dark")) il.classList.replace("bg-dark", "bg-thirdly");
 				// bg-secondary
-				else if (e[il].classList.contains("bg-secondary")) e[il].classList.replace("bg-secondary", "bg-light");
+				else if (il.classList.contains("bg-secondary")) il.classList.replace("bg-secondary", "bg-light");
 				// navbar-dark
-				if (e[il].classList.contains("navbar-dark")) e[il].classList.replace("navbar-dark", "navbar-light");
+				if (il.classList.contains("navbar-dark")) il.classList.replace("navbar-dark", "navbar-light");
 				// lead-dark
-				if (e[il].classList.contains("lead-dark")) e[il].classList.replace("lead-dark", "lead-light");
+				if (il.classList.contains("lead-dark")) il.classList.replace("lead-dark", "lead-light");
 				// border-light
-				if (e[il].classList.contains("border-light")) {
-					e[il].classList.replace("border-light", "border-dark");
-					if (e[il].classList.contains("accordion-item")) e[il].style.setProperty("--bs-border-opacity", 0.125);
+				if (il.classList.contains("border-light")) {
+					il.classList.replace("border-light", "border-dark");
+					if (il.classList.contains("accordion-item")) il.style.setProperty("--bs-border-opacity", 0.125);
 				}
 				// btn-outline-light
-				if (e[il].classList.contains("btn-outline-light")) e[il].classList.replace("btn-outline-light", "btn-outline-dark");
+				if (il.classList.contains("btn-outline-light")) il.classList.replace("btn-outline-light", "btn-outline-dark");
 				// homepage-theme-dark
-				if (e[il].classList.contains("homepage-theme-dark")) e[il].classList.replace("homepage-theme-dark", "homepage-theme-light");
-			}
+				if (il.classList.contains("homepage-theme-dark")) il.classList.replace("homepage-theme-dark", "homepage-theme-light");
+			});
+
 			// bi-moon-stars
 			if (tt.children[0].classList.contains("bi-moon-stars")) tt.children[0].classList.replace("bi-moon-stars", "bi-sun");
 		}
-	}
-	// Theme Set + Docs Search - Init Undo
-	window.addEventListener("pageshow", function () {
+	};
+
+	// Theme - init
+	window.addEventListener("pageshow", () => {
 		formReset();
-		if (localStorage.getItem("darkTheme") !== null) darkTheme = localStorage.getItem("darkTheme");
+
+		darkTheme = localStorage.getItem("darkTheme") !== null ? localStorage.getItem("darkTheme") : darkTheme;
+
 		setTheme();
 	});
-	// Docs Search - Search/Close Icons
-	function docsToggle(e) {
-		if (!e.classList.contains("collapsed")) {
-			e.children[0].classList.replace("bi-search", "bi-x-lg");
-			document.getElementsByClassName("input-group")[0].style.width = "100%";
-		} else {
-			formReset();
-			e.children[0].classList.replace("bi-x-lg", "bi-search");
-			document.getElementsByClassName("input-group")[0].style.width = "inherit";
-		}
-	}
-	// Docs Search - Form Reset
-	function formReset() {
-		fb.children[0].classList.replace("bi-x-lg", "bi-search");
+
+	// Docs search - dynamic icons
+	const docsToggle = e => {
+		let toggle;
+
+		toggle = !e.classList.contains("collapsed") ? ["bi-search", "bi-x-lg", "100%"] : ["bi-x-lg", "bi-search", "inherit"];
+
+		e.children[0].classList.replace(toggle[0], toggle[1]);
+
+		document.getElementsByClassName("input-group")[0].style.width = toggle[2];
+	};
+
+	// Docs search - form reset
+	const formReset = (i = 0) => {
+		let a = fb.getAttribute("aria-expanded");
+
+		i !== 1 ? fb.children[0].classList.replace("bi-x-lg", "bi-search") : {};
+
 		fc.classList.remove("show");
-		var a = fb.getAttribute("aria-expanded");
+
 		a = "false";
+
 		fb.setAttribute("aria-expanded", a);
+
 		fi.value = "";
-	}
-	// Docs Search - Close Control
-	window.addEventListener("keydown", function (e) {
-		if (e.key === "Escape") formReset();
-	});
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest("#formCollapse") && !e.target.closest("#formBtn") && !e.target.closest(".navBtn")) formReset();
-	});
-	// Docs Search - Search Destination
-	function checkValidation() {
-		if (fi.value.length >= 3) location.href = "https://forums.armory3d.org/search?q=" + String(fi.value);
-		else alert("Search terms require a minimum of three characters.");
-	}
-	// Footer - ScrollToTop
-	function scrollToTop(e) {
+	};
+
+	// Docs search - close controls
+	document.addEventListener("keydown", e => e.key === "Escape" ? formReset() : {});
+	document.addEventListener("click", e => e.target.closest("#formBtn") ? formReset(1) : !e.target.closest("#formCollapse") ? formReset() : {});
+
+	// Docs search - go to search link
+	const checkValidation = () => fi.value.length >= 3 ? location.href = `https://forums.armory3d.org/search?q=${fi.value}` : alert("Search terms require a minimum of three characters.");
+
+	// Footer - scroll to top
+	const scrollToTop = e => {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth"
 		});
-	}
+	};
 </script>
 </body>
 

@@ -86,7 +86,7 @@
 * Same setup as described above for the other components.
 ## Modifying release notes (tabs and content sections)
 * You can do this in [notes.html][file_notes].
-  * **NOTE:** Do not forgot to modify the `INIT_DATE` variable to correctly set the date for the landing page of the release notes.
+  * **NOTE:** Do not forgot to modify the `initDate` variable to correctly set the date for the landing page of the release notes.
 ## Modifying content section component
 * With [content.html][file_content].
   * **WARNING:** You should only modify [content.html][file_content] if you need to change the template look for all release note pages, globally.

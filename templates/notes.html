@@ -1,6 +1,6 @@
 <!-- $main.html -->
 <main class="text-bg-secondary">
-	<div id="cookies_banner" class="text-center notes_img container position-sticky top-50 start-0 translate-middle-y"
+	<div id="cookiesBanner" class="text-center notes_img container position-sticky top-50 start-0 translate-middle-y"
 		style="z-index: 999">
 		<div class="mb-4">
 			<div class="text-bg-dark container-fluid ms-0 px-5 py-3">
@@ -48,6 +48,9 @@
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m25" class="m lead-light nav-link" href="#2023.06"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c25" type="button"
+							role="tab" aria-controls="c25" aria-selected="false">2023.06</a></li>
 					<li class="nav-item" role="presentation"><a id="m24" class="m lead-light nav-link" href="#2023.05"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c24" type="button"
 							role="tab" aria-controls="c24" aria-selected="false">2023.05</a></li>
@@ -137,6 +140,11 @@
 	<!-- CONTENTS -->
 	<div class="tab-content">
 		<!-- Contents - 2023 -->
+		<div id="c2023" class="c y2023 tab-content">
+			<div id="c25" class="c tab-pane" role="tabpanel" tabindex="0">
+				%c25%
+			</div>
+		</div>
 		<div id="c2023" class="c y2023 tab-content">
 			<div id="c24" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c24%
@@ -229,86 +237,96 @@
 </main>
 <script>
 	// jshint esversion: 6
-	const INIT_DATE = "2023.05";
-	const cookies_banner = document.getElementById("cookies_banner");
+	const initDate = "2023.06";
+	const cookiesBanner = document.getElementById("cookiesBanner");
+
 	// Function - Set Year
-	function setYear(y) {
+	const setYear = y => {
 		const years = document.getElementsByClassName("y");
 		const years_children = document.getElementsByClassName("y" + y);
+
 		// Reset
-		for (var yr = 0; yr < years.length; yr++) {
-			years[yr].classList.remove("show", "active");
-			years[yr].setAttribute("aria-selected", false);
-		}
+		Array.from(years).forEach(yr => {
+			yr.classList.remove("show", "active");
+			yr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
-		for (var ya = 0; ya < years_children.length; ya++) {
-			years_children[ya].classList.add("show", "active");
-			years_children[ya].setAttribute("aria-selected", true);
-		}
-	}
+		Array.from(years_children).forEach(ya => {
+			ya.classList.add("show", "active");
+			ya.setAttribute("aria-selected", true);
+		});
+	};
+
 	// Function - Set Month
-	function setMonth(m) {
+	const setMonth = m => {
 		const all_months = document.getElementsByClassName("m");
+
 		// Reset
-		for (var mr = 0; mr < all_months.length; mr++) {
-			all_months[mr].classList.remove("show", "active");
-			all_months[mr].setAttribute("aria-selected", false);
-		}
+		Array.from(all_months).forEach(mr => {
+			mr.classList.remove("show", "active");
+			mr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
 		document.getElementById(m).classList.add("show", "active");
 		document.getElementById(m).setAttribute("aria-selected", true);
-	}
+	};
+
 	// Function - Set Content
-	function setContent(c) {
+	const setContent = c => {
 		const all_contents = document.getElementsByClassName("c");
+
 		// Reset
-		for (var cr = 0; cr < all_contents.length; cr++) {
-			all_contents[cr].classList.remove("show", "active");
-			all_contents[cr].setAttribute("aria-selected", false);
-		}
+		Array.from(all_contents).forEach(cr => {
+			cr.classList.remove("show", "active");
+			cr.setAttribute("aria-selected", false);
+		});
+
 		// Set Active
 		document.getElementById(c).classList.add("show", "active");
 		document.getElementById(c).setAttribute("aria-selected", true);
+
 		setAnchor();
 		resetVideoFrames();
 		correctBannerLocation();
-	}
-	function closeBanner() {
-		cookies_banner.classList.add("d-none");
-	}
+	};
+
+	closeBanner = () => cookiesBanner.classList.add("d-none");
+
 	// Function - Set Year / Month / Content / Anchor
-	function init() {
+	const init = () => {
 		if (window.location.hash.substr(1)) {
-			fetch("templates/changelogs/data.json").then(function (r) {
-				return r.text();
-			}).then(function (DATA) {
-				if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
-					for (var i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
-						if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
-							// Set Year
-							if (window.location.hash.includes("2023")) setYear("2023");
-							else if (window.location.hash.includes("2022")) setYear("2022");
-							else if (window.location.hash.includes("2021")) setYear("2021");
-							// Set Month
-							if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
-								setMonth("m" + i);
-								setContent("c" + i);
+			fetch("templates/changelogs/data.json")
+				.then((r) => r.ok ? r.text() : (() => { throw new Error(r.status); })())
+				.then(DATA => {
+					if (JSON.stringify(DATA).includes(window.location.hash.substr(1) + "\\")) {
+						for (let i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
+							if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
+								// Set Year
+								window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
+
+								// Set Month
+								if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
+									setMonth("m" + i);
+									setContent("c" + i);
+								}
 							}
 						}
-					}
-				} else window.location.href = "/404";
-			}).catch(function (e) {
-				window.location.href = "/404";
-				console.log(e);
-			});
-		} else window.location.href = "/notes#" + INIT_DATE;
-	}
+					} else window.location.href = "/404";
+				})
+				.catch(e => {
+					window.location.href = "/404";
+					console.log(e);
+				});
+		} else window.location.href = "/notes#" + initDate;
+	};
+
 	// Function - Set URL
-	function updateURL(e) {
-		window.location.hash = e.innerText;
-	}
+	const updateURL = e => window.location.hash = e.innerText;
+
 	// Function - Set Anchor
-	function setAnchor() {
+	const setAnchor = () => {
 		try {
 			window.location.hash = window.location.hash;
 		} catch (e) {
@@ -321,35 +339,41 @@
 		//   window.scrollTo(0, scrollpos);
 		//   console.log(window.scrollY);
 		// }
-	}
-	function resetVideoFrames() {
+	};
+
+	const resetVideoFrames = () => {
 		const all_videos = document.getElementsByTagName("video");
-		for (var ev = 0; ev < all_videos.length; ev++) all_videos[ev].currentTime = 0.0;
-	}
-	function correctBannerLocation() {
-		cookies_banner.style.marginTop = `${-cookies_banner.offsetHeight}px`;
-	}
-	function setPageCookies(b) {
+
+		Array.from(all_videos).forEach(ev => ev.currentTime = 0.0);
+	};
+
+	const correctBannerLocation = () => cookiesBanner.style.marginTop = `${-cookiesBanner.offsetHeight}px`;
+
+	const setPageCookies = b => {
 		const all_youtube_videos = document.getElementsByClassName("youtube_video");
-		if (b) for (var yv = 0; yv < all_youtube_videos.length; yv++) {
-			// Thumbnails
-			all_youtube_videos[yv].children[0].classList.add("d-none");
-			// iFrames
-			all_youtube_videos[yv].children[1].classList.remove("d-none");
-			all_youtube_videos[yv].children[1].src = `https://www.youtube-nocookie.com/embed/${all_youtube_videos[yv].children[1].id}`;
+
+		if (b) {
+			Array.from(all_youtube_videos).forEach(yv => {
+				let c2 = yv.children[1];
+
+				// Thumbnails
+				yv.children[0].classList.add("d-none");
+				// iFrames
+				c2.classList.remove("d-none");
+				c2.src = `https://www.youtube-nocookie.com/embed/${c2.id}`;
+			});
 		}
+
 		closeBanner();
-	}
+	};
+
 	// Cookies Banner - Close Banner
-	window.addEventListener("keydown", function (e) {
-		if (e.key === "Escape") closeBanner();
-	});
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest("#cookies_banner")) closeBanner();
-	});
+	document.addEventListener("keydown", e => e.key === "Escape" ? closeBanner() : {});
+	document.addEventListener("click", e => !e.target.closest("#cookiesBanner") ? closeBanner() : {});
+
+	// Init
 	window.addEventListener("pageshow", init);
 	window.addEventListener("popstate", init);
-    // document.addEventListener("scroll", function() {
-    //   sessionStorage.setItem("scrollpos", window.scrollY);
-    // });
+
+	// document.addEventListener("scroll", () => sessionStorage.setItem("scrollpos", window.scrollY));
 </script>
