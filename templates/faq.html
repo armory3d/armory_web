@@ -139,13 +139,12 @@
 <script>
 	// jshint esversion: 6
 	function faqToggle(e) {
-		// Reset Un-collapsed
-		const a = document.getElementsByClassName("accordion-button");
-		for (var i = 0; i < a.length; i++) {
-			if (a[i].children[0].classList.contains("bi-dash-circle")) a[i].children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
-		}
-		// Collapse Icons Only For Active
-		if (!e.classList.contains("collapsed")) e.children[0].classList.replace("bi-plus-circle", "bi-dash-circle");
-		else e.children[0].classList.replace("bi-dash-circle", "bi-plus-circle");
-	}
+		const eButtons = document.getElementsByTagName("button");
+
+		// Reset uncollapsed
+		Array.from(eButtons).forEach(eButton => eButton.children[0].classList.contains("bi-dash-circle") ? eButton.children[0].classList.replace("bi-dash-circle", "bi-plus-circle") : {});
+
+		// Collapse active
+		e.children[0].classList.replace(...!e.classList.contains("collapsed") ? ["bi-plus-circle", "bi-dash-circle"] : ["bi-dash-circle", "bi-plus-circle"]);
+	};
 </script>

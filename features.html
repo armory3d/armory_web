@@ -553,23 +553,8 @@
 			<div class="collapse navbar-collapse" id="navLinks">
 				<ul class="navbar-nav me-auto border-light border-top" style="--bs-border-opacity: 0.125">
 					<!-- News -->
-					<li class="nav-item dropdown">
-						<a class="text-light nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							News<i class="text-light bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
-						</a>
-						<ul class="text-bg-dark border-0 rounded-0 dropdown-menu">
-							<li>
-								<a class="text-light dropdown-item" href="/notes">
-									<i class="text-light bi bi-megaphone me-2"></i>Release Notes
-								</a>
-							</li>
-							<li>
-								<a class="text-light dropdown-item" href="/news">
-									<i class="text-light bi bi-twitter me-2"></i>Armory Twitter
-								</a>
-							</li>
-						</ul>
+					<li class="nav-item">
+						<a class="text-light nav-link" href="/notes">Release Notes</a>
 					</li>
 					<!-- Features -->
 					<li class="nav-item">
@@ -1129,142 +1114,154 @@
 	// jshint esversion: 6
 	// Navbar Scroll Transition
 	// const nav = document.getElementById("brand");
-	// window.addEventListener("scroll", function () {
-	//   if (window.pageYOffset >= 64) {
-	//     if (nav.classList.contains("navbar-dark")) {
-	//       nav.classList.add("text-bg-dark");
-	//       nav.classList.remove("text-bg-light");
-	//     } else if (nav.classList.contains("navbar-light")) {
-	//       nav.classList.add("text-bg-light");
-	//       nav.classList.remove("text-bg-dark");
-	//     }
-	//   } else if (window.pageYOffset < 256) {
-	//     nav.classList.remove("text-bg-dark");
-	//     nav.classList.remove("text-bg-light");
-	//   }
+	//
+	// window.addEventListener("scroll", () => {
+	// 	if (window.pageYOffset >= 64) {
+	// 		if (nav.classList.contains("navbar-dark")) {
+	// 			nav.classList.add("text-bg-dark");
+	// 			nav.classList.remove("text-bg-light");
+	// 		} else if (nav.classList.contains("navbar-light")) {
+	// 			nav.classList.add("text-bg-light");
+	// 			nav.classList.remove("text-bg-dark");
+	// 		}
+	// 	} else if (window.pageYOffset < 256) {
+	// 		nav.classList.remove("text-bg-dark");
+	// 		nav.classList.remove("text-bg-light");
+	// 	}
 	// });
-	// Theme Toggle
+	var darkTheme = "true";
 	const fb = document.getElementById("formBtn");
 	const fc = document.getElementById("formCollapse");
 	const fi = document.getElementById("formInput");
 	const tt = document.getElementById("themeToggle");
-	var darkTheme = "true";
-	function toggleTheme() {
-		if (darkTheme === "true") darkTheme = "false";
-		else darkTheme = "true";
+
+	// Theme - toggle
+	const toggleTheme = () => {
+		darkTheme = darkTheme === "true" ? "false" : "true";
+
 		localStorage.setItem("darkTheme", darkTheme);
+
 		setTheme();
-	}
-	// Set Theme
-	function setTheme() {
+	};
+
+	// Theme - set
+	const setTheme = () => {
 		const e = document.querySelectorAll("*");
+
 		if (darkTheme === "true") {
-			for (var id = 0; id < e.length; id++) {
+			Array.from(e).forEach(id => {
 				// text-bg-light
-				if (e[id].classList.contains("text-bg-light")) e[id].classList.replace("text-bg-light", "text-bg-secondary");
+				if (id.classList.contains("text-bg-light")) id.classList.replace("text-bg-light", "text-bg-secondary");
 				// text-bg-thirdly
-				else if (e[id].classList.contains("text-bg-thirdly")) e[id].classList.replace("text-bg-thirdly", "text-bg-dark");
+				else if (id.classList.contains("text-bg-thirdly")) id.classList.replace("text-bg-thirdly", "text-bg-dark");
 				// text-dark
-				if (e[id].classList.contains("text-dark")) e[id].classList.replace("text-dark", "text-light");
+				if (id.classList.contains("text-dark")) id.classList.replace("text-dark", "text-light");
 				// text-white-50
-				else if (e[id].classList.contains("text-white-50")) e[id].classList.replace("text-white-50", "text-muted");
+				else if (id.classList.contains("text-white-50")) id.classList.replace("text-white-50", "text-muted");
 				// bg-light
-				if (e[id].classList.contains("bg-light")) e[id].classList.replace("bg-light", "bg-secondary");
+				if (id.classList.contains("bg-light")) id.classList.replace("bg-light", "bg-secondary");
 				// bg-thirdly
-				else if (e[id].classList.contains("bg-thirdly")) e[id].classList.replace("bg-thirdly", "bg-dark");
+				else if (id.classList.contains("bg-thirdly")) id.classList.replace("bg-thirdly", "bg-dark");
 				// navbar-light
-				if (e[id].classList.contains("navbar-light")) e[id].classList.replace("navbar-light", "navbar-dark");
+				if (id.classList.contains("navbar-light")) id.classList.replace("navbar-light", "navbar-dark");
 				// lead-light
-				if (e[id].classList.contains("lead-light")) e[id].classList.replace("lead-light", "lead-dark");
+				if (id.classList.contains("lead-light")) id.classList.replace("lead-light", "lead-dark");
 				// border-dark
-				if (e[id].classList.contains("border-dark")) {
-					e[id].classList.replace("border-dark", "border-light");
-					if (e[id].classList.contains("accordion-item")) e[id].style.setProperty("--bs-border-opacity", 0.1875);
+				if (id.classList.contains("border-dark")) {
+					id.classList.replace("border-dark", "border-light");
+					if (id.classList.contains("accordion-item")) id.style.setProperty("--bs-border-opacity", 0.1875);
 				}
 				// btn-outline-dark
-				if (e[id].classList.contains("btn-outline-dark")) e[id].classList.replace("btn-outline-dark", "btn-outline-light");
+				if (id.classList.contains("btn-outline-dark")) id.classList.replace("btn-outline-dark", "btn-outline-light");
 				// homepage-theme-light
-				if (e[id].classList.contains("homepage-theme-light")) e[id].classList.replace("homepage-theme-light", "homepage-theme-dark");
-			}
+				if (id.classList.contains("homepage-theme-light")) id.classList.replace("homepage-theme-light", "homepage-theme-dark");
+			});
+
 			// bi-sun
 			if (tt.children[0].classList.contains("bi-sun")) tt.children[0].classList.replace("bi-sun", "bi-moon-stars");
 		} else {
-			for (var il = 0; il < e.length; il++) {
+			Array.from(e).forEach(il => {
 				// text-bg-dark
-				if (e[il].classList.contains("text-bg-dark")) e[il].classList.replace("text-bg-dark", "text-bg-thirdly");
+				if (il.classList.contains("text-bg-dark")) il.classList.replace("text-bg-dark", "text-bg-thirdly");
 				// text-bg-secondary
-				else if (e[il].classList.contains("text-bg-secondary")) e[il].classList.replace("text-bg-secondary", "text-bg-light");
+				else if (il.classList.contains("text-bg-secondary")) il.classList.replace("text-bg-secondary", "text-bg-light");
 				// text-light
-				if (e[il].classList.contains("text-light")) e[il].classList.replace("text-light", "text-dark");
+				if (il.classList.contains("text-light")) il.classList.replace("text-light", "text-dark");
 				// text-muted
-				else if (e[il].classList.contains("text-muted")) e[il].classList.replace("text-muted", "text-white-50");
+				else if (il.classList.contains("text-muted")) il.classList.replace("text-muted", "text-white-50");
 				// bg-dark
-				if (e[il].classList.contains("bg-dark")) e[il].classList.replace("bg-dark", "bg-thirdly");
+				if (il.classList.contains("bg-dark")) il.classList.replace("bg-dark", "bg-thirdly");
 				// bg-secondary
-				else if (e[il].classList.contains("bg-secondary")) e[il].classList.replace("bg-secondary", "bg-light");
+				else if (il.classList.contains("bg-secondary")) il.classList.replace("bg-secondary", "bg-light");
 				// navbar-dark
-				if (e[il].classList.contains("navbar-dark")) e[il].classList.replace("navbar-dark", "navbar-light");
+				if (il.classList.contains("navbar-dark")) il.classList.replace("navbar-dark", "navbar-light");
 				// lead-dark
-				if (e[il].classList.contains("lead-dark")) e[il].classList.replace("lead-dark", "lead-light");
+				if (il.classList.contains("lead-dark")) il.classList.replace("lead-dark", "lead-light");
 				// border-light
-				if (e[il].classList.contains("border-light")) {
-					e[il].classList.replace("border-light", "border-dark");
-					if (e[il].classList.contains("accordion-item")) e[il].style.setProperty("--bs-border-opacity", 0.125);
+				if (il.classList.contains("border-light")) {
+					il.classList.replace("border-light", "border-dark");
+					if (il.classList.contains("accordion-item")) il.style.setProperty("--bs-border-opacity", 0.125);
 				}
 				// btn-outline-light
-				if (e[il].classList.contains("btn-outline-light")) e[il].classList.replace("btn-outline-light", "btn-outline-dark");
+				if (il.classList.contains("btn-outline-light")) il.classList.replace("btn-outline-light", "btn-outline-dark");
 				// homepage-theme-dark
-				if (e[il].classList.contains("homepage-theme-dark")) e[il].classList.replace("homepage-theme-dark", "homepage-theme-light");
-			}
+				if (il.classList.contains("homepage-theme-dark")) il.classList.replace("homepage-theme-dark", "homepage-theme-light");
+			});
+
 			// bi-moon-stars
 			if (tt.children[0].classList.contains("bi-moon-stars")) tt.children[0].classList.replace("bi-moon-stars", "bi-sun");
 		}
-	}
-	// Theme Set + Docs Search - Init Undo
-	window.addEventListener("pageshow", function () {
+	};
+
+	// Theme - init
+	window.addEventListener("pageshow", () => {
 		formReset();
-		if (localStorage.getItem("darkTheme") !== null) darkTheme = localStorage.getItem("darkTheme");
+
+		darkTheme = localStorage.getItem("darkTheme") !== null ? localStorage.getItem("darkTheme") : darkTheme;
+
 		setTheme();
 	});
-	// Docs Search - Search/Close Icons
-	function docsToggle(e) {
-		if (!e.classList.contains("collapsed")) {
-			e.children[0].classList.replace("bi-search", "bi-x-lg");
-			document.getElementsByClassName("input-group")[0].style.width = "100%";
-		} else {
-			formReset();
-			e.children[0].classList.replace("bi-x-lg", "bi-search");
-			document.getElementsByClassName("input-group")[0].style.width = "inherit";
-		}
-	}
-	// Docs Search - Form Reset
-	function formReset() {
-		fb.children[0].classList.replace("bi-x-lg", "bi-search");
+
+	// Docs search - dynamic icons
+	const docsToggle = e => {
+		let toggle;
+
+		toggle = !e.classList.contains("collapsed") ? ["bi-search", "bi-x-lg", "100%"] : ["bi-x-lg", "bi-search", "inherit"];
+
+		e.children[0].classList.replace(toggle[0], toggle[1]);
+
+		document.getElementsByClassName("input-group")[0].style.width = toggle[2];
+	};
+
+	// Docs search - form reset
+	const formReset = (i = 0) => {
+		let a = fb.getAttribute("aria-expanded");
+
+		i !== 1 ? fb.children[0].classList.replace("bi-x-lg", "bi-search") : {};
+
 		fc.classList.remove("show");
-		var a = fb.getAttribute("aria-expanded");
+
 		a = "false";
+
 		fb.setAttribute("aria-expanded", a);
+
 		fi.value = "";
-	}
-	// Docs Search - Close Control
-	window.addEventListener("keydown", function (e) {
-		if (e.key === "Escape") formReset();
-	});
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest("#formCollapse") && !e.target.closest("#formBtn") && !e.target.closest(".navBtn")) formReset();
-	});
-	// Docs Search - Search Destination
-	function checkValidation() {
-		if (fi.value.length >= 3) location.href = "https://forums.armory3d.org/search?q=" + String(fi.value);
-		else alert("Search terms require a minimum of three characters.");
-	}
-	// Footer - ScrollToTop
-	function scrollToTop(e) {
+	};
+
+	// Docs search - close controls
+	document.addEventListener("keydown", e => e.key === "Escape" ? formReset() : {});
+	document.addEventListener("click", e => e.target.closest("#formBtn") ? formReset(1) : !e.target.closest("#formCollapse") ? formReset() : {});
+
+	// Docs search - go to search link
+	const checkValidation = () => fi.value.length >= 3 ? location.href = `https://forums.armory3d.org/search?q=${fi.value}` : alert("Search terms require a minimum of three characters.");
+
+	// Footer - scroll to top
+	const scrollToTop = e => {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth"
 		});
-	}
+	};
 </script>
 </body>
 

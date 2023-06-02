@@ -7,4 +7,4 @@
   - [icons8.com] Discourse + Artstation
 # JS
   - https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js
-  - [Twitter, August 22, 2022] https://platform.twitter.com/widgets.js
+  - [REMOVED][Twitter, August 22, 2022] https://platform.twitter.com/widgets.js
