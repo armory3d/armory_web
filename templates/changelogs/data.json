@@ -1,4 +1,18 @@
 {
+	"26": {
+		"date": "2023.07",
+		"splash": "2023-07-a.jpg",
+		"title": "July - 2023",
+		"hash-title": "2023.07-title",
+		"hash-info": "2023.07-info",
+		"hash-highlights": "2023.07-highlights",
+		"hash-new": "2023.07-new",
+		"hash-bug-fixes": "2023.07-bug-fixes",
+		"hash-other-changes": "2023.07-other-changes",
+		"hash-download": "2023.07-download",
+		"hash-manual": "2023.07-manual",
+		"hash-help": "2023.07-help"
+	},
 	"25": {
 		"date": "2023.06",
 		"splash": "2023-06-a.jpg",
