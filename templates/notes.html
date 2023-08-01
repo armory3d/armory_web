@@ -7,9 +7,9 @@
 				<h1 class="display-4 fw-bold fst-italic mb-4">Cookies Policy</h1>
 				<p class="fs-4 lead lh-1" style='font-family: "Open Sans", sans-serif; margin-bottom: 1.5rem;'>
 				<p class="lead-dark mb-4">
-					This page's YouTube videos uses cookies. If you decline cookies, those videos will be replaced with
-					video thumbnails and URL links instead. More information about cookies can be found <a
-						class="fw-semibold text-reset" href="/privacy">here</a>.
+					This page uses cookies from YouTube videos. If you choose to decline the cookies, these videos will
+					be replaced with video thumbnails and links instead. More information about YouTube cookies can be
+					found <a class="fw-semibold text-reset btn-link" href="/privacy">here</a>.
 				</p>
 				<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
 					<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
@@ -48,6 +48,9 @@
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m27" class="m lead-light nav-link" href="#2023.08"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c27" type="button"
+							role="tab" aria-controls="c27" aria-selected="false">2023.08</a></li>
 					<li class="nav-item" role="presentation"><a id="m26" class="m lead-light nav-link" href="#2023.07"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c26" type="button"
 							role="tab" aria-controls="c26" aria-selected="false">2023.07</a></li>
@@ -144,36 +147,27 @@
 	<div class="tab-content">
 		<!-- Contents - 2023 -->
 		<div id="c2023" class="c y2023 tab-content">
+			<div id="c27" class="c tab-pane" role="tabpanel" tabindex="0">
+				%c27%
+			</div>
 			<div id="c26" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c26%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c25" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c25%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c24" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c24%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c23" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c23%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c22" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c22%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c21" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c21%
 			</div>
-		</div>
-		<div id="c2023" class="c y2023 tab-content">
 			<div id="c20" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c20%
 			</div>
@@ -245,7 +239,7 @@
 </main>
 <script>
 	// jshint esversion: 6
-	const initDate = "2023.07";
+	const initDate = "2023.08";
 	const cookiesBanner = document.getElementById("cookiesBanner");
 
 	// Function - Set Year

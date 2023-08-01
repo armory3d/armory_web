@@ -159,6 +159,25 @@
 			border-color: rgba(0, 0, 0, 0.5);
 		}
 
+		/* btn-link */
+		.text-light .btn-link:hover,
+		.lead-light .btn-link:hover {
+			color: black !important;
+		}
+
+		.text-dark .btn-link:hover,
+		.lead-dark .btn-link:hover {
+			color: lightgray !important;
+		}
+
+		.text-warning>.btn-link:hover {
+			color: orange !important;
+		}
+
+		.text-danger>.btn-link:hover {
+			color: red !important;
+		}
+
 		/* Navbar Buttons */
 		#brand>div>a,
 		#brand>div>div>a,
@@ -798,12 +817,8 @@
 				<!-- Body -->
 				<div class="card-body pt-0">
 					<h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">Facebook</h1>
-					<p class="card-text lead-dark">Official handle</p>
+					<p class="card-text lead-dark">Community hashtag</p>
 					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
-						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
-							href="https://facebook.com/armorytools">
-							<i class="bi bi-link-45deg text-white me-2"></i>Handle
-						</a>
 						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
 							href="https://facebook.com/hashtag/armory3d">
 							<i class="bi bi-hash text-white me-2"></i>Hashtag
@@ -814,21 +829,25 @@
 		</div>
 		<!-- 7-9 -->
 		<div class="card-group">
-			<!-- TikTok -->
-			<div id="tiktok" class="text-bg-dark rounded card m-1">
+			<!-- YouTube -->
+			<div id="youtube" class="text-bg-dark rounded card m-1">
 				<!-- Icon -->
 				<div class="d-flex justify-content-center align-items-center">
-					<a href="#tiktok">
-						<i class="bi bi-tiktok text-light" style="font-size: 4rem;"></i>
+					<a href="#youtube">
+						<i class="bi bi-youtube text-light" style="font-size: 4rem;"></i>
 					</a>
 				</div>
 				<!-- Body -->
 				<div class="card-body pt-0">
-					<h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">TikTok</h1>
-					<p class="card-text lead-dark">Community hashtag</p>
+					<h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">YouTube</h1>
+					<p class="card-text lead-dark">Official channel</p>
 					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
 						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
-							href="https://tiktok.com/tag/armory3d">
+							href="https://youtube.com/c/Armory3d">
+							<i class="bi bi-link-45deg text-white me-2"></i>Channel
+						</a>
+						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
+							href="https://youtube.com/hashtag/armory3d">
 							<i class="bi bi-hash text-white me-2"></i>Hashtag
 						</a>
 					</div>
@@ -858,25 +877,21 @@
 					</div>
 				</div>
 			</div>
-			<!-- YouTube -->
-			<div id="youtube" class="text-bg-dark rounded card m-1">
+			<!-- TikTok -->
+			<div id="tiktok" class="text-bg-dark rounded card m-1">
 				<!-- Icon -->
 				<div class="d-flex justify-content-center align-items-center">
-					<a href="#youtube">
-						<i class="bi bi-youtube text-light" style="font-size: 4rem;"></i>
+					<a href="#tiktok">
+						<i class="bi bi-tiktok text-light" style="font-size: 4rem;"></i>
 					</a>
 				</div>
 				<!-- Body -->
 				<div class="card-body pt-0">
-					<h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">YouTube</h1>
-					<p class="card-text lead-dark">Official channel</p>
+					<h1 class="display-6 fw-bold text-reset text-decoration-none lh-1 mb-3">TikTok</h1>
+					<p class="card-text lead-dark">Community hashtag</p>
 					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
 						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
-							href="https://youtube.com/c/Armory3d">
-							<i class="bi bi-link-45deg text-white me-2"></i>Channel
-						</a>
-						<a class="fw-semibold btn btn-danger align-items-center justify-content-center"
-							href="https://youtube.com/hashtag/armory3d">
+							href="https://tiktok.com/tag/armory3d">
 							<i class="bi bi-hash text-white me-2"></i>Hashtag
 						</a>
 					</div>
@@ -916,7 +931,7 @@
 		</div>
 	</div>
 	<p class="lead-dark text-center container pb-4">Discourse & Artstation icons provided by <a
-			class="fw-bold text-reset" href="https://icons8.com">icons8.com</a></p>
+			class="fw-bold text-reset btn-link" href="https://icons8.com">icons8.com</a></p>
 </main>
 <!-- footer.html -->
 <footer class="text-bg-dark" style="padding-bottom: 50vh;">

@@ -159,6 +159,25 @@
 			border-color: rgba(0, 0, 0, 0.5);
 		}
 
+		/* btn-link */
+		.text-light .btn-link:hover,
+		.lead-light .btn-link:hover {
+			color: black !important;
+		}
+
+		.text-dark .btn-link:hover,
+		.lead-dark .btn-link:hover {
+			color: lightgray !important;
+		}
+
+		.text-warning>.btn-link:hover {
+			color: orange !important;
+		}
+
+		.text-danger>.btn-link:hover {
+			color: red !important;
+		}
+
 		/* Navbar Buttons */
 		#brand>div>a,
 		#brand>div>div>a,
@@ -674,11 +693,11 @@
 			<hr />
 			<h2 class="display-6 fw-normal lh-1 mb-3">Get Armored</h2>
 			<p class="lead-dark mb-4">
-				Before proceeding, please read Armory3D <a class="fw-semibold text-reset"
+				Before proceeding, please read Armory3D <a class="fw-semibold text-reset btn-link"
 					href="https://github.com/armory3d/armory/wiki/setup">installation instructions</a>
 				to better understand how to setup Armory3D for your computer.<br /><br />
-				<span class="fw-bold text-light">Note:</span> Windows builds may be more stable than Linux or Mac
-				builds.<br />
+				<span class="fw-bold text-light">Note:</span> Windows builds are known to be less stable than Linux or
+				macOS builds.<br />
 			</p>
 			<div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
 				<a class="fw-semibold btn btn-danger btn-lg d-flex align-items-center justify-content-center"
@@ -702,16 +721,20 @@
 			<h2 class="display-6 fw-normal lh-1 mb-3">Armory3D Development</h2>
 			<p class="lead-dark mb-4">
 				Want to contribute to Armory3D development? Whether your contributions relate to <a
-					class="fw-semibold text-reset" href="https://github.com/armory3d/armory">engine</a> development,
-				<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory/wiki">documentation</a>
+					class="fw-semibold text-reset  btn-link" href="https://github.com/armory3d/armory">engine</a>
 				development,
-				<a class="fw-semibold text-reset"
+				<a class="fw-semibold text-reset btn-link"
+					href="https://github.com/armory3d/armory/wiki">documentation</a>
+				development,
+				<a class="fw-semibold text-reset btn-link"
 					href="https://github.com/armory3d/armory/wiki/community_tutorials">tutorials</a>,
-				<a class="fw-semibold text-reset" href="https://github.com/armory3d/armory_web">website</a> development
-				or <a class="fw-semibold text-reset" href="#donate">financial donations</a>, they are always welcome and
+				<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory_web">website</a>
+				development
+				or <a class="fw-semibold text-reset btn-link" href="#donate">financial donations</a>, they are always
+				welcome and
 				appreciated!<br /><br />
-				<span class="fw-bold text-light">For interested contributors:</span><br />
-				There are available paid bounties for certain wanted Armory3D features <a class="fw-semibold text-reset"
+				<span class="fw-bold text-light">For interested contributors:</span> There are available paid bounties
+				for certain wanted Armory3D features <a class="fw-semibold text-reset btn-link"
 					href="https://app.bountysource.com/teams/armory3d">here</a>.
 			</p>
 			<div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
@@ -736,9 +759,11 @@
 			</a>
 			<hr />
 			<h2 class="display-6 fw-normal lh-1 mb-3">Cup Of Coffee</h2>
-			<p class="lead-dark mb-4">While Armory3D is free and open-source, maintaince and time spent on
-				development isn't always free or cheap. Here's a few ways you can help financially compensate those
-				services.
+			<p class="lead-dark mb-4">
+				Armory3D is free and open-source, but the time spent on development, maintaince, or community help is
+				donated by
+				awesome members of its community. If you'd like to give back to its
+				community financially, here's a few ways you can.<br />
 			</p>
 			<div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
 				<a class="fw-semibold btn btn-danger btn-lg align-items-center justify-content-center" href="/donate">
