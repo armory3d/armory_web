@@ -1,4 +1,18 @@
 {
+	"29": {
+		"date": "2023.10",
+		"splash": "2023-10-a.jpg",
+		"title": "October - 2023",
+		"hash-title": "2023.10-title",
+		"hash-info": "2023.10-info",
+		"hash-highlights": "2023.10-highlights",
+		"hash-new": "2023.10-new",
+		"hash-bug-fixes": "2023.10-bug-fixes",
+		"hash-other-changes": "2023.10-other-changes",
+		"hash-download": "2023.10-download",
+		"hash-manual": "2023.10-manual",
+		"hash-help": "2023.10-help"
+	},
 	"28": {
 		"date": "2023.09",
 		"splash": "2023-09-a.jpg",
