@@ -51,7 +51,7 @@ var compileHTML = () => {
 								let content2 = content1.replace("<span></span>", `<span>${JSON.parse(DATA)[i].title}</span>`);
 
 								// Set - Source (Image)
-								if (PATH.extname(JSON.parse(DATA)[i].splash) === ".jpg") {
+								if (PATH.extname(JSON.parse(DATA)[i].splash) === ".jpg" || PATH.extname(JSON.parse(DATA)[i].splash) === ".png") {
 									var content3 = content2.replace('id="video" class="', 'id="video" class="d-none ');
 									var content4 = content3.replace('src="/img/notes/notes-placeholder.png"', `src="/img/${JSON.parse(DATA)[i].splash.split("-").slice(0, 2).join("-")}/${JSON.parse(DATA)[i].splash}"`);
 								} else if (PATH.extname(JSON.parse(DATA)[i].splash) === ".mp4") {
