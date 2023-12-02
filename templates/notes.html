@@ -48,9 +48,12 @@
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m31" class="m lead-light nav-link" href="#2023.12"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c31" type="button"
+							role="tab" aria-controls="c31" aria-selected="false">2023.12</a></li>
 					<li class="nav-item" role="presentation"><a id="m30" class="m lead-light nav-link" href="#2023.11"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c30" type="button"
-							role="tab" aria-controls="c29" aria-selected="false">2023.11</a></li>
+							role="tab" aria-controls="c30" aria-selected="false">2023.11</a></li>
 					<li class="nav-item" role="presentation"><a id="m29" class="m lead-light nav-link" href="#2023.10"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c29" type="button"
 							role="tab" aria-controls="c29" aria-selected="false">2023.10</a></li>
@@ -156,6 +159,9 @@
 	<div class="tab-content">
 		<!-- Contents - 2023 -->
 		<div id="c2023" class="c y2023 tab-content">
+			<div id="c31" class="c tab-pane" role="tabpanel" tabindex="0">
+				%c31%
+			</div>
 			<div id="c30" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c30%
 			</div>
@@ -257,7 +263,7 @@
 </main>
 <script>
 	// jshint esversion: 6
-	const initDate = "2023.11";
+	const initDate = "2023.12";
 	const cookiesBanner = document.getElementById("cookiesBanner");
 
 	// Function - Set Year
