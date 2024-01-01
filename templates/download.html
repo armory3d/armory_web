@@ -1,23 +1,72 @@
 <!-- $main.html -->
 <main class="text-bg-secondary">
+	<!-- <div class="d-flex">
+		<div class="w-100">
+			<img class="mt-2" src="/img/download/download-warning.jpg" width="100%" height="100%" loading="lazy"
+				alt="Armory3D Warning" />
+		</div>
+		<div class="w-100">
+			<span class="fw-bold text-light">Warning:
+				<ul class="lead-dark">
+					<li>A known Krom bug causes build crashes for
+						Armory3D.</li>
+					<li>A special Krom build for Windows is available for download.</li>
+					<li> Additional details on how to fix the bug for macOS and Linux builds are also provided.</li>
+				</ul>
+			</span>
+		</div>
+	</div> -->
+	<!-- Warning -->
+	<div id="warning" class="position-relative row g-0">
+		<div class="col-lg-6 mb-lg-0">
+			<img class="ratio ratio-21x9 h-100" src="/img/download/download-warning.jpg" loading="lazy"
+				alt="Armory3D Warning Example" />
+		</div>
+		<div class="col-lg-6 p-4">
+			<a class="heading_anchor display-6 fw-semibold text-reset lh-1 mb-3" href="#warning">
+				Warning<i class="bi bi-link-45deg text-light ms-2"></i>
+			</a>
+			<hr />
+			<h2 class="display-6 fw-normal lh-1 mb-4">Known Bug</h2>
+			<p class="lead-dark mb-2">
+				A known Armorcore / Krom bug causes build crashes for
+				Armory3D projects whenever they contain high resolution textures.<br /><br />
+				<span class="fw-bold text-light">Note:
+					<ul class="lead-dark">
+						<li>Textures with a image resolution of +4k or higher seem to trigger the crashes.</li>
+						<li>A special Armorcore / Krom build for Windows is available for download.</li>
+						<li> Additional details on how to fix the bug for macOS and Linux builds are also provided.</li>
+					</ul>
+				</span>
+			</p>
+			<div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
+				<a class="fw-semibold btn btn-danger btn-lg d-flex align-items-center justify-content-center"
+					href="https://forums.armory3d.org/t/solved-armory-closes-when-minimized-with-code-3221225477/5299/2">
+					<i class="bi bi-link-45deg text-white me-2"></i>Download + Summary
+				</a>
+			</div>
+		</div>
+	</div>
+	</div>
 	<!-- Releases -->
 	<div id="releases" class="position-relative row g-0">
-		<div class="col-lg-6 mb-lg-0">
-			<img class="ratio ratio-21x9 h-100" src="/img/download/download-releases.jpg" loading="lazy"
-				alt="Armory3D Releases Example" />
-		</div>
 		<div class="col-lg-6 p-4">
 			<a class="heading_anchor display-6 fw-semibold text-reset lh-1 mb-3" href="#releases">
 				Releases<i class="bi bi-link-45deg text-light ms-2"></i>
 			</a>
 			<hr />
-			<h2 class="display-6 fw-normal lh-1 mb-3">Get Armored</h2>
-			<p class="lead-dark mb-4">
+			<h2 class="display-6 fw-normal lh-1 mb-4">Get Armored</h2>
+			<p class="lead-dark mb-2">
 				Before proceeding, please read Armory3D <a class="fw-semibold text-reset btn-link"
 					href="https://github.com/armory3d/armory/wiki/setup">installation instructions</a>
 				to better understand how to setup Armory3D for your computer.<br /><br />
-				<span class="fw-bold text-light">Note:</span> Windows builds are known to be less stable than Linux or
-				macOS builds.<br />
+				<span class="fw-bold text-light">Note:
+					<ul class="lead-dark">
+						<li>Windows is most stable and the officially recommended OS for Armory3D.</li>
+						<li>Linux is less stable and may not fully work as expected.</li>
+						<li>macOS is experimental and may be extremely buggy.</li>
+					</ul>
+				</span>
 			</p>
 			<div class="d-grid gap-2 d-lg-flex justify-content-lg-start">
 				<a class="fw-semibold btn btn-danger btn-lg d-flex align-items-center justify-content-center"
@@ -30,9 +79,16 @@
 				</a>
 			</div>
 		</div>
+		<div class="col-lg-6 mb-lg-0">
+			<img class="ratio ratio-21x9 h-100" src="/img/download/download-releases.jpg" loading="lazy"
+				alt="Armory3D Releases Example" />
+		</div>
 	</div>
 	<!-- Contribute -->
 	<div id="contribute" class="position-relative row g-0">
+		<div class="col-lg-6">
+			<img class="ratio ratio-21x9 h-100" src="/img/download/download-fund.jpg" alt="Download Example" />
+		</div>
 		<div class="col-lg-6 p-4">
 			<a class="heading_anchor d-block display-6 fw-semibold text-reset lh-1 mb-3" href="#contribute">
 				Contribute<i class="bi bi-link-45deg text-light ms-2"></i>
@@ -64,15 +120,9 @@
 				</a>
 			</div>
 		</div>
-		<div class="col-lg-6">
-			<img class="ratio ratio-21x9 h-100" src="/img/download/download-fund.jpg" alt="Download Example" />
-		</div>
 	</div>
 	<!-- Donate -->
 	<div id="donate" class="position-relative row g-0">
-		<div class="col-lg-6">
-			<img class="ratio ratio-21x9 h-100" src="/img/download/download-contribute.jpg" alt="Donate Example" />
-		</div>
 		<div class="col-lg-6 p-4">
 			<a class="heading_anchor d-block display-6 fw-semibold text-reset lh-1 mb-3" href="#donate">
 				Donate<i class="bi bi-link-45deg text-light ms-2"></i>
@@ -90,6 +140,9 @@
 					<i class="bi bi-currency-dollar text-white me-2"></i>Learn More
 				</a>
 			</div>
+		</div>
+		<div class="col-lg-6">
+			<img class="ratio ratio-21x9 h-100" src="/img/download/download-contribute.jpg" alt="Donate Example" />
 		</div>
 	</div>
 </main>
