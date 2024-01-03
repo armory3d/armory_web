@@ -27,6 +27,10 @@
 	<div class="d-flex container p-3 p-lg-5">
 		<!-- YEARS -->
 		<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+			<!-- Year - 2024 -->
+			<li class="nav-item" role="presentation"><a id="y2024" class="y y2024 lead-light nav-link"
+					onclick='setYear("2024");' data-bs-toggle="pill" data-bs-target="#m2024" type="button" role="tab"
+					aria-selected="false">2024</a></li>
 			<!-- Year - 2023 -->
 			<li class="nav-item" role="presentation"><a id="y2023" class="y y2023 lead-light nav-link"
 					onclick='setYear("2023");' data-bs-toggle="pill" data-bs-target="#m2023" type="button" role="tab"
@@ -45,6 +49,14 @@
 		</div>
 		<!-- MONTHS -->
 		<div class="tab-content">
+			<!-- Months - 2024 -->
+			<div id="m2024" class="y y2024 tab-pane" role="tabpanel" tabindex="0">
+				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m32" class="m lead-light nav-link" href="#2024.01"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c32" type="button"
+							role="tab" aria-controls="c32" aria-selected="false">2024.01</a></li>
+				</ul>
+			</div>
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
@@ -157,6 +169,12 @@
 	</div>
 	<!-- CONTENTS -->
 	<div class="tab-content">
+		<!-- Contents - 2024 -->
+		<div id="c2024" class="c y2024 tab-content">
+			<div id="c32" class="c tab-pane" role="tabpanel" tabindex="0">
+				%c32%
+			</div>
+		</div>
 		<!-- Contents - 2023 -->
 		<div id="c2023" class="c y2023 tab-content">
 			<div id="c31" class="c tab-pane" role="tabpanel" tabindex="0">
@@ -263,7 +281,7 @@
 </main>
 <script>
 	// jshint esversion: 6
-	const initDate = "2023.12";
+	const initDate = "2024.01";
 	const cookiesBanner = document.getElementById("cookiesBanner");
 
 	// Function - Set Year
@@ -330,7 +348,7 @@
 						for (let i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
 							if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
 								// Set Year
-								window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
+								window.location.hash.includes("2024") ? setYear("2024") : window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
 
 								// Set Month
 								if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {

@@ -707,6 +707,10 @@
 	<div class="d-flex container p-3 p-lg-5">
 		<!-- YEARS -->
 		<ul class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+			<!-- Year - 2024 -->
+			<li class="nav-item" role="presentation"><a id="y2024" class="y y2024 lead-light nav-link"
+					onclick='setYear("2024");' data-bs-toggle="pill" data-bs-target="#m2024" type="button" role="tab"
+					aria-selected="false">2024</a></li>
 			<!-- Year - 2023 -->
 			<li class="nav-item" role="presentation"><a id="y2023" class="y y2023 lead-light nav-link"
 					onclick='setYear("2023");' data-bs-toggle="pill" data-bs-target="#m2023" type="button" role="tab"
@@ -725,6 +729,14 @@
 		</div>
 		<!-- MONTHS -->
 		<div class="tab-content">
+			<!-- Months - 2024 -->
+			<div id="m2024" class="y y2024 tab-pane" role="tabpanel" tabindex="0">
+				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m32" class="m lead-light nav-link" href="#2024.01"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c32" type="button"
+							role="tab" aria-controls="c32" aria-selected="false">2024.01</a></li>
+				</ul>
+			</div>
 			<!-- Months - 2023 -->
 			<div id="m2023" class="y y2023 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
@@ -837,6 +849,209 @@
 	</div>
 	<!-- CONTENTS -->
 	<div class="tab-content">
+		<!-- Contents - 2024 -->
+		<div id="c2024" class="c y2024 tab-content">
+			<div id="c32" class="c tab-pane" role="tabpanel" tabindex="0">
+				<div>
+	<div class="d-flex justify-content-center pb-5">
+		<a class="heading_anchor d-block text-center display-3 fw-bold text-reset lh-1
+    w-100" id="2024.01-title" href="#2024.01-title">
+			<span>January - 2024</span><i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+	</div>
+	<div id="image" class="d-flex justify-content-center">
+		<img class="notes_img" loading="lazy" src="/img/2024-01/2024-01-a.jpg" alt="Cover Image" />
+	</div>
+	<div id="video" class="d-none d-flex justify-content-center">
+		<video class="ratio ratio-21x9 notes_img" playsinline autoplay muted loop>
+			<source src="/img/notes/notes-placeholder.mp4" type="video/mp4">
+			This browser doesn't support MP4. Try using a different browser.
+		</video>
+	</div>
+	<div class="text-center lead-dark px-5 py-3" id="2024.01-info">
+January is here with <span class="display-6 fw-semibold text-danger align-middle">7</span> new pull requests and 3
+additional new commit from some great <a class="fw-semibold text-reset btn-link"
+	href="https://github.com/armory3d/armory/graphs/contributors">contributors</a> - great work!
+</div>
+	<div class="container p-3 pt-0 notes_container">
+		<div class="card-group text-center mx-auto" style="max-width: 54rem">
+			<!-- Download -->
+			<div id="2024.01-download" class="text-bg-dark rounded card m-1">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2024.01-download">
+						<i class="bi bi-download text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Get Armored.</h1>
+					<p class="card-text lead-dark">Start Armory3D today!</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#releases">
+							<i class="bi bi-link-45deg text-white me-2"></i>Download
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- Manual -->
+			<div id="2024.01-manual" class="text-bg-dark rounded card m-1">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2024.01-manual">
+						<i class="bi bi-book text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Need info?</h1>
+					<p class="card-text lead-dark">Learn more at the Armory3D wiki.</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="https://github.com/armory3d/armory/wiki">
+							<i class="bi bi-link-45deg text-white me-2"></i>Manual
+						</a>
+					</div>
+				</div>
+			</div>
+		</div><br />
+		<!-- HIGHLIGHTS -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2024.01-highlights" href="#2024.01-highlights">
+			HIGHLIGHTS<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2024.01-highlights_d">
+<p class="my-3">t3du added Play Sound Node: add option for sound/sound name.</p>
+<img class="notes_img" loading="lazy" src="/img/2024-01/2024-01-b.jpg" alt="2024-01-b Screenshot" />
+<hr />
+<p class="my-3">t3du added World Logic Nodes.</p>
+<img class="notes_img" loading="lazy" src="/img/2024-01/2024-01-c.jpg" alt="2024-01-c Screenshot" />
+<hr />
+<p>These developer bounties are still available! Earn paid rewards by developing new
+	features.<br /><br /><span class="fw-semibold text-light">List of active Armory3D bounties with payments:</span></p>
+<ul>
+	<li>Parallax Occlusion Mapping: <a class="fw-semibold text-reset btn-link"
+			href="https://github.com/armory3d/armory/issues/2609">https://github.com/armory3d/armory/issues/2609</a>
+	</li>
+	<li>Dynamic Diffuse Global Illumination (DDGI): <a class="fw-semibold text-reset btn-link"
+			href="https://github.com/armory3d/armory/issues/2610">https://github.com/armory3d/armory/issues/2610</a>
+	</li>
+	<li>Stochastic Screen-Space Reflections: <a class="fw-semibold text-reset btn-link"
+			href="https://github.com/armory3d/armory/issues/2611">https://github.com/armory3d/armory/issues/2611</a>
+	</li>
+	<li>Box Projected Cube Environment Mapping (BPCEM): <a class="fw-semibold text-reset btn-link"
+			href="https://github.com/armory3d/armory/issues/2613">https://github.com/armory3d/armory/issues/2613</a>
+	</li>
+	<li>Unbroken Gamepad Logic Nodes: <a class="fw-semibold text-reset btn-link"
+			href="https://github.com/armory3d/armory/issues/2886">https://github.com/armory3d/armory/issues/2886</a>
+	</li>
+</ul>
+<hr />
+<p class="my-3">SIMPLE CUBE made <span class="display-6 fw-semibold text-danger align-middle">6</span> (including
+	Russian translations) new community
+	tutorials this month - fantastic work!</p>
+<span class="fw-semibold text-light">English:</span>
+<ul>
+	<li>
+		<a class="fw-semibold text-reset btn-link"
+			href="https://youtube.com/@_SIMPLECUBE_/videos">https://youtube.com/@_SIMPLECUBE_/videos</a>
+	</li>
+</ul>
+<span class="fw-semibold text-light">Russian:</span>
+<ul>
+	<li>
+		<a class="fw-semibold text-reset btn-link"
+			href="https://youtube.com/@SimpleCubeRus/videos">https://youtube.com/@SimpleCubeRus/videos</a>
+	</li>
+</ul>
+<hr />
+<p class="my-3">You may also be interested in videos from PleaseTryThis:</p>
+<ul>
+	<li>
+		<span class="fw-semibold text-light">English:</span> <a class="fw-semibold text-reset btn-link"
+			href="https://youtube.com/@PleaseTryThis/videos">https://youtube.com/@PleaseTryThis/videos</a>
+	</li>
+</ul>
+</div>
+		<!-- NEW -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2024.01-new" href="#2024.01-new">
+			NEW<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2024.01-new_d">
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2978">#2978</a> -
+MoritzBrueckner added Enable GPU for environment rendering also for non-CUDA compute devices.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2981">#2981</a> -
+t3du added Play Sound Node: add option for sound/sound name.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2982">#2982</a> -
+t3du added World Logic Nodes.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2983">#2983</a> -
+MoritzBrueckner added Add DebugConsole.isDebugConsoleHovered (+ node integration).<br />
+</div>
+		<!-- BUG FIXES -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2024.01-bug-fixes" href="#2024.01-bug-fixes">
+			BUG FIXES<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2024.01-bug_fixes_d">
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2984">#2984</a> -
+t3du added Play sound node: fix update routine version.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/pull/2985">#2985</a> -
+t3du added Play sound node: fix sound load and retrigger.<br />
+</div>
+		<!-- OTHER CHANGES -->
+		<a class="heading_anchor d-block display-6 fw-bold text-reset lh-1 mb-3" id="2024.01-other-changes"
+			href="#2024.01-other-changes">
+			OTHER CHANGES<i class="bi bi-link-45deg text-light ms-2"></i>
+		</a>
+		<hr />
+		<div class="lead-dark mb-5" id="2024.01-other_changes_d">
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/iron/pull/203">Iron: #203</a> -
+tong added Add Trait documentation.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/commit/efb9d75c8f28d7cc23bd651fb0f7a7d012480670
+">Armory [commit]: #efb9d75</a>
+-
+MoritzBrueckner added Cleanup whitespace.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/commit/a67b5f5222007bf527a02544da3b78c3d249bfa6
+">Armory [commit]: #a67b5f5</a>
+-
+MoritzBrueckner added Play Sound node: fix version check once more.<br />
+<a class="fw-semibold text-reset btn-link" href="https://github.com/armory3d/armory/commit/6c09dbbe951180ece756c28d0c3cb600bd35f728
+">Armory [commit]: #6c09dbb</a>
+-
+MoritzBrueckner added Whitespace cleanup.<br />
+</div>
+		<div class="card-group text-center mx-auto mb-lg-5" style="max-width: 27rem">
+			<!-- Help -->
+			<div id="2024.01-help" class="text-bg-dark rounded card">
+				<!-- Icon -->
+				<div class="d-flex justify-content-center align-items-center">
+					<a href="#2024.01-help">
+						<i class="bi bi-gift text-light" style="font-size: 4rem;"></i>
+					</a>
+				</div>
+				<!-- Body -->
+				<div class="card-body pt-0">
+					<h1 class="display-6 fw-bold text-reset lh-1 mb-3">Want to help?</h1>
+					<p class="card-text lead-dark">Here's a few ways you can.</p>
+					<div class="card-text d-grid gap-2 d-lg-flex justify-content-lg-center">
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#contribute">
+							<i class="bi bi-link-45deg text-white me-2"></i>Contribute
+						</a>
+						<a class="fw-bold btn btn-danger align-items-center justify-content-center"
+							href="/download#donate">
+							<i class="bi bi-link-45deg text-white me-2"></i>Donate
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
 		<!-- Contents - 2023 -->
 		<div id="c2023" class="c y2023 tab-content">
 			<div id="c31" class="c tab-pane" role="tabpanel" tabindex="0">
@@ -7939,7 +8154,7 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.<br />
 </main>
 <script>
 	// jshint esversion: 6
-	const initDate = "2023.12";
+	const initDate = "2024.01";
 	const cookiesBanner = document.getElementById("cookiesBanner");
 
 	// Function - Set Year
@@ -8006,7 +8221,7 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.<br />
 						for (let i = 1; i <= Object.keys(JSON.parse(DATA)).length + 1; i++) {
 							if (document.getElementById("m" + i) !== null && document.getElementById("c" + i) !== null) {
 								// Set Year
-								window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
+								window.location.hash.includes("2024") ? setYear("2024") : window.location.hash.includes("2023") ? setYear("2023") : window.location.hash.includes("2022") ? setYear("2022") : window.location.hash.includes("2021") ? setYear("2021") : {};
 
 								// Set Month
 								if (window.location.hash.substr(1).includes(JSON.parse(DATA)[i].date)) {
@@ -8129,7 +8344,7 @@ added [Blender 2.9]: update Blender version information to 2.93 LTS.<br />
 	<hr class="container mt-0" />
 	<div class="container d-flex flex-column flex-sm-row justify-content-between py-2 px-lg-0">
 		<div class="row-8 row-lg-3 mb-3 px-0">
-			<h1 class="fs-6 text-light">&copy; 2014 - 2023 Lubos Lenco & contributors</h1>
+			<h1 class="fs-6 text-light">&copy; 2014 - 2024 Lubos Lenco & contributors</h1>
 			<ul class="nav me-auto">
 				<li class="nav-item me-2"><a class="nav-link p-0 link-secondary" href="/privacy">Privacy Policy</a></li>
 				<li class="text-secondary nav-item me-2">|</li>
