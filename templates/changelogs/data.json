@@ -1,4 +1,18 @@
 {
+	"33": {
+		"date": "2024.02",
+		"splash": "2024-02-a.jpg",
+		"title": "February - 2024",
+		"hash-title": "2024.02-title",
+		"hash-info": "2024.02-info",
+		"hash-highlights": "2024.02-highlights",
+		"hash-new": "2024.02-new",
+		"hash-bug-fixes": "2024.02-bug-fixes",
+		"hash-other-changes": "2024.02-other-changes",
+		"hash-download": "2024.02-download",
+		"hash-manual": "2024.02-manual",
+		"hash-help": "2024.02-help"
+	},
 	"32": {
 		"date": "2024.01",
 		"splash": "2024-01-a.jpg",
