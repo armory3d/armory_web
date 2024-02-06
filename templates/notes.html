@@ -52,6 +52,9 @@
 			<!-- Months - 2024 -->
 			<div id="m2024" class="y y2024 tab-pane" role="tabpanel" tabindex="0">
 				<ul class="nav nav-pills nav-justified">
+					<li class="nav-item" role="presentation"><a id="m33" class="m lead-light nav-link" href="#2024.02"
+							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c33" type="button"
+							role="tab" aria-controls="c33" aria-selected="false">2024.02</a></li>
 					<li class="nav-item" role="presentation"><a id="m32" class="m lead-light nav-link" href="#2024.01"
 							onclick="updateURL(this);" data-bs-toggle="pill" data-bs-target="#c32" type="button"
 							role="tab" aria-controls="c32" aria-selected="false">2024.01</a></li>
@@ -171,6 +174,9 @@
 	<div class="tab-content">
 		<!-- Contents - 2024 -->
 		<div id="c2024" class="c y2024 tab-content">
+			<div id="c33" class="c tab-pane" role="tabpanel" tabindex="0">
+				%c33%
+			</div>
 			<div id="c32" class="c tab-pane" role="tabpanel" tabindex="0">
 				%c32%
 			</div>
@@ -281,7 +287,7 @@
 </main>
 <script>
 	// jshint esversion: 6
-	const initDate = "2024.01";
+	const initDate = "2024.02";
 	const cookiesBanner = document.getElementById("cookiesBanner");
 
 	// Function - Set Year
