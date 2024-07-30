@@ -116,6 +116,11 @@ HTTP.createServer((req, res) => {
 	// Variables
 	const URI = URL.parse(req.url).pathname;
 
+    if (PATH.normalize(decodeURI(URI)) !== decodeURI(URI)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
 	let fileName = PATH.join(PROCESS.cwd(), URI);
 
 	URI === "" || URI === "/" ? fileName = "index.html" : WEBPAGES.includes(URI) ? fileName += ".html" : {};
