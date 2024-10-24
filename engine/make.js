@@ -116,7 +116,7 @@ HTTP.createServer((req, res) => {
 	// Variables
 	const URI = URL.parse(req.url).pathname;
 
-	let fileName = PATH.join(PROCESS.cwd(), URI);
+	let fileName = PATH.join(PROCESS.cwd(), "..", URI);
 
 	URI === "" || URI === "/" ? fileName = "index.html" : WEBPAGES.includes(URI) ? fileName += ".html" : {};
 
