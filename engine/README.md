@@ -15,7 +15,6 @@
 [file_index]: https://github.com/armory3d/armory_web/blob/main/templates/index.html
 [file_localhost]: https://github.com/armory3d/armory_web/blob/main/localhost.bat
 [file_makejs]: https://github.com/armory3d/armory_web/blob/main/make.js
-[file_notes]: https://github.com/armory3d/armory_web/blob/main/templates/notes.html
 [file_releases]: https://github.com/armory3d/armory_web/blob/main/templates/changelogs/releases
 [directory_templates]: https://github.com/armory3d/armory_web/tree/main/templates
 [directory_armory_archive]: https://github.com/armoury3d
@@ -42,9 +41,6 @@
 * [make.js][file_makejs] is known to send a 302 error if you attempt to access a webpage without inserting its `.html` extension and there is no redirect stated in the localhost.
 ## Getting a 404 error
 * [make.js][file_makejs] is known to send a 404 if a URL is invalid, for instance if a webpage or file is missing.
-## Compiling release notes is slow
-* Compiling of release notes can sometimes be slow due to the large amount of files that needed to be compiled. If you do not need to compile release notes, you can set the `COMPILE_NOTES` variable in [make.js][file_makejs] to `false` to disable compiling of release notes.
-  * **NOTE:** Do not forget to re-enable this variable when modifying the release notes source.
 ## Modifying make.js does not seem to update anything
 * Changes to the [make.js][file_makejs] script itself require any active instances of [make.js][file_makejs] terminals to be closed and restarted in order for changes to be updated.
 # Webpage Development
@@ -70,15 +66,6 @@
 * Save the changes.
 * Run [make.js][file_makejs] if you do not already have an instance of it running.
 * Refresh your browser if the old webpage is active to view the new changes.
-## Release notes structure
-* Release notes are comprised of six components:
-  * [header.html][file_header] (header component)
-  * [notes.html][file_notes] (notes component)
-  * [content.html][file_content] (content section component)
-  * [data.json][file_data] (template data)
-  * [%monthly_content%][file_releases] (changelog component)
-  * [index.html][file_index] (latest downloadable release)
-  * [footer.html][file_footer] (footer component)
 ## Modifying homepage (release date)
 * Modify the [index.html][file_index] page.
   * **TIP:** The download button should be one of the first things you see in preview mode.
