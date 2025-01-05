@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Armory | 3D Content Creation Tools</title>
+    <meta name="description" content="3D content creation tools.">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      [data-bs-theme=dark] {
+        --bs-body-bg: #1e2226;
+        --bs-body-bg-rgb: 30,34,38;
+        --bs-secondary-bg: #272c31;
+        --bs-secondary-bg-rgb: 39,44,49;
+        --bs-tertiary-bg: #272c31;
+        --bs-tertiary-bg-rgb: 39,44,49;
+      }
+
+      .bg-dark {
+        background-color: #1e2226 !important;
+/*        background-color: #171b1f !important;*/
+      }
+
+      .btn-primary {
+        background-color: #cc334d !important;
+        border-color: #cc334d !important;
+      }
+
+      header {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+        height: 58vh;
+        display: block;
+      }
+
+/*      header video {*/
+      header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <a href="https://armory3d.org/"><img src="img/Logo.png" style="width: 50px;" class="rounded" /></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">ARMORY</a>
+            <ul class="dropdown-menu rounded-3 shadow">
+              <li><a class="dropdown-item rounded-2" href="https://armorpaint.org/"><img src="img/paint.png" style="width: 25px;" class="rounded" /> ARMORPAINT</a></li>
+              <li><a class="dropdown-item rounded-2" href="https://armorlab.org/"><img src="img/lab.png" style="width: 25px;" class="rounded" /> ARMORLAB</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://armory3d.org">HOME</a>
+            </li>
+            <li>
+              <a href="https://armory3d.org/account"><button type="button" class="btn btn-primary px-4 me-sm-3">ACCOUNT</button></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <main>
+      <header>
+        <img src="img/FeaturedCover.jpg" />
+        <div class="position-relative p-5 mx-auto mx-md-5 my-5">
+          <div class="p-5 mx-auto mx-md-5 my-5 bg-body-secondary rounded-3" style="--bs-bg-opacity: 0.6; width: 440px;">
+            <h1 class="display-5 pb-3">3D <span class="text-body-emphasis">Content<br/>Creation</span> Tools</h1>
+            <a href="https://armory3d.org/account"><button type="button" class="btn btn-primary px-4 me-sm-3">Download</button></a>
+          </div>
+        </div>
+      </header>
+
+<script src="./chart.js"></script>
+
+      <!------------------------------------->
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h1 class="display-3 fw-bold">Server</h1>
+        <h3 class="fw-normal text-muted mb-3">Public server stats.</h3>
+        <canvas id="chart0"></canvas>
+        <canvas id="chart1"></canvas>
+        <canvas id="chart2"></canvas>
+        <canvas id="chart3"></canvas>
+      </div>
+
+      <!------------------------------------->
+
+      <script>
+        fetch("https://server.armorpaint.org/")
+         .then(response => response.text())
+         .then(data => {
+           const lines = data.replaceAll("\n", "").replaceAll("-", ",").split("<br>");
+           const views_paint = [];
+           const views_lab = [];
+           const supporters_paint = [];
+           const supporters_lab = [];
+           const labels = [];
+
+           for (let i = 0; i < 90; ++i) {
+             let line = lines[lines.length - 90 + i];
+             let parts = line.split(",");
+             views_paint.push(parts[0]);
+             supporters_paint.push(parts[2]);
+             views_lab.push(parts[3]);
+             supporters_lab.push(parts[5]);
+             labels.push(i + 1);
+           }
+
+           new Chart(document.getElementById("chart0").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Views", data: views_paint } ] } });
+
+           new Chart(document.getElementById("chart1").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Views", data: views_lab } ] } });
+
+           new Chart(document.getElementById("chart2").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Supporters", data: supporters_paint } ] }, options: { scales: { y: { beginAtZero: false } } } });
+
+           new Chart(document.getElementById("chart3").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Supporters", data: supporters_lab } ] }, options: { scales: { y: { beginAtZero: false } } } });
+         });
+        </script>
+
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md pb-4">
+            <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/Logo.png"/></a>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Projects</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/">ArmorLab</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/">Armory3D</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Links</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/notes">Release Notes</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/community">Contact</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="css/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

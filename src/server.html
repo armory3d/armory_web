@@ -1,0 +1,50 @@
+
+<script src="./chart.js"></script>
+
+      <!------------------------------------->
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h1 class="display-3 fw-bold">Server</h1>
+        <h3 class="fw-normal text-muted mb-3">Public server stats.</h3>
+        <canvas id="chart0"></canvas>
+        <canvas id="chart1"></canvas>
+        <canvas id="chart2"></canvas>
+        <canvas id="chart3"></canvas>
+      </div>
+
+      <!------------------------------------->
+
+      <script>
+        fetch("https://server.armorpaint.org/")
+         .then(response => response.text())
+         .then(data => {
+           const lines = data.replaceAll("\n", "").replaceAll("-", ",").split("<br>");
+           const views_paint = [];
+           const views_lab = [];
+           const supporters_paint = [];
+           const supporters_lab = [];
+           const labels = [];
+
+           for (let i = 0; i < 90; ++i) {
+             let line = lines[lines.length - 90 + i];
+             let parts = line.split(",");
+             views_paint.push(parts[0]);
+             supporters_paint.push(parts[2]);
+             views_lab.push(parts[3]);
+             supporters_lab.push(parts[5]);
+             labels.push(i + 1);
+           }
+
+           new Chart(document.getElementById("chart0").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Views", data: views_paint } ] } });
+
+           new Chart(document.getElementById("chart1").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Views", data: views_lab } ] } });
+
+           new Chart(document.getElementById("chart2").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Supporters", data: supporters_paint } ] }, options: { scales: { y: { beginAtZero: false } } } });
+
+           new Chart(document.getElementById("chart3").getContext("2d"),
+            { type: "bar", data: { labels, datasets: [ { label: "Supporters", data: supporters_lab } ] }, options: { scales: { y: { beginAtZero: false } } } });
+         });
+        </script>
