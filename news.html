@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Armory | 3D Content Creation Tools</title>
+    <meta name="description" content="3D content creation tools.">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      [data-bs-theme=dark] {
+        --bs-body-bg: #1e2226;
+        --bs-body-bg-rgb: 30,34,38;
+        --bs-secondary-bg: #272c31;
+        --bs-secondary-bg-rgb: 39,44,49;
+        --bs-tertiary-bg: #272c31;
+        --bs-tertiary-bg-rgb: 39,44,49;
+      }
+
+      .bg-dark {
+        background-color: #1e2226 !important;
+/*        background-color: #171b1f !important;*/
+      }
+
+      .btn-primary {
+        background-color: #cc334d !important;
+        border-color: #cc334d !important;
+      }
+
+      header {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+        height: 58vh;
+        display: block;
+      }
+
+/*      header video {*/
+      header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <a href="https://armory3d.org/"><img src="img/Logo.png" style="width: 50px;" class="rounded" /></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">ARMORY</a>
+            <ul class="dropdown-menu rounded-3 shadow">
+              <li><a class="dropdown-item rounded-2" href="https://armorpaint.org/"><img src="img/paint.png" style="width: 25px;" class="rounded" /> ARMORPAINT</a></li>
+              <li><a class="dropdown-item rounded-2" href="https://armorlab.org/"><img src="img/lab.png" style="width: 25px;" class="rounded" /> ARMORLAB</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://armory3d.org">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armory3d.org/news">NEWS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armory3d.org/blog">BLOG</a>
+            </li>
+            <!-- <li>
+              <a href="https://armory3d.org/account"><button type="button" class="btn btn-primary px-4 me-sm-3">ACCOUNT</button></a>
+            </li> -->
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <main>
+      <header>
+        <img src="img/FeaturedCover.jpg" />
+        <div class="position-relative p-5 mx-auto mx-md-5 my-5">
+          <div class="p-5 mx-auto mx-md-5 my-5 bg-body-secondary rounded-3" style="--bs-bg-opacity: 0.6; width: 440px;">
+            <h1 class="display-5 pb-3">3D <span class="text-body-emphasis">Content<br/>Creation</span> Tools</h1>
+            <!-- <a href="https://armory3d.org/account"><button type="button" class="btn btn-primary px-4 me-sm-3">Download</button></a> -->
+          </div>
+        </div>
+      </header>
+
+      <!------------------------------------->
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h1 class="display-3 fw-bold">News</h1>
+        <h3 class="fw-normal text-muted mb-3">Latest updates from development.</h3>
+        <a href="https://armorpaint.org/rss.xml" target="_blank"><button type="button" class="btn btn-primary px-4 me-sm-3">RSS</button></a>
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Nov 5, 2024</p>
+        <h3 class="fw-normal text-muted mb-3">Getting there - after a big development effort, ArmorPaint 1.0 alpha builds are coming soon.🖌</h3>
+        <img src="img/news/78.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sep 25, 2023</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorLab 0.1 is out - PBR material creation app.🎨<br/>
+        <a href="https://armorlab.org/notes">armorlab.org/notes</a></h3>
+        <img src="img/news/77.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Aug 30, 2023</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint 0.9 is out now - 3D texturing app for desktop, iOS and Android.🖌<br/>
+        <a href="https://armorpaint.org/notes">armorpaint.org/notes</a></h3>
+        <img src="img/news/76.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Aug 7, 2023</p>
+        <h3 class="fw-normal text-muted mb-3">Preparing to release ArmorPaint 0.9. Website just got a big update.</h3>
+        <img src="img/news/75.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 21, 2022</p>
+        <h3 class="fw-normal text-muted mb-3">Tons of polishing done in the latest ArmorPaint builds. iOS and Android update coming next.</h3>
+        <img src="img/news/0.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 11, 2022</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint builds are out on iOS and Android. More to come!</h3>
+        <!-- <img src="img/news/1.jpg" class="img-fluid" /> -->
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 23, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Thank you for the big interest in the iPad version - will be rolling updates regularly. All feedback on GitHub is very welcome!</h3>
+        <img src="img/news/2.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 21, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint 0.8 is out - 3D texture painting app now on desktop, iPad and Android.🖌<br/>
+        <a href="https://armorpaint.org/notes">armorpaint.org/notes</a></h3>
+        <img src="img/news/3.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sep 9, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Submitted to the AppStore, in the review process now.</h3>
+        <img src="img/news/4.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jul 19, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint on iPadOS with cloud support. Coming to the AppStore!</h3>
+        <!-- <img src="img/news/5.jpg" class="img-fluid" /> -->
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 18, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Drag and drop procedural edge wear onto your models in ArmorPaint.</h3>
+        <img src="img/news/6.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 3, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Unlimited masks per layer and mask blending now in the latest ArmorPaint builds.</h3>
+        <img src="img/news/7.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 13, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Cloud library now available in ArmorPaint.🌩️<br/>
+        <a href="https://armorpaint.org/cloud">armorpaint.org/cloud</a></h3>
+        <img src="img/news/8.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 6, 2021</p>
+        <h3 class="fw-normal text-muted mb-3">Working on procedural edge wear materials for ArmorPaint.</h3>
+        <img src="img/news/9.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Dec 17, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Non-destructive decal layers now available in ArmorPaint.</h3>
+        <img src="img/news/10.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Dec 3, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Use decals as a brush mask in the latest ArmorPaint builds.</h3>
+        <img src="img/news/11.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sept 29, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Painting translucency in the upcoming ArmorPaint ray-tracing update.</h3>
+        <img src="img/news/12.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sept 24, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Use nodes to control layer masks in ArmorPaint.</h3>
+        <img src="img/news/13.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sept 22, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Live material node preview, new blur node and a boatload of bug fixes now in the latest ArmorPaint builds.📦</h3>
+        <img src="img/news/14.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sept 9, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Path-traced viewport and ray-traced baking in ArmorPaint now runs on both Direct3D12 and Vulkan, Windows and Linux, Nvidia and the upcoming AMD cards.</h3>
+        <img src="img/news/15.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 12, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint running on iPadOS. Powered by Metal @ 120fps with Apple Pencil support. ✏</h3>
+        <img src="img/news/16.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 13, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Stencil mask, lazy mouse and brush jitter in ArmorPaint.<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></h3>
+        <img src="img/news/17.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 25, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">New video is up! Real-time path tracing in ArmorPaint.<br/>
+          <a href="https://youtu.be/uQb-LOJdYrE">youtu.be/uQb-LOJdYrE</a></h3>
+        <img src="img/news/18.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 21, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Creating materials for Minecraft RTX in ArmorPaint.<br/>
+          <a href="https://armorpaint.org/howto">armorpaint.org/howto</a></h3>
+        <img src="img/news/19.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 15, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Live brush preview + path-tracing in ArmorPaint.</h3>
+        <img src="img/news/20.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 7, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Sewing in ArmorPaint. Using the new brush nodes to create directional brushes.🧵<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></h3>
+        <img src="img/news/21.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 2, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Painted and rendered in ArmorPaint for fun. Model by İrfan Çaylı.🥏<br/>
+        <a href="https://artstation.com/artwork/aRW169">artstation.com/artwork/aRW169</a></h3>
+        <img src="img/news/22.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 5, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint launches on Android - development builds are up, with support for pen pressure, touch, keyboard, mouse and mirroring to big screen. iPadOS will follow!</h3>
+        <img src="img/news/23.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 25, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint has been awarded an Epic MegaGrant! Full steam ahead to build the best possible open-source 3D painting software!🏅</h3>
+        <img src="img/news/24.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 29, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint 0.8 dev builds! Working on asset browser with material previews, layer grouping, script console, faster ray-tracing, painting transparent surfaces.</h3>
+        <img src="img/news/25.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 23, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">Learn ArmorPaint by watching short clips. 🎓<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></h3>
+        <img src="img/news/26.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 9, 2020</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint 0.7 is out - new features, tons of fixes and updated manual. Video tutorials section coming!<br/>
+        <a href="http://armorpaint.org/notes">armorpaint.org/notes</a></h3>
+        <img src="img/news/27.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Dec 17, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Baking update for ArmorPaintDXR is up - raytraced ao, cavity, bent normals, thickness, lightmap, curvature, dilate pass, reduced gpu mem usage.🍞</h3>
+        <img src="img/news/28.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Nov 28, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint dev builds are up, gearing up for 0.7 release. Focused on fixes but has new stuff as well - custom export presets with channel swizzling, read layers and masks with material nodes, udim tiles export, built-in uv unwrap, improved dxr support.</h3>
+        <img src="img/news/29.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Nov 4, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Testing out plugin for @UnrealEngine. Paint onto objects by summoning ArmorPaint.</h3>
+        <img src="img/news/30.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 31, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Small feature to improve workflow in ArmorPaint. Quickly re-import mesh from source obj/fbx/blend file.</h3>
+        <img src="img/news/31.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 23, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Adding a way to create custom material nodes with plugins. Will make it possible to integrate new node systems, extend existing node set or write material shader by hand.</h3>
+        <img src="img/news/32.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 22, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">More goodies in latest ArmorPaint dev builds.📦 Split view, plugin manager, auto-save, improved decal scaling, UV controls for fill layers, faster layer handling, blend modes, enhanced picker tool.<br/>
+        <a href="http://armorpaint.org/notes">armorpaint.org/notes</a></h3>
+        <img src="img/news/33.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 10, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Approaching the holy grail - path-tracing viewport in ArmorPaint.</h3>
+        <img src="img/news/34.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 7, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">A new ArmorPaintDXR build is up, featuring 'Bake - AO (DXR)' option. It's the first build ever running on Direct3D12.</h3>
+        <img src="img/news/35.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sep 17, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Texture Synthesis by @EmbarkStudios running in ArmorPaint as a plugin. Make non-tiling textures tile. First step towards generating materials from photos!</h3>
+        <img src="img/news/36.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sep 13, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Friday fun - 'procedural' Commodore 64 material.📺 Actual emulator compiled from C to WebAssembly, running in ArmorPaint as a plugin. Check out github.com/floooh/chips by @FlohOfWoe!</h3>
+        <img src="img/news/37.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Sep 4, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Fun with terrain in ArmorPaint. Improving height map sculpting features.</h3>
+        <img src="img/news/38.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Aug 29, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Working on ray-traced baking in ArmorPaint.🍞</h3>
+        <img src="img/news/39.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Aug 14, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New video is up! Texturing in ArmorPaint 0.6.</h3>
+        <img src="img/news/40.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Aug 1, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Upcoming ArmorPaint ray-tracing update now in testing phase.🤖</h3>
+        <img src="img/news/41.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jul 12, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Cooking some edge wear materials, powered by curvature baker. Drag and drop material from the shelf to apply.</h3>
+        <img src="img/news/42.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jul 4, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint builds are up! Curvature baker, 16/32bit painting, .exr export, undo for layer operations, custom keymaps, 256 layers per project.🎨</h3>
+        <img src="img/news/43.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 13, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Under the hood, ArmorPaint 0.5 vs 0.6. 🚀<br/>
+        23% faster painting<br/>
+        34% less gpu mem for layer storage<br/>
+        43% less gpu mem for mesh storage<br/>
+        72% faster startup<br/>
+        59% faster .obj import</h3>
+        <img src="img/news/44.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 6, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New 3D brush cursor with topological warp + angle and depth rejection in latest ArmorPaint builds.</h3>
+        <img src="img/news/45.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 23, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New features landed in ArmorPaint - triplanar mapping, symmetry paint, texture viewer, native file dialogs, initial .blend material importer.🎨</h3>
+        <img src="img/news/46.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 18, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Fresh ArmorPaint development builds are up! New layer tools, UDIM, 2D paint, masking.</h3>
+        <img src="img/news/47.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 10, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint gearing up for ray tracing.</h3>
+        <img src="img/news/48.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 29, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Advancing layer management in ArmorPaint. Per-layer masking, blending, opacity and channel control.</h3>
+        <img src="img/news/49.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 21, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Adding particle brushes into ArmorPaint to achieve rain effect!</h3>
+        <img src="img/news/50.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 7, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New text tool in ArmorPaint. Drop in a font file and stamp text onto objects. Text has active material applied.</h3>
+        <img src="img/news/51.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 5, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">Advancing the decal tool in ArmorPaint. Applies all channels at once and supports opacity masking now.</h3>
+        <img src="img/news/52.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 28, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint development builds are now up if you feel adventurous, approaching 0.6 release!🎨</h3>
+        <img src="img/news/53.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 8, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint is getting more and more refined.🤠🖌</h3>
+        <img src="img/news/54.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 30, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint + latest Armory engine. Importing 650MB .obj file(7.2M tris) - 32% lower memory usage, 15% faster when painting. Must have all the speed!</h3>
+        <img src="img/news/55.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 25, 2019</p>
+        <h3 class="fw-normal text-muted mb-3">If you are eyeing a 3D painting software, ArmorPaint just happens to have another big upgrade around the corner. Humbled by the enormous support!</h3>
+        <img src="img/news/56.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Nov 8, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint gets the biggest update yet - 0.5 is live!</h3>
+        <img src="img/news/57.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Oct 12, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">New ArmorPaint builds incoming! Painting 3M triangle mesh, all PBR maps at once.</h3>
+        <img src="img/news/58.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jul 31, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Kha can do ray-tracing now powered by D3D12 and soon Vulkan. Endless possibilities! First test - primitive path-tracing renderer in Armory.</h3>
+        <img src="img/news/59.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jul 12, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint 0.4 is out! Material previews, height painting, sticker tool and first peek at undo support.</h3>
+        <img src="img/news/60.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 29, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Adding sticker tool and live material previews to ArmorPaint.</h3>
+        <img src="img/news/61.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 18, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Height-maps in upcoming ArmorPaint - generating procedural terrain with hand-painted road layer.</h3>
+        <img src="img/news/62.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 11, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Painting height textures in ArmorPaint.</h3>
+        <img src="img/news/63.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 4, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint 0.3 is out! Layers, color-id maps, plugins, themes, pen pressure, erase tool, refined ui.</h3>
+        <img src="img/news/64.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Apr 27, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Wrapping up new ArmorPaint builds - now with support for color-id maps and plugins written in JS or WebAssembly.</h3>
+        <img src="img/news/65.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Mar 9, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">Testing the new Kha pen API in ArmorPaint!</h3>
+        <img src="img/news/66.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 27, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint hits version 0.2! Check out what's new.</h3>
+        <img src="img/news/67.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jan 19, 2018</p>
+        <h3 class="fw-normal text-muted mb-3">ArmorPaint is out now! 3D PBR texture painting tool powered by Armory.</h3>
+        <img src="img/news/68.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Dec 15, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Still coming! 3D character painting in ArmorPaint.</h3>
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 18, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Pushed updates to the UI library used in Armory tools.</h3>
+        <img src="img/news/69.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Jun 15, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Armory painter tool now with a website, launching next month.</h3>
+        <img src="img/news/70.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 18, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">More progress on Armory painter - added VR/AR mode and mobile/web support.</h3>
+        <img src="img/news/71.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 9, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Stress-testing Armory painter tool on a sculpted 1.35M triangle mesh. Up to 20K texture painting using 6GB+ graphics card.</h3>
+        <img src="img/news/72.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>May 2, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Armory-powered GPU painting tool taking shape - Cycles-like node materials for brushes with instant voxel GI enabled preview.</h3>
+        <img src="img/news/73.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <p>Feb 6, 2017</p>
+        <h3 class="fw-normal text-muted mb-3">Watch some GPU based 3D painting I have been working on using Armory & Kha.<br/>
+          <a href="http://youtu.be/TEp3fPBvf80">youtu.be/TEp3fPBvf80</a></h3>
+        <img src="img/news/74.jpg" class="img-fluid" />
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h3><a href="https://x.com/armory3d">Source</a></h3>
+      </div>
+
+      <!------------------------------------->
+
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md pb-4">
+            <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/Logo.png"/></a>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Projects</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/">ArmorLab</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/">Armory3D</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Links</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/notes">Release Notes</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/community">Contact</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="css/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
