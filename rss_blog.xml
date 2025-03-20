@@ -4,12 +4,585 @@
 		<title>Armory3D Blog</title>
 		<link>https://armory3d.org/blog</link>
 		<description>3D Content Creation Tools</description>
-
+	
 			<item>
 	    		<title>Armory3D Blog</title>
 	    		<link>https://armory3d.org/blog</link>
-	    		<description></description>
+	    		<description>Getting there - after a big development effort, ArmorPaint 1.0 alpha builds are coming soon.🖌</description>
 			</item>
 
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorLab 0.1 is out - PBR material creation app.🎨<br/>
+        <a href="https://armorlab.org/notes">armorlab.org/notes</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint 0.9 is out now - 3D texturing app for desktop, iOS and Android.🖌<br/>
+        <a href="https://armorpaint.org/notes">armorpaint.org/notes</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Preparing to release ArmorPaint 0.9. Website just got a big update.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Tons of polishing done in the latest ArmorPaint builds. iOS and Android update coming next.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint builds are out on iOS and Android. More to come!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Thank you for the big interest in the iPad version - will be rolling updates regularly. All feedback on GitHub is very welcome!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint 0.8 is out - 3D texture painting app now on desktop, iPad and Android.🖌<br/>
+        <a href="https://armorpaint.org/notes">armorpaint.org/notes</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Submitted to the AppStore, in the review process now.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint on iPadOS with cloud support. Coming to the AppStore!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Drag and drop procedural edge wear onto your models in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Unlimited masks per layer and mask blending now in the latest ArmorPaint builds.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Cloud library now available in ArmorPaint.🌩️<br/>
+        <a href="https://armorpaint.org/cloud">armorpaint.org/cloud</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Working on procedural edge wear materials for ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Non-destructive decal layers now available in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Use decals as a brush mask in the latest ArmorPaint builds.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Painting translucency in the upcoming ArmorPaint ray-tracing update.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Use nodes to control layer masks in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Live material node preview, new blur node and a boatload of bug fixes now in the latest ArmorPaint builds.📦</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Path-traced viewport and ray-traced baking in ArmorPaint now runs on both Direct3D12 and Vulkan, Windows and Linux, Nvidia and the upcoming AMD cards.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint running on iPadOS. Powered by Metal @ 120fps with Apple Pencil support. ✏</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Stencil mask, lazy mouse and brush jitter in ArmorPaint.<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New video is up! Real-time path tracing in ArmorPaint.<br/>
+          <a href="https://youtu.be/uQb-LOJdYrE">youtu.be/uQb-LOJdYrE</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Creating materials for Minecraft RTX in ArmorPaint.<br/>
+          <a href="https://armorpaint.org/howto">armorpaint.org/howto</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Live brush preview + path-tracing in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Sewing in ArmorPaint. Using the new brush nodes to create directional brushes.🧵<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Painted and rendered in ArmorPaint for fun. Model by İrfan Çaylı.🥏<br/>
+        <a href="https://artstation.com/artwork/aRW169">artstation.com/artwork/aRW169</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint launches on Android - development builds are up, with support for pen pressure, touch, keyboard, mouse and mirroring to big screen. iPadOS will follow!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint has been awarded an Epic MegaGrant! Full steam ahead to build the best possible open-source 3D painting software!🏅</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint 0.8 dev builds! Working on asset browser with material previews, layer grouping, script console, faster ray-tracing, painting transparent surfaces.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Learn ArmorPaint by watching short clips. 🎓<br/>
+        <a href="http://armorpaint.org/howto">armorpaint.org/howto</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint 0.7 is out - new features, tons of fixes and updated manual. Video tutorials section coming!<br/>
+        <a href="http://armorpaint.org/notes">armorpaint.org/notes</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Baking update for ArmorPaintDXR is up - raytraced ao, cavity, bent normals, thickness, lightmap, curvature, dilate pass, reduced gpu mem usage.🍞</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint dev builds are up, gearing up for 0.7 release. Focused on fixes but has new stuff as well - custom export presets with channel swizzling, read layers and masks with material nodes, udim tiles export, built-in uv unwrap, improved dxr support.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Testing out plugin for @UnrealEngine. Paint onto objects by summoning ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Small feature to improve workflow in ArmorPaint. Quickly re-import mesh from source obj/fbx/blend file.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Adding a way to create custom material nodes with plugins. Will make it possible to integrate new node systems, extend existing node set or write material shader by hand.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>More goodies in latest ArmorPaint dev builds.📦 Split view, plugin manager, auto-save, improved decal scaling, UV controls for fill layers, faster layer handling, blend modes, enhanced picker tool.<br/>
+        <a href="http://armorpaint.org/notes">armorpaint.org/notes</a></description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Approaching the holy grail - path-tracing viewport in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>A new ArmorPaintDXR build is up, featuring 'Bake - AO (DXR)' option. It's the first build ever running on Direct3D12.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Texture Synthesis by @EmbarkStudios running in ArmorPaint as a plugin. Make non-tiling textures tile. First step towards generating materials from photos!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Friday fun - 'procedural' Commodore 64 material.📺 Actual emulator compiled from C to WebAssembly, running in ArmorPaint as a plugin. Check out github.com/floooh/chips by @FlohOfWoe!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Fun with terrain in ArmorPaint. Improving height map sculpting features.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Working on ray-traced baking in ArmorPaint.🍞</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New video is up! Texturing in ArmorPaint 0.6.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Upcoming ArmorPaint ray-tracing update now in testing phase.🤖</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Cooking some edge wear materials, powered by curvature baker. Drag and drop material from the shelf to apply.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint builds are up! Curvature baker, 16/32bit painting, .exr export, undo for layer operations, custom keymaps, 256 layers per project.🎨</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Under the hood, ArmorPaint 0.5 vs 0.6. 🚀<br/>
+        23% faster painting<br/>
+        34% less gpu mem for layer storage<br/>
+        43% less gpu mem for mesh storage<br/>
+        72% faster startup<br/>
+        59% faster .obj import</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New 3D brush cursor with topological warp + angle and depth rejection in latest ArmorPaint builds.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New features landed in ArmorPaint - triplanar mapping, symmetry paint, texture viewer, native file dialogs, initial .blend material importer.🎨</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Fresh ArmorPaint development builds are up! New layer tools, UDIM, 2D paint, masking.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint gearing up for ray tracing.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Advancing layer management in ArmorPaint. Per-layer masking, blending, opacity and channel control.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Adding particle brushes into ArmorPaint to achieve rain effect!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New text tool in ArmorPaint. Drop in a font file and stamp text onto objects. Text has active material applied.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Advancing the decal tool in ArmorPaint. Applies all channels at once and supports opacity masking now.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint development builds are now up if you feel adventurous, approaching 0.6 release!🎨</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint is getting more and more refined.🤠🖌</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint + latest Armory engine. Importing 650MB .obj file(7.2M tris) - 32% lower memory usage, 15% faster when painting. Must have all the speed!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>If you are eyeing a 3D painting software, ArmorPaint just happens to have another big upgrade around the corner. Humbled by the enormous support!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint gets the biggest update yet - 0.5 is live!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>New ArmorPaint builds incoming! Painting 3M triangle mesh, all PBR maps at once.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Kha can do ray-tracing now powered by D3D12 and soon Vulkan. Endless possibilities! First test - primitive path-tracing renderer in Armory.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint 0.4 is out! Material previews, height painting, sticker tool and first peek at undo support.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Adding sticker tool and live material previews to ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Height-maps in upcoming ArmorPaint - generating procedural terrain with hand-painted road layer.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Painting height textures in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint 0.3 is out! Layers, color-id maps, plugins, themes, pen pressure, erase tool, refined ui.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Wrapping up new ArmorPaint builds - now with support for color-id maps and plugins written in JS or WebAssembly.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Testing the new Kha pen API in ArmorPaint!</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint hits version 0.2! Check out what's new.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>ArmorPaint is out now! 3D PBR texture painting tool powered by Armory.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Still coming! 3D character painting in ArmorPaint.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Pushed updates to the UI library used in Armory tools.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Armory painter tool now with a website, launching next month.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>More progress on Armory painter - added VR/AR mode and mobile/web support.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Stress-testing Armory painter tool on a sculpted 1.35M triangle mesh. Up to 20K texture painting using 6GB+ graphics card.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Armory-powered GPU painting tool taking shape - Cycles-like node materials for brushes with instant voxel GI enabled preview.</description>
+			</item>
+
+		
+			<item>
+	    		<title>Armory3D Blog</title>
+	    		<link>https://armory3d.org/blog</link>
+	    		<description>Watch some GPU based 3D painting I have been working on using Armory & Kha.<br/>
+          <a href="http://youtu.be/TEp3fPBvf80">youtu.be/TEp3fPBvf80</a></description>
+			</item>
+
+		
 	</channel>
 	</rss>
+	
