@@ -8,12 +8,6 @@ let writeHtml = function(fileName, extra = '') {
 	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
 }
 
-let writeNews = function(fileName, extra = '') {
-	let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
-	html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
-	fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
-}
-
 let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileNameMd) {
 	let showdown = require('./showdown.min.js');
     let converter = new showdown.Converter();
@@ -25,7 +19,6 @@ let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileName
 }
 
 writeHtml('index.html');
-writeNews('news.html');
 writeHtml('community.html');
 writeHtml('download.html');
 writeHtml('notes.html');

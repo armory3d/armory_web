@@ -18,12 +18,6 @@ let writeManual = function(fileNameOut, fileNameHeader, fileNameFooter, fileName
 	fs.writeFileSync('../' + fileNameOut, header + htmlHeader + converted_md + htmlFooter + footer);
 }
 
-let writeNews = function(fileName, extra = '') {
-	//let html = fs.readFileSync('../../armorpaint_web/src/' + fileName, 'utf8');
-	//html = html.replaceAll('img/news/', 'https://armorpaint.org/img/news/');
-	//fs.writeFileSync('../' + fileName, header + cover + html + extra + footer);
-}
-
 writeHtml('index.html');
 writeHtml('community.html');
 writeHtml('download.html');
