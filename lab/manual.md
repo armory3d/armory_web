@@ -14,13 +14,13 @@ ArmorLab is a stand-alone software designed for AI-powered texture authoring. Ge
 
 **Windows** build is available. **Linux** (cpu only) and **macOS** (apple silicon only) builds also provided. On desktop, ArmorLab is a portable application with no installation - just unpack and run.
 
-> [Get ArmorLab](https://armorlab.org/download.html)
+> [Get ArmorLab](https://armory3d.org/lab/download.html)
 
 #### Requirements
 
 ArmorLab runs on the GPU by default and the processing time depends on a graphics card performance. GTX 1060/6GB or better is recommended. Optionally, GPU inference can be disabled at the expense of processing time. With GPU inference disabled, ArmorLab benefits from multi-threaded CPU performance.
 
-> See [Preferences](https://armorlab.org/manual#preferences) to tune performance.
+> See [Preferences](https://armory3d.org/lab/manual#preferences) to tune performance.
 
 #### Updating
 
@@ -203,7 +203,7 @@ Generates a new image variant guided with text prompt.
 
 Final node which is used when exporting textures to disk.
 
-> Check out the [gallery](https://armorlab.org/gallery.html) to see nodes in action.
+> Check out the [gallery](https://armory3d.org/lab/gallery.html) to see nodes in action.
 
 <br/><br/><br/><br/><br/>
 
@@ -330,9 +330,9 @@ Click `Menu bar - Edit - Preferences...` to show the preferences window.
 
 > ArmorLab uses `Windows Ink` API on Windows. `Windows Ink` is available on Windows 8 or newer.
 
-> When using a Wacom tablet on Windows, ensure `Use Windows Ink` option is enabled in [Wacom Tablet Properties](https://armorlab.org/manual/img/manual/wacom.png).
+> When using a Wacom tablet on Windows, ensure `Use Windows Ink` option is enabled in [Wacom Tablet Properties](https://armory3d.org/lab/manual/img/manual/wacom.png).
 
-> When using a Wacom tablet on Windows, you can rotate the viewport by assigning `Alt` + `Left click` modifier onto pen button in [Wacom Tablet Properties](https://armorlab.org/manual/img/manual/wacom_button.png).
+> When using a Wacom tablet on Windows, you can rotate the viewport by assigning `Alt` + `Left click` modifier onto pen button in [Wacom Tablet Properties](https://armory3d.org/lab/manual/img/manual/wacom_button.png).
 
 > Pen pressure is expected to work on Windows, Linux, macOS, Android and iOS.
 
