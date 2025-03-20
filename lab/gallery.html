@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArmorLab | PBR Texture Creation</title>
+    <meta name="description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://armorlab.org/">
+    <meta property="og:title" content="ArmorLab | PBR Texture Creation">
+    <meta property="og:description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="og:image" content="https://armorlab.org/img/x.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://armorlab.org/">
+    <meta property="twitter:title" content="ArmorLab | PBR Texture Creation">
+    <meta property="twitter:description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="twitter:image" content="https://armorlab.org/img/x.jpg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      [data-bs-theme=dark] {
+        --bs-body-bg: #1e2226;
+        --bs-body-bg-rgb: 30,34,38;
+        --bs-secondary-bg: #272c31;
+        --bs-secondary-bg-rgb: 39,44,49;
+        --bs-tertiary-bg: #272c31;
+        --bs-tertiary-bg-rgb: 39,44,49;
+      }
+
+      .bg-dark {
+        background-color: #1e2226 !important;
+/*        background-color: #171b1f !important;*/
+      }
+
+      .btn-primary {
+        background-color: #cc334d !important;
+        border-color: #cc334d !important;
+      }
+
+      header {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+        height: 58vh;
+        display: block;
+      }
+
+/*      header video {*/
+      header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <a href="https://armorlab.org/"><img src="img/Logo.png" style="width: 50px;" class="rounded" /></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">ARMORLAB</a>
+            <ul class="dropdown-menu rounded-3 shadow">
+              <li><a class="dropdown-item rounded-2" href="https://armorpaint.org/"><img src="img/paint.png" style="width: 25px;" class="rounded" /> ARMORPAINT</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/news">NEWS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/manual">MANUAL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/howto">HOW TO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/community">COMMUNITY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/gallery">GALLERY</a>
+            </li>
+            <li>
+              <a href="https://armorlab.org/download"><button type="button" class="btn btn-primary px-4 me-sm-3">DOWNLOAD</button></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <main>
+      <header>
+        <!-- <video playsinline='' autoplay='' muted='' loop=''>
+          <source src="img/cover.mp4" type="video/mp4" />
+        </video> -->
+        <img src="img/FeaturedCover.jpg" />
+        <div class="position-relative p-5 mx-auto mx-md-5 my-5">
+          <div class="p-5 mx-auto mx-md-5 my-5 bg-body-secondary rounded-3" style="--bs-bg-opacity: 0.6; width: 440px;">
+            <h1 class="display-5 pb-3">Create Your<br>PBR Textures<br>in <span class="text-body-emphasis">ArmorLab</span>.</h1>
+            <a href="https://armorlab.org/download"><button type="button" class="btn btn-primary px-4 me-sm-3">v<span id="spanversionhead">...</span></button></a>
+          </div>
+        </div>
+      </header>
+      <script type="text/javascript">
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = function() {
+            if (req.readyState == XMLHttpRequest.DONE) {
+               if (req.status == 200) {
+                  var data = JSON.parse(req.responseText);
+                  spanversionhead.innerHTML = "" + data.version_name + "";
+               }
+            }
+        };
+        req.open("GET", "https://server.armorpaint.org/armorlab.html", true);
+        req.send();
+      </script>
+
+      <!------------------------------------->
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h1 class="display-3 fw-bold">Gallery</h1>
+        <h3 class="fw-normal text-muted mb-3">Content generated in ArmorLab.</h3>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators18" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/h.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/g.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators18" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators19" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/d.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/c.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators19" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators20" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/t.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/s.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators20" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators21" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/p.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/o.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators21" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators22" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/j.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/i.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators22" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators23" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/l.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/k.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators23" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators24" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/n.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/m.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators24" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators25" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/f.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/e.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators25" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Photo to Material</p>
+            <div id="carouselExampleIndicators26" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/photo_to_material/v.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/photo_to_material/u.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators26" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Inpaint</p>
+            <div id="carouselExampleIndicators0" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/slide1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/slide2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/slide3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/slide4.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators0" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Pebbles</p>
+            <div id="carouselExampleIndicators1" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="7"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/4.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/5.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/6.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/7.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/8.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Tiling</p>
+            <div id="carouselExampleIndicators2" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/185/185_tile1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/185/185_tile2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/185/185_tile0.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Tiling</p>
+            <div id="carouselExampleIndicators3" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/bricks_tile/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/bricks_tile/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/bricks_tile/3.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Upscale</p>
+            <div id="carouselExampleIndicators4" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/upscale_variance/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/upscale_variance/2.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Variance</p>
+            <div id="carouselExampleIndicators5" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/upscale_variance/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/upscale_variance/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/upscale_variance/4.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>PBR Textures</p>
+            <div id="carouselExampleIndicators6" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/179/179_tile.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_base.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_height.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_normal.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_occlusion.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_roughness.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>PBR Textures</p>
+            <div id="carouselExampleIndicators7" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/66/66_tile.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_base.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_height.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_normal.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_occlusion.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_roughness.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>PBR Textures</p>
+            <div id="carouselExampleIndicators8" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/31/31_tile.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_base.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_height.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_normal.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_occlusion.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_roughness.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Tiling</p>
+            <div id="carouselExampleIndicators9" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/179/179_tile1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_tile2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/179/179_tile0.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Tiling</p>
+            <div id="carouselExampleIndicators10" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/66/66_tile1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_tile2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/66/66_tile0.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Tiling</p>
+            <div id="carouselExampleIndicators11" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/31/31_tile1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_tile2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/31/31_tile0.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Chain Mail</p>
+            <div id="carouselExampleIndicators12" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/chain_mail/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/chain_mail/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/chain_mail/3.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Fabric</p>
+            <div id="carouselExampleIndicators13" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/fabric/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/fabric/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/fabric/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/fabric/4.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/fabric/5.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/fabric/6.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Floor</p>
+            <div id="carouselExampleIndicators14" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/floor/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/floor/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/floor/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/floor/4.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/floor/5.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container col-xxl-9 py-2">
+        <div class="row align-items-center g-5 py-2">
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Leather</p>
+            <div id="carouselExampleIndicators15" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/leather/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/leather/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/leather/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/leather/4.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Plaster</p>
+            <div id="carouselExampleIndicators16" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide-to="3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/plaster/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/plaster/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/plaster/3.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/plaster/4.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators16" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-3 bg-body-tertiary rounded p-2 mx-lg-5">
+            <p>Text to Photo - Wood</p>
+            <div id="carouselExampleIndicators17" class="carousel slide carousel-fade">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/text_to_material/wood/1.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/wood/2.jpg" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/text_to_material/wood/3.jpg" class="d-block w-100 rounded">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators17" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <h5 class="fw-normal text-muted text-center mb-5">Materials available in the <a href="https://armorpaint.org/cloud.html">ArmorPaint cloud</a>. 🖌🎨</h5>
+
+      <!------------------------------------->
+
+		<div style="justify-content: center; display: grid; grid-template-columns: repeat(auto-fill, 170px); max-width: 900px; margin: auto;">
+	<div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Asphalt001_icon.png"/><br>Asphalt001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Asphalt002_icon.png"/><br>Asphalt002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Asphalt003_icon.png"/><br>Asphalt003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Bark001_icon.png"/><br>Bark001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Bark002_icon.png"/><br>Bark002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Bark003_icon.png"/><br>Bark003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Cardboard001_icon.png"/><br>Cardboard001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Chessboard001_icon.png"/><br>Chessboard001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Concrete001_icon.png"/><br>Concrete001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Concrete002_icon.png"/><br>Concrete002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Concrete003_icon.png"/><br>Concrete003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Concrete004_icon.png"/><br>Concrete004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Concrete005_icon.png"/><br>Concrete005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Cover001_icon.png"/><br>Cover001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Drain001_icon.png"/><br>Drain001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Fabric001_icon.png"/><br>Fabric001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Fabric002_icon.png"/><br>Fabric002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/ForestGround001_icon.png"/><br>ForestGroun...<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Fur001_icon.png"/><br>Fur001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Fur002_icon.png"/><br>Fur002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Fur003_icon.png"/><br>Fur003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Grass001_icon.png"/><br>Grass001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/GrassDry001_icon.png"/><br>GrassDry001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Grid001_icon.png"/><br>Grid001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground001_icon.png"/><br>Ground001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground002_icon.png"/><br>Ground002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground003_icon.png"/><br>Ground003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground004_icon.png"/><br>Ground004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground005_icon.png"/><br>Ground005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground006_icon.png"/><br>Ground006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Ground007_icon.png"/><br>Ground007<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Leaves001_icon.png"/><br>Leaves001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Marble001_icon.png"/><br>Marble001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Marble002_icon.png"/><br>Marble002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Mud001_icon.png"/><br>Mud001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Mud002_icon.png"/><br>Mud002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Paper001_icon.png"/><br>Paper001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Paper002_icon.png"/><br>Paper002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster001_icon.png"/><br>Plaster001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster002_icon.png"/><br>Plaster002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster003_icon.png"/><br>Plaster003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster004_icon.png"/><br>Plaster004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster005_icon.png"/><br>Plaster005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster006_icon.png"/><br>Plaster006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plaster007_icon.png"/><br>Plaster007<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Plastic001_icon.png"/><br>Plastic001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Rocks001_icon.png"/><br>Rocks001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Rocks002_icon.png"/><br>Rocks002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Rocks003_icon.png"/><br>Rocks003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Rocks004_icon.png"/><br>Rocks004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Rocks005_icon.png"/><br>Rocks005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Snow001_icon.png"/><br>Snow001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Snow002_icon.png"/><br>Snow002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Stone001_icon.png"/><br>Stone001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles001_icon.png"/><br>Tiles001<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles002_icon.png"/><br>Tiles002<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles003_icon.png"/><br>Tiles003<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles004_icon.png"/><br>Tiles004<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles005_icon.png"/><br>Tiles005<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/Tiles006_icon.png"/><br>Tiles006<br><br></div><div style="width: 70%; text-align: center; margin: auto;"><img style="width: 128px;" src="img/cloud_raytraced/WoodBurnt001_icon.png"/><br>WoodBurnt001<br><br></div></div>
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md pb-4">
+            <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/armory.png"/></a>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Projects</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/">ArmorLab</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/">Armory3D</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Links</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/notes">Release Notes</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/community">Contact</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/privacy">Privacy</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="css/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ArmorLab | PBR Texture Creation</title>
+    <meta name="description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://armorlab.org/">
+    <meta property="og:title" content="ArmorLab | PBR Texture Creation">
+    <meta property="og:description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="og:image" content="https://armorlab.org/img/x.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://armorlab.org/">
+    <meta property="twitter:title" content="ArmorLab | PBR Texture Creation">
+    <meta property="twitter:description" content="ArmorLab is a software designed for authoring PBR textures.">
+    <meta property="twitter:image" content="https://armorlab.org/img/x.jpg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      [data-bs-theme=dark] {
+        --bs-body-bg: #1e2226;
+        --bs-body-bg-rgb: 30,34,38;
+        --bs-secondary-bg: #272c31;
+        --bs-secondary-bg-rgb: 39,44,49;
+        --bs-tertiary-bg: #272c31;
+        --bs-tertiary-bg-rgb: 39,44,49;
+      }
+
+      .bg-dark {
+        background-color: #1e2226 !important;
+/*        background-color: #171b1f !important;*/
+      }
+
+      .btn-primary {
+        background-color: #cc334d !important;
+        border-color: #cc334d !important;
+      }
+
+      header {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+        height: 58vh;
+        display: block;
+      }
+
+/*      header video {*/
+      header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+
+        <a href="https://armorlab.org/"><img src="img/Logo.png" style="width: 50px;" class="rounded" /></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">ARMORLAB</a>
+            <ul class="dropdown-menu rounded-3 shadow">
+              <li><a class="dropdown-item rounded-2" href="https://armorpaint.org/"><img src="img/paint.png" style="width: 25px;" class="rounded" /> ARMORPAINT</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://armory3d.org/news">NEWS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/manual">MANUAL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/howto">HOW TO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/community">COMMUNITY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://armorlab.org/gallery">GALLERY</a>
+            </li>
+            <li>
+              <a href="https://armorlab.org/download"><button type="button" class="btn btn-primary px-4 me-sm-3">DOWNLOAD</button></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+      <!------------------------------------->
+
+      <style type="text/css">
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+
+        .doc-sidebar { width: 100%; padding-top: 72px; }
+        @media (min-width: 992px) {
+            .doc-sidebar { position: fixed; width: 280px; }
+        }
+
+        h1 { scroll-margin-top: 100px; }
+
+      </style>
+
+      <div class="d-flex flex-column flex-shrink-0 doc-sidebar">
+        <ul class="nav nav-pills flex-column mb-auto" id="docNav">
+          <li><a href="#download" class="nav-link text-white">
+            Download
+          </a></li>
+          <li><a href="#getstarted" class="nav-link text-white">
+            Get Started
+          </a></li>
+          <li><a href="#workflow" class="nav-link text-white">
+            Workflow
+          </a></li>
+          <li><a href="#nodes" class="nav-link text-white">
+            Nodes
+          </a></li>
+          <li><a href="#viewport" class="nav-link text-white">
+            Viewport
+          </a></li>
+          <li><a href="#workspaces" class="nav-link text-white">
+            Workspaces
+          </a></li>
+          <li><a href="#preferences" class="nav-link text-white">
+            Preferences
+          </a></li>
+          <li><a href="#plugins" class="nav-link text-white">
+            Plugins
+          </a></li>
+        </ul>
+      </div>
+
+      <div class="pt-4"></div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3">
+        <h1 class="display-3 fw-bold">Manual</h1>
+        <h3 class="fw-normal text-muted mb-3">Text-based guide to ArmorLab.</h3>
+      </div>
+
+      <div class="col-md-6 p-lg-5 mx-auto my-5 bg-body-tertiary rounded pt-3" data-bs-spy="scroll"; data-bs-target="#docNav";>
+
+      <!------------------------------------->
+<h1 id="welcome">Welcome</h1>
+<p><em>Version <a href="https://github.com/armory3d/armorlab_web/tree/main/manual.md">0.1</a></em></p>
+<p><img src="img/manual/title.jpg" alt="" /></p>
+<p>ArmorLab is a stand-alone software designed for AI-powered texture authoring. Generate PBR textures using text prompts or by drag &amp; dropping your photos.</p>
+<blockquote>
+  <p>The preview version has many rough edges and the experience may be frustrating.</p>
+</blockquote>
+<hr />
+<h1 id="download">Download</h1>
+<p><strong>Windows</strong> build is available. <strong>Linux</strong> (cpu only) and <strong>macOS</strong> (apple silicon only) builds also provided. On desktop, ArmorLab is a portable application with no installation - just unpack and run.</p>
+<blockquote>
+  <p><a href="https://armorlab.org/download.html">Get ArmorLab</a></p>
+</blockquote>
+<h4 id="requirements">Requirements</h4>
+<p>ArmorLab runs on the GPU by default and the processing time depends on a graphics card performance. GTX 1060/6GB or better is recommended. Optionally, GPU inference can be disabled at the expense of processing time. With GPU inference disabled, ArmorLab benefits from multi-threaded CPU performance.</p>
+<blockquote>
+  <p>See <a href="https://armorlab.org/manual#preferences">Preferences</a> to tune performance.</p>
+</blockquote>
+<h4 id="updating">Updating</h4>
+<p>Latest builds can be downloaded through your <a href="https://gumroad.com/library">Gumroad Library</a>. Alternatively, use the original email sent by Gumroad to access the download page.</p>
+<blockquote>
+  <p>In ArmorLab, press <code>Help - Check for Updates...</code> to check if newer build is available.</p>
+</blockquote>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="getstarted">Get Started</h1>
+<div style="height:300px"><iframe style="top:0;left:0;width:100%;height:100%;max-width:560px;" src="https://www.youtube.com/embed/-PYPuZQsujs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<h4 id="windows">Windows</h4>
+<p>Unpack downloaded archive and run <code>ArmorLab.exe</code>. In some cases, Windows may prompt you with the unrecognized app dialog - press <code>More Info - Run Anyway</code>.</p>
+<h4 id="linux">Linux</h4>
+<p>Unpack downloaded archive and run <code>ArmorLab</code>. In some cases, you may need to open terminal in the extracted folder and run <code>./ArmorLab</code>.</p>
+<h4 id="macos">macOS</h4>
+<p>Unpack downloaded archive and run <code>ArmorLab.app</code>.</p>
+<h4 id="ios">iOS</h4>
+<p>Coming soon.</p>
+<h4 id="android">Android</h4>
+<p>Coming soon.</p>
+<h4 id="controls">Controls</h4>
+<ul>
+<li><code>Left mouse button / Pen</code> to paint a mask.</li>
+<li><code>Alt</code> + <code>left mouse button</code> to rotate the camera.</li>
+<li><code>Alt</code> + <code>middle mouse button</code> to pan the camera.</li>
+<li><code>Alt</code> + <code>right mouse button</code> / <code>mouse wheel</code> to zoom in and out.</li>
+<li>Controls can be customized in <code>Menu bar - Edit - Preferences... - Keymap</code>.</li>
+<li>Keymap presets can be imported and exported.</li>
+</ul>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="workflow">Workflow</h1>
+<p><img src="img/manual/a.jpg" alt="" /></p>
+<h4 id="importtextures">Import Textures</h4>
+<p>Drag and drop <code>.jpg</code>, <code>.png</code>, <code>.tga</code>, <code>.bmp</code>, <code>.gif</code>, <code>.psd</code>, <code>.hdr</code>, <code>.svg</code> or <code>.tif</code> images into the node editor. This will import the image and place a new <code>Image</code> node onto the canvas.</p>
+<blockquote>
+  <p>See <code>Menu bar - Preferences... - Plugins</code> to enable support for additional image formats.</p>
+  <p>You can get starter content in the <a href="https://armorpaint.org/cloud">ArmorPaint Cloud</a>.</p>
+</blockquote>
+<h4 id="importmeshes">Import Meshes</h4>
+<p>Drag and drop unwrapped <code>.obj</code> file into the viewport. This will replace the currently painted mesh. <code>.fbx</code>, <code>.blend</code>, <code>.stl</code>, <code>.gltf</code> and <code>.glb</code> files are supported, but the importer is not 100% reliable yet.</p>
+<p>Modifying imported mesh data:</p>
+<ul>
+<li>Normals can be re-calculated with <code>Meshes tab - Calculate Normals</code>.</li>
+<li>Up axis can be set with <code>Meshes tab - Rotate X / Rotate Y / Rotate Z</code>.</li>
+<li>Geometry can be re-centered with <code>Meshes tab - Geometry to Origin</code>.</li>
+<li>Height output can be applied to geometry with <code>Meshes tab - Apply Displacement</code>.</li>
+<li>UV map can be auto-generated by enabling the <code>uv_unwrap</code> plugin.</li>
+</ul>
+<blockquote>
+  <p>See <code>Menu bar - Preferences... - Plugins</code> to enable support for additional mesh formats.</p>
+  <p>You can get sample assets for testing in the <a href="https://armorpaint.org/cloud">ArmorPaint cloud</a>.</p>
+</blockquote>
+<h4 id="exporttextures">Export Textures</h4>
+<p>Click on the <code>Menu bar - File - Export Textures...</code> button.</p>
+<ul>
+<li><code>Resolution</code>: Set resolution for exported textures.</li>
+<li><code>Color</code>: Set <code>8bit</code>, <code>16bit</code> or <code>32bit</code> color depth.</li>
+<li><code>Format</code>: <code>.png</code> or <code>.jpg</code> (for <code>8bit</code> color), <code>.exr</code> (for <code>16bit / 32bit</code> color).</li>
+<li><code>Preset</code>: Select a pre-configured preset or build a custom one.</li>
+<li><code>Generic</code> preset exports individual PBR textures.</li>
+<li><code>Unreal</code> preset exports packed <em>occlusion-roughness-metallic</em> texture.</li>
+<li><code>Unity</code> preset exports packed <em>metallic-occlusion-smoothness</em> texture.</li>
+<li><code>Minecraft</code> preset exports packed <em>metallic-emission-roughness</em> texture.</li>
+<li><code>Destination</code>: Export textures to disk or pack into the project file at <code>Textures tab</code>.</li>
+</ul>
+<p>Configure custom channel swizzling for exported textures in <code>Presets</code> tab:</p>
+<ul>
+<li>Select an existing preset you wish to edit or press <code>New</code>.</li>
+<li>Press <code>Import</code> to import preset from <code>.json</code> file.</li>
+<li>Press <code>Add</code> to create new texture slot.</li>
+<li>Configure <code>RGBA</code> channels for each texture slot.</li>
+<li>Right-click on texture name and press <code>Delete</code> to delete texture slot.</li>
+<li><code>.json</code> file for each preset is located in the <code>ArmorLab/data/presets</code> folder.</li>
+</ul>
+<h4 id="saveloadproject">Save / Load Project</h4>
+<p>Click on the <code>Menu bar - File - Save</code> button (<code>Ctrl + S</code>) to save the currently opened project. Mesh, nodes and textures will be saved into <code>.arm</code> project file.</p>
+<p>To open the project file, drag and drop <code>.arm</code> file onto the viewport. <code>.arm</code> files can also be set to open directly with ArmorLab executable from the OS file explorer.</p>
+<p><code>.jpg</code> and other asset types can also be associated if you wish to use ArmorLab as a texture viewer.</p>
+<h4 id="browser">Browser</h4>
+<p>Click on the <code>Status bar - Browser tab</code> to activate the built-in asset browser.</p>
+<ul>
+<li>Click on the <code>Cloud</code> button to access the <a href="https://armorpaint.org/cloud">ArmorPaint cloud</a>.</li>
+<li>Drag assets from browser into the viewport to import.</li>
+<li>Click on the <code>+</code> button to save the current path into bookmarks panel.</li>
+</ul>
+<!-- <br/><a href="img/manual/browser.jpg" target="_blank"><img src="img/manual/browser.jpg" width="200px"/></a> -->
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="nodes">Nodes</h1>
+<p><img src="img/manual/b.jpg" alt="" /></p>
+<p>Texture processing in ArmorLab is done via composing node graphs in node editor.</p>
+<ul>
+<li>Use toolbar at the top to add new nodes.</li>
+<li>Press <code>space</code> to search for nodes.</li>
+<li>Drag textures from <code>Textures tab</code> or file explorer into the node editor to create <code>Image</code> nodes.</li>
+</ul>
+<p>Node preview is displayed instantly in the viewport as the nodes are assembled.</p>
+<h4 id="phototopbrnode">Photo to PBR Node</h4>
+<p><img src="img/manual/node_photo_to_pbr.png" alt="" /></p>
+<p>Extract base color, occlusion, roughness, normal map and height from color input. A photo image is expected as a color input.</p>
+<h4 id="imagetexturenode">Image Texture Node</h4>
+<p><img src="img/manual/node_image_texture.png" alt="" /></p>
+<p>Reference to a texture file from disk.</p>
+<h4 id="texttophotonode">Text to Photo Node</h4>
+<p><img src="img/manual/node_text_to_photo.png" alt="" /></p>
+<p>Generate a photo described via text prompt.</p>
+<h4 id="tilingnode">Tiling Node</h4>
+<p><img src="img/manual/node_tiling.png" alt="" /></p>
+<p>Outputs a tileable texture with removed seams from color input.</p>
+<h4 id="inpaintnode">Inpaint Node</h4>
+<p><img src="img/manual/node_inpaint.png" alt="" /></p>
+<p>Allows to paint a mask in the viewport. Outputs a texture where mask area is filled with new content.</p>
+<h4 id="upscalenode">Upscale Node</h4>
+<p><img src="img/manual/node_upscale.png" alt="" /></p>
+<p>Upscales color input to the current project resolution selected in the node editor header.</p>
+<h4 id="variancenode">Variance Node</h4>
+<p><img src="img/manual/node_variance.png" alt="" /></p>
+<p>Generates a new image variant guided with text prompt.</p>
+<h4 id="outputnode">Output Node</h4>
+<p><img src="img/manual/node_output.png" alt="" /></p>
+<p>Final node which is used when exporting textures to disk.</p>
+<blockquote>
+  <p>Check out the <a href="https://armorlab.org/gallery.html">gallery</a> to see nodes in action.</p>
+</blockquote>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="viewport">Viewport</h1>
+<!-- ![](img/manual/c.jpg) -->
+<p>Set viewport parameters in <code>Menu bar - Viewport</code>.</p>
+<ul>
+<li>Enable <code>Distract Free</code> (<code>F11</code>) mode.</li>
+<li><code>Toggle Fullscreen</code> (<code>alt+enter</code>) mode.</li>
+<li>Set <code>Environment</code> and <code>Light</code> intensity.</li>
+<li>Set <code>Light Size</code>.</li>
+<li>Enable <code>Cull Backfaces</code> to skip drawing backward facing polygons.</li>
+<li>Enable <code>Filter Textures</code> to apply linear filter when sampling textures references by material.</li>
+<li>Show 3D <code>Compass</code> in the viewport.</li>
+<li>Enable <code>Envmap</code> to draw environment map in the viewport.</li>
+<li>Enable <code>Blur Envmap</code> to use blurred version of the environment map.</li>
+</ul>
+<blockquote>
+  <p>Drag and drop a <code>.hdr</code> file onto the viewport to change the environment map.</p>
+  <p>Hold <code>Shift</code> + <code>middle mouse button</code> to rotate light.</p>
+  <p>Hold <code>Ctrl</code> + <code>middle mouse button</code> to rotate environment map.</p>
+  <p>To simulate pixel-art like texturing, disable <code>Filter Textures</code> option and set <code>Super Sample</code> in preferences to <code>0.25x</code>.</p>
+</blockquote>
+<!-- > <br/><a href="img/manual/pixelart.jpg" target="_blank"><img src="img/manual/pixelart.jpg" width="200px"/></a> -->
+<h4 id="viewportmode">Viewport Mode</h4>
+<p>Set viewport render mode in <code>Menu bar - Mode</code>.</p>
+<ul>
+<li>Pick <code>Lit</code> to draw viewport with applied lighting using the rasterizer.</li>
+<li>Pick specific channel to visualize it with no applied lighting.</li>
+<li>Pick <code>Path Traced</code> to draw viewport with interactive path-tracer. (<em><a href="https://github.com/armory3d/armorlab/blob/master/Assets/readme/readme_dxr.txt">ArmorLabDXR</a> and <a href="https://github.com/armory3d/armorlab/blob/master/Assets/readme/readme_vkrt.txt">ArmorLabVKRT</a> builds</em>)</li>
+</ul>
+<h4 id="pathtracedviewportwip">Path Traced Viewport <em>wip</em></h4>
+<ul>
+<li>Available in ArmorLabDXR and ArmorLabVKRT builds (see <a href="https://github.com/armory3d/armorlab/blob/master/Assets/readme/readme_dxr.txt">dxr requirements</a> and <a href="https://github.com/armory3d/armorlab/blob/master/Assets/readme/readme_vkrt.txt">vkrt requirements</a>).</li>
+<li>The renderer favors performance.</li>
+</ul>
+<!-- <div style="height:300px"><iframe style="top:0;left:0;width:100%;height:100%;max-width:560px;" src="https://www.youtube.com/embed/uQb-LOJdYrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> -->
+<h4 id="camera">Camera</h4>
+<p>Set camera parameters in <code>Menu bar - Camera</code>:</p>
+<ul>
+<li>Set specific camera viewpoint.</li>
+<li><code>Orbit</code>, <code>Zoom In</code> and <code>Zoom Out</code> camera.</li>
+<li><code>Reset</code> camera.</li>
+<li>Set <code>FoV</code> (field of view).</li>
+<li>Set <code>Perspective</code> or <code>Orthographic</code> camera type.</li>
+<li>Set camera mode:</li>
+<li><code>Orbit</code> - Rotate camera around the mesh.</li>
+<li><code>Rotate</code> - Rotate mesh around the origin.</li>
+<li><code>Fly</code> - Hold <code>right mouse button</code> and move camera freely using the <code>WASD</code> and <code>QE</code> keys.</li>
+</ul>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="workspaces">Workspaces</h1>
+<!-- ![](img/manual/d.jpg) -->
+<p>Select workspace tab from the header bar:</p>
+<ul>
+<li><code>3D</code>: Set for 3D view.</li>
+<li><code>2D</code>: Set for top-down view of the plane object.</li>
+</ul>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="preferences">Preferences</h1>
+<!-- ![](img/manual/e.jpg) -->
+<p>Click <code>Menu bar - Edit - Preferences...</code> to show the preferences window.</p>
+<h4 id="interface">Interface</h4>
+<ul>
+<li><code>Language</code>: Set localization. See <a href="https://github.com/armory3d/armorlab/tree/master/Assets/locale">currently available translations</a>.</li>
+<li><code>UI Scale</code>: Scale up the user interface when running on high-resolution display. By default, 2X scale is applied during the first startup for high-resolution displays.</li>
+<li><code>Camera Speed</code>: Intensity of camera movements.</li>
+<li><code>Direction to Zoom</code>: Mouse / pen direction to perform camera zoom.</li>
+<li><code>Wrap Mouse</code>: Wrap mouse around view boundaries during camera control.</li>
+<li><code>Show Asset Names</code>: Draw labels below each texture icon.</li>
+<li>Click <code>Restore - Confirm</code> button to revert back to default settings.</li>
+<li>Click <code>Restore - Import...</code> button to import settings from older ArmorLab version.</li>
+<li>Click <code>Reset Layout</code> button to revert all layout changes.</li>
+</ul>
+<h4 id="theme">Theme</h4>
+<ul>
+<li>Select <code>default</code> (dark) or <code>light</code> theme.</li>
+<li>Click <code>New</code> button to create custom theme.</li>
+<li>Click <code>Import</code> button to import theme from file.</li>
+<li>Click <code>Export</code> button to export theme into file.</li>
+<li>Set <code>Viewport Color</code> to draw when environment map is hidden.</li>
+<li>Set color and size of individual theme elements.</li>
+<li>Set <code>Straight</code> or <code>Curved</code> link style for node connections.</li>
+</ul>
+<h4 id="usage">Usage</h4>
+<ul>
+<li><code>Undo Steps</code>: Set the number of undo steps to keep. Using less undo steps may improve performance when running on GPU with constrained memory.</li>
+<li><code>Default Workspace</code>: start-up workspace.</li>
+<li><code>Default Layer Resolution</code>: for new layers.</li>
+<li><code>Cloud Server</code>: address of the S3 server used by <code>Browser tab - Cloud</code>.</li>
+<li><code>GPU Inference</code>: Use GPU to accelerate node graph processing.</li>
+</ul>
+<!-- - `3D Cursor`: Enable topological warp for paint cursor with depth and angle rejection.
+- `Live Node Preview`: Update nodes immediately during node editing. -->
+<!-- <br/><a href="https://www.youtube.com/watch?v=O5ccQBbKc48" target="_blank"><img src="img/manual/live_brush.jpg" width="200px"/></a> -->
+<h4 id="pen">Pen</h4>
+<ul>
+<li><code>Brush Radius</code>: When painting with a pen, pressure affects the radius of brush.</li>
+<li><code>Sensitivity</code>: Manual pen pressure sensitivity control.</li>
+</ul>
+<blockquote>
+  <p>ArmorLab uses <code>Windows Ink</code> API on Windows. <code>Windows Ink</code> is available on Windows 8 or newer.</p>
+  <p>When using a Wacom tablet on Windows, ensure <code>Use Windows Ink</code> option is enabled in <a href="https://armorlab.org/manual/img/manual/wacom.png">Wacom Tablet Properties</a>.</p>
+  <p>When using a Wacom tablet on Windows, you can rotate the viewport by assigning <code>Alt</code> + <code>Left click</code> modifier onto pen button in <a href="https://armorlab.org/manual/img/manual/wacom_button.png">Wacom Tablet Properties</a>.</p>
+  <p>Pen pressure is expected to work on Windows, Linux, macOS, Android and iOS.</p>
+</blockquote>
+<h4 id="viewport-1">Viewport</h4>
+<p>On faster GPUs:</p>
+<ul>
+<li>Raise <code>Super Sample</code> to 2X/4X for improved anti-aliasing.</li>
+<li>Enable <code>Voxel AO</code> for cone-traced ambient occlusion and shadows (non DXR / VKRT builds).</li>
+</ul>
+<p>On slower GPUs:</p>
+<ul>
+<li>Disable <code>SSAO (screen-space ambient occlusion)</code> for improved performance.</li>
+</ul>
+<p>Additional options:</p>
+<ul>
+<li>Set <code>Path Tracer</code> mode: <code>Core</code> for performance, <code>Full</code> for features. (DXR / VKRT builds)</li>
+<li>Set clipping values with <code>Clip Start</code> and <code>Clip End</code>.</li>
+<li>Enable <code>SSR</code> for screen-space reflections.</li>
+<li>Enable <code>Bloom</code>.</li>
+<li>Set <code>Vignette</code> intensity.</li>
+<li>Set <code>Displacement Strength</code> applied by height channel in the viewport.</li>
+</ul>
+<h4 id="keymap">Keymap</h4>
+<p>Select an existing preset or define custom keyboard shortcuts.</p>
+<ul>
+<li>Use <code>left</code>, <code>middle</code>, <code>right</code> handles to reference mouse buttons / pen.</li>
+<li>Use <code>+</code> character to reference multiple keys: ie. <code>ctrl+1</code>.</li>
+<li>Click <code>Import</code> button to import keymap from file.</li>
+<li>Click <code>Export</code> button to export keymap into file.</li>
+</ul>
+<p><br/><br/><br/><br/><br/></p>
+<h1 id="plugins">Plugins</h1>
+<!-- ![](img/manual/f.jpg) -->
+<p>Press <code>Plugins tab - Manager</code> to open the plugin manager.</p>
+<ul>
+<li>Click <code>Import</code> to install a new plugin from <code>.js</code>, <code>.wasm</code> or <code>.zip</code> file.</li>
+<li>Click <code>New</code> to create a new hello-world plugin.</li>
+<li>Enable desired plugins from the list.</li>
+<li>Right-click onto plugin name to expose plugin operations:</li>
+<li><code>Export</code> plugin file for distribution.</li>
+<li><code>Edit</code> plugin in a text editor.</li>
+<li><code>Delete</code> plugin.</li>
+<li>Controls for enabled plugins are displayed in the <code>Plugins tab</code>.</li>
+<li>Some plugins may not expose controls but add new import / export file formats.</li>
+</ul>
+<h4 id="plugindevelopment">Plugin Development</h4>
+<p>Plugins are written in <code>JavaScript</code> or <code>WebAssembly</code> (compiled from <code>C</code>, <code>Rust</code>, ..). For a minimal example, see the <a href="https://github.com/armory3d/armorlab/tree/master/Assets/plugins">bundled</a> <code>hello_world.js</code> file located in the <code>ArmorLab/data/plugins</code> folder.</p>
+<p>A <a href="https://github.com/armory3d/armorlab/wiki/Plugins">plugin development guide</a> will be provided soon.</p>
+<p><br/><br/><br/><br/><br/></p>
+      <!------------------------------------->
+
+      </div>
+
+      <!------------------------------------->
+
+      <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md pb-4">
+            <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/armory.png"/></a>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Projects</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/">ArmorLab</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/">Armory3D</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Social</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Links</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/notes">Release Notes</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/community">Contact</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://armorlab.org/privacy">Privacy</a></li>
+              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="css/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
