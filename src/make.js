@@ -64,7 +64,7 @@ write_html('blog.html');
 		<description>3D Content Creation Tools</description>
 	`;
 
-	let news = fs.readFileSync("news.html", "utf8");
+	let news = fs.readFileSync("blog.html", "utf8");
 	let h3s = news.split(`<h3 class="fw-normal text-muted mb-3">`);
 	let items = [];
 	h3s.shift();
