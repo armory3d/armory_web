@@ -8,8 +8,14 @@
             <h5>Projects</h5>
             <ul class="list-unstyled text-small">
               <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
-              <!-- <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/lab">ArmorLab</a></li> -->
-              <!-- <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/">Armory3D</a></li> -->
+              <li><span id="view-count" style="color: #333;"></span></li>
+              <script>
+                fetch('https://counters.armory3d.workers.dev' + window.location.pathname)
+                .then(res => res.text())
+                .then(count => {
+                document.getElementById('view-count').innerText = count;
+                });
+              </script>
             </ul>
           </div>
           <div class="col-6 col-md">
