@@ -46,5 +46,27 @@
       </footer>
     </main>
     <script src="css/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        fadeIns.forEach((fadeIn) => {
+          observer.observe(fadeIn);
+        });
+      });
+    </script>
   </body>
 </html>
