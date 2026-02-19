@@ -9,6 +9,5 @@ let writeHtml = function(fileName, extra = '') {
 }
 
 writeHtml('index.html');
-writeHtml('community.html');
 writeHtml('download.html');
 writeHtml('privacy.html');

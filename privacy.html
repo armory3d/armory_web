@@ -41,7 +41,7 @@
         min-height: 100%;
         width: auto;
         height: auto;
-        transform: translateX(-40%) translateY(0%);
+        transform: translateX(-40%) translateY(-25%);
         object-fit: cover;
         z-index: 0;
       }
@@ -71,7 +71,7 @@
       }
 
       .glass-hero {
-          background-color: rgba(17, 17, 17, 0.45) !important;
+          background-color: rgba(17, 17, 17, 0.60) !important;
           border: 1px solid rgba(255, 255, 255, 0.05);
           box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
       }
@@ -126,6 +126,25 @@
       @media (min-width: 576px) {
           .gallery { column-count: 2; }
       }
+
+      .footer-center ul {
+        padding-left: 0;
+      }
+
+      .footer-center {
+        margin-bottom: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .footer-center {
+          text-align: center;
+          margin-bottom: 0;
+        }
+
+        .footer-center > div {
+          display: inline-block;
+          text-align: left;
+        }
     </style>
   </head>
   <body>
@@ -133,16 +152,19 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-navbar">
       <div class="container-fluid">
 
-        <a href="https://armory3d.org/" class="navbar-brand me-4">
-          <img src="img/Logo.png" style="width: 50px;" class="rounded" alt="ArmorPaint">
-        </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-expanded="false" aria-label="Toggle">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-center" id="mynavbar">
           <ul class="navbar-nav align-items-center">
+
+            <li>
+            <a href="https://armory3d.org/" class="navbar-brand me-4">
+              <img src="img/Logo.png" style="width: 50px;" class="rounded" alt="Armory">
+            </a>
+            </li>
+
             <li class="nav-item dropdown me-4">
               <a class="nav-link dropdown-toggle fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 ARMORY
@@ -153,15 +175,16 @@
                     <img src="img/paint.png" style="width: 25px;" class="rounded" /> ARMORPAINT
                   </a>
                 </li>
+                <li>
+                  <a class="dropdown-item rounded-2" href="https://armory3d.org/engine">
+                    <img src="img/Logo.png" style="width: 25px;" class="rounded" /> ARMORY ENGINE
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="https://armory3d.org">HOME</a></li>
           </ul>
         </div>
-        <!-- Balancing dummy -->
-        <a class="navbar-brand ms-4 d-none d-lg-inline-block" style="visibility: hidden;" aria-hidden="true">
-          <img src="img/Logo.png" style="width: 50px;" class="rounded" alt="">
-        </a>
 
       </div>
     </nav>
@@ -170,7 +193,7 @@
       <header>
         <img src="img/FeaturedCover.jpg" />
         <div class="position-relative p-5 mx-auto mx-md-5 my-5">
-          <div class="p-5 mx-auto mx-md-5 my-5 bg-body-secondary rounded-3" style="--bs-bg-opacity: 0.6; width: 440px;">
+          <div class="p-5 mx-auto mx-md-5 my-5 glass-hero rounded-3" style="width: 440px;">
             <h1 class="display-5 pb-3">3D <span class="text-body-emphasis">Content<br/>Creation</span> Tools</h1>
           </div>
         </div>
@@ -184,52 +207,70 @@
       </div>
 
       <!------------------------------------->
-
       <footer class="container py-5">
-        <div class="row">
-          <div class="col-12 col-md pb-4">
+        <div class="row pb-4">
+          <div class="col-12 col-md footer-center">
             <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/Logo.png"/></a>
           </div>
-          <div class="col-6 col-md">
-            <h5>Projects</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
-              <li><span id="view-count" style="color: #333;"></span></li>
-              <script>
-                fetch('https://counters.armory3d.workers.dev' + window.location.pathname)
-                .then(res => res.text())
-                .then(count => {
-                document.getElementById('view-count').innerText = count;
-                });
-              </script>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Projects</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/engine">Armory Engine</a></li>
+                <li><span id="view-count" style="color: #333;"></span></li>
+                <script>
+                  fetch('https://counters.armory3d.workers.dev' + window.location.pathname)
+                  .then(res => res.text())
+                  .then(count => {
+                  document.getElementById('view-count').innerText = count;
+                  });
+                </script>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>Social</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Social</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>Links</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/notes">Release Notes</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Links</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://forums.armorpaint.org/c/releases">Releases</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/community">Contact</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <script language="JavaScript">
+                var user_name = "lubos";
+                var host_name = "armory3d.com";
+                document.write("<li><a class='link-secondary text-decoration-none' href='" + "mail" + "to:" + user_name + "@" + host_name + "'>Contact</a></li>");
+                </script>
+                <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
+
+
+
+
+
+
     </main>
     <script src="css/bootstrap.bundle.min.js"></script>
     <script>

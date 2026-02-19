@@ -1,49 +1,67 @@
-
       <footer class="container py-5">
-        <div class="row">
-          <div class="col-12 col-md pb-4">
+        <div class="row pb-4">
+          <div class="col-12 col-md footer-center">
             <a href="https://armory3d.org/"><img class='col-3 col-md-6 img-fluid rounded' src="img/Logo.png"/></a>
           </div>
-          <div class="col-6 col-md">
-            <h5>Projects</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
-              <li><span id="view-count" style="color: #333;"></span></li>
-              <script>
-                fetch('https://counters.armory3d.workers.dev' + window.location.pathname)
-                .then(res => res.text())
-                .then(count => {
-                document.getElementById('view-count').innerText = count;
-                });
-              </script>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Projects</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/">ArmorPaint</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://armory3d.org/engine">Armory Engine</a></li>
+                <li><span id="view-count" style="color: #333;"></span></li>
+                <script>
+                  fetch('https://counters.armory3d.workers.dev' + window.location.pathname)
+                  .then(res => res.text())
+                  .then(count => {
+                  document.getElementById('view-count').innerText = count;
+                  });
+                </script>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>Social</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Social</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://youtube.com/c/armory3d">YouTube</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://artstation.com/armory">ArtStation</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://x.com/armory3d">X</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>Links</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/notes">Release Notes</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>Links</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools">GitHub</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/issues">Tracker</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://forums.armorpaint.org/c/releases">Releases</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/community">Contact</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
-              <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
-            </ul>
+          <div class="col-6 col-md footer-center">
+            <div>
+              <h5>About</h5>
+              <ul class="list-unstyled text-small">
+                <script language="JavaScript">
+                var user_name = "lubos";
+                var host_name = "armory3d.com";
+                document.write("<li><a class='link-secondary text-decoration-none' href='" + "mail" + "to:" + user_name + "@" + host_name + "'>Contact</a></li>");
+                </script>
+                <li><a class="link-secondary text-decoration-none" href="https://armorpaint.org/privacy">Privacy</a></li>
+                <li><a class="link-secondary text-decoration-none" href="https://github.com/armory3d/armortools/blob/main/license.md">License</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
+
+
+
+
+
+
     </main>
     <script src="css/bootstrap.bundle.min.js"></script>
     <script>
