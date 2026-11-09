@@ -10,5 +10,3 @@ let write_html = function(fileName, extra = '') {
 
 write_html('index.html');
 write_html('privacy.html');
-write_html('login.html');
-write_html('account.html');
